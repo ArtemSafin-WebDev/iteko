@@ -1,0 +1,314 @@
+.page-footer {
+   
+}
+
+.page-footer__inner {
+    // background-color: var(--primary-color);
+    background-image: url('../img/footer-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 10rem;
+    padding-bottom: 7.5rem;
+    opacity: 0;
+    visibility: hidden;
+
+    .loaded & {
+        opacity: 1;
+        visibility: inherit;
+    }
+    @include breakpoint(mobile) {
+        padding-top: 5.5rem;
+        padding-bottom: 4rem;
+        background-image: url('../img/page-footer-mobile-bg.svg');
+    }
+}
+
+.page-footer__top-row {
+    display: flex;
+    padding-bottom: 8.5rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        padding-bottom: 6rem;
+    }
+}
+
+.page-footer__logo {
+    flex-shrink: 0;
+    margin-right: 18rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.page-footer__logo-image {
+    width: 17.5rem;
+    height: auto;
+    display: block;
+    @include breakpoint(mobile) {
+        width: 12.5rem;
+    }
+}
+
+.page-footer__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        align-items: initial;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-row-gap: 1rem;
+        grid-column-gap: 4rem;
+        margin-bottom: 5.5rem;
+    }
+}
+
+.page-footer__nav-link {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 140%;
+        margin: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer__contacts {
+    width: 56rem;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2.4rem;
+    margin-top: auto;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        grid-column-gap: 4rem;
+        grid-row-gap: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: 'phone address' 'email address' 'additional additional' 'social social';
+    }
+}
+
+.page-footer__contacts-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.page-footer__phone-link {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+    margin-bottom: 0.7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 140%;
+        margin-bottom: 0;
+        grid-area: phone;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.page-footer__mail-link {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 120%;
+        margin-bottom: 0;
+        grid-area: email;
+    }
+}
+
+.page-footer__address {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+    margin-bottom: 5.8rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        line-height: 140%;
+        grid-area: address;
+    }
+}
+
+.page-footer__social-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        grid-area: social;
+        order: 6;
+        margin-top: 4rem;
+    }
+}
+
+.page-footer__social-list-item {
+    margin-right: 2rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.page-footer__social-link {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#c4c4c4, 0.23);
+    border-radius: 50%;
+    @include breakpoint(mobile) {
+        width: 4rem;
+        height: 4rem;
+    }
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: white;
+
+        @include breakpoint(mobile) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+}
+
+.page-footer__bottom-row {
+    padding-top: 4.4rem;
+    display: flex;
+    align-items: baseline;
+    font-size: 1.5rem;
+    line-height: 140%;
+    margin-bottom: 4rem;
+    border-top: 1px solid #ffffff;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        margin-bottom: 2rem;
+        padding-top: 2.5rem;
+    }
+}
+
+.page-footer__copyright {
+    margin-right: 3.4rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.page-footer__policy {
+    margin-right: 1.8rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.page-footer__info {
+    margin-right: 1.8rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.page-footer__made-by {
+    display: inline-flex;
+    align-items: flex-end;
+    margin-left: auto;
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+}
+
+.page-footer__made-by-image {
+    width: 8rem;
+    flex-shrink: 0;
+    margin-left: 0.4rem;
+    position: relative;
+    bottom: -0.35rem;
+}
+
+.page-footer__remark {
+    font-size: 1.2rem;
+    line-height: 140%;
+    color: rgba(white, 0.3);
+}
+
+.page-footer__contacts-additional {
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 4rem;
+        grid-row-gap: 2rem;
+        grid-area: additional;
+        margin-top: 3rem;
+    }
+}
+
+.page-footer__contacts-additional-item {
+    margin-bottom: 2.2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer__contacts-additional-item-title {
+    font-size: 1.5rem;
+    line-height: 140%;
+    color: rgba(white, 0.6);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.page-footer__contacts-additional-item-link {
+    font-size: 2rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.5rem;
+        line-height: 140%;
+    }
+}

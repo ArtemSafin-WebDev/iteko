@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <script src="assets/js/ie11CustomProperties.js"></script>
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>
+        Айтеко - Главная страница
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 7.91 7.91" id="arrow-diagonal" xmlns="http://www.w3.org/2000/svg"><path d="M1.41 7.91l4.5-4.5V7h2V0h-7v2H4.5L0 6.5z"/></symbol><symbol viewBox="0 0 19.8 19.8" id="arrow-down" xmlns="http://www.w3.org/2000/svg"><path d="M11.15 0h-2.5v15L1.78 8.13 0 9.9l9.9 9.9 9.9-9.9L18 8.13 11.15 15z"/></symbol><symbol viewBox="0 0 19.8 19.8" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M0 8.65v2.5h15L8.13 18l1.77 1.8 9.9-9.9L9.9 0 8.13 1.78 15 8.65z"/></symbol><symbol viewBox="0 0 30.39 32.5" id="award" xmlns="http://www.w3.org/2000/svg"><path d="M15.2 0a3.82 3.82 0 00-2.2.74l-2.1 1.45-2.38.31a4.26 4.26 0 00-3.21 3.2l-.43 2.54-1.44 1.88a4.08 4.08 0 000 4.53l1.48 2.15.39 2.2-4 6.13L0 27h6l1.44 3.36.9 2.15 1.29-1.95 3.94-5.94a4.18 4.18 0 003.29 0l3.94 5.94 1.29 1.95.9-2.15L24.41 27h6l-1.31-1.92-3.9-5.94.31-2.34L27 14.73a4 4 0 000-4.49l-1.49-2.15L25 5.74v-.08a3.69 3.69 0 00-3.12-3.16l-2.35-.31L17.42.74A3.82 3.82 0 0015.2 0zm0 2.54a1.46 1.46 0 01.78.23l2.22 1.61.28.19h.31l2.73.43a1.11 1.11 0 011 1v.07l.51 2.78v.27l.19.24 1.6 2.22a1.58 1.58 0 010 1.72l-1.75 2.46v.31l-.39 2.74a1.35 1.35 0 01-.2.54h-.08a1.06 1.06 0 01-.74.39h-.06l-2.85.51h-.31l-.24.2-2.2 1.78a1.69 1.69 0 01-1.76 0l-2-1.56-.24-.2h-.35L8.87 20a1.07 1.07 0 01-.87-.55 1.14 1.14 0 01-.19-.45v-.07l-.51-2.88v-.31l-.2-.23-1.6-2.23a1.65 1.65 0 010-1.76l1.56-2 .2-.23v-.35l.36-2.62A1.72 1.72 0 019 5l2.62-.35h.31l.28-.19 2.22-1.61a1.47 1.47 0 01.77-.31zm8.63 19l1.91 2.93h-3l-.31.78-.86 2-2.66-4.05.58-.43 2.51-.43h.08a3.62 3.62 0 001.75-.78zm-17.27 0a3.56 3.56 0 002 .9l2.39.31.54.43-2.65 4-.86-2-.31-.78h-3z"/></symbol><symbol viewBox="0 0 30 30" id="compass" xmlns="http://www.w3.org/2000/svg"><path d="M15 0a15 15 0 1015 15A15 15 0 0015 0zm-1.29 2.58v1.17h2.5V2.58a12.43 12.43 0 0111.21 11.17h-1.17v2.5h1.17a12.43 12.43 0 01-11.17 11.17v-1.17h-2.5v1.17A12.43 12.43 0 012.58 16.25h1.17v-2.5H2.58A12.43 12.43 0 0113.71 2.58zm9.42 4.3L12.7 12.7 6.88 23.13 17.3 17.3zM15 13.13A1.88 1.88 0 1113.13 15 1.87 1.87 0 0115 13.13z"/></symbol><symbol viewBox="0 0 35 25" id="crowd" xmlns="http://www.w3.org/2000/svg"><path d="M11.88 0a4.38 4.38 0 104.37 4.38A4.39 4.39 0 0011.88 0zm11.25 0a4.38 4.38 0 104.37 4.38A4.39 4.39 0 0023.13 0zM11.88 2.5A1.88 1.88 0 1110 4.38a1.86 1.86 0 011.88-1.88zm11.25 0a1.88 1.88 0 11-1.88 1.88 1.86 1.86 0 011.88-1.88zm-16.88 5a5 5 0 00-3.48 8.55A6.31 6.31 0 000 21.25h2.5a3.75 3.75 0 017.5 0h2.5a6.31 6.31 0 00-2.77-5.2A5 5 0 006.25 7.5zm6.25 13.75A6.28 6.28 0 0011.25 25h2.5a3.75 3.75 0 017.5 0h2.5a6.28 6.28 0 00-1.25-3.75A6.34 6.34 0 0021 19.8a5 5 0 10-7 0 6.34 6.34 0 00-1.5 1.45zm10 0H25a3.75 3.75 0 017.5 0H35a6.31 6.31 0 00-2.77-5.2 5 5 0 10-7 0 6.31 6.31 0 00-2.73 5.2zM6.25 10a2.5 2.5 0 11-2.5 2.5 2.48 2.48 0 012.5-2.5zm22.5 0a2.5 2.5 0 11-2.5 2.5 2.48 2.48 0 012.5-2.5zM17.5 13.75a2.5 2.5 0 11-2.5 2.5 2.48 2.48 0 012.5-2.5z"/></symbol><symbol viewBox="0 0 10 20" id="facebook" xmlns="http://www.w3.org/2000/svg"><path d="M10 0v4H8c-.69 0-1 .81-1 1.5V8h3v4H7v8H3v-8H0V8h3V4a4 4 0 014-4z"/></symbol><symbol viewBox="0 0 11 19" id="fb" xmlns="http://www.w3.org/2000/svg"><path d="M7.06 6.38V4.51c0-.84.19-1.26 1.49-1.26h1.64V.13H7.46C4.11.13 3 1.66 3 4.29v2.09H.81V9.5H3v9.38h4.06V9.5h2.76l.37-3.12z"/></symbol><symbol id="grid-view" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><style>.icls-1{fill-rule:evenodd}</style></defs><path class="icls-1" d="M15.33 0a.67.67 0 01.67.67v4.66a.67.67 0 01-.67.67h-4.66a.67.67 0 01-.67-.67V.67a.67.67 0 01.67-.67zM15.33 10a.67.67 0 01.67.67v4.66a.67.67 0 01-.67.67h-4.66a.67.67 0 01-.67-.67v-4.66a.67.67 0 01.67-.67zM5.33 10a.67.67 0 01.67.67v4.66a.67.67 0 01-.67.67H.67a.67.67 0 01-.67-.67v-4.66A.67.67 0 01.67 10zM5.33 0A.67.67 0 016 .67v4.66a.67.67 0 01-.67.67H.67A.67.67 0 010 5.33V.67A.67.67 0 01.67 0z"/></symbol><symbol viewBox="0 0 35 26.34" id="handshake" xmlns="http://www.w3.org/2000/svg"><path d="M21.64 0a8.63 8.63 0 00-2.11.23 7.7 7.7 0 00-2.23 1A7.62 7.62 0 0014.53.12a21.5 21.5 0 00-3.32 0C9.8.11 8.88.83 7.38 1.41a16.43 16.43 0 01-6.13 1.13H0v12l.7.35L3 16.06l8.2 9.14a4.28 4.28 0 003.32 1.1 6.52 6.52 0 003-.9c1.84-1.11 6.87-4.61 6.87-4.61l.12-.08.08-.08a4.38 4.38 0 001.09-2.07l4.81-2.42L34.14 15l.86-.27V2.54h-1.25a16.14 16.14 0 01-6.13-1.17C26.12.78 25.21.07 23.79 0h-2.15zm0 2.5h2c.13 0 1.33.52 3 1.17a19.42 19.42 0 005.86 1.25v8l-2.89 1h-.16l-3.79 1.91a4.38 4.38 0 00-.93-1.56l-.08-.12-5.31-6.53-.79-1-1 .78-3.36 2.74a2.65 2.65 0 01-3 .11 2 2 0 01-.47-.31l5.7-4.73.08-.07a8.45 8.45 0 013.64-2.5 5.6 5.6 0 011.54-.14zM13 2.54a8.19 8.19 0 011.25 0 5.57 5.57 0 011 .43c-.12.12-.22.18-.35.31l-.08.08L8 9.06l-1.06.86.94 1a8.11 8.11 0 002.31 1.64 5.45 5.45 0 005.5-.31l.08-.08 2.42-2 4.61 5.66v.08a2.05 2.05 0 010 2.93l-.19.11L21 16.8l-2 1.48 1.61 2.15c-.65.44-.95.67-1.64 1.13l-1.7-2.26-2 1.48 1.61 2.15-.55.35a4.54 4.54 0 01-1.84.55 2.07 2.07 0 01-1.36-.31l-8.44-9.3-.16-.22-2-1V4.92a20 20 0 005.75-1.17c1.67-.64 2.86-1.17 3-1.17z"/></symbol><symbol viewBox="0 0 20 20" id="instagram" xmlns="http://www.w3.org/2000/svg"><path d="M5.8 0h8.4A5.8 5.8 0 0120 5.8v8.4a5.8 5.8 0 01-5.8 5.8H5.8A5.8 5.8 0 010 14.2V5.8A5.8 5.8 0 015.8 0zm-.2 2A3.6 3.6 0 002 5.6v8.8A3.6 3.6 0 005.6 18h8.8a3.6 3.6 0 003.6-3.6V5.6A3.6 3.6 0 0014.4 2zm9.65 1.5A1.25 1.25 0 1114 4.75a1.25 1.25 0 011.25-1.25zM10 5a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 103 3 3 3 0 00-3-3z"/></symbol><symbol viewBox="0 0 19 14" id="list-view" xmlns="http://www.w3.org/2000/svg"><path d="M18 2H1a1 1 0 010-2h17a1 1 0 010 2zM18 8H1a1 1 0 010-2h17a1 1 0 010 2zM18 14H1a1 1 0 010-2h17a1 1 0 010 2z"/></symbol><symbol viewBox="0 0 14 20" id="ok" xmlns="http://www.w3.org/2000/svg"><path d="M12.83 10.74c-.28-.57-1.07-1.05-2.12-.24A6.84 6.84 0 017 11.64a6.84 6.84 0 01-3.71-1.14c-1-.81-1.84-.33-2.12.24-.5 1 .06 1.49 1.33 2.3A8.54 8.54 0 006 14.1l-.8.8-.03.1C4.06 16.07 3 17.14 2.25 17.88a1.14 1.14 0 000 1.62l.14.16a1.16 1.16 0 001.64 0l3-3c1.15 1.13 2.24 2.22 3 3a1.16 1.16 0 001.64 0l.13-.16a1.12 1.12 0 000-1.62l-3-3-.8-.79A8.35 8.35 0 0011.5 13c1.27-.77 1.83-1.26 1.33-2.26z"/><path d="M7 10.12a5.06 5.06 0 10-5.06-5.06A5.05 5.05 0 007 10.12zm0-7.55a2.49 2.49 0 11-2.5 2.49A2.5 2.5 0 017 2.57z"/></symbol><symbol viewBox="0 0 13.67 7.83" id="scroll-down" xmlns="http://www.w3.org/2000/svg"><path d="M6.83 7.83a1 1 0 01-.7-.29L.29 1.71A1 1 0 011.71.29l5.12 5.13L12 .29a1 1 0 011.41 0 1 1 0 010 1.42L7.54 7.54a1 1 0 01-.71.29z"/></symbol><symbol viewBox="0 0 17 17" id="search" xmlns="http://www.w3.org/2000/svg"><path d="M16.71 15.29l-3-3a7.68 7.68 0 10-1.41 1.41l3 3a1 1 0 001.42 0 1 1 0 00-.01-1.41zM2 7.67a5.67 5.67 0 119.68 4 5.66 5.66 0 01-9.68-4z"/></symbol><symbol viewBox="0 0 18.02 15.12" id="telegram" xmlns="http://www.w3.org/2000/svg"><path d="M6.78 14.21L7.06 10l7.68-6.92c.34-.31-.07-.46-.52-.19l-9.48 6-4.1-1.33c-.88-.25-.89-.86.2-1.3L16.81.1c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L9.6 11.86l-2 1.93a1.06 1.06 0 01-.82.42z"/></symbol><symbol viewBox="0 0 22 17" id="twitter" xmlns="http://www.w3.org/2000/svg"><path d="M21.46 2a8.57 8.57 0 01-2.46.69A4.3 4.3 0 0020.88.31a8.64 8.64 0 01-2.72 1.05A4.22 4.22 0 0015 0a4.28 4.28 0 00-4.27 4.29 4.46 4.46 0 00.11 1A12.19 12.19 0 012 .79a4.24 4.24 0 00-.58 2.15A4.22 4.22 0 003.33 6.5 4.24 4.24 0 011.38 6a4.29 4.29 0 003.44 4.21 4.21 4.21 0 01-1.93.07 4.28 4.28 0 004 3 8.52 8.52 0 01-5.33 1.84 8.72 8.72 0 01-1-.06A12.14 12.14 0 007.12 17 12.14 12.14 0 0019.33 4.79v-.56A8.57 8.57 0 0021.46 2z"/></symbol><symbol viewBox="0 0 20 12" id="vk" xmlns="http://www.w3.org/2000/svg"><path d="M17.54 7.6a8.51 8.51 0 011.92 2.22c.64 1.06-.7 1.14-.7 1.14h-2.58a1.81 1.81 0 01-1.28-.39c-1-.66-1.9-2.39-2.59-2.16s-.69 1.78-.69 1.78a.62.62 0 01-.16.39.65.65 0 01-.53.12H9.78A6.24 6.24 0 015 8.67C2.55 6.13.39 1.13.39 1.13S.27.83.4.66 1 .5 1 .5h2.73a.72.72 0 01.44.16.89.89 0 01.24.34 17.61 17.61 0 001 2.13c1.15 2 1.68 2.42 2.05 2.21.6-.31.43-2.81.43-2.81a2.76 2.76 0 00-.29-1.31 1.3 1.3 0 00-.82-.43c-.16 0 .1-.38.43-.55A6.58 6.58 0 019.62 0 4.85 4.85 0 0111 .13c1 .23.63 1.12.63 3.24 0 .69-.1 1.63.37 2 .21.14.73 0 2-2.17A17.63 17.63 0 0015.06.89a.89.89 0 01.25-.31 1 1 0 01.38-.08h2.9s.88-.1 1 .29-.33 1.38-1.52 3c-1.92 2.55-2.14 2.31-.53 3.81z" fill-rule="evenodd"/></symbol><symbol viewBox="0 0 20 16" id="youtube" xmlns="http://www.w3.org/2000/svg"><path d="M8 12.5v-9L14 8zM18 .4a55.36 55.36 0 00-8-.4 58.24 58.24 0 00-8 .38C.44.9 0 4.4 0 8s.44 7.1 2 7.61a56 56 0 008 .39 56 56 0 008-.39c1.56-.51 2-4 2-7.61S19.56.91 18 .4z"/></symbol></svg>    </div>
+
+    <div class="page-content">
+        <header class="page-header">
+            <div class="container">
+                <div class="page-header__row">
+                    <div class="page-header__menu">
+                        <div class="container">
+                            <form action="/" method="POST" class="page-header__search-form">
+                                <input type="search" class="page-header__search-form-input" placeholder="Поиск">
+                                <button class="page-header__search-form-submit" type="submit">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <div class="page-header__menu-row">
+                                <div class="page-header__menu-solutions">
+                                    <h3 class="page-header__menu-solutions-heading">
+                                        Решения
+                                    </h3>
+                                    <ul class="page-header__menu-solutions-list">
+                                        <li class="page-header__menu-solutions-list-item">
+                                            <a href="#" class="page-header__menu-solutions-card">
+                                                Разработка ПО, стартапы, большие данные
+        
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                    <use xlink:href="#arrow-diagonal"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-solutions-list-item">
+                                            <a href="#" class="page-header__menu-solutions-card">
+                                                IT-инфраструктура
+                                                и телекоммуникационные решения
+        
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                    <use xlink:href="#arrow-diagonal"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-solutions-list-item">
+                                            <a href="#" class="page-header__menu-solutions-card">
+                                                Аутсорсинг, сервисные услуги и IaaS
+        
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                    <use xlink:href="#arrow-diagonal"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-solutions-list-item">
+                                            <a href="#" class="page-header__menu-solutions-card">
+                                                Инженерные системы и управление строительством
+        
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                    <use xlink:href="#arrow-diagonal"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-solutions-list-item">
+                                            <a href="#" class="page-header__menu-solutions-card">
+                                                Консалтинг
+                                                и бизнес-приложения
+        
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                    <use xlink:href="#arrow-diagonal"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <nav class="page-header__menu-nav">
+                                    <a href="#" class="page-header__menu-nav-link">
+                                        Проекты
+                                    </a>
+                                    <a href="#" class="page-header__menu-nav-link">
+                                        О компании
+                                    </a>
+                                    <a href="#" class="page-header__menu-nav-link">
+                                        Пресс-центр
+                                    </a>
+                                    <a href="#" class="page-header__menu-nav-link">
+                                        Отрасли
+                                    </a>
+                                    <a href="#" class="page-header__menu-nav-link">
+                                        Партнёры
+                                    </a>
+                                    <a href="#" class="page-header__menu-nav-link">
+                                        Карьера
+                                    </a>
+                                    <a href="#" class="page-header__menu-nav-link">
+                                        Контакты
+                                    </a>
+                                </nav>
+                                <div class="page-header__menu-contacts">
+                                    <a href="tel:+7 495 777-10-95" class="page-header__menu-phone-link">
+                                        +7 495 777-10-95
+                                    </a>
+                                    <a href="#" class="page-header__mail-link">
+                                        income@i-teco.ru
+                                    </a>
+                                    <ul class="page-header__menu-social-list">
+                                        <li class="page-header__menu-social-list-item">
+                                            <a href="#" class="page-header__menu-social-link">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-social-list-item">
+                                            <a href="#" class="page-header__menu-social-link">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-twitter">
+                                                    <use xlink:href="#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-social-list-item">
+                                            <a href="#" class="page-header__menu-social-link">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-youtube">
+                                                    <use xlink:href="#youtube"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-social-list-item">
+                                            <a href="#" class="page-header__menu-social-link">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                                                    <use xlink:href="#instagram"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-header__menu-social-list-item">
+                                            <a href="#" class="page-header__menu-social-link">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-telegram">
+                                                    <use xlink:href="#telegram"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="page-header__logo">
+                        <img src="img/logo.svg" alt="" class="page-header__logo-image" width="120">
+                    </a>
+        
+                    <nav class="page-header__nav">
+                        <ul class="page-header__nav-list">
+                            <li class="page-header__nav-list-item">
+                                <a href="#" class="page-header__nav-link">
+                                    Продукты
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="#" class="page-header__nav-link">
+                                    Решения
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="#" class="page-header__nav-link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="#" class="page-header__nav-link">
+                                    Пресс-центр
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="#" class="page-header__nav-link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="page-header__burger">
+        
+                    </button>
+                    <a href="#" class="page-header__search-btn">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="page-header__contact-link">
+                        Связаться
+                    </a>
+                </div>
+            </div>
+        </header>        <main class="page-main">
+
+
+<section class="intro js-intro">
+    <div class="intro__bg">
+
+    </div>
+    <div class="container">
+        <div class="intro__content">
+            <div class="intro__pane">
+
+
+                <div class="intro__items-row">
+                    <div class="intro__items-left-col">
+                        <h3 class="intro__items-heading">
+                            Услуги <br>
+                            и решения
+                        </h3>
+                    </div>
+                    <div class="intro__items-right-col">
+                        <ul class="intro__items">
+                            <li class="intro__item">
+                                <div class="intro__item-card">
+                                    <div class="intro__item-card-ring">
+                                        <svg width="448" height="449" viewBox="0 0 448 449" fill="none" xmlns="http://www.w3.org/2000/svg" class="js-hoop">
+                                            <g filter="url(#filter0_d)">
+                                                <path
+                                                    d="M 320.004 96.375 C 384.316 153.375 406.647 250.832 350.039 314.703 C 321.61 346.779 280.111 368.668 237.697 375.411 C 195.289 382.153 152.118 373.738 120.181 345.432 C 88.21 317.096 72.641 275.21 72.207 232.304 C 71.774 189.394 86.484 145.603 114.883 113.56 C 143.335 81.458 178.632 63.005 214.76 59.636 C 250.876 56.268 287.945 67.961 320.004 96.375 Z"
+                                                    stroke="url(#paint0_linear)" stroke-width="3" class="js-hoop-path-1" />
+                                            </g>
+                                            <g filter="url(#filter1_d)">
+                                                <path
+                                                    d="M 375.714 213.853 C 376.298 291.236 320.099 365.11 236.518 365.742 C 194.559 366.059 151.48 351.451 118.839 327.092 C 86.197 302.732 64.142 268.747 63.852 230.339 C 63.561 191.88 83.808 156.184 114.74 129.978 C 145.671 103.773 187.163 87.17 229.082 86.853 C 271.076 86.536 307.598 99.063 333.669 121.242 C 359.721 143.406 375.422 175.273 375.714 213.853 Z"
+                                                    stroke="url(#paint1_linear)" stroke-width="3" class="js-hoop-path-2" />
+                                            </g>
+                                            <g filter="url(#filter2_d)">
+                                                <path
+                                                    d="M 53.916 240.48 C 53.916 192.598 67.954 145.898 92.295 111.208 C 116.63 76.529 151.179 53.945 192.272 53.945 C 274.924 53.945 361.488 127.632 361.488 223.042 C 361.488 318.587 280.041 398.962 197.525 398.962 C 156.221 398.962 120.35 383.205 94.795 355.57 C 69.235 327.928 53.916 288.313 53.916 240.48 Z"
+                                                    stroke="url(#paint2_linear)" stroke-width="3" class="js-hoop-path-3" />
+                                            </g>
+                                            <g filter="url(#filter3_d)">
+                                                <path
+                                                    d="M42.9055 241.236C42.9055 159.271 102.673 81.4782 190.684 81.4783C234.86 81.4783 280.097 97.2924 314.268 123.349C348.441 149.406 371.402 185.582 371.402 226.281C371.402 267.03 349.792 304.678 317.017 332.183C284.243 359.686 240.427 376.936 196.291 376.936C152.08 376.936 113.726 363.378 86.4478 339.677C59.1876 315.991 42.9055 282.107 42.9055 241.236Z"
+                                                    stroke="url(#paint3_linear)" stroke-width="3" class="js-hoop-path-4" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_d" x="51.6992" y="38.5737" width="351.257" height="359.537" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                                    <feOffset />
+                                                    <feGaussianBlur stdDeviation="9.5" />
+                                                    <feColorMatrix type="matrix" values="0 0 0 0 0.290087 0 0 0 0 0.904167 0 0 0 0 0.713385 0 0 0 0.65 0" />
+                                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                                                </filter>
+                                                <filter id="filter1_d" x="43.3477" y="66.3472" width="352.869" height="319.9" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                                    <feOffset />
+                                                    <feGaussianBlur stdDeviation="9.5" />
+                                                    <feColorMatrix type="matrix" values="0 0 0 0 0.290087 0 0 0 0 0.904167 0 0 0 0 0.713385 0 0 0 0.65 0" />
+                                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                                                </filter>
+                                                <filter id="filter2_d" x="33.418" y="33.4453" width="348.572" height="386.017" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                                    <feOffset />
+                                                    <feGaussianBlur stdDeviation="9.5" />
+                                                    <feColorMatrix type="matrix" values="0 0 0 0 0.290087 0 0 0 0 0.904167 0 0 0 0 0.713385 0 0 0 0.65 0" />
+                                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                                                </filter>
+                                                <filter id="filter3_d" x="22.4062" y="60.978" width="369.497" height="336.457" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                                    <feOffset />
+                                                    <feGaussianBlur stdDeviation="9.5" />
+                                                    <feColorMatrix type="matrix" values="0 0 0 0 0.290087 0 0 0 0 0.904167 0 0 0 0 0.713385 0 0 0 0.65 0" />
+                                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear" x1="0" y1="240.92" x2="438.53" y2="159.743" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.395833" stop-color="#4AE7B6" />
+                                                    <stop offset="1" stop-color="#8038ED" />
+                                                </linearGradient>
+                                                <linearGradient id="paint1_linear" x1="61.2656" y1="86.6216" x2="385.946" y2="357.069"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.395833" stop-color="#4AE7B6" />
+                                                    <stop offset="1" stop-color="#8038ED" />
+                                                </linearGradient>
+                                                <linearGradient id="paint2_linear" x1="362.988" y1="400.462" x2="-11.6812" y2="147.312"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.395833" stop-color="#4AE7B6" />
+                                                    <stop offset="1" stop-color="#8038ED" />
+                                                </linearGradient>
+                                                <linearGradient id="paint3_linear" x1="372.902" y1="378.436" x2="31.7074" y2="91.5107"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.395833" stop-color="#4AE7B6" />
+                                                    <stop offset="1" stop-color="#8038ED" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>                                    </div>
+                                    <div class="intro__item-card-content">
+                                        <h3 class="intro__item-card-title">
+                                            <a href="#" class="intro__item-card-title-link">
+                                                ИТ-инфра&shy;структура и<br> телекоммуника&shy;ционные решения
+                                            </a>
+                                        </h3>
+                                        <ul class="intro__item-card-services-list">
+                                            <li class="intro__item-card-services-list-item">
+                                                Вычислительная инфраструктура
+                                            </li>
+                                            <li class="intro__item-card-services-list-item">
+                                                Офисная печать
+                                            </li>
+                                            <li class="intro__item-card-services-list-item">
+                                                Телекоммуникационные решения
+                                            </li>
+                                            <li class="intro__item-card-services-list-item">
+                                                Управление ИТ-инфраструктурой
+                                            </li>
+                                            <li class="intro__item-card-services-list-item">
+                                                Производство оборудования
+                                            </li>
+                                        </ul>
+                                        <div class="intro__item-card-products">
+                                            <h4 class="intro__item-card-products-heading">
+                                                флагманские продукты
+                                            </h4>
+                                            <ul class="intro__item-card-products-list">
+                                                <li class="intro__item-card-products-list-item">
+                                                    <a href="#" class="intro__item-card-products-card">
+                                                        <h5 class="intro__item-card-products-card-title">
+                                                            СХД
+                                                        </h5>
+                                                        <div class="intro__item-card-products-card-tags">
+                                                            <div class="intro__item-card-products-card-tag">
+                                                                #стартапы
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="intro__item-card-products-list-item">
+                                                    <a href="#" class="intro__item-card-products-card">
+                                                        <h5 class="intro__item-card-products-card-title">
+                                                            Дистанция — удаленные рабочие места
+                                                        </h5>
+                                                        <div class="intro__item-card-products-card-tags">
+                                                            <div class="intro__item-card-products-card-tag">
+                                                                #разработка
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="intro__item-card-products-list-item">
+                                                    <a href="#" class="intro__item-card-products-card">
+                                                        <h5 class="intro__item-card-products-card-title">
+                                                            РУСТЭК — защищенная платформа виртуализации
+                                                        </h5>
+                                                        <div class="intro__item-card-products-card-tags">
+                                                            <div class="intro__item-card-products-card-tag">
+                                                                #блокчейн
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="intro__item-card-products-list-item">
+                                                    <a href="#" class="intro__item-card-products-card">
+                                                        <h5 class="intro__item-card-products-card-title">
+                                                            Система управления печатью Принт-Икс
+                                                        </h5>
+                                                        <div class="intro__item-card-products-card-tags">
+                                                            <div class="intro__item-card-products-card-tag">
+                                                                #блокчейн
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="intro__item-card-products-list-item">
+                                                    <a href="#" class="intro__item-card-products-card">
+                                                        <h5 class="intro__item-card-products-card-title">
+                                                            Унифицированные коммуникации
+                                                        </h5>
+                                                        <div class="intro__item-card-products-card-tags">
+                                                            <div class="intro__item-card-products-card-tag">
+                                                                #разработка
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="intro__item-card-hover-area">
+
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="intro__slogan">
+                    <div class="intro__slogan-text">
+                        Ведущий российский системный интегратор
+                    </div>
+                    <a href="#" class="intro__slogan-details-link">
+                        Подробнее
+                    </a>
+                </div>
+
+                <div class="intro__news js-intro-news-tabs">
+                    <div class="intro__news-tabs-nav">
+                        <a href="#" class="intro__news-tabs-nav-link">
+                            новости
+                        </a>
+                        <a href="#" class="intro__news-tabs-nav-link">
+                            мероприятия
+                        </a>
+                    </div>
+                    <div class="intro__news-tabs-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <ul class="intro__news-list">
+                                        <li class="intro__news-list-item">
+                                            <a href="#" class="intro__news-card">
+                                                <h4 class="intro__news-card-title">
+                                                    Насколько могут вырасти ваши показатели продаж с решениями HPE +
+                                                    Veeam и
+                                                    UserGate (NGFW)
+                                                </h4>
+
+                                                <time datetime="2021-08-20" class="intro__news-card-time">20
+                                                    августа</time>
+                                            </a>
+                                        </li>
+                                        <li class="intro__news-list-item">
+                                            <a href="#" class="intro__news-card">
+                                                <h4 class="intro__news-card-title">
+                                                    Онлайн-семинар Wi-Fi 6 — миф и реальность
+                                                </h4>
+
+                                                <time datetime="2021-08-20" class="intro__news-card-time">20
+                                                    августа</time>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="intro__news-all-news">
+                                        Все новости
+
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="intro__news-list">
+                                        <li class="intro__news-list-item">
+                                            <a href="#" class="intro__news-card">
+                                                <h4 class="intro__news-card-title">
+                                                    Насколько могут вырасти ваши показатели продаж с решениями HPE +
+                                                    Veeam и
+                                                    UserGate (NGFW)
+                                                </h4>
+
+                                                <time datetime="2021-08-20" class="intro__news-card-time">20
+                                                    августа</time>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                    <a href="#" class="intro__news-all-news">
+                                        Все мероприятия
+
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__controls">
+                <a href="#" class="intro__controls-btn js-chaos-view">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-grid-view">
+                        <use xlink:href="#grid-view"></use>
+                    </svg>
+                </a>
+                <a href="#" class="intro__controls-btn js-ordered-view">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-list-view">
+                        <use xlink:href="#list-view"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-company">
+    <div class="container">
+        <h2 class="about-company__heading">
+            О компании
+        </h2>
+        <div class="about-company__top-row">
+            <div class="about-company__intro-text">
+                <p>
+                    Создаем ценность для организаций через инновации, опираясь на доверие, опыт и технологии
+                </p>
+            </div>
+            <div class="about-company__full-text">
+                <p>
+                    Работаем в сфере строительства ИТ- и инженерной инфраструктуры, консалтинга и разработки,
+                    комплексной безопасности, аутсорсинга и развития
+                    стартапов.
+                </p>
+                <p>
+                    Группа компаний «АйТеко» объединяет лучшую экспертизу и развивает такие передовые
+                    направления, как: большие данные, облачные технологии, искусственный интеллект,
+                    интегрированные коммуникации,заказная разработка ПО, блокчейн, строительство с
+                    применением информационного моделирования зданий (BIM), сети пятого поколения, также
+                    занимается акселерацией стартапов.
+                </p>
+                <p>
+                    «АйТеко» работает на ИТ-рынке с 1997 года, сохраняя стабильные темпы роста на протяжении
+                    всего времени своего существования. Оборот «АйТеко» по итогам 2019 года составил 36,34 млрд
+                    рублей.
+                </p>
+            </div>
+            <ul class="about-company__features">
+                <li class="about-company__features-item">
+                    <div class="about-company__features-card">
+                        <div class="about-company__features-card-icon">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-compass">
+                                <use xlink:href="#compass"></use>
+                            </svg>
+                        </div>
+
+                        <div class="about-company__features-card-text">
+                            <p>
+                                ИТ-аутсорсинг, управленческий консалтинг, системы связи и энергетики, BIM-
+                                проектирование, успешно развивают дочерние компании в структуре группы компаний
+                                «АйТеко».
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="about-company__features-item">
+                    <div class="about-company__features-card">
+                        <div class="about-company__features-card-icon">
+
+
+                            <svg width="14" height="14" aria-hidden="true" class="icon-handshake">
+                                <use xlink:href="#handshake"></use>
+                            </svg>
+                        </div>
+                        <div class="about-company__features-card-text">
+                            <p>
+                                Партнерская сеть «АйТеко» объединяет более 180 компаний в 85 регионах России —
+                                от Калининграда до Петропавловска- Камчатского.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="about-company__bottom-row">
+            <ul class="about-company__numbers">
+                <li class="about-company__numbers-item">
+                    <div class="about-company__numbers-card">
+                        <div class="about-company__numbers-card-number">
+                            2900+
+                        </div>
+                        <div class="about-company__numbers-card-text">
+                            Сертификатов
+                        </div>
+                    </div>
+                </li>
+                <li class="about-company__numbers-item">
+                    <div class="about-company__numbers-card">
+                        <div class="about-company__numbers-card-number">
+                            1997
+                        </div>
+                        <div class="about-company__numbers-card-text">
+                            Год основания компании
+                        </div>
+                    </div>
+                </li>
+                <li class="about-company__numbers-item">
+                    <div class="about-company__numbers-card">
+                        <div class="about-company__numbers-card-number">
+                            3200+
+                        </div>
+                        <div class="about-company__numbers-card-text">
+                            Сотрудников в штате
+                        </div>
+                    </div>
+                </li>
+                <li class="about-company__numbers-item">
+                    <div class="about-company__numbers-card">
+                        <div class="about-company__numbers-card-number">
+                            20
+                        </div>
+                        <div class="about-company__numbers-card-text">
+                            Собственных проектов
+                        </div>
+                    </div>
+                </li>
+                <li class="about-company__numbers-item">
+                    <div class="about-company__numbers-card">
+                        <div class="about-company__numbers-card-number">
+                            85
+                        </div>
+                        <div class="about-company__numbers-card-text">
+                            Все субъекты РФ
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="about-company__page-link">
+                О компании
+
+                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="awards">
+    <div class="container">
+        <h2 class="awards__heading">
+            <a href="#" class="awards__heading-link">
+                Признание
+
+                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </a>
+
+        </h2>
+        <div class="awards__top-row">
+            <ul class="awards__items">
+                <li class="awards__item">
+                    <div class="awards__item-card">
+                        <div class="awards__item-card-icon">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-award">
+                                <use xlink:href="#award"></use>
+                            </svg>
+                        </div>
+                        <div class="awards__item-card-text">
+                            <p>
+                                За годы работы компания «Ай-Теко» удостаивалась многих почетных наград и дипломов.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="awards__item">
+                    <div class="awards__item-card">
+                        <div class="awards__item-card-icon">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-crowd">
+                                <use xlink:href="#crowd"></use>
+                            </svg>
+                        </div>
+                        <div class="awards__item-card-text">
+                            <p>
+                                Присвоенные звания подчеркивают высокое качество комплексных решений компании
+                                и профессионализм команды специалистов.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="awards__intro-text">
+                <p>
+                    Входим в перечень системо- образующих организаций российской экономики в сфере информации и связи
+                </p>
+            </div>
+        </div>
+        <ul class="awards__numbers">
+            <li class="awards__numbers-item">
+                <div class="awards__numbers-card">
+                    <div class="awards__numbers-card-digit">
+                        <div class="awards__numbers-card-digit-text">
+                            Топ
+                        </div>
+                        <div class="awards__numbers-card-digit-number">
+                            5
+                        </div>
+                    </div>
+                    <ul class="awards__categories-list">
+                        <li class="awards__categories-list-item">
+                            <a href="#" class="awards__categories-card">
+                                <h4 class="awards__categories-card-title">
+                                    ИТ-компаний России
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                        <use xlink:href="#arrow-diagonal"></use>
+                                    </svg>
+                                </h4>
+                                <div class="awards__categories-card-text">
+                                    RAEX/Эксперт РА
+                                </div>
+                            </a>
+                        </li>
+                        <li class="awards__categories-list-item">
+                            <a href="#" class="awards__categories-card">
+                                <h4 class="awards__categories-card-title">
+                                    Поставщиков ИТ-услуг России
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                        <use xlink:href="#arrow-diagonal"></use>
+                                    </svg>
+                                </h4>
+                                <div class="awards__categories-card-text">
+                                    RAEX/Эксперт РА, IDC, Tadviser
+                                </div>
+                            </a>
+                        </li>
+                        <li class="awards__categories-list-item">
+                            <a href="#" class="awards__categories-card">
+                                <h4 class="awards__categories-card-title">
+                                    Разработчиков ПО
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                        <use xlink:href="#arrow-diagonal"></use>
+                                    </svg>
+                                </h4>
+                                <div class="awards__categories-card-text">
+                                    RAEX/Эксперт РА, IDC, Tadviser
+                                </div>
+                            </a>
+                        </li>
+                        <li class="awards__categories-list-item">
+                            <a href="#" class="awards__categories-card">
+                                <h4 class="awards__categories-card-title">
+                                    Системных интеграторов России в сфере построения ИТ-инфраструктуры
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                        <use xlink:href="#arrow-diagonal"></use>
+                                    </svg>
+                                </h4>
+                                <div class="awards__categories-card-text">
+                                    CNews
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+            <li class="awards__numbers-item">
+                <div class="awards__numbers-card">
+                    <div class="awards__numbers-card-digit">
+                        <div class="awards__numbers-card-digit-text">
+                            Топ
+                        </div>
+                        <div class="awards__numbers-card-digit-number">
+                            500
+                        </div>
+                    </div>
+
+
+                    <ul class="awards__categories-list">
+                        <li class="awards__categories-list-item awards__categories-list-item--fullwidth">
+                            <a href="#" class="awards__categories-card">
+                                <h4 class="awards__categories-card-title">
+                                    Поставщиков ИТ для операторов связи и промышленных предприятий
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                        <use xlink:href="#arrow-diagonal"></use>
+                                    </svg>
+                                </h4>
+                                <div class="awards__categories-card-text">
+                                    RAEX
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="success-stories js-success-stories">
+    <div class="container">
+        <h2 class="success-stories__heading">
+            Истории успеха
+        </h2>
+
+        <div class="success-stories__slider">
+            <div class="success-stories__slider-top-panel">
+
+
+                <div class="success-stories__slider-nav">
+                    <a href="#" class="success-stories__slider-nav-link active">
+                        Все направления
+                    </a>
+                    <a href="#" class="success-stories__slider-nav-link">
+                        Образование
+                    </a>
+                    <a href="#" class="success-stories__slider-nav-link">
+                        Торговля
+                    </a>
+                    <a href="#" class="success-stories__slider-nav-link">
+                        ИТ, телекоммуникации
+                    </a>
+                    <a href="#" class="success-stories__slider-nav-link">
+                        Нефтегаз
+                    </a>
+                    <a href="#" class="success-stories__slider-nav-link">
+                        Промышленность
+                    </a>
+                </div>
+            </div>
+            <div class="success-stories__slider-main">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="success-stories__slider-main-card">
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/2.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Услуги по техподдержке и обслуживанию АПК в 6 макрорегиональных центрах
+                                            «Почты России»
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/3.svg" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Внедрение в ВТБ систему сбора биометрических данных
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="success-stories__slider-main-card">
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/2.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Услуги по техподдержке и обслуживанию АПК в 6 макрорегиональных центрах
+                                            «Почты России»
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/3.svg" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Внедрение в ВТБ систему сбора биометрических данных
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="success-stories__slider-main-card">
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/2.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Услуги по техподдержке и обслуживанию АПК в 6 макрорегиональных центрах
+                                            «Почты России»
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/3.svg" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Внедрение в ВТБ систему сбора биометрических данных
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="success-stories__slider-main-card">
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/2.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Услуги по техподдержке и обслуживанию АПК в 6 макрорегиональных центрах
+                                            «Почты России»
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/3.svg" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Внедрение в ВТБ систему сбора биометрических данных
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="success-stories__slider-main-card">
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/2.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Услуги по техподдержке и обслуживанию АПК в 6 макрорегиональных центрах
+                                            «Почты России»
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/3.svg" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Внедрение в ВТБ систему сбора биометрических данных
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="success-stories__slider-main-card">
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/2.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Услуги по техподдержке и обслуживанию АПК в 6 макрорегиональных центрах
+                                            «Почты России»
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/3.svg" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Образование
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Внедрение в ВТБ систему сбора биометрических данных
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="success-stories__slider-subcard">
+                                    <div class="success-stories__slider-subcard-icon-container">
+                                        <img src="img/success-stories/1.png" alt=""
+                                            class="success-stories__slider-subcard-icon">
+                                    </div>
+                                    <div class="success-stories__slider-subcard-content">
+                                        <div class="success-stories__slider-subcard-category">
+                                            Торговля
+                                        </div>
+                                        <div class="success-stories__slider-subcard-text">
+                                            Электронная карта в образовании: «Москвёнок» вчера, сегодня, завтра
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="success-stories__slider-bottom-panel">
+                <div class="success-stories__slider-detail-links">
+                    <a href="#" class="success-stories__slider-detail-link">
+                        Показать еще
+
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="success-stories__slider-detail-link">
+                        Смотреть все проекты
+
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        </main>
+        <footer class="page-footer">
+            <div class="page-footer__inner">
+        
+        
+                <div class="container">
+                    <div class="page-footer__top-row">
+                        <a href="#" class="page-footer__logo">
+                            <img src="img/iteko-simple-logo.png" alt="" class="page-footer__logo-image">
+                        </a>
+                        <nav class="page-footer__nav">
+                            <a href="#" class="page-footer__nav-link">
+                                Решения
+                            </a>
+                            <a href="#" class="page-footer__nav-link">
+                                Продукты
+                            </a>
+                            <a href="#" class="page-footer__nav-link">
+                                Проекты
+                            </a>
+                            <a href="#" class="page-footer__nav-link">
+                                О компании
+                            </a>
+                            <a href="#" class="page-footer__nav-link">
+                                Карьера
+                            </a>
+                            <a href="#" class="page-footer__nav-link">
+                                Партнеры
+                            </a>
+                            <a href="#" class="page-footer__nav-link">
+                                Пресс-центр
+                            </a>
+                            <a href="#" class="page-footer__nav-link">
+                                Контакты
+                            </a>
+                        </nav>
+                        <div class="page-footer__contacts">
+                            <div class="page-footer__contacts-main">
+                                <a href="tel:+74957771095" class="page-footer__phone-link">
+                                    +7 495 777-10-95
+                                </a>
+                                <a href="#" class="page-footer__mail-link">
+                                    income@i-teco.ru
+                                </a>
+                                <div class="page-footer__address">
+                                    Ул. Кедрова, 15, Москва, 117036
+                                </div>
+                                <ul class="page-footer__social-list">
+                                    <li class="page-footer__social-list-item">
+                                        <a href="#" class="page-footer__social-link">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-fb">
+                                                <use xlink:href="#fb"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__social-list-item">
+                                        <a href="#" class="page-footer__social-link">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-twitter">
+                                                <use xlink:href="#twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__social-list-item">
+                                        <a href="#" class="page-footer__social-link">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-youtube">
+                                                <use xlink:href="#youtube"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__social-list-item">
+                                        <a href="#" class="page-footer__social-link">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                                                <use xlink:href="#instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__social-list-item">
+                                        <a href="#" class="page-footer__social-link">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-telegram">
+                                                <use xlink:href="#telegram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page-footer__contacts-additional">
+                                <div class="page-footer__contacts-additional-item">
+                                    <h5 class="page-footer__contacts-additional-item-title">
+                                        Тех.поддержка
+                                    </h5>
+                                    <a href="tel:+78002001095" class="page-footer__contacts-additional-item-link">
+                                        8 800 200-10-95
+                                    </a>
+                                </div>
+                                <div class="page-footer__contacts-additional-item">
+                                    <h5 class="page-footer__contacts-additional-item-title">
+                                        Пресс-служба
+                                    </h5>
+                                    <a href="mailto:press@i-teco.ru" class="page-footer__contacts-additional-item-link">
+                                        press@i-teco.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer__bottom-row">
+                        <div class="page-footer__copyright">
+                            © i-teco, 2020
+                        </div>
+                        <a href="#" class="page-footer__policy">
+                            Обработка персональных данных
+                        </a>
+                        <a href="#" class="page-footer__info">
+                            Раскрытие информации
+                        </a>
+                        <a href="#" class="page-footer__made-by">
+                            Создание сайта
+                            <img src="img/mark-weber-logo.svg" alt="" class="page-footer__made-by-image">
+                        </a>
+                    </div>
+                    <div class="page-footer__remark">
+                        <p>
+                            Поскольку информационные активы любой организации нуждаются в соответствующей защите, Политика
+                            информационной безопасности АО «Ай-Теко» — один из основополагающих документов компании. А Политика
+                            организации обработки и обеспечения безопасности персональных данных в АО «Ай-Теко» определяет
+                            соблюдение принципов законности, конфиденциальности и безопасности при обработке персональных
+                            данных.
+                            В сфере производственной безопасности обеспечивается приоритет сохранения жизни и здоровья
+                            работников
+                            перед результатом хозяйственной деятельности, что нашло отражение в документе Политика АО «Ай-Теко»
+                            в области охраны труда. Мы дорожим репутацией компании с ответственным подходом к решению вопросов
+                            обеспечения экологической безопасности, зафиксировав это в документе Политика АО «Ай-Теко» в области
+                            охраны окружающей среды.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>

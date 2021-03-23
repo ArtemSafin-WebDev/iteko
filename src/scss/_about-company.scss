@@ -1,0 +1,231 @@
+.about-company {
+    padding-top: 8.5rem;
+    padding-bottom: 13.2rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-top: 5rem;
+        padding-bottom: 8rem;
+    }
+}
+
+.about-company__heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 111%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-bottom: 0.3rem solid #1b1e1d;
+    margin-bottom: 6rem;
+    padding-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+      
+        font-size: 1.5rem;
+        line-height: 111%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        padding-bottom: 1.7rem;
+        margin-bottom: 1.7rem;
+    }
+}
+
+.about-company__top-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    margin-bottom: 13.5rem;
+
+    @include breakpoint(mobile) {
+        display: block;
+        margin-bottom: 4.5rem;
+    }
+}
+
+.about-company__intro-text {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    margin-top: -0.3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 140%;
+        margin: 0;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.about-company__full-text {
+    font-size: 1.4rem;
+    line-height: 140%;
+
+    p {
+        margin-bottom: 1.2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+}
+
+.about-company__features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        display: block;
+        margin-top: 4rem;
+    }
+}
+
+.about-company__features-item {
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about-company__features-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-company__features-card-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        height: auto;
+        margin-bottom: .6rem;
+        display: block;
+    }
+    svg {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--primary-color);
+        display: block;
+
+        &.icon-handshake {
+            width: 3.5rem;
+            height: 2.6rem;
+        }
+    }
+}
+
+.about-company__features-card-text {
+    font-size: 1.5rem;
+    line-height: 140%;
+    max-width: 27.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 140%;
+        max-width: none;
+    }
+}
+
+.about-company__bottom-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 32rem;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+
+.about-company__numbers {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 4rem;
+    grid-row-gap: 9rem;
+    margin-bottom: 0.8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2.8rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.about-company__numbers-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-company__numbers-card-number {
+    font-weight: 500;
+    font-size: 8rem;
+    line-height: 123%;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid #1b1e1d;
+    margin-bottom: 1.7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 3.6rem;
+        line-height: 130%;
+        padding-bottom: .2rem;
+        margin-bottom: .7rem;
+    }
+}
+
+.about-company__numbers-card-text {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 120%;
+    }
+}
+
+.about-company__page-link {
+    display: flex;
+    align-items: center;
+    padding-top: 2.2rem;
+    border-top: 1px solid #1b1e1d;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 111%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    justify-content: space-between;
+    align-self: flex-end;
+
+    @include breakpoint(mobile) {
+      
+        font-size: 1.5rem;
+        line-height: 111%;
+        padding-top: 1.8rem;
+    }
+    svg {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+}
