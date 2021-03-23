@@ -2177,9 +2177,6 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center; }
 
-.intro__item-card-content {
-  position: relative; }
-
 @media only screen and (max-width: 640px) {
   .intro__item-card-services-list {
     display: none; } }
@@ -2200,7 +2197,8 @@ select:-webkit-autofill:focus {
   width: 28rem;
   opacity: 0;
   visibility: hidden;
-  margin-left: -6rem; }
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%); }
   @media only screen and (max-width: 640px) {
     .intro__item-card-products {
       display: none; } }

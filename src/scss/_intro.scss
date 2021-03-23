@@ -315,7 +315,7 @@
 }
 
 .intro__item-card-content {
-    position: relative;
+    // position: relative;
 }
 
 .intro__item-card-services-list {
@@ -342,7 +342,8 @@
     width: 28rem;
     opacity: 0;
     visibility: hidden;
-    margin-left: -6rem;
+    transform: translateX(-30%);
+    // margin-left: -6rem;
 
     @include breakpoint(mobile) {
         display: none;

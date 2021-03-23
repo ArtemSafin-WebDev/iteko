@@ -37,12 +37,13 @@ export default function newIntro() {
                 const cardContent = item.card.querySelector('.intro__item-card-content');
                 const hiddenContent = item.card.querySelector('.js-intro-card-hidden-content');
 
-                const cardContentLeft = cardContent.getBoundingClientRect().right;
-                const cardProductsLeft = hiddenContent.getBoundingClientRect().right;
+                const cardContentRight = item.card.getBoundingClientRect().right;
+                const cardProductsRight = hiddenContent.getBoundingClientRect().right;
                 const controlsOffset = parseFloat(window.getComputedStyle(elements.controls).right);
 
-                const x = -1 * (cardProductsLeft - cardContentLeft + controlsOffset);
+                const x = -1 * (cardProductsRight - cardContentRight + controlsOffset);
                 const y = `+=${window.innerHeight * 0.1}`;
+               
 
                 return {
                     x,
