@@ -34,7 +34,7 @@ export default function newIntro() {
             ringActiveMultiplier: 1.8,
             active: false,
             paneOffsetFormula: item => {
-                const cardContent = item.card.querySelector('.intro__item-card-content');
+                // const cardContent = item.card.querySelector('.intro__item-card-content');
                 const hiddenContent = item.card.querySelector('.js-intro-card-hidden-content');
 
                 const cardContentRight = item.card.getBoundingClientRect().right;
@@ -43,7 +43,6 @@ export default function newIntro() {
 
                 const x = -1 * (cardProductsRight - cardContentRight + controlsOffset);
                 const y = `+=${window.innerHeight * 0.1}`;
-               
 
                 return {
                     x,
@@ -69,6 +68,53 @@ export default function newIntro() {
                     y
                 };
             }
+        },
+        {
+            card: intro.querySelector('#engineering-card'),
+            cardMultiplier: 0.8,
+            ringMultiplier: 1.2,
+            cardActiveMultiplier: 1.2,
+            ringActiveMultiplier: 2.1,
+            
+            active: false,
+            cardOffsetFormula: item => {
+                const x = -1 * window.innerWidth * 0.1;
+                const y =
+                    -1 *
+                    (item.card.getBoundingClientRect().top -
+                        document.querySelector('.page-header').offsetHeight -
+                        (item.card.querySelector('.intro__item-card-ring').offsetHeight * item.ringMultiplier) / 2);
+
+                return {
+                    x,
+                    y
+                };
+            },
+            paneOffsetFormula: item => {
+                const x = `+=100`;
+                const y = `+=${item.card.offsetHeight * 1.2}`;
+
+                return {
+                    x, y
+                }
+            },
+            activeOffsetFormula: item => {
+                const x = `-=150`;
+                const y = `-=${item.card.offsetHeight * 1.2}`;
+
+                return {
+                    x, y
+                }
+            },
+            exitOffsetFormula: item => {
+                const x = `+=150`;
+                const y = `+=${item.card.offsetHeight * 1.2}`;
+
+                return {
+                    x, y
+                }
+            }
+
         }
     ];
 
@@ -226,6 +272,16 @@ export default function newIntro() {
         });
 
         tl.to(
+            item.card,
+            {
+             
+                scale: item.cardActiveMultiplier,
+                duration: CARD_ACTIVATION_DURATION
+            },
+            0
+        );
+
+        tl.to(
             hiddenContent,
             {
                 autoAlpha: 1,
@@ -270,6 +326,20 @@ export default function newIntro() {
             },
             0
         );
+
+        if (item.activeOffsetFormula) {
+            const activeOffset = item.activeOffsetFormula(item);
+            console.log('Active offset on enter', activeOffset)
+            tl.to(
+                item.card,
+                {
+                    x: activeOffset.x,
+                    y: activeOffset.y,
+                    duration: CARD_ACTIVATION_DURATION
+                },
+                0
+            );
+        }
     };
 
     const deactivateCurrentCard = () => {
@@ -300,6 +370,16 @@ export default function newIntro() {
             {
                 autoAlpha: 0,
                 duration: 0.3
+            },
+            0
+        );
+
+        tl.to(
+            item.card,
+            {
+               
+                scale: item.cardMultiplier,
+                duration: CARD_ACTIVATION_DURATION
             },
             0
         );
@@ -340,6 +420,21 @@ export default function newIntro() {
             },
             0
         );
+
+
+        if (item.exitOffsetFormula) {
+            const activeOffset = item.exitOffsetFormula(item);
+            console.log('Active offset on exit', activeOffset)
+            tl.to(
+                item.card,
+                {
+                    x: activeOffset.x,
+                    y: activeOffset.y,
+                    duration: CARD_ACTIVATION_DURATION
+                },
+                0
+            );
+        }
     };
 
     const enterChaosMode = (forced = false) => {
@@ -469,7 +564,6 @@ export default function newIntro() {
             if (state.mode === 'chaos') {
                 enterOrderMode(true);
                 enterChaosMode(true);
-
             }
         }, RESIZE_DEBOUNCE)
     );
