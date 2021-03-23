@@ -207,7 +207,7 @@
     z-index: 300;
     position: relative;
 
-    z-index: 1;
+ 
     &::before {
         content: '';
         position: absolute;
@@ -264,8 +264,13 @@
     overflow-x: hidden;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: opacity, visibility;
+    // transition: opacity 0.4s, visibility 0s linear 0.4s;
     -webkit-overflow-scrolling: touch;
+    transform-origin: center top;
+   
 
     @include breakpoint(mobile) {
         padding-top: 6.6rem;
@@ -273,11 +278,11 @@
         background-image: url('../img/menu-mobile-bg.jpg');
     }
 
-    .menu-open & {
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity 0.4s, visibility 0.4s;
-    }
+    // .menu-open & {
+    //     opacity: 1;
+    //     visibility: inherit;
+    //     transition: opacity 0.4s, visibility 0.4s;
+    // }
 
     .no-touch & {
         &::-webkit-scrollbar {
@@ -304,6 +309,13 @@
 
    
 }
+
+
+.page-header__menu-inner {
+    opacity: 0;
+    visibility: hidden;
+}
+
 
 .page-header__search-form {
     display: flex;
@@ -392,13 +404,17 @@
     font-size: 4.5rem;
     line-height: 120%;
     margin-bottom: 4.5rem;
-
+    overflow: hidden;
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.5rem;
         line-height: 120%;
         margin-bottom: 1.7rem;
     }
+}
+
+.page-header__menu-solutions-heading-text {
+
 }
 
 .page-header__menu-solutions-list {
@@ -408,7 +424,7 @@
 
 .page-header__menu-solutions-list-item {
     margin-bottom: 4.4rem;
-
+    overflow: hidden;
     @include breakpoint(mobile) {
         margin-bottom: 1.2rem;
     }
@@ -420,7 +436,7 @@
 .page-header__menu-solutions-card {
     font-size: 1.5rem;
     line-height: 140%;
-
+    display: block;
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 140%;
@@ -459,7 +475,7 @@
     font-size: 4.5rem;
     line-height: 120%;
     margin-bottom: 5rem;
-
+    overflow: hidden;
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.5rem;
@@ -469,6 +485,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.page-header__nav-link-text {
+    display: block;
 }
 
 .page-header__menu-contacts {
