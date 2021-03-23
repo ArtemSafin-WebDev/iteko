@@ -3,13 +3,36 @@
     padding-top: 13rem;
     padding-bottom: 2rem;
 
-   
     position: relative;
     z-index: 1;
+
+
 
     @include breakpoint(mobile) {
         padding-top: 4rem;
         padding-bottom: 3rem;
+    }
+}
+
+.awards-megahoop {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 75.7rem;
+    height: auto;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    .cls-1 {
+        fill: none;
+        stroke: #1c0f52;
+        stroke-width: 7px;
+        opacity: 0.05;
+        isolation: isolate;
     }
 }
 
@@ -136,6 +159,34 @@
         font-size: 1.2rem;
         max-width: none;
         line-height: 140%;
+    }
+}
+
+.awards__numbers-item {
+    position: relative;
+    z-index: 1;
+}
+
+.awards__hoop {
+    position: absolute;
+    left: 15rem;
+    top: 0;
+    transform: translateY(-50%);
+    width: 38rem;
+    height: 38rem;
+    z-index: -1;
+    pointer-events: none;
+    margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+    .cls-1 {
+        fill: none;
+        stroke: #1c0f52;
+        stroke-width: 4px;
+        opacity: 0.05;
+        isolation: isolate;
     }
 }
 
