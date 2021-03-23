@@ -22,15 +22,22 @@ export default function intro() {
 
         let movedToCardOne = false;
 
+        // const card0Multiplier = 1.4;
+        // const card0RingMultiplier = 1.6;
+        // const card0RingMaxScale = 2.3;
+        const card0Multiplier = 1.2;
+        const card0RingMultiplier = 1.4;
+        const card0RingMaxScale = 1.8;
+
         const calculateCard0Offset = () => {
             const controlsOffset = parseFloat(window.getComputedStyle(controls).right);
             return {
-                x: document.documentElement.clientWidth - cards[0].getBoundingClientRect().left - cards[0].offsetWidth * 1.4 - controlsOffset - controls.offsetWidth,
+                x: document.documentElement.clientWidth - cards[0].getBoundingClientRect().left - cards[0].offsetWidth * card0Multiplier - controlsOffset - controls.offsetWidth,
                 y:
                     -1 *
                     (cards[0].getBoundingClientRect().top -
                         document.querySelector('.page-header').offsetHeight -
-                        (cards[0].querySelector('.intro__item-card-ring').offsetHeight * 1.6) / 2)
+                        (cards[0].querySelector('.intro__item-card-ring').offsetHeight * card0RingMultiplier) / 2)
             };
         };
 
@@ -57,14 +64,14 @@ export default function intro() {
             tl.to(cards[0], {
                 x: card0Offset.x,
                 y: card0Offset.y,
-                scale: 1.4,
+                scale: card0Multiplier,
                 duration: forced ? 0 : cardTransitionDuration
             });
 
             tl.to(
                 ring,
                 {
-                    scale: 1.6,
+                    scale: card0RingMultiplier,
                     duration: forced ? 0 : cardTransitionDuration
                 },
                 0
@@ -122,7 +129,7 @@ export default function intro() {
             tl.to(
                 ring,
                 {
-                    scale: 2.3,
+                    scale: card0RingMaxScale,
                     duration: 0.6
                 },
                 0
@@ -181,7 +188,7 @@ export default function intro() {
             tl.to(
                 ring,
                 {
-                    scale: 1.6,
+                    scale: card0RingMultiplier,
                     duration: 0.6
                 },
                 0

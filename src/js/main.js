@@ -13,6 +13,7 @@ import successStories from './successStories';
 import hoop from './hoop';
 import menu from './menu';
 import FixedFooter from './fixedFooter';
+import newIntro from './newIntro';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onlyNumeric();
     fileUpload();
     intro();
+    // newIntro();
     introNewsTabs();
     successStories();
     hoop();

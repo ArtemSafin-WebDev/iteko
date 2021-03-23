@@ -2212,8 +2212,9 @@ select:-webkit-autofill:focus {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 2.8rem;
-  padding-left: 1.5rem; }
+  margin-bottom: 1.8rem;
+  padding-left: 1.5rem;
+  margin-top: 0.4rem; }
 
 .intro__item-card-products-list {
   padding-left: 1.5rem;
