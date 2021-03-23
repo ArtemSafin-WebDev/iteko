@@ -159,6 +159,7 @@
 .success-stories__slider-main {
     display: flex;
     flex-direction: column;
+   
 
     .swiper-container {
         margin: 0;
@@ -169,6 +170,11 @@
         display: flex;
         flex-direction: column;
         height: auto;
+
+        transition: transform .5s;
+        .slider-transitioning & {
+            transform: scale(0.9);
+        }
     }
 }
 

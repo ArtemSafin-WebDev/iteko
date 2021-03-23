@@ -18,6 +18,12 @@ export default function successStories() {
             autoHeight: true,
             speed: 700,
             on: {
+                slideChangeTransitionStart: () => {
+                    element.classList.add('slider-transitioning')
+                },
+                slideChangeTransitionEnd: () => {
+                    element.classList.remove('slider-transitioning')
+                },
                 slideChange: swiper => {
                     links.forEach(link => link.classList.remove('active'));
                     links[swiper.realIndex].classList.add('active');
