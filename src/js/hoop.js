@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 
 export default function hoop() {
+    return;
     const elements = Array.from(document.querySelectorAll('.js-hoop'));
 
     elements.forEach(element => {
