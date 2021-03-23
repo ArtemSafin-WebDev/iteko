@@ -91,7 +91,7 @@ export default function newIntro() {
                 };
             },
             paneOffsetFormula: item => {
-                const x = `+=100`;
+                const x = `+=${item.card.offsetWidth * 0.3}`;
                 const y = `+=${item.card.offsetHeight * 1.2}`;
 
                 return {
@@ -99,7 +99,7 @@ export default function newIntro() {
                 }
             },
             activeOffsetFormula: item => {
-                const x = `-=150`;
+                const x = `-=${item.card.offsetWidth * 0.4}`;
                 const y = `-=${item.card.offsetHeight * 1.2}`;
 
                 return {
@@ -107,7 +107,7 @@ export default function newIntro() {
                 }
             },
             exitOffsetFormula: item => {
-                const x = `+=150`;
+                const x = `+=${item.card.offsetWidth * 0.4}`;
                 const y = `+=${item.card.offsetHeight * 1.2}`;
 
                 return {
@@ -342,7 +342,7 @@ export default function newIntro() {
         }
     };
 
-    const deactivateCurrentCard = () => {
+    const deactivateCurrentCard = (onDeactivation) => {
         if (!state.cardChosen || !state.activeCard || state.animating || state.mode === 'order') return;
         const card = state.activeCard;
         const item = cards.find(item => item.card === card);
@@ -362,6 +362,10 @@ export default function newIntro() {
                 state.cardChosen = false;
                 state.activeCard = null;
                 unlock();
+
+                if (typeof onDeactivation === 'function') {
+                    onDeactivation();
+                }
             }
         });
 
@@ -552,7 +556,15 @@ export default function newIntro() {
     intro.addEventListener('mouseover', event => {
         if (event.target.matches('.intro__item-card') || event.target.closest('.intro__item-card')) {
             const card = event.target.matches('.intro__item-card') ? event.target : event.target.closest('.intro__item-card');
-            activateCard(card);
+
+            if (state.cardChosen && card !== state.activeCard) {
+                deactivateCurrentCard(() => {
+                    activateCard(card);
+                });
+            } else {
+                activateCard(card);
+            }
+            
         } else {
             deactivateCurrentCard();
         }
