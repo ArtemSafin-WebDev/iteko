@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     onlyNumeric();
     fileUpload();
-    intro();
-    // newIntro();
+    // intro();
+    newIntro();
     introNewsTabs();
     successStories();
     hoop();
