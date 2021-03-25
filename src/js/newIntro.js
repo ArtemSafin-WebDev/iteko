@@ -99,16 +99,16 @@ export default function newIntro() {
                 }
             },
             activeOffsetFormula: item => {
-                const x = `-=${item.card.offsetWidth * 0.4}`;
-                const y = `-=${item.card.offsetHeight * 1.2}`;
+                const x = `-=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 3 * item.card.offsetWidth / window.innerWidth)}`;
+                const y = `-=${(item.card.offsetHeight * 1.2) - (item.card.offsetHeight * 2 * item.card.offsetHeight / window.innerHeight)}`;
 
                 return {
                     x, y
                 }
             },
             exitOffsetFormula: item => {
-                const x = `+=${item.card.offsetWidth * 0.4}`;
-                const y = `+=${item.card.offsetHeight * 1.2}`;
+                const x = `+=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 3 * item.card.offsetWidth / window.innerWidth)}`;
+                const y = `+=${(item.card.offsetHeight * 1.2) - (item.card.offsetHeight * 2 * item.card.offsetHeight / window.innerHeight)}`;
 
                 return {
                     x, y
