@@ -1851,7 +1851,8 @@ select:-webkit-autofill:focus {
       background-image: url("../img/noise-pattern.png"), url("../img/intro-mobile-bg.svg"); } }
 
 .intro__content {
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   @media only screen and (max-width: 768px) {
     .intro__content {
       height: 90rem; } }

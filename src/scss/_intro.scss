@@ -16,7 +16,7 @@
 
 .intro__content {
     height: 100vh;
-
+    position: relative;
     @include breakpoint(small-tablet) {
         height: 90rem;
     }
