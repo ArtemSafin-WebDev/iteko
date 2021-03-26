@@ -3,7 +3,7 @@ import { debounce } from 'lodash';
 
 export default function newIntro() {
     const intro = document.querySelector('.js-intro');
-    if (window.matchMedia('(max-width: 768px)').matches || !intro) return;
+
     const RESIZE_DEBOUNCE = 300;
     const CARD_TRANSITION_DURATION = 1.2;
     const CARD_ACTIVATION_DURATION = 0.6;
@@ -42,7 +42,7 @@ export default function newIntro() {
                 const controlsOffset = parseFloat(window.getComputedStyle(elements.controls).right);
 
                 const x = -1 * (cardProductsRight - cardContentRight + controlsOffset);
-                const y = `+=${item.card.offsetHeight * 0.7}`;
+                const y = `+=${item.card.offsetHeight * 0.9}`;
 
                 return {
                     x,
@@ -70,19 +70,21 @@ export default function newIntro() {
             },
             activeOffsetFormula: item => {
                 const x = `-=${0}`;
-                const y = `-=${item.card.offsetHeight * 0.7}`;
+                const y = `-=${item.card.offsetHeight * 0.9}`;
 
                 return {
-                    x, y
-                }
+                    x,
+                    y
+                };
             },
             exitOffsetFormula: item => {
                 const x = `+=${0}`;
-                const y = `+=${item.card.offsetHeight * 0.7}`;
+                const y = `+=${item.card.offsetHeight * 0.9}`;
 
                 return {
-                    x, y
-                }
+                    x,
+                    y
+                };
             }
         },
         {
@@ -91,7 +93,7 @@ export default function newIntro() {
             ringMultiplier: 1.2,
             cardActiveMultiplier: 1.2,
             ringActiveMultiplier: 2.1,
-            
+
             active: false,
             cardOffsetFormula: item => {
                 const x = -1 * window.innerWidth * 0.1;
@@ -108,29 +110,77 @@ export default function newIntro() {
             },
             paneOffsetFormula: item => {
                 const x = `+=${item.card.offsetWidth * 0.3}`;
-                const y = `+=${150}`;
+                const y = `+=${250}`;
 
                 return {
-                    x, y
-                }
+                    x,
+                    y
+                };
             },
             activeOffsetFormula: item => {
-                const x = `-=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 4 * item.card.offsetWidth / window.innerWidth)}`;
-                const y = `-=${150}`;
+                const x = `-=${item.card.offsetWidth * 0.4 + (item.card.offsetWidth * 4 * item.card.offsetWidth) / window.innerWidth}`;
+                const y = `-=${250}`;
 
                 return {
-                    x, y
-                }
+                    x,
+                    y
+                };
             },
             exitOffsetFormula: item => {
-                const x = `+=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 4 * item.card.offsetWidth / window.innerWidth)}`;
-                const y = `+=${150}`;
+                const x = `+=${item.card.offsetWidth * 0.4 + (item.card.offsetWidth * 4 * item.card.offsetWidth) / window.innerWidth}`;
+                const y = `+=${250}`;
 
                 return {
-                    x, y
-                }
+                    x,
+                    y
+                };
             }
+        },
+        {
+            card: intro.querySelector('#software-card'),
+            cardMultiplier: 1.2,
+            ringMultiplier: 1.8,
+            cardActiveMultiplier: 1.2,
+            ringActiveMultiplier: 2.2,
+            active: false,
+            cardOffsetFormula: item => {
+               
 
+                const x =
+                    -1 *
+                    (item.card.getBoundingClientRect().right -
+                        item.card.offsetWidth * item.cardMultiplier -
+                        (item.card.querySelector('.intro__item-card-ring').offsetHeight * item.ringMultiplier) / 2) - 40;
+                const y = 0;
+                return {
+                    x,
+                    y
+                };
+            },
+            paneOffsetFormula: item => {
+                const hiddenContent = item.card.querySelector('.js-intro-card-hidden-content');
+                const x = item.card.offsetWidth * item.cardActiveMultiplier;
+                const y = hiddenContent.offsetHeight;
+                return { x, y };
+            },
+            activeOffsetFormula: item => {
+                const hiddenContent = item.card.querySelector('.js-intro-card-hidden-content');
+                const x = `-=${item.card.offsetWidth * item.cardActiveMultiplier}`;
+                const y = `-=${hiddenContent.offsetHeight}`;
+                return {
+                    x,
+                    y
+                };
+            },
+            exitOffsetFormula: item => {
+                const hiddenContent = item.card.querySelector('.js-intro-card-hidden-content');
+                const x = `+=${item.card.offsetWidth * item.cardActiveMultiplier}`;
+                const y = `+=${hiddenContent.offsetHeight}`;
+                return {
+                    x,
+                    y
+                };
+            }
         }
     ];
 
@@ -290,7 +340,6 @@ export default function newIntro() {
         tl.to(
             item.card,
             {
-             
                 scale: item.cardActiveMultiplier,
                 duration: CARD_ACTIVATION_DURATION
             },
@@ -345,7 +394,7 @@ export default function newIntro() {
 
         if (item.activeOffsetFormula) {
             const activeOffset = item.activeOffsetFormula(item);
-            console.log('Active offset on enter', activeOffset)
+            console.log('Active offset on enter', activeOffset);
             tl.to(
                 item.card,
                 {
@@ -358,7 +407,7 @@ export default function newIntro() {
         }
     };
 
-    const deactivateCurrentCard = (onDeactivation) => {
+    const deactivateCurrentCard = onDeactivation => {
         if (!state.cardChosen || !state.activeCard || state.animating || state.mode === 'order') return;
         const card = state.activeCard;
         const item = cards.find(item => item.card === card);
@@ -397,7 +446,6 @@ export default function newIntro() {
         tl.to(
             item.card,
             {
-               
                 scale: item.cardMultiplier,
                 duration: CARD_ACTIVATION_DURATION
             },
@@ -441,10 +489,9 @@ export default function newIntro() {
             0
         );
 
-
         if (item.exitOffsetFormula) {
             const activeOffset = item.exitOffsetFormula(item);
-            console.log('Active offset on exit', activeOffset)
+            console.log('Active offset on exit', activeOffset);
             tl.to(
                 item.card,
                 {
@@ -580,7 +627,6 @@ export default function newIntro() {
             } else {
                 activateCard(card);
             }
-            
         } else {
             deactivateCurrentCard();
         }
