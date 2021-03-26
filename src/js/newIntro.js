@@ -42,7 +42,7 @@ export default function newIntro() {
                 const controlsOffset = parseFloat(window.getComputedStyle(elements.controls).right);
 
                 const x = -1 * (cardProductsRight - cardContentRight + controlsOffset);
-                const y = `+=${window.innerHeight * 0.1}`;
+                const y = `+=${item.card.offsetHeight * 0.7}`;
 
                 return {
                     x,
@@ -67,6 +67,22 @@ export default function newIntro() {
                     x,
                     y
                 };
+            },
+            activeOffsetFormula: item => {
+                const x = `-=${0}`;
+                const y = `-=${item.card.offsetHeight * 0.7}`;
+
+                return {
+                    x, y
+                }
+            },
+            exitOffsetFormula: item => {
+                const x = `+=${0}`;
+                const y = `+=${item.card.offsetHeight * 0.7}`;
+
+                return {
+                    x, y
+                }
             }
         },
         {
@@ -92,23 +108,23 @@ export default function newIntro() {
             },
             paneOffsetFormula: item => {
                 const x = `+=${item.card.offsetWidth * 0.3}`;
-                const y = `+=${item.card.offsetHeight * 1.2}`;
+                const y = `+=${150}`;
 
                 return {
                     x, y
                 }
             },
             activeOffsetFormula: item => {
-                const x = `-=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 3 * item.card.offsetWidth / window.innerWidth)}`;
-                const y = `-=${(item.card.offsetHeight * 1.2) - (item.card.offsetHeight * 2 * item.card.offsetHeight / window.innerHeight)}`;
+                const x = `-=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 4 * item.card.offsetWidth / window.innerWidth)}`;
+                const y = `-=${150}`;
 
                 return {
                     x, y
                 }
             },
             exitOffsetFormula: item => {
-                const x = `+=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 3 * item.card.offsetWidth / window.innerWidth)}`;
-                const y = `+=${(item.card.offsetHeight * 1.2) - (item.card.offsetHeight * 2 * item.card.offsetHeight / window.innerHeight)}`;
+                const x = `+=${(item.card.offsetWidth * 0.4) + (item.card.offsetWidth * 4 * item.card.offsetWidth / window.innerWidth)}`;
+                const y = `+=${150}`;
 
                 return {
                     x, y
