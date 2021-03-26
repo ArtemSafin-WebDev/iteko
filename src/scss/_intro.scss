@@ -207,7 +207,7 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-gap: 2rem;
-        grid-row-gap: 4rem;
+        grid-row-gap: 6rem;
     }
 
     @include breakpoint(mobile) {
@@ -394,7 +394,7 @@
 
 .intro__item-card-products-list {
     padding-left: 1.5rem;
-    height: 30rem;
+    max-height: 30rem;
     overflow-x: hidden;
     overscroll-behavior: contain;
     direction: rtl;

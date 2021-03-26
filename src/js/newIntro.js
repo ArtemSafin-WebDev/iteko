@@ -144,13 +144,12 @@ export default function newIntro() {
             ringActiveMultiplier: 2.2,
             active: false,
             cardOffsetFormula: item => {
-               
-
                 const x =
                     -1 *
-                    (item.card.getBoundingClientRect().right -
-                        item.card.offsetWidth * item.cardMultiplier -
-                        (item.card.querySelector('.intro__item-card-ring').offsetHeight * item.ringMultiplier) / 2) - 40;
+                        (item.card.getBoundingClientRect().right -
+                            item.card.offsetWidth * item.cardMultiplier -
+                            (item.card.querySelector('.intro__item-card-ring').offsetHeight * item.ringMultiplier) / 2) -
+                    40;
                 const y = 0;
                 return {
                     x,
@@ -176,6 +175,51 @@ export default function newIntro() {
                 const hiddenContent = item.card.querySelector('.js-intro-card-hidden-content');
                 const x = `+=${item.card.offsetWidth * item.cardActiveMultiplier}`;
                 const y = `+=${hiddenContent.offsetHeight}`;
+                return {
+                    x,
+                    y
+                };
+            }
+        },
+        {
+            card: intro.querySelector('#consulting-card'),
+            cardMultiplier: 0.8,
+            ringMultiplier: 1.2,
+            cardActiveMultiplier: 1.2,
+            ringActiveMultiplier: 2.1,
+
+            active: false,
+            cardOffsetFormula: item => {
+                // const x =
+                //     -1 *
+                //         (item.card.getBoundingClientRect().right -
+                //             item.card.offsetWidth * item.cardMultiplier -
+                //             (item.card.querySelector('.intro__item-card-ring').offsetHeight * item.ringMultiplier) / 2) -
+                //     40;
+                const x = item.card.offsetWidth * 0.5;
+                const y = intro.offsetHeight - item.card.getBoundingClientRect().top - item.card.offsetHeight * item.cardMultiplier - 100;
+                return {
+                    x,
+                    y
+                };
+            },
+            paneOffsetFormula: item => {
+                const hiddenContent = item.card.querySelector('.js-intro-card-hidden-content');
+                const x = 0;
+                const y = -1 * (Math.max(hiddenContent.offsetHeight, item.card.offsetHeight) + item.card.offsetHeight);
+                return { x, y };
+            },
+            activeOffsetFormula: item => {
+                const x = `-=${0}`;
+                const y = `+=${item.card.offsetHeight}`;
+                return {
+                    x,
+                    y
+                };
+            },
+            exitOffsetFormula: item => {
+                const x = `+=${0}`;
+                const y = `-=${item.card.offsetHeight}`;
                 return {
                     x,
                     y

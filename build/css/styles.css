@@ -2073,7 +2073,7 @@ select:-webkit-autofill:focus {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
-    grid-row-gap: 4rem; } }
+    grid-row-gap: 6rem; } }
 
 @media only screen and (max-width: 640px) {
   .intro__items {
@@ -2241,7 +2241,7 @@ select:-webkit-autofill:focus {
 
 .intro__item-card-products-list {
   padding-left: 1.5rem;
-  height: 30rem;
+  max-height: 30rem;
   overflow-x: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: contain;
