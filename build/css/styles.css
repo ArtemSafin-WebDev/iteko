@@ -1886,10 +1886,7 @@ select:-webkit-autofill:focus {
   opacity: 0;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform; }
+          backface-visibility: hidden; }
   @media only screen and (max-width: 640px) {
     .intro__pane {
       opacity: 1;
@@ -2112,12 +2109,7 @@ select:-webkit-autofill:focus {
   @media only screen and (min-width: 641px) {
     .intro__item-card {
       -webkit-transform-origin: left top;
-              transform-origin: left top;
-      will-change: transform;
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0); } }
+              transform-origin: left top; } }
   @media only screen and (max-width: 640px) {
     .intro__item-card {
       padding-left: 4.7rem; } }

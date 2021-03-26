@@ -40,8 +40,8 @@
     opacity: 0;
     visibility: hidden;
     backface-visibility: hidden;
-    transform: translateZ(0);
-    will-change: transform;
+    // transform: translateZ(0);
+    // will-change: transform;
 
     @include breakpoint(mobile) {
         opacity: 1;
@@ -238,9 +238,9 @@
 
     @include breakpointMF(small-tablet) {
         transform-origin: left top;
-        will-change: transform;
-        backface-visibility: hidden;
-        transform: translateZ(0);
+        // will-change: transform;
+        // backface-visibility: hidden;
+        // transform: translateZ(0);
     }
 
     @include breakpoint(mobile) {
