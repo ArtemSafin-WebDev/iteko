@@ -14,6 +14,8 @@ import hoop from './hoop';
 import menu from './menu';
 import FixedFooter from './fixedFooter';
 import newIntro from './newIntro';
+import solutionsIntroSlider from './solutionsIntroSlider';
+import solutionHoops from './solutionsHoops';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -30,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     successStories();
     hoop();
     menu();
+    solutionsIntroSlider();
+    solutionHoops();
     FixedFooter();
 });
 

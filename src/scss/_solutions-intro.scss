@@ -1,0 +1,306 @@
+.solutions-intro {
+    background-image: url('../img/noise-pattern.png'), url('../img/home-page-bg.svg');
+    background-position: left top, center;
+    background-size: 25.6rem 25.6rem, cover;
+    background-repeat: repeat, no-repeat;
+    color: white;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(mobile) {
+        background-image: url('../img/noise-pattern.png'), url('../img/intro-mobile-bg.svg');
+    }
+}
+
+.solutions-intro__content {
+    min-height: 95rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 17rem;
+}
+
+.solutions-intro__top-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+.solutions-intro__breadcrumbs {
+    font-size: 1.5rem;
+    line-height: 140%;
+    color: rgba(white, 0.3);
+}
+
+.solutions-intro__heading {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    margin-left: 14rem;
+}
+
+.solutions-intro__slider {
+    width: 100%;
+    max-width: 108rem;
+    margin: 0 auto;
+    position: relative;
+
+    .swiper-container {
+        overflow: visible;
+    }
+
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+
+.solutions-intro__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 300;
+
+    &--prev {
+        right: 100%;
+        margin-right: 7rem;
+    }
+    &--next {
+        left: 100%;
+        margin-left: 7rem;
+    }
+    svg {
+        width: 3rem;
+        height: 3rem;
+        fill: white;
+        display: block;
+
+        &.icon-arrow-left {
+            transform: scaleX(-1);
+        }
+    }
+}
+
+.solutions-intro__slider-card {
+    padding: 5rem 8rem;
+    border-radius: 2.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+
+    .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) & {
+        transform: scale(0.7);
+    }
+}
+
+.solutions-intro__short-card {
+    padding: 5rem 8rem;
+    border-radius: 2.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    color: var(--text-color);
+
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+    display: flex;
+    .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) & {
+        transform: scale(0.7);
+    }
+}
+
+.solutions-intro__short-card-content {
+    width: 30%;
+    flex-grow: 1;
+}
+
+.solutions-intro__short-card-numbers {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    flex-shrink: 0;
+    color: var(--primary-color);
+}
+
+.solutions-intro__short-card-numbers-amount {
+    font-weight: 500;
+    font-size: 11rem;
+    line-height: 1;
+}
+
+.solutions-intro__short-card-numbers-text {
+    white-space: nowrap;
+    font-size: 3rem;
+    line-height: 4.2rem;
+}
+
+.solutions-intro__slider-card-top-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.solutions-intro__slider-card-icon-container,
+.solutions-intro__short-card-icon-container {
+    width: 15rem;
+    height: 15rem;
+    flex-shrink: 0;
+    margin-right: 7rem;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.solutions-intro__short-card-icon-container {
+    background: #F0F3F4;
+}
+
+.solutions-intro__short-card-icon,
+.solutions-intro__slider-card-icon {
+    max-width: 10rem;
+    max-height: 7.2rem;
+    width: auto;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.solutions-intro__short-card-bg,
+.solutions-intro__slider-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.solutions-intro__short-card-title,
+.solutions-intro__slider-card-title {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+}
+
+.solutions-intro__short-card-title {
+    margin-bottom: 3rem;
+}
+
+.solutions-intro__slider-card-content {
+    padding-top: 4rem;
+    padding-left: 22rem;
+}
+
+.solutions-intro__short-card-text,
+.solutions-intro__slider-card-text {
+    font-size: 2rem;
+    line-height: 140%;
+    margin-bottom: 3rem;
+}
+
+.solutions-intro__slider-card-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    margin-bottom: 6.5rem;
+    align-items: flex-start;
+}
+
+.solutions-intro__slider-card-feature {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--primary-color);
+    padding-left: 1.3rem;
+    color: var(--primary-color);
+}
+
+.solutions-intro__slider-card-feature-name {
+    font-size: 1.5rem;
+    line-height: 140%;
+    margin-top: -0.3rem;
+    display: block;
+}
+
+.solutions-intro__slider-card-feature-value {
+    font-size: 2.5rem;
+    line-height: 3rem;
+
+    small {
+        font-size: 2.1rem;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+
+    big {
+        font-size: 4.5rem;
+        line-height: 1;
+        font-weight: 400;
+    }
+}
+
+.solutions-intro__slider-card-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.solutions-intro__slider-card-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 111%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(white, 0.2);
+    border-radius: 5rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.solutions-intro__hoop-large {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 90rem;
+    height: auto;
+}
+
+
+.solutions-intro__hoop-medium {
+    top: 5rem;
+    right: 5rem;
+    position: absolute;
+    z-index: -1;
+    width: 67rem;
+    height: 67rem;
+}
+
+
+
+.solutions-intro__hoop-small {
+    position: absolute;
+    z-index: -1;
+    width: 24rem;
+    height: 24rem;
+    right: 5rem;
+    bottom: 5rem;
+}

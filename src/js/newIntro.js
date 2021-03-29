@@ -4,6 +4,8 @@ import { debounce } from 'lodash';
 export default function newIntro() {
     const intro = document.querySelector('.js-intro');
 
+    if (!intro) return;
+
     const RESIZE_DEBOUNCE = 300;
     const CARD_TRANSITION_DURATION = 1.2;
     const CARD_ACTIVATION_DURATION = 0.6;
