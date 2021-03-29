@@ -50,6 +50,7 @@
         flex-grow: 1;
 
         justify-content: initial;
+
     }
 }
 
@@ -216,7 +217,7 @@
         flex-wrap: nowrap;
         padding: 0 var(--content-padding);
         -webkit-overflow-scrolling: touch;
-
+        display: none;
         @include noScrollbar();
     }
 }

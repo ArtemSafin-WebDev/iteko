@@ -1,6 +1,6 @@
-import { Swiper, Navigation, EffectFade } from 'swiper';
+import { Swiper, Navigation, EffectFade, Pagination } from 'swiper';
 
-Swiper.use([Navigation, EffectFade]);
+Swiper.use([Navigation, EffectFade, Pagination]);
 
 export default function solutionsIntroSlider() {
     const elements = Array.from(document.querySelectorAll('.js-solutions-intro-slider'));
@@ -10,16 +10,27 @@ export default function solutionsIntroSlider() {
 
         new Swiper(container, {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 0,
             watchOverflow: true,
             loop: true,
-            speed: 1200,
+            speed: 400,
             slideToClickedSlide: true,
             loopedSlides: 4,
-            threshold: 4,
+            threshold: window.matchMedia("(max-width: 640px)").matches ? 0 : 4,
+            pagination: {
+                el: element.querySelector('.solutions-intro__slider-pagination'),
+                type: 'bullets',
+                clickable: true
+            },
             navigation: {
                 nextEl: element.querySelector('.solutions-intro__slider-arrow--next'),
                 prevEl: element.querySelector('.solutions-intro__slider-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 20,
+                    speed: 1200,
+                }
             }
         });
     });
