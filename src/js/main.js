@@ -7,15 +7,16 @@ import customSelects from './customSelects';
 import phoneMask from './phoneMask';
 import onlyNumeric from './onlyNumeric';
 import fileUpload from './fileUpload';
-import intro from './intro';
+
 import introNewsTabs from './introNewsTabs';
 import successStories from './successStories';
 import hoop from './hoop';
 import menu from './menu';
 import FixedFooter from './fixedFooter';
-import newIntro from './newIntro';
+// import newIntro from './newIntro';
 import solutionsIntroSlider from './solutionsIntroSlider';
 import solutionHoops from './solutionsHoops';
+import introRemake from './introRemake';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     onlyNumeric();
     fileUpload();
     // intro();
-    newIntro();
+    // newIntro();
+    introRemake();
     introNewsTabs();
     successStories();
     hoop();

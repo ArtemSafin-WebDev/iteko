@@ -1883,11 +1883,7 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  position: relative; }
   @media only screen and (max-width: 640px) {
     .intro__pane {
       opacity: 1;
@@ -2046,7 +2042,9 @@ select:-webkit-autofill:focus {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 30rem;
-  margin-right: 5rem; }
+  margin-right: 5rem;
+  opacity: 0;
+  visibility: hidden; }
   @media only screen and (max-width: 768px) {
     .intro__items-left-col {
       width: 25rem;
@@ -2130,6 +2128,22 @@ select:-webkit-autofill:focus {
   z-index: 30;
   display: none; }
 
+@-webkit-keyframes ring-spin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes ring-spin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
 .intro__item-card-ring {
   position: absolute;
   top: 0;
@@ -2189,7 +2203,8 @@ select:-webkit-autofill:focus {
     -webkit-transition: opacity 0.2s, visibility 0s linear 0.2s;
     transition: opacity 0.2s, visibility 0s linear 0.2s;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    display: none; }
     .intro__item-card.active .intro__item-card-title-link svg {
       opacity: 1;
       visibility: inherit;
