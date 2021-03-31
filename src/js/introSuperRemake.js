@@ -680,7 +680,12 @@ export default function introSuperRemake() {
         tl.to(elements.pane, {
             autoAlpha: 1,
             duration: 0.4
+        }).to(elements.slogan, {
+            autoAlpha: 1,
+            duration: 0.4
         });
+
+     
     };
 
     elements.orderedViewBtn.addEventListener('click', event => {
