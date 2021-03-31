@@ -62,8 +62,8 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
+    // opacity: 0;
+    // visibility: hidden;
 
     @include breakpoint(mobile) {
         position: static;

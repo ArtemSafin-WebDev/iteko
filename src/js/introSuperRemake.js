@@ -518,7 +518,7 @@ export default function introSuperRemake() {
             }
         });
 
-        let duration = .8;
+        let duration = 0.8;
         const services = item.card.querySelector('.intro__item-card-services-list');
         const ring = item.card.querySelector('.intro__item-card-ring');
         const offset = item.focusFormula(item);
@@ -535,8 +535,8 @@ export default function introSuperRemake() {
             }
         });
         tl.to(item.card, {
-            x: offset.x,
-            y: offset.y,
+            x: offset.x * 0.1,
+            y: offset.y * 0.3,
             scale: item.cardScaleActive,
             duration
         })
@@ -556,6 +556,13 @@ export default function introSuperRemake() {
                 },
                 0
             );
+
+        const sloganTl = gsap.timeline();
+
+        sloganTl.to(elements.slogan, {
+            autoAlpha: 0,
+            duration: 0.4
+        });
     };
 
     const blurCard = item => {
@@ -572,7 +579,7 @@ export default function introSuperRemake() {
             }
         });
 
-        let duration = .8;
+        let duration = 0.8;
         const services = item.card.querySelector('.intro__item-card-services-list');
         const ring = item.card.querySelector('.intro__item-card-ring');
 
@@ -604,6 +611,13 @@ export default function introSuperRemake() {
                 },
                 0
             );
+
+        const sloganTl = gsap.timeline();
+
+        sloganTl.to(elements.slogan, {
+            autoAlpha: 1,
+            duration: 0.4
+        });
     };
 
     const positionCards = (forced = false) => {
@@ -628,6 +642,13 @@ export default function introSuperRemake() {
         elements.chaosViewBtn.classList.add('active');
         elements.orderedViewBtn.classList.remove('active');
         positionCards();
+
+        const tl = gsap.timeline();
+
+        tl.to(elements.slogan, {
+            autoAlpha: 1,
+            duration: 0.4
+        });
     };
 
     const enterOrderMode = () => {
@@ -638,6 +659,12 @@ export default function introSuperRemake() {
         elements.chaosViewBtn.classList.remove('active');
         elements.orderedViewBtn.classList.add('active');
         returnCards();
+        const tl = gsap.timeline();
+
+        tl.to(elements.slogan, {
+            autoAlpha: 0,
+            duration: 0.4
+        });
     };
 
     const initialize = () => {
