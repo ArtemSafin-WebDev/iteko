@@ -1883,7 +1883,9 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative; }
+  position: relative;
+  opacity: 0;
+  visibility: hidden; }
   @media only screen and (max-width: 640px) {
     .intro__pane {
       opacity: 1;
@@ -2106,6 +2108,8 @@ select:-webkit-autofill:focus {
   display: flex;
   position: relative;
   z-index: 1; }
+  .intro__item-card.shifted {
+    pointer-events: none; }
   @media only screen and (min-width: 641px) {
     .intro__item-card {
       -webkit-transform-origin: left top;

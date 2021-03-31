@@ -17,6 +17,7 @@ import FixedFooter from './fixedFooter';
 import solutionsIntroSlider from './solutionsIntroSlider';
 import solutionHoops from './solutionsHoops';
 import introRemake from './introRemake';
+import introSuperRemake from './introSuperRemake';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fileUpload();
     // intro();
     // newIntro();
-    introRemake();
+    // introRemake();
+    introSuperRemake();
     introNewsTabs();
     successStories();
     hoop();

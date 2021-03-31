@@ -37,11 +37,9 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    // opacity: 0;
-    // visibility: hidden;
-    // backface-visibility: hidden;
-    // transform: translateZ(0);
-    // will-change: transform;
+    opacity: 0;
+    visibility: hidden;
+   
 
     @include breakpoint(mobile) {
         opacity: 1;
@@ -239,6 +237,10 @@
     display: flex;
     position: relative;
     z-index: 1;
+
+    &.shifted {
+        pointer-events: none;
+    }
 
     @include breakpointMF(small-tablet) {
         transform-origin: left top;
