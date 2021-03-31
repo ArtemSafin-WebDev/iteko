@@ -39,7 +39,6 @@
     position: relative;
     opacity: 0;
     visibility: hidden;
-   
 
     @include breakpoint(mobile) {
         opacity: 1;
@@ -179,7 +178,6 @@
     flex-shrink: 0;
     width: 30rem;
     margin-right: 5rem;
-
 
     opacity: 0;
     visibility: hidden;
@@ -479,10 +477,14 @@
 .intro__news {
     position: absolute;
     left: 0;
-    bottom: 8rem;
-    width: 28rem;
-    opacity: 0;
-    visibility: hidden;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    border-top: 1px solid rgba(#f0f3f4, 0.2);
+    padding-top: 2.2rem;
+   
+    padding-bottom: 3.5rem;
 
     @include breakpoint(mobile) {
         display: none;
@@ -491,125 +493,87 @@
 
 .intro__news-tabs-nav {
     display: flex;
-    padding: 0 1.8rem;
-    margin-bottom: 1.5rem;
+    flex-direction: column;
+ 
+    width: 19rem;
 }
 
 .intro__news-tabs-nav-link {
+    display: inline-flex;
+    align-items: center;
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 111%;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(white, 0.3);
-    margin-right: 1.3rem;
+    margin-bottom: 1.6rem;
+    transition: color 0.2s;
 
     &:link,
     &:visited {
         color: rgba(white, 0.3);
     }
-    &:last-child {
-        margin-right: 0;
-    }
 
-    &.active,
     .no-touch &:hover {
         color: white;
     }
-}
-
-.intro__news-tabs-items {
-    position: relative;
-}
-
-.intro__news-tabs-item {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s, visibility 0s linear 0.4s;
-    z-index: 5;
 
     &.active {
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity 0.4s, visibility 0.4s;
-        z-index: 10;
-        position: relative;
-    }
-}
-
-.intro__news-list-item {
-    // margin-bottom: 1rem;
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
-}
-
-.intro__news-card {
-    display: flex;
-    flex-direction: column;
-    padding: 1.4rem 1.8rem;
-    border-radius: 2rem;
-    transition: background-color 0.2s, color 0.2s;
-    color: rgba(white, 0.6);
-
-    &:link,
-    &:visited {
-        color: rgba(white, 0.6);
-    }
-
-    .no-touch &:hover {
         color: white;
-        background-color: rgba(white, 0.1);
     }
-}
-
-.intro__news-card-title {
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 140%;
-    margin-bottom: 0.8rem;
-}
-
-.intro__news-card-time {
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 111%;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(white, 0.3);
-    transition: color 0.2s;
-}
-
-.intro__news-all-news {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 1.8rem;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 111%;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(white, 0.3);
-    margin-top: 1.5rem;
 
     svg {
         width: 0.8rem;
         height: 0.8rem;
         flex-shrink: 0;
-        margin-left: 0.5rem;
-        fill: currentColor;
+        margin-left: 0.8rem;
+        fill: rgba(white, 0.3);
     }
-    &:link,
-    &:visited {
-        color: rgba(white, 0.3);
-    }
+}
+
+.intro__news-tabs-items {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.intro__news-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 10rem;
+    grid-row-gap: 2rem;
+}
+
+.intro__news-card {
+    display: flex;
 
     .no-touch &:hover {
-        color: white;
+        .intro__news-card-title {
+            color: white;
+        }
     }
+}
+
+.intro__news-card-date {
+    flex-shrink: 0;
+    color: rgba(white, 0.3);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    line-height: 111%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.intro__news-card-content {
+    width: 40%;
+    flex-grow: 1;
+}
+
+.intro__news-card-title {
+    font-size: 1.5rem;
+    line-height: 140%;
+    color: rgba(white, 0.5);
+    font-weight: 400;
+    margin-top: -0.3em;
+    transition: color .2s;
 }

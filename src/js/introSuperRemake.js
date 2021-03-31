@@ -503,7 +503,7 @@ export default function introSuperRemake() {
     };
 
     const focusCard = item => {
-        if (state.activeCard || state.animating) return;
+        if (state.activeCard || state.animating || state.mode === 'order') return;
         state.cardChosen = true;
         state.activeCard = item.card;
         state.animating = true;
@@ -610,14 +610,17 @@ export default function introSuperRemake() {
                     duration
                 },
                 0
+            )
+            .to(
+                elements.slogan,
+                {
+                    autoAlpha: 1,
+                    duration: 0.4
+                },
+                0
             );
 
-        const sloganTl = gsap.timeline();
-
-        sloganTl.to(elements.slogan, {
-            autoAlpha: 1,
-            duration: 0.4
-        });
+        return tl;
     };
 
     const positionCards = (forced = false) => {
@@ -684,8 +687,6 @@ export default function introSuperRemake() {
             autoAlpha: 1,
             duration: 0.4
         });
-
-     
     };
 
     elements.orderedViewBtn.addEventListener('click', event => {
@@ -716,13 +717,23 @@ export default function introSuperRemake() {
             const item = cards.find(el => el.card === card);
 
             if (item) {
-                focusCard(item);
+                if (state.activeCard) {
+                    console.log('Switching new item while has active')
+                    const currentItem = cards.find(el => el.card === state.activeCard);
+                    blurCard(currentItem).then(() => {
+                        focusCard(item);
+                    })
+                } else {
+                    console.log('No card chosen before')
+                    focusCard(item);
+                }
+              
             } else {
                 console.error('Item for card not found');
                 return;
             }
         } else {
-            if (state.cardChosen) {
+            if (state.activeCard) {
                 const item = cards.find(el => el.card === state.activeCard);
                 if (item) {
                     blurCard(item);
