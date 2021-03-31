@@ -408,7 +408,7 @@ export default function introSuperRemake() {
     ];
 
     const positionCard = (item, forced = false) => {
-        let duration = forced ? 0 : 0.7;
+        let duration = forced ? 0 : 0.9;
         const services = item.card.querySelector('.intro__item-card-services-list');
         const ring = item.card.querySelector('.intro__item-card-ring');
 
@@ -441,7 +441,7 @@ export default function introSuperRemake() {
     };
 
     const returnCard = (item, forced = false) => {
-        let duration = forced ? 0 : 0.7;
+        let duration = forced ? 0 : 0.9;
 
         const services = item.card.querySelector('.intro__item-card-services-list');
         const ring = item.card.querySelector('.intro__item-card-ring');
@@ -503,8 +503,10 @@ export default function introSuperRemake() {
     };
 
     const focusCard = item => {
+        if (state.activeCard || state.animating) return;
         state.cardChosen = true;
         state.activeCard = item.card;
+        state.animating = true;
         cards.forEach(otherItem => {
             if (otherItem.card !== item.card) {
                 otherItem.active = false;
@@ -516,18 +518,22 @@ export default function introSuperRemake() {
             }
         });
 
-        let duration = 0.7;
+        let duration = .8;
         const services = item.card.querySelector('.intro__item-card-services-list');
         const ring = item.card.querySelector('.intro__item-card-ring');
         const offset = item.focusFormula(item);
 
-        console.log('Position X before transform', gsap.getProperty(item.card, "x"));
-        console.log('Position Y before transform', gsap.getProperty(item.card, "y"));
+        console.log('Position X before transform', gsap.getProperty(item.card, 'x'));
+        console.log('Position Y before transform', gsap.getProperty(item.card, 'y'));
 
-        item.posBeforeFocus.x = gsap.getProperty(item.card, "x");
-        item.posBeforeFocus.y = gsap.getProperty(item.card, "y");
+        item.posBeforeFocus.x = gsap.getProperty(item.card, 'x');
+        item.posBeforeFocus.y = gsap.getProperty(item.card, 'y');
 
-        const tl = gsap.timeline();
+        const tl = gsap.timeline({
+            onComplete: () => {
+                state.animating = false;
+            }
+        });
         tl.to(item.card, {
             x: offset.x,
             y: offset.y,
@@ -550,25 +556,31 @@ export default function introSuperRemake() {
                 },
                 0
             );
-
-       
     };
 
     const blurCard = item => {
+        if (!state.activeCard || state.animating) return;
+        state.animating = true;
         state.cardChosen = false;
         state.activeCard = null;
         cards.forEach(otherItem => {
             otherItem.active = false;
             otherItem.card.classList.remove('active');
+
+            if (otherItem.card !== item.card) {
+                unshiftCard(otherItem);
+            }
         });
 
-        let duration = 0.7;
+        let duration = .8;
         const services = item.card.querySelector('.intro__item-card-services-list');
         const ring = item.card.querySelector('.intro__item-card-ring');
 
-        const tl = gsap.timeline();
-
-        
+        const tl = gsap.timeline({
+            onComplete: () => {
+                state.animating = false;
+            }
+        });
 
         tl.to(item.card, {
             x: item.posBeforeFocus.x,
@@ -665,24 +677,37 @@ export default function introSuperRemake() {
         }, 400)
     );
 
-    setTimeout(() => {
-        focusCard(cards[3]);
+    intro.addEventListener('mouseover', event => {
+        if (event.target.matches('.intro__item-card') || event.target.closest('.intro__item-card')) {
+            const card = event.target.matches('.intro__item-card') ? event.target : event.target.closest('.intro__item-card');
 
-        setTimeout(() => {
-            blurCard(cards[3]);
-        }, 4000);
-    }, 2000);
+            const item = cards.find(el => el.card === card);
+
+            if (item) {
+                focusCard(item);
+            } else {
+                console.error('Item for card not found');
+                return;
+            }
+        } else {
+            if (state.cardChosen) {
+                const item = cards.find(el => el.card === state.activeCard);
+                if (item) {
+                    blurCard(item);
+                } else {
+                    console.error('Item for card not found');
+                    return;
+                }
+            }
+        }
+    });
 
     // setTimeout(() => {
-    //     cards.forEach(item => {
-    //         shiftCard(item);
-    //     });
+    //     focusCard(cards[5]);
 
     //     setTimeout(() => {
-    //         cards.forEach(item => {
-    //             unshiftCard(item);
-    //         });
-    //     }, 2000);
+    //         blurCard(cards[5]);
+    //     }, 4000);
     // }, 2000);
 
     initialize();
