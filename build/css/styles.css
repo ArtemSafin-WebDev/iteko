@@ -1006,8 +1006,8 @@ button.swiper-pagination-bullet {
 :root {
   --max-container-width: 140rem;
   --content-padding: 6rem;
-  --primary-color: #00b07a;
-  --primary-color-hover: #099b6f;
+  --primary-color: #00B07A;
+  --primary-color-hover: rgb(8, 138, 99);
   --text-color: #1B1E1D;
   --golos: 'Golos', sans-serif;
   --circe: 'Circe', sans-serif; }
@@ -3755,6 +3755,11 @@ select:-webkit-autofill:focus {
       display: grid;
       grid-template-columns: minmax(5.5rem, auto) minmax(0, 1fr); } }
 
+@media only screen and (min-width: 641px) {
+  .solutions-intro__slider-card,
+  .solutions-intro__short-card {
+    min-height: 48rem; } }
+
 .solutions-intro__short-card-content {
   width: 30%;
   -webkit-box-flex: 1;
@@ -4558,8 +4563,8 @@ select:-webkit-autofill:focus {
   border: 1px solid rgba(27, 30, 29, 0.15);
   overflow: hidden;
   border-radius: 2rem;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s, border-color .2s;
+  transition: background-color 0.2s, border-color .2s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: relative;
@@ -4571,7 +4576,8 @@ select:-webkit-autofill:focus {
       min-height: 19.2rem;
       padding: 2.2rem; } }
   .no-touch .solutions-catalog__block-card:hover {
-    background: #f0f3f4; }
+    background: #f0f3f4;
+    border-color: #f0f3f4; }
     .no-touch .solutions-catalog__block-card:hover .solutions-catalog__block-card-arrow {
       background-color: var(--primary-color); }
     .no-touch .solutions-catalog__block-card:hover .solutions-catalog__block-card-arrow-inner {

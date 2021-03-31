@@ -143,6 +143,7 @@
     }
 }
 
+
 .solutions-intro__short-card {
     padding: 5rem 8rem;
     border-radius: 2.5rem;
@@ -152,7 +153,7 @@
     backface-visibility: hidden;
     transition: transform 0.5s;
     color: var(--text-color);
-
+    
     display: flex;
 
     &:link,
@@ -174,6 +175,15 @@
         flex-direction: column;
         display: grid;
         grid-template-columns: minmax(5.5rem, auto) minmax(0, 1fr);
+    }
+}
+
+.solutions-intro__slider-card,
+.solutions-intro__short-card {
+   
+
+    @include breakpointMF(small-tablet) {
+        min-height: 48rem;
     }
 }
 

@@ -423,7 +423,7 @@
     border: 1px solid rgba(27, 30, 29, 0.15);
     overflow: hidden;
     border-radius: 2rem;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color .2s;
     backface-visibility: hidden;
     position: relative;
     z-index: 1;
@@ -436,7 +436,7 @@
     }
     .no-touch &:hover {
         background: #f0f3f4;
-
+        border-color: #f0f3f4;
         .solutions-catalog__block-card-arrow {
             background-color: var(--primary-color);
         }
