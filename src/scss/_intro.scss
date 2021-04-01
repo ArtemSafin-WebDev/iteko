@@ -214,19 +214,18 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     flex-grow: 1;
-    transition: opacity .7s;
-    &.active { 
-
+    transition: opacity 0.7s;
+    &.active {
         .intro__card-features-list,
         .intro__card-title svg,
-        .intro__card-flagship-products  {
+        .intro__card-flagship-products {
             opacity: 1;
             visibility: inherit;
             transition: opacity 0.7s, visibility 0.7s;
         }
 
         .intro__card-flagship-products {
-            transition: opacity 0.7s ease .3s, visibility 0.7s ease .3s;
+            transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s;
         }
 
         .intro__card-content {
@@ -234,27 +233,26 @@
         }
     }
 
-
     &.faded {
         // pointer-events: none;
 
         .intro__card {
             opacity: 0.5;
         }
-
     }
     &:nth-child(1) {
         .intro__card {
             align-self: center;
             justify-self: center;
-            
+        }
+
+        .intro__card-content {
+            transform: scale(0.85);
         }
 
         .intro__card-ring {
             transform: translate(-50%, -50%) scale(0.8);
         }
-
-      
 
         &.active {
             .intro__card {
@@ -264,26 +262,22 @@
             .intro__card-ring {
                 transform: translate(-50%, -50%) scale(1);
             }
+
+            .intro__card-content {
+                transform: scale(1);
+            }
         }
 
-
         &.faded {
-     
-
             .intro__card {
                 transform: translate(-50%, -60%);
             }
-    
         }
-
-
-        
     }
     &:nth-child(2) {
         .intro__card {
             align-self: center;
             justify-self: flex-end;
-            
         }
 
         .intro__card-ring {
@@ -291,15 +285,13 @@
         }
 
         .intro__card-content {
-            transform: scale(0.7);
+            transform: scale(0.6);
         }
 
         &.active {
             .intro__card {
                 transform: translate(-20%, 40%);
             }
-
-          
 
             .intro__card-content {
                 transform: scale(1);
@@ -310,20 +302,13 @@
             }
         }
 
-
         &.faded {
-     
-
             .intro__card {
                 transform: translate(-30%, -60%);
             }
-
-            
-    
         }
     }
     &:nth-child(3) {
-
         .intro__card {
             align-self: center;
             justify-self: flex-end;
@@ -345,7 +330,6 @@
             transform: scale(0.8);
         }
 
-
         &.active {
             .intro__card {
                 transform: translate(-30%, 50%);
@@ -358,18 +342,12 @@
             .intro__card-content {
                 transform: scale(1);
             }
-
-          
         }
 
-
         &.faded {
-     
-
             .intro__card {
-                transform: translate(30%, -40%);
+                transform: translate(-25%, -65%);
             }
-    
         }
     }
     &:nth-child(4) {
@@ -399,36 +377,27 @@
             .intro__card-content {
                 transform: scale(1);
             }
-
-          
         }
 
-
         &.faded {
-     
-
             .intro__card {
                 transform: translate(-40%, 40%);
             }
-    
         }
-
     }
-
 
     &:nth-child(5) {
         .intro__card {
             align-self: center;
             justify-self: flex-end;
-            
         }
 
         .intro__card-ring {
-            transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.6);
         }
 
         .intro__card-content {
-            transform: scale(0.8);
+            transform: scale(0.6);
         }
 
         &.active {
@@ -443,25 +412,62 @@
             .intro__card-content {
                 transform: scale(1);
             }
-
-          
         }
 
+        &.faded {
+            .intro__card {
+                transform: translate(20%, 200%);
+            }
+        }
+    }
+
+    &:nth-child(6) {
+        .intro__card {
+            align-self: center;
+            justify-self: flex-end;
+            margin-top: 2rem;
+        }
+
+        .intro__card-flagship-products {
+            left: auto;
+            padding-left: 0;
+            right: 100%;
+            padding-right: 3rem;
+        }
+
+        .intro__card-ring {
+            transform: translate(-50%, -50%) scale(0.65);
+        }
+
+        .intro__card-content {
+            transform: scale(0.65);
+        }
+
+        &.active {
+            .intro__card {
+                transform: translate(15%, -100%);
+            }
+
+            .intro__card-ring {
+                transform: translate(-50%, -50%) scale(0.75);
+            }
+
+            .intro__card-content {
+                transform: scale(1);
+            }
+        }
 
         &.faded {
-     
-
             .intro__card {
-                transform: translate(30%, 160%);
+                transform: translate(60%, 170%);
             }
-    
         }
     }
 }
 
 .intro__card {
     position: relative;
-    transition: transform 0.7s, opacity .7s;
+    transition: transform 0.7s, opacity 0.7s;
 }
 
 .intro__card-title {
@@ -543,7 +549,7 @@
     padding-top: 0.3rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .7s, visibility 0s linear .7s;
+    transition: opacity 0.7s, visibility 0s linear 0.7s;
 }
 
 .intro__card-flagship-products-heading {
@@ -566,9 +572,8 @@
     }
 }
 
-
 .intro__card-flagship-products-link {
     .no-touch &:hover {
-        color: rgba(white, .8);
+        color: rgba(white, 0.8);
     }
 }

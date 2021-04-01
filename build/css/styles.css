@@ -2069,8 +2069,8 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -webkit-transition: opacity .7s;
-  transition: opacity .7s; }
+  -webkit-transition: opacity 0.7s;
+  transition: opacity 0.7s; }
   .intro__cards-sector.active .intro__card-features-list,
   .intro__cards-sector.active .intro__card-title svg,
   .intro__cards-sector.active .intro__card-flagship-products {
@@ -2079,8 +2079,8 @@ select:-webkit-autofill:focus {
     -webkit-transition: opacity 0.7s, visibility 0.7s;
     transition: opacity 0.7s, visibility 0.7s; }
   .intro__cards-sector.active .intro__card-flagship-products {
-    -webkit-transition: opacity 0.7s ease .3s, visibility 0.7s ease .3s;
-    transition: opacity 0.7s ease .3s, visibility 0.7s ease .3s; }
+    -webkit-transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s;
+    transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s; }
   .intro__cards-sector.active .intro__card-content {
     -webkit-transform: scale(1);
             transform: scale(1); }
@@ -2090,6 +2090,9 @@ select:-webkit-autofill:focus {
     -ms-flex-item-align: center;
         align-self: center;
     justify-self: center; }
+  .intro__cards-sector:nth-child(1) .intro__card-content {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85); }
   .intro__cards-sector:nth-child(1) .intro__card-ring {
     -webkit-transform: translate(-50%, -50%) scale(0.8);
             transform: translate(-50%, -50%) scale(0.8); }
@@ -2099,6 +2102,9 @@ select:-webkit-autofill:focus {
   .intro__cards-sector:nth-child(1).active .intro__card-ring {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1); }
+  .intro__cards-sector:nth-child(1).active .intro__card-content {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
   .intro__cards-sector:nth-child(1).faded .intro__card {
     -webkit-transform: translate(-50%, -60%);
             transform: translate(-50%, -60%); }
@@ -2110,8 +2116,8 @@ select:-webkit-autofill:focus {
     -webkit-transform: translate(-50%, -50%) scale(0.5);
             transform: translate(-50%, -50%) scale(0.5); }
   .intro__cards-sector:nth-child(2) .intro__card-content {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7); }
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6); }
   .intro__cards-sector:nth-child(2).active .intro__card {
     -webkit-transform: translate(-20%, 40%);
             transform: translate(-20%, 40%); }
@@ -2150,8 +2156,8 @@ select:-webkit-autofill:focus {
     -webkit-transform: scale(1);
             transform: scale(1); }
   .intro__cards-sector:nth-child(3).faded .intro__card {
-    -webkit-transform: translate(30%, -40%);
-            transform: translate(30%, -40%); }
+    -webkit-transform: translate(-25%, -65%);
+            transform: translate(-25%, -65%); }
   .intro__cards-sector:nth-child(4) .intro__card {
     -ms-flex-item-align: center;
         align-self: center;
@@ -2180,11 +2186,11 @@ select:-webkit-autofill:focus {
         align-self: center;
     justify-self: flex-end; }
   .intro__cards-sector:nth-child(5) .intro__card-ring {
-    -webkit-transform: translate(-50%, -50%) scale(0.5);
-            transform: translate(-50%, -50%) scale(0.5); }
+    -webkit-transform: translate(-50%, -50%) scale(0.6);
+            transform: translate(-50%, -50%) scale(0.6); }
   .intro__cards-sector:nth-child(5) .intro__card-content {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8); }
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6); }
   .intro__cards-sector:nth-child(5).active .intro__card {
     -webkit-transform: translate(-40%, -160%);
             transform: translate(-40%, -160%); }
@@ -2195,15 +2201,43 @@ select:-webkit-autofill:focus {
     -webkit-transform: scale(1);
             transform: scale(1); }
   .intro__cards-sector:nth-child(5).faded .intro__card {
-    -webkit-transform: translate(30%, 160%);
-            transform: translate(30%, 160%); }
+    -webkit-transform: translate(20%, 200%);
+            transform: translate(20%, 200%); }
+  .intro__cards-sector:nth-child(6) .intro__card {
+    -ms-flex-item-align: center;
+        align-self: center;
+    justify-self: flex-end;
+    margin-top: 2rem; }
+  .intro__cards-sector:nth-child(6) .intro__card-flagship-products {
+    left: auto;
+    padding-left: 0;
+    right: 100%;
+    padding-right: 3rem; }
+  .intro__cards-sector:nth-child(6) .intro__card-ring {
+    -webkit-transform: translate(-50%, -50%) scale(0.65);
+            transform: translate(-50%, -50%) scale(0.65); }
+  .intro__cards-sector:nth-child(6) .intro__card-content {
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65); }
+  .intro__cards-sector:nth-child(6).active .intro__card {
+    -webkit-transform: translate(15%, -100%);
+            transform: translate(15%, -100%); }
+  .intro__cards-sector:nth-child(6).active .intro__card-ring {
+    -webkit-transform: translate(-50%, -50%) scale(0.75);
+            transform: translate(-50%, -50%) scale(0.75); }
+  .intro__cards-sector:nth-child(6).active .intro__card-content {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  .intro__cards-sector:nth-child(6).faded .intro__card {
+    -webkit-transform: translate(60%, 170%);
+            transform: translate(60%, 170%); }
 
 .intro__card {
   position: relative;
-  -webkit-transition: opacity .7s, -webkit-transform 0.7s;
-  transition: opacity .7s, -webkit-transform 0.7s;
-  transition: transform 0.7s, opacity .7s;
-  transition: transform 0.7s, opacity .7s, -webkit-transform 0.7s; }
+  -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
+  transition: opacity 0.7s, -webkit-transform 0.7s;
+  transition: transform 0.7s, opacity 0.7s;
+  transition: transform 0.7s, opacity 0.7s, -webkit-transform 0.7s; }
 
 .intro__card-title {
   font-weight: 500;
@@ -2292,8 +2326,8 @@ select:-webkit-autofill:focus {
   padding-top: 0.3rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .7s, visibility 0s linear .7s;
-  transition: opacity .7s, visibility 0s linear .7s; }
+  -webkit-transition: opacity 0.7s, visibility 0s linear 0.7s;
+  transition: opacity 0.7s, visibility 0s linear 0.7s; }
 
 .intro__card-flagship-products-heading {
   font-weight: 500;
