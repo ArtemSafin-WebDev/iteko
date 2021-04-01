@@ -13,11 +13,12 @@ import successStories from './successStories';
 import hoop from './hoop';
 import menu from './menu';
 import FixedFooter from './fixedFooter';
-// import newIntro from './newIntro';
+
 import solutionsIntroSlider from './solutionsIntroSlider';
 import solutionHoops from './solutionsHoops';
-import introRemake from './introRemake';
-import introSuperRemake from './introSuperRemake';
+import intro from './intro';
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -28,16 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     onlyNumeric();
     fileUpload();
-    // intro();
-    // newIntro();
-    // introRemake();
-    introSuperRemake();
+  
+   
     introNewsTabs();
     successStories();
     hoop();
     menu();
     solutionsIntroSlider();
     solutionHoops();
+    intro();
     FixedFooter();
 });
 
