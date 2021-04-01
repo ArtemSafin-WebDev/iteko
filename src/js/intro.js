@@ -7,6 +7,7 @@ export default function intro() {
 
         sectors.forEach(sector => {
             sector.addEventListener('mouseenter', () => {
+                element.classList.add('hovered');
                 sector.classList.add('active');
                 sectors.forEach(otherSector => {
                     if (otherSector === sector) {
@@ -18,6 +19,7 @@ export default function intro() {
             })
             sector.addEventListener('mouseleave', () => {
                 sector.classList.remove('active');
+                element.classList.remove('hovered');
                 sectors.forEach(sector => {
                     sector.classList.remove('faded')
                 })

@@ -346,15 +346,15 @@
 
         &.faded {
             .intro__card {
-                transform: translate(-25%, -65%);
+                transform: translate(25%, -65%);
             }
         }
     }
     &:nth-child(4) {
         .intro__card {
-            align-self: center;
+            align-self: flex-end;
             justify-self: flex-end;
-            margin-top: 4rem;
+            margin-bottom: 11rem;
         }
 
         .intro__card-ring {
@@ -388,8 +388,9 @@
 
     &:nth-child(5) {
         .intro__card {
-            align-self: center;
+            align-self: flex-end;
             justify-self: flex-end;
+            margin-bottom: 5rem;
         }
 
         .intro__card-ring {
@@ -402,7 +403,7 @@
 
         &.active {
             .intro__card {
-                transform: translate(-40%, -160%);
+                transform: translate(-40%, -250%);
             }
 
             .intro__card-ring {
@@ -423,9 +424,9 @@
 
     &:nth-child(6) {
         .intro__card {
-            align-self: center;
+            align-self: flex-end;
             justify-self: flex-end;
-            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
         .intro__card-flagship-products {
@@ -445,7 +446,7 @@
 
         &.active {
             .intro__card {
-                transform: translate(15%, -100%);
+                transform: translate(15%, -160%);
             }
 
             .intro__card-ring {
@@ -459,7 +460,7 @@
 
         &.faded {
             .intro__card {
-                transform: translate(60%, 170%);
+                transform: translate(40%, 70%);
             }
         }
     }
@@ -575,5 +576,47 @@
 .intro__card-flagship-products-link {
     .no-touch &:hover {
         color: rgba(white, 0.8);
+    }
+}
+
+.intro__heading-block {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+    position: absolute;
+    margin-top: -3rem;
+    transition: opacity .3s, visibility .3s;
+
+    .intro.hovered & {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility 0s linear .3s;
+    }
+}
+
+.intro__heading {
+    font-size: 3.5rem;
+    line-height: 120%;
+    margin-bottom: 1.8rem;
+    font-weight: 500;
+}
+
+.intro__heading-block-details-link {
+    padding: .8rem 2rem;
+    font-size: 1.5rem;
+    line-height: 140%;
+    text-align: center;
+    display: inline-flex;
+    border-radius: 2rem;
+    background: rgba(white, .1);
+    transition: background-color .2s;
+
+    .no-touch &:hover {
+        background: rgba(white, .2);
     }
 }
