@@ -1,0 +1,152 @@
+.solution-economy {
+    background-color: #fff;
+    padding-bottom: 9rem;
+    position: relative;
+    z-index: 1;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.solution-economy__content {
+    padding-top: 10rem;
+    padding-bottom: 13rem;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        top: 0;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        background: #f0f3f4;
+    }
+}
+
+.solution-economy__heading {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    margin-bottom: 6rem;
+}
+
+.solution-economy__examples-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+}
+
+.solution-economy__examples-list-item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.solution-economy__examples-card {
+    padding: 5rem;
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 2.5rem;
+   
+    background-image: url('../img/solution/economy-hoop.svg');
+    background-size: auto 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.solution-economy__examples-card-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+}
+
+.solution-economy__examples-card-numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-economy__examples-card-numbers-item {
+    margin-bottom: 4rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.solution-economy__examples-card-numbers-item-key {
+    font-size: 1.4rem;
+    line-height: 120%;
+    margin-bottom: .3rem;
+}
+
+.solution-economy__examples-card-numbers-item-value {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    big {
+        font-size: 4.5rem;
+        line-height: 5.4rem;
+    }
+}
+
+.solution-economy__examples-card-text {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+    color: #1c0f52;
+    p {
+        margin-bottom: 1.7rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        font-size: 1.5rem;
+        line-height: 140%;
+        margin-bottom: 3.4rem;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 400;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 1rem;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 0.6rem;
+                height: 0.6rem;
+                border-radius: 50%;
+                margin-right: 1.5rem;
+                background: #1B1E1D;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.solution-economy__examples-card-remark {
+    margin-top: 3rem;
+    font-size: 1rem;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.solution-economy__examples-card-title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 120%;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(27, 30, 29, 0.15);
+    margin-bottom: 3.5rem;
+}

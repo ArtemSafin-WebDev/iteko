@@ -3,22 +3,34 @@
     position: relative;
     z-index: 1;
     background-color: #fff;
-    padding-bottom: 3rem;
+    padding-bottom: 7rem;
 }
 
 .solution-platform__card {
     border-radius: 2.5rem;
     overflow: hidden;
     background-color: #1c1050;
-    background-image: url('../img/solution/solution-platform-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  
     padding: 3.5rem;
     display: flex;
     flex-direction: column;
     padding-bottom: 13rem;
     color: white;
+    position: relative;
+    z-index: 1;
+    margin: 0 -3.5rem;
+}
+
+.solution-platform__card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .solution-platform__card-breadcrumbs {

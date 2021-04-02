@@ -1,0 +1,150 @@
+.solution-description {
+ 
+    padding-bottom: 10rem;
+    position: relative;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.solution-description__top-panel {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 2rem;
+    grid-column-gap: 7.5rem;
+    margin-bottom: 5rem;
+}
+
+.solution-description__heading {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+}
+
+.solution-description__text {
+    font-size: 2rem;
+    line-height: 140%;
+}
+
+.solution-description__scheme {
+    padding: 9rem 10rem;
+    background: #f0f3f4;
+    border-radius: 4.5rem;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 -3.5rem;
+    margin-bottom: 4.5rem;
+}
+
+.solution-description__scheme-image {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.solution-description__accordions-card {
+    background: #f0f3f4;
+    border-radius: 4.5rem;
+    margin: 0 -3.5rem;
+    padding: 9rem 15.5rem;
+}
+
+.solution-description__accordions-heading {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+    margin-bottom: 5.5rem;
+}
+
+.solution-description__accordions-list {
+    margin-bottom: 7rem;
+}
+
+.solution-description__accordions-list-item {
+    border-top: 1px solid #000000;
+}
+
+.solution-description__accordions-btn {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 140%;
+    padding: 3rem 0;
+    cursor: pointer;
+    transition: color .2s;
+    user-select: none;
+    color: var(--text-color);
+    &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 1.3rem;
+        background-color: var(--primary-color);
+    }
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        margin-left: auto;
+        fill: var(--text-color);
+        transition: transform .3s, fill .3s;
+    }
+
+    .solution-description__accordions-list-item.active & {
+        color: var(--primary-color);
+
+
+
+        svg {
+            transform: rotate(180deg);
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.solution-description__accordions-content {
+    height: 0;
+    overflow: hidden;
+}
+
+.solution-description__accordions-content-inner {
+    padding-bottom: 3rem;
+    padding-left: 2.5rem;
+    font-size: 2rem;
+    line-height: 140%;
+}
+
+.solution-description__accordions-content-list {
+    li {
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.solution-description__link {
+    padding: 2rem 3rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    line-height: 111%;
+    color: white;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 5rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+    .no-touch &:hover {
+        background-color: var(--primary-color-hover);
+    }
+}

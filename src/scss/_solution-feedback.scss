@@ -1,0 +1,126 @@
+.solution-feedback {
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.solution-feedback__card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 6.2rem 10rem;
+    color: white;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .solution-feedback--dark & {
+        color: var(--text-color);
+
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+    }
+
+    .no-touch &:hover {
+        .solution-feedback__card-arrow {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+    }
+}
+
+.solution-feedback__card-bg {
+    background-color: #1c1050;
+    position: absolute;
+    left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    top: 0;
+
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    color: white;
+
+    .solution-feedback--dark & {
+        background: #f0f3f4;
+    }
+}
+
+.solution-feedback__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.solution-feedback__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.solution-feedback__card-content {
+    width: 30%;
+    flex-grow: 1;
+}
+
+.solution-feedback__card-arrow {
+    width: 21rem;
+    height: 21rem;
+    flex-shrink: 0;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    
+    svg {
+        width: 4rem;
+        height: 4rem;
+        fill: white;
+        transition: fill 0.2s;
+    }
+
+    .solution-feedback--dark & {
+        border-color: var(--text-color);
+
+        svg {
+            fill: var(--text-color);
+        }
+    }
+}
+
+.solution-feedback__card-small-heading {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 111%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.solution-feedback__card-text {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+}

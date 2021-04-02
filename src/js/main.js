@@ -17,6 +17,8 @@ import FixedFooter from './fixedFooter';
 import solutionsIntroSlider from './solutionsIntroSlider';
 import solutionHoops from './solutionsHoops';
 import intro from './intro';
+import solutionAccordions from './solutionAccorions';
+import solutionExamples from './solutionExamples';
 
 
 
@@ -29,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     onlyNumeric();
     fileUpload();
-  
-   
     introNewsTabs();
     successStories();
     hoop();
@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
     solutionsIntroSlider();
     solutionHoops();
     intro();
+    solutionAccordions();
+    solutionExamples();
     FixedFooter();
 });
 

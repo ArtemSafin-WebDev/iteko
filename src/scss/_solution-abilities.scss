@@ -1,0 +1,194 @@
+.solution-abilities {
+    padding-bottom: 11rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.solution-abilities__content {
+    
+    color: var(--text-color);
+    padding: 9rem 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        top: 0;
+        background: #f0f3f4;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+      
+    }
+}
+
+.solution-abilities__heading {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    margin-bottom: 7rem;
+}
+
+.solution-abilities__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 3rem;
+    grid-auto-rows: 35rem;
+}
+
+.solution-abilities__list-item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-abilities__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+    .no-touch &:hover {
+        color: white;
+        .solution-abilities__card-bg {
+            transform: scale(1.05);
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        .solution-abilities__card-content {
+            transform: translateY(0);
+        }
+
+        
+
+        .solution-abilities__card-text {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .3s, visibility .3s;
+        }
+
+        .solution-abilities__card-bg-hoop {
+            path {
+                stroke: white;
+            }
+        }
+    }
+}
+
+.solution-abilities__card-inner-wrapper {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    // justify-content: flex-end;
+}
+
+.solution-abilities__card-icon-container {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.solution-abilities__card-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.solution-abilities__card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #ffffff;
+    border-radius: 4rem;
+    transition: transform 0.3s, background-color 0.3s;
+    overflow: hidden;
+
+
+  
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/solution/abilities-card-gradient.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        
+    }
+}
+
+.solution-abilities__card-bg-hoop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+    object-fit: cover;
+    object-position: center;
+
+    path {
+       
+        transition: stroke .3s;
+    }
+    
+}
+
+.solution-abilities__card-content {
+    display: flex;
+    flex-direction: column;
+  
+    margin-top: auto;
+    position: relative;
+    transform: translateY(calc(100% + 3rem));
+    transition: transform .3s;
+}
+
+.solution-abilities__card-title {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 140%;
+    margin-bottom: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+}
+
+.solution-abilities__card-text {
+    font-size: 1.5rem;
+    line-height: 140%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+}
