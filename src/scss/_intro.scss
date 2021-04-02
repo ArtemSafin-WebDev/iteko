@@ -785,6 +785,11 @@
     height: 2px;
     background-color: rgba(white, .3);
     overflow: hidden;
+
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
 }
 
 
@@ -798,10 +803,7 @@
     left: var(--progress, 0%);
    
     top: 0;
-    display: none;
-    @include breakpoint(mobile) {
-        display: block;
-    }
+ 
 }
 
 .intro__scroll-progress-bar-wrapper {

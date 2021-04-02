@@ -23,7 +23,7 @@
     position: relative;
     bottom: 0.2rem;
     z-index: 300;
-
+    position: relative;
     @include breakpoint(small-tablet) {
         margin-right: auto;
     }
@@ -39,6 +39,23 @@
 
     @include breakpoint(mobile) {
         width: 8rem;
+    }
+}
+
+.page-header__logo-image--dark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+
+    .page-header--dark & {
+        opacity: 1;
+    }
+
+    .menu-open & {
+        opacity: 0 !important;
     }
 }
 
@@ -84,6 +101,18 @@
     .no-touch &:hover {
         background: rgba(white, 0.1);
     }
+
+    .page-header--dark & {
+        color: var(--text-color);
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+
+        .no-touch &:hover {
+            background: rgba(#1b1e1d, 0.05);
+        }
+    }
 }
 
 .page-header__burger {
@@ -115,7 +144,11 @@
         height: 2px;
         margin-bottom: 6px;
         background-color: #fff;
-        transition: transform 0.3s;
+        transition: transform 0.3s, background-color .3s;
+
+        body:not(.menu-open) .page-header--dark & {
+            background-color: var(--text-color);
+        }
     }
 
     &::after {
@@ -126,6 +159,7 @@
         background: rgba(white, 0.1);
 
         
+
         &::before {
             transform: translateY(4px) rotate(45deg);
         }
@@ -136,6 +170,10 @@
 
         @include breakpoint(mobile) {
             background: rgba(#f0f3f4, 0.3);
+
+            .page-header--dark & {
+                background: rgba(#1b1e1d, 0.3);
+            }
             &::before {
                 transform: translateY(4px) rotate(45deg) scale(0.7);
             }
@@ -148,6 +186,10 @@
 
     .no-touch &:hover {
         background: rgba(white, 0.1);
+    }
+
+    .no-touch:not(.menu-open)  .page-header--dark &:hover {
+        background: rgba(#1b1e1d, 0.05);
     }
 }
 
@@ -164,8 +206,9 @@
     border-radius: 50%;
     transition: background-color 0.2s;
 
+   
+
     @include breakpoint(mobile) {
-        
         margin-right: 0;
         width: auto;
         height: auto;
@@ -177,8 +220,20 @@
         color: white;
     }
 
+    .page-header--dark & {
+        color: var(--text-color);
+
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+    }
+
     .no-touch &:hover {
         background: rgba(white, 0.1);
+    }
+    .no-touch .page-header--dark &:hover {
+        background: rgba(#1b1e1d, 0.05);
     }
 
     svg {
@@ -200,14 +255,15 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 120%;
-  
+
     color: white;
-   
+
     transition: background-color 0.2s, color 0.2s;
     z-index: 300;
     position: relative;
 
- 
+
+
     &::before {
         content: '';
         position: absolute;
@@ -217,7 +273,7 @@
         height: 100%;
         border-radius: 2rem;
         background-color: var(--primary-color);
-        transition: transform .2s;
+        transition: transform 0.2s;
         z-index: -1;
 
         @include breakpoint(small-tablet) {
@@ -228,7 +284,6 @@
     @include breakpoint(small-tablet) {
         font-size: 2rem;
         padding: 1.2rem 2.4rem;
-        
     }
 
     @include breakpoint(mobile) {
@@ -239,10 +294,12 @@
         color: white;
     }
 
+    
+   
+
     .no-touch &:hover {
         &::before {
             transform: scale(0.95);
-            
         }
     }
 }
@@ -270,7 +327,6 @@
     // transition: opacity 0.4s, visibility 0s linear 0.4s;
     -webkit-overflow-scrolling: touch;
     transform-origin: center top;
-   
 
     @include breakpoint(mobile) {
         padding-top: 6.6rem;
@@ -288,34 +344,30 @@
         &::-webkit-scrollbar {
             background-color: transparent;
             width: 6px;
-    
+
             @include breakpoint(mobile) {
                 width: 4px;
             }
         }
-    
+
         &::-webkit-scrollbar-thumb {
             background-color: var(--primary-color);
         }
-    
+
         &::-webkit-scrollbar-button {
             display: none;
         }
-    
+
         &::-webkit-scrollbar-track {
             background-color: rgba(white, 0.3);
         }
     }
-
-   
 }
-
 
 .page-header__menu-inner {
     opacity: 0;
     visibility: hidden;
 }
-
 
 .page-header__search-form {
     display: flex;
@@ -414,7 +466,6 @@
 }
 
 .page-header__menu-solutions-heading-text {
-
 }
 
 .page-header__menu-solutions-list {

@@ -1,4 +1,4 @@
-<header class="page-header">
+<header class="page-header {{#if darkHeader }} page-header--dark {{/if}}">
     <div class="container">
         <div class="page-header__row">
             <div class="page-header__menu">
@@ -157,7 +157,14 @@
                 </div>
             </div>
             <a href="#" class="page-header__logo">
+
+
+
+
+                <img src="img/logo-dark.svg" alt="" class="page-header__logo-image page-header__logo-image--dark" width="120">
+
                 <img src="img/logo.svg" alt="" class="page-header__logo-image" width="120">
+
             </a>
 
             <nav class="page-header__nav">
