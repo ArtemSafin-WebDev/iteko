@@ -1,9 +1,12 @@
 .solution-description {
- 
     padding-bottom: 10rem;
     position: relative;
     background-color: #fff;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 3rem;
+    }
 }
 
 .solution-description__top-panel {
@@ -12,17 +15,35 @@
     grid-gap: 2rem;
     grid-column-gap: 7.5rem;
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        display: block;
+        margin-bottom: 3rem;
+    }
 }
 
 .solution-description__heading {
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 130%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 130%;
+        margin-bottom: 2rem;
+    }
 }
 
 .solution-description__text {
     font-size: 2rem;
     line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 140%;
+        margin-bottom: 3rem;
+    }
 }
 
 .solution-description__scheme {
@@ -34,6 +55,13 @@
 
     margin: 0 -3.5rem;
     margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 3rem;
+        padding: 2.4rem 1.2rem;
+        border-radius: 3rem;
+    }
 }
 
 .solution-description__scheme-image {
@@ -47,6 +75,12 @@
     border-radius: 4.5rem;
     margin: 0 -3.5rem;
     padding: 9rem 15.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem;
+        margin: 0;
+        border-radius: 3rem;
+    }
 }
 
 .solution-description__accordions-heading {
@@ -54,10 +88,21 @@
     font-size: 4.5rem;
     line-height: 120%;
     margin-bottom: 5.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 120%;
+        margin-bottom: 2rem;
+    }
 }
 
 .solution-description__accordions-list {
     margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
 }
 
 .solution-description__accordions-list-item {
@@ -72,9 +117,16 @@
     line-height: 140%;
     padding: 3rem 0;
     cursor: pointer;
-    transition: color .2s;
+    transition: color 0.2s;
     user-select: none;
     color: var(--text-color);
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 140%;
+        padding: 1.1rem 0;
+    }
     &::before {
         content: '';
         width: 6px;
@@ -83,6 +135,15 @@
         flex-shrink: 0;
         margin-right: 1.3rem;
         background-color: var(--primary-color);
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+            background-color: transparent;
+            background-image: url('../img/list-marker.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 
     svg {
@@ -91,13 +152,16 @@
         flex-shrink: 0;
         margin-left: auto;
         fill: var(--text-color);
-        transition: transform .3s, fill .3s;
+        transition: transform 0.3s, fill 0.3s;
+
+        @include breakpoint(mobile) {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
     }
 
     .solution-description__accordions-list-item.active & {
         color: var(--primary-color);
-
-
 
         svg {
             transform: rotate(180deg);
@@ -116,6 +180,13 @@
     padding-left: 2.5rem;
     font-size: 2rem;
     line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 140%;
+        padding-bottom: 1.1rem;
+        padding-left: 1.8rem;
+    }
 }
 
 .solution-description__accordions-content-list {
@@ -140,6 +211,14 @@
     color: white;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 111%;
+        padding: 1.3rem 2rem; 
+        align-self: flex-start;
+    }
     &:link,
     &:visited {
         color: white;

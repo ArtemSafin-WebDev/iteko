@@ -4,11 +4,13 @@
     background-color: white;
     padding-bottom: 9rem;
 
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
 
     &:last-child {
         padding-bottom: 0;
     }
-   
 }
 
 .solution-tasks__card {
@@ -47,18 +49,36 @@
     grid-column-gap: 7.5rem;
     padding: 9.5rem 0;
     position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+        display: block;
+    }
 }
 
 .solution-tasks__small-heading {
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 130%;
-    margin-top: -.5rem;
+    margin-top: -0.5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 130%;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .solution-tasks__text {
     font-size: 2rem;
     line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 140%;
+    }
     p {
         margin-bottom: 1.5rem;
         &:last-child {

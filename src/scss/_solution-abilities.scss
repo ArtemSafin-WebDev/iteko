@@ -3,14 +3,22 @@
     background-color: #fff;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
 }
 
 .solution-abilities__content {
-    
     color: var(--text-color);
     padding: 9rem 0;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
 
     &::before {
         content: '';
@@ -22,7 +30,6 @@
         height: 100%;
         z-index: -1;
         pointer-events: none;
-      
     }
 }
 
@@ -31,13 +38,26 @@
     font-size: 3.6rem;
     line-height: 130%;
     margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 130%;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .solution-abilities__list {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 3rem;
-    grid-auto-rows: 35rem;
+   
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 1rem;
+      
+    }
 }
 
 .solution-abilities__list-item {
@@ -50,10 +70,15 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-  
+
     position: relative;
     z-index: 1;
     transition: color 0.3s;
+    min-height: 35rem;
+
+    @include breakpoint(mobile) {
+        min-height: 16.6rem;
+    }
     .no-touch &:hover {
         color: white;
         .solution-abilities__card-bg {
@@ -67,12 +92,10 @@
             transform: translateY(0);
         }
 
-        
-
         .solution-abilities__card-text {
             opacity: 1;
             visibility: inherit;
-            transition: opacity .3s, visibility .3s;
+            transition: opacity 0.3s, visibility 0.3s;
         }
 
         .solution-abilities__card-bg-hoop {
@@ -89,7 +112,10 @@
     flex-direction: column;
     flex-grow: 1;
     overflow: hidden;
-    // justify-content: flex-end;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem;
+    }
 }
 
 .solution-abilities__card-icon-container {
@@ -103,6 +129,12 @@
     background-color: #fff;
     border-radius: 50%;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        height: auto;
+        width: auto;
+        align-self: flex-start;
+    }
 }
 
 .solution-abilities__card-icon {
@@ -125,8 +157,9 @@
     transition: transform 0.3s, background-color 0.3s;
     overflow: hidden;
 
-
-  
+    @include breakpoint(mobile) {
+        border-radius: 2.5rem;
+    }
 
     &::after {
         content: '';
@@ -142,8 +175,6 @@
         z-index: 5;
         opacity: 0;
         transition: opacity 0.3s;
-
-        
     }
 }
 
@@ -158,20 +189,22 @@
     object-position: center;
 
     path {
-       
-        transition: stroke .3s;
+        transition: stroke 0.3s;
     }
-    
 }
 
 .solution-abilities__card-content {
     display: flex;
     flex-direction: column;
-  
+
     margin-top: auto;
     position: relative;
     transform: translateY(calc(100% + 3rem));
-    transition: transform .3s;
+    transition: transform 0.3s;
+
+    @include breakpoint(mobile) {
+        transform: none;
+    }
 }
 
 .solution-abilities__card-title {
@@ -183,6 +216,14 @@
     left: 0;
     bottom: 100%;
     width: 100%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 140%;
+        position: static;
+        margin-bottom: 0;
+    }
 }
 
 .solution-abilities__card-text {
@@ -190,5 +231,11 @@
     line-height: 140%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 140%;
+        display: none;
+    }
 }

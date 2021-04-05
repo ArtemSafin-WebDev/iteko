@@ -3,6 +3,10 @@
     background-color: #fff;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
 }
 
 .solution-we-can__card {
@@ -11,6 +15,13 @@
     padding: 13rem 10rem;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        border-radius: 3rem;
+        padding: 4rem;
+        flex-direction: column;
+        align-items: initial;
+    }
 
     .no-touch &:hover {
         .solution-we-can__card-arrow {
@@ -26,6 +37,11 @@
 .solution-we-can__card-content {
     width: 30%;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 
 .solution-we-can__card-heading {
@@ -35,12 +51,26 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 111%;
+        margin-bottom: 1.4rem;
+    }
 }
 
 .solution-we-can__card-text {
     font-weight: 500;
     font-size: 4.5rem;
     line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: 4rem;
+    }
 }
 
 .solution-we-can__card-arrow {
@@ -55,6 +85,12 @@
     border: 1px solid #1b1e1d;
     border-radius: 50%;
     transition: background-color 0.2s;
+
+    @include breakpoint(mobile) {
+        width: 7rem;
+        height: 7rem;
+        margin: 0;
+    }
     svg {
         fill: #1b1e1d;
         width: 4rem;
@@ -62,5 +98,10 @@
         display: block;
         flex-shrink: 0;
         transition: fill 0.2s;
+
+        @include breakpoint(mobile) {
+            width: 1.3rem;
+            height: 1.3rem;
+        }
     }
 }

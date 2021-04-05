@@ -3,6 +3,10 @@
     background-color: #fff;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
 }
 
 .solution-footer__row {
@@ -10,12 +14,23 @@
     padding-top: 3.6rem;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        padding-top: 2rem;
+        flex-direction: column;
+        align-items: initial;
+    }
 }
 
 .solution-footer__sharing {
     display: flex;
     align-items: center;
     margin-right: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        margin-bottom: 1.7rem;
+    }
 }
 
 .solution-footer__sharing-heading {
@@ -23,6 +38,14 @@
     font-size: 2.5rem;
     line-height: 140%;
     margin-right: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 111%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
 }
 
 .solution-footer__sharing-list {
@@ -32,6 +55,9 @@
 
 .solution-footer__sharing-list-item {
     margin-right: 1.5rem;
+    @include breakpoint(mobile) {
+        margin-right: 1.1rem;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -48,11 +74,21 @@
     justify-content: center;
     transition: background-color 0.2s;
     border-radius: 50%;
+
+    @include breakpoint(mobile) {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
     svg {
         width: 1.5rem;
         height: 1.5rem;
         fill: white;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+        }
     }
     &:link,
     &:visited {
@@ -69,4 +105,10 @@
     font-size: 1.5rem;
     line-height: 140%;
     color: #bbbfc4;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 140%;
+        margin: 0;
+    }
 }
