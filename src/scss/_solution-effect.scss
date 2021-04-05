@@ -8,12 +8,27 @@
 .solution-effect__card {
     background: #1c0f52;
     border-radius: 4rem;
+    display: grid;
     grid-template-columns: 1fr 1.5fr;
     grid-gap: 2rem;
     grid-column-gap: 7.5rem;
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
     color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.solution-effect__card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
 }
 
 .solution-effect__card-heading {
@@ -35,29 +50,57 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    &::before {
+        display: none;
+    }
 }
 
 .solution-effect__card-benefit-card {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    border: 2px solid rgba(#884dd6, 0.5);
-    border-radius: 1.5rem;
+    // border: 2px solid rgba(#884dd6, 0.5);
+    // border-radius: 1.5rem;
     padding: 2.4rem 2.8rem;
 
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 145%;
     position: relative;
-    &::before {
-        content: counter(ordered-list, decimal-leading-zero);
-        font-size: 1.5rem;
-        line-height: 140%;
+    z-index: 1;
+    svg {
         position: absolute;
+        left: 0;
         top: 0;
-        left: 3rem;
-        margin-top: 1rem;
-        background-color: #1c0f52;
-        padding: .3rem 0.7rem;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        rect {
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+        }
     }
+   
+}
+
+
+.solution-effect__card-benefit-card-number {
+    font-size: 1.5rem;
+    line-height: 140%;
+    position: absolute;
+    top: 0;
+    left: 2.2rem;
+    font-weight: 400;
+    transform: translateY(-50%);
+    margin-top: 0.15rem;
+    background-color: #1c0f52;
+    padding: 0.3rem 0.7rem;
+    font-weight: 500;
+}
+
+.solution-effect__card-benefit-card-number-text {
+    background: linear-gradient(to top right, #8F5FE3, #00B07A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

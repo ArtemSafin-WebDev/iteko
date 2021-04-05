@@ -27,10 +27,11 @@
 .solution-documents__card {
     display: flex;
     padding: 3.5rem 3rem;
+    align-items: center;
     border: 1px solid #F0F3F4;
     border-radius: 1.5rem;
     transition: background-color .2s;
-
+    flex-grow: 1;
     .no-touch &:hover {
         background: #F0F3F4;
     }
@@ -40,6 +41,7 @@
         flex-shrink: 0;
         margin-right: 1.2rem;
         fill: var(--text-color);
+        margin-top: -0.4rem;
     }
 }
 
