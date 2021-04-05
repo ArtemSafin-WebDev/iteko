@@ -1,0 +1,136 @@
+.solution-gallery {
+    padding-bottom: 8rem;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 5rem;
+    }
+}
+
+.solution-gallery__slider {
+    position: relative;
+    .swiper-container {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.solution-gallery__slider-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 78rem;
+    flex-grow: 1;
+    border-radius: 4rem;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    padding: 5.5rem;
+    color: white;
+    justify-content: flex-end;
+
+    backface-visibility: hidden;
+    transition: transform 0.5s, opacity 0.5s;
+
+    @include breakpoint(mobile) {
+        padding: 2.2rem;
+        min-height: 21.4rem;
+        border-radius: 1.5rem;
+    }
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) & {
+        transform: scale(0.85);
+        opacity: 0.5;
+
+        @include breakpoint(mobile) {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.solution-gallery__slider-card-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    &::after {
+        content: '';
+        background: linear-gradient(360deg, #1c0f52 -23.68%, rgba(28, 15, 82, 0) 43.45%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        @include breakpoint(mobile) {
+            background: linear-gradient(0deg, #1C0F52 -4.24%, rgba(28, 15, 82, 0) 61.44%);
+        }
+    }
+}
+
+.solution-gallery__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.solution-gallery__slider-card-title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+}
+
+.solution-gallery__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 300;
+
+    .no-touch &:not(.swiper-button-disabled):hover {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &--prev {
+        right: 100%;
+        margin-right: 4rem;
+    }
+    &--next {
+        left: 100%;
+        margin-left: 4rem;
+    }
+    svg {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--text-color);
+        display: block;
+        transition: fill 0.2s;
+    }
+}

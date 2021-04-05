@@ -19,6 +19,7 @@ import solutionHoops from './solutionsHoops';
 import intro from './intro';
 import solutionAccordions from './solutionAccorions';
 import solutionExamples from './solutionExamples';
+import solutionGallerySlider from './solutionGallerySlider';
 
 
 
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     intro();
     solutionAccordions();
     solutionExamples();
+    solutionGallerySlider();
     FixedFooter();
 });
 
