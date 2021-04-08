@@ -1,0 +1,93 @@
+.project-intro {
+    position: relative;
+    z-index: 1;
+
+    padding-bottom: 8rem;
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 3rem;
+    }
+}
+
+.project-intro__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    z-index: -1;
+}
+
+.project-intro__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-intro__content {
+    padding: 5rem 0;
+    padding-top: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    background-color: #1c1050;
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-top: 12rem;
+    }
+}
+
+.project-intro__breadcrumbs {
+    font-size: 1.5rem;
+    line-height: 140%;
+    color: rgba(white, 0.3);
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        .no-touch &:hover {
+            color: white;
+        }
+    }
+}
+
+.project-intro__title {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 120%;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2.5rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.project-intro__date {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}

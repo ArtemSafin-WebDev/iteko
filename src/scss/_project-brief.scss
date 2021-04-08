@@ -1,0 +1,50 @@
+.project-brief {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 5rem;
+    }
+
+    figure {
+        figcaption {
+            font-size: 1.5rem;
+            line-height: 140%;
+            color: #bbbfc4;
+            margin-top: 3rem;
+            padding-left: 16rem;
+
+            @include breakpoint(mobile) {
+                padding-left: 0;
+                font-size: 1.2rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+.project-brief__text {
+    padding-left: 16rem;
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    margin-bottom: 3rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.project-brief__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}

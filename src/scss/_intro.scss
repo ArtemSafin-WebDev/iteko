@@ -726,24 +726,28 @@
             transform: translate(-50%, -50%) translateY(3rem);
         }
 
-        .sector-1-hovered & {
-            transform: translate(-50%, -50%) translateX(70%);
+        &--flying {
+            .sector-1-hovered & {
+                transform: translate(-50%, -50%) translateX(70%);
+            }
+            .sector-2-hovered & {
+                transform: translate(-50%, -50%) translateY(130%);
+            }
+            .sector-3-hovered & {
+                transform: translate(-50%, -50%) translateX(-100%);
+            }
+            .sector-4-hovered & {
+                transform: translate(-50%, -50%) translateY(-50%) translateX(30%);
+            }
+            .sector-5-hovered & {
+                transform: translate(-50%, -50%) translateY(-80%) translateX(35%);
+            }
+            .sector-6-hovered & {
+                transform: translate(-50%, -50%) translateY(-80%) translateX(-35%);
+            }
         }
-        .sector-2-hovered & {
-            transform: translate(-50%, -50%) translateY(130%);
-        }
-        .sector-3-hovered & {
-            transform: translate(-50%, -50%) translateX(-100%);
-        }
-        .sector-4-hovered & {
-            transform: translate(-50%, -50%) translateY(-50%) translateX(30%);
-        }
-        .sector-5-hovered & {
-            transform: translate(-50%, -50%) translateY(-80%) translateX(35%);
-        }
-        .sector-6-hovered & {
-            transform: translate(-50%, -50%) translateY(-80%) translateX(-35%);
-        }
+
+     
     }
 
    
@@ -759,8 +763,12 @@
     }
 
     .intro.hovered & {
-        opacity: 0.5;
+        opacity: 0.1;
         // visibility: hidden;
+
+        &--flying {
+            opacity: 0.5;
+        }
         transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s;
         pointer-events: none;
     }

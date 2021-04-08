@@ -1,0 +1,106 @@
+.project-goals {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 3rem;
+    }
+}
+
+.project-goals__content {
+    position: relative;
+    z-index: 1;
+
+    padding: 6.5rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: #f0f3f4;
+        background-image: url('../img/project/project-goals-bg.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include breakpoint(mobile) {
+            background-image: none;
+        }
+    }
+}
+
+.project-goals__heading {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.project-goals__grid {
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 2rem;
+    grid-column-gap: 7.5rem;
+    display: grid;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.project-goals__small-text {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    max-width: 39rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 140%;
+        max-width: none;
+    }
+
+    p {
+        margin-bottom: 0.8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    em {
+        font-style: normal;
+        color: #00b07a;
+        font-size: 3.5rem;
+        line-height: 1.2;
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.project-goals__large-text {
+    font-size: 2rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+}

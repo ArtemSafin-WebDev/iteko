@@ -1,5 +1,5 @@
 .solution-examples {
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
     background-color: #fff;
     position: relative;
     z-index: 1;
@@ -87,7 +87,6 @@
         }
     }
 
-
     .swiper-container {
         @include breakpoint(mobile) {
             overflow: visible;
@@ -102,7 +101,7 @@
     padding: 4.5rem;
     border: 1px solid rgba(#bbbfc4, 0.4);
     border-radius: 4rem;
-    min-height: 36rem;
+    // min-height: 36rem;
 
     @include breakpoint(mobile) {
         padding: 3.2rem;
@@ -162,6 +161,10 @@
     line-height: 140%;
     margin-bottom: 2rem;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 140%;
@@ -197,7 +200,6 @@
     }
 }
 
-
 .solution-examples__slider-pagination {
     display: flex;
     align-items: center;
@@ -209,11 +211,11 @@
         width: 0.8rem;
         height: 0.8rem;
         border-radius: 50%;
-        margin: 0 .25rem;
-        background-color: #E2E4E6;
+        margin: 0 0.25rem;
+        background-color: #e2e4e6;
         border-radius: 50%;
         flex-shrink: 0;
-        transition: background-color .2s;
+        transition: background-color 0.2s;
         opacity: 1;
         &-active {
             background-color: var(--primary-color);
@@ -222,4 +224,4 @@
     @include breakpoint(mobile) {
         display: flex;
     }
-} 
+}

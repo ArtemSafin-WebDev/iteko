@@ -1,0 +1,126 @@
+.project__stats {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 3rem;
+    }
+}
+
+.project__stats-content {
+    position: relative;
+    z-index: 1;
+    background-color: #231458;
+    padding: 12rem 0;
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+}
+
+.project__stats-bg {
+    position: absolute;
+    left: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+    right: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+    top: 0;
+    width: auto;
+    height: 100%;
+    z-index: -1;
+}
+
+.project__stats-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project__stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 2rem;
+    grid-column-gap: 7.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.project__stats-heading {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.project__stats-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-row-gap: 9rem;
+    grid-column-gap: 9rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.project__stats-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__stats-card-number {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        margin-bottom: .5rem;
+    }
+}
+
+.project__stats-card-number-amount {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+    margin-right: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3rem;
+    }
+}
+
+.project__stats-card-number-text {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+    }
+}
+
+.project__stats-card-text {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+    }
+}
