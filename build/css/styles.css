@@ -2565,7 +2565,8 @@ select:-webkit-autofill:focus {
     -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform .7s;
     transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform .7s;
     transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s;
-    transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s, -webkit-transform .7s; }
+    transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s, -webkit-transform .7s;
+    pointer-events: none; }
 
 .intro__heading {
   font-size: 3.5rem;
