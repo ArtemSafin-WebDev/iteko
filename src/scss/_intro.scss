@@ -631,6 +631,12 @@
     }
 }
 
+.intro__card-features-link {
+    &:hover {
+        color: white;
+    }
+}
+
 .intro__card-ring {
     position: absolute;
     left: 0;
@@ -719,6 +725,25 @@
             visibility: hidden;
             transform: translate(-50%, -50%) translateY(3rem);
         }
+
+        .sector-1-hovered & {
+            transform: translate(-50%, -50%) translateX(70%);
+        }
+        .sector-2-hovered & {
+            transform: translate(-50%, -50%) translateY(130%);
+        }
+        .sector-3-hovered & {
+            transform: translate(-50%, -50%) translateX(-100%);
+        }
+        .sector-4-hovered & {
+            transform: translate(-50%, -50%) translateY(-50%) translateX(30%);
+        }
+        .sector-5-hovered & {
+            transform: translate(-50%, -50%) translateY(-80%) translateX(35%);
+        }
+        .sector-6-hovered & {
+            transform: translate(-50%, -50%) translateY(-80%) translateX(-35%);
+        }
     }
 
    
@@ -734,9 +759,9 @@
     }
 
     .intro.hovered & {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0s linear 0.3s;
+        opacity: 0.5;
+        // visibility: hidden;
+        transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s;
     }
 }
 

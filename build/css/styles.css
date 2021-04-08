@@ -2434,6 +2434,9 @@ select:-webkit-autofill:focus {
   .intro__card-features-list-item:last-child {
     margin-bottom: 0; }
 
+.intro__card-features-link:hover {
+  color: white; }
+
 .intro__card-ring {
   position: absolute;
   left: 0;
@@ -2526,7 +2529,25 @@ select:-webkit-autofill:focus {
       opacity: 0;
       visibility: hidden;
       -webkit-transform: translate(-50%, -50%) translateY(3rem);
-              transform: translate(-50%, -50%) translateY(3rem); } }
+              transform: translate(-50%, -50%) translateY(3rem); }
+    .sector-1-hovered .intro__heading-block {
+      -webkit-transform: translate(-50%, -50%) translateX(70%);
+              transform: translate(-50%, -50%) translateX(70%); }
+    .sector-2-hovered .intro__heading-block {
+      -webkit-transform: translate(-50%, -50%) translateY(130%);
+              transform: translate(-50%, -50%) translateY(130%); }
+    .sector-3-hovered .intro__heading-block {
+      -webkit-transform: translate(-50%, -50%) translateX(-100%);
+              transform: translate(-50%, -50%) translateX(-100%); }
+    .sector-4-hovered .intro__heading-block {
+      -webkit-transform: translate(-50%, -50%) translateY(-50%) translateX(30%);
+              transform: translate(-50%, -50%) translateY(-50%) translateX(30%); }
+    .sector-5-hovered .intro__heading-block {
+      -webkit-transform: translate(-50%, -50%) translateY(-80%) translateX(35%);
+              transform: translate(-50%, -50%) translateY(-80%) translateX(35%); }
+    .sector-6-hovered .intro__heading-block {
+      -webkit-transform: translate(-50%, -50%) translateY(-80%) translateX(-35%);
+              transform: translate(-50%, -50%) translateY(-80%) translateX(-35%); } }
   @media only screen and (max-width: 640px) {
     .intro__heading-block {
       margin: 0;
@@ -2540,10 +2561,11 @@ select:-webkit-autofill:focus {
       left: auto;
       top: auto; } }
   .intro.hovered .intro__heading-block {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
-    transition: opacity 0.3s, visibility 0s linear 0.3s; }
+    opacity: 0.5;
+    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform .7s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform .7s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s, -webkit-transform .7s; }
 
 .intro__heading {
   font-size: 3.5rem;

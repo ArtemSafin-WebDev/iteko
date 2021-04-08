@@ -7,14 +7,17 @@ export default function intro() {
         elements.forEach(element => {
             const sectors = Array.from(element.querySelectorAll('.intro__cards-sector'));
     
-            sectors.forEach(sector => {
+            sectors.forEach((sector, sectorIndex) => {
                 sector.addEventListener('mouseenter', () => {
                     element.classList.add('hovered');
                     sector.classList.add('active');
-                    sectors.forEach(otherSector => {
+                    sectors.forEach((otherSector, otherSectorIndex) => {
+                      
                         if (otherSector === sector) {
                             otherSector.classList.remove('faded');
+                            element.classList.add(`sector-${otherSectorIndex + 1}-hovered`);
                         } else {
+                            element.classList.remove(`sector-${otherSectorIndex + 1}-hovered`);
                             otherSector.classList.add('faded');
                         }
                     });
@@ -22,6 +25,7 @@ export default function intro() {
                 sector.addEventListener('mouseleave', () => {
                     sector.classList.remove('active');
                     element.classList.remove('hovered');
+                    element.classList.remove(`sector-${sectorIndex + 1}-hovered`);
                     sectors.forEach(sector => {
                         sector.classList.remove('faded');
                     });
