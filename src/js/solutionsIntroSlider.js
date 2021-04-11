@@ -28,7 +28,7 @@ export default function solutionsIntroSlider() {
             },
             breakpoints: {
                 641: {
-                    spaceBetween: 20,
+                    spaceBetween: 60,
                     speed: 1200,
                 }
             }
