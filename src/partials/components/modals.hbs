@@ -1,0 +1,148 @@
+<div class="modal js-modal" id="demo">
+    <div class="modal__inner modal__inner--demo">
+        <button class="modal__close js-close-modal" type="button">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <form action="/" method="POST" class="modal__demo-form" data-need-validation id="demo-form">
+            <h3 class="modal__demo-form-small-heading">
+                Заявка на демодоступ
+            </h3>
+            <h2 class="modal__demo-form-large-heading">
+                Заполните форму ниже,
+                и мы вскоре свяжемся с вами
+            </h2>
+            <div class="modal__demo-form-fields">
+                <div class="modal__demo-form-field">
+                    <input type="text" class="modal__demo-form-input" name="name" placeholder="ФИО" required>
+                </div>
+                <div class="modal__demo-form-field">
+                    <div class="modal__custom-select" id="theme-field">
+                        <select name="theme" class="js-custom-select" required
+                            data-parsley-errors-container="#theme-field" data-parsley-class-handler="#theme-field">
+                            <option value="" placeholder>Тема обращения</option>
+                            <option value="1">Потенциальный клиент</option>
+                            <option value="2">Запрос от СМИ</option>
+                            <option value="3">Запрос по аналитике</option>
+                            <option value="4">Карьера</option>
+                            <option value="5">Технологическое партнерство</option>
+                            <option value="6">Вопрос по работе сайта</option>
+                            <option value="7">Другое</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal__demo-form-field">
+                    <input type="tel" class="modal__demo-form-input js-phone-input" name="phone" placeholder="Телефон"
+                        required data-parsley-phone>
+                </div>
+                <div class="modal__demo-form-field modal__demo-form-field--high">
+                    <textarea name="comment" class="modal__demo-form-input"
+                        placeholder="Дополнительная информация"></textarea>
+                </div>
+
+                <div class="modal__demo-form-field">
+                    <input type="email" class="modal__demo-form-input" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="modal__demo-form-field">
+                    <input type="text" class="modal__demo-form-input" name="role" placeholder="Должность">
+                </div>
+                <div class="modal__demo-form-field">
+                    <input type="text" class="modal__demo-form-input" name="company" placeholder="Компания">
+                </div>
+                <div class="modal__demo-form-field">
+                    <label class="modal__file-upload js-file-upload">
+                        <input type="file" name="file" class="modal__file-upload-input"
+                            accept=".pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                        <span class="modal__file-upload-text js-file-upload-text">
+                            Перетащите файл (pdf, doc, docx,XLS)
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal__demo-form-controls">
+                <label class="modal__demo-form-checkbox">
+                    <input type="checkbox" name="policy" class="modal__demo-form-checkbox-input" checked required>
+                    <span class="modal__demo-form-checkbox-mark">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                            <use xlink:href="#checkmark"></use>
+                        </svg>
+                    </span>
+                    <span class="modal__demo-form-checkbox-text">
+                        Даю согласие на обработку моих персональных данных, в соответствии с Федеральным законом от
+                        27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в
+                        Согласии
+                        на обработку персональных данных
+                    </span>
+                </label>
+                <button type="submit" class="modal__demo-form-submit">
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="demo-success">
+    <div class="modal__inner modal__inner--demo">
+        <button class="modal__close js-close-modal" type="button">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <div class="modal__demo-form">
+            <h3 class="modal__demo-form-small-heading">
+                Заявка отправлена
+            </h3>
+            <div class="modal__demo-success">
+                <h4 class="modal__demo-success-heading">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-success">
+                        <use xlink:href="#success"></use>
+                    </svg>
+                    Спасибо за вашу заявку
+                </h4>
+                <div class="modal__demo-success-text">
+                    <p>
+                        В ближайшее время с вами свяжется наш специалист – будьте на связи
+                    </p>
+                </div>
+                <a href="#" class="modal__demo-success-back-link js-close-modal">
+                    Вернуться на сайт
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="demo-failure">
+    <div class="modal__inner modal__inner--demo">
+        <button class="modal__close js-close-modal" type="button">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <div class="modal__demo-form">
+            <h3 class="modal__demo-form-small-heading modal__demo-form-small-heading--violet">
+                Заявка не отправлена
+            </h3>
+            <div class="modal__demo-success">
+                <h4 class="modal__demo-success-heading modal__demo-success-heading--violet">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-failure">
+                        <use xlink:href="#failure"></use>
+                    </svg>
+                    Ваша заявка не отправлена
+                </h4>
+                <div class="modal__demo-success-text">
+                    <p>
+                        Попробуйте повторить операцию.
+                        Если не получается снова, напишите
+                        нам <a href="mailto:income@i-teco.ru">income@i-teco.ru</a> и мы вам поможем
+                    </p>
+                </div>
+                <a href="#demo" class="modal__demo-success-back-link js-open-modal">
+                    Повторить 
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

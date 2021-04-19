@@ -7,11 +7,13 @@
 }
 
 :root {
-    --max-container-width: 140rem;
+    --max-container-width: 158rem;
+    --max-inner-container-width: 140rem;
     --content-padding: 6rem;
     --primary-color: #00B07A; 
     --primary-color-hover: rgb(8, 138, 99);
     --text-color: #1B1E1D;
+    --error-color: #BD0909;
     --golos: 'Golos', sans-serif;
     --circe: 'Circe', sans-serif;
     @include breakpoint(tablet) {

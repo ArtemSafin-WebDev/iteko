@@ -104,15 +104,19 @@
     bottom: 0;
     width: 100%;
     height: auto;
+   
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.intro__news-row {
     display: flex;
     border-top: 1px solid rgba(#f0f3f4, 0.2);
     padding-top: 2.2rem;
 
     padding-bottom: 3.5rem;
-
-    @include breakpoint(mobile) {
-        display: none;
-    }
 }
 
 .intro__news-tabs-nav {

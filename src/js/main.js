@@ -20,6 +20,7 @@ import intro from './intro';
 import solutionAccordions from './solutionAccorions';
 import solutionExamples from './solutionExamples';
 import solutionGallerySlider from './solutionGallerySlider';
+import modals from './modals';
 
 
 
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     solutionExamples();
     solutionGallerySlider();
     FixedFooter();
+    modals();
 });
 
 window.addEventListener('load', function() {

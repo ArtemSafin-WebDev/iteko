@@ -9,6 +9,12 @@
     }
 }
 
+.inner-container {
+    width: 100%;
+    max-width: var(--max-inner-container-width, 100%);
+    margin: 0 auto;
+}
+
 .page-content {
     flex-grow: 1;
     display: flex;

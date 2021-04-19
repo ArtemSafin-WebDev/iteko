@@ -236,6 +236,16 @@
         background: rgba(#1b1e1d, 0.05);
     }
 
+
+    .menu-open & {
+        color: white;
+
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+
     svg {
         width: 15px;
         height: 15px;
@@ -488,6 +498,11 @@
     font-size: 1.5rem;
     line-height: 140%;
     display: block;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 140%;
@@ -527,6 +542,11 @@
     line-height: 120%;
     margin-bottom: 5rem;
     overflow: hidden;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.5rem;
@@ -561,6 +581,11 @@
     line-height: 130%;
     margin-bottom: 1.7rem;
 
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 2.5rem;
@@ -574,6 +599,11 @@
     font-size: 2.5rem;
     line-height: 140%;
     margin-bottom: 2.2rem;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -604,6 +634,12 @@
     height: 5rem;
     background: rgba(#c4c4c4, 0.23);
     border-radius: 50%;
+    transition: background-color .2s;
+    .no-touch &:hover,
+    .touch &:active {
+        background: var(--primary-color);
+       
+    }
 
     @include breakpoint(mobile) {
         width: 3.4rem;

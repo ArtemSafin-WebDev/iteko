@@ -269,6 +269,11 @@
 .awards__categories-card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
 }
 
 .awards__categories-card-title {

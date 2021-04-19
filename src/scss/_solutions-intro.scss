@@ -48,11 +48,7 @@
     color: rgba(white, 0.3);
     width: 12rem;
     flex-grow: 1;
-    padding-left: 7rem;
-
-    @include breakpoint(tablet) {
-        padding-left: 0;
-    }
+    
 
     a {
         &.active,
@@ -137,9 +133,15 @@
         height: 3rem;
         fill: white;
         display: block;
-
+        transition: fill .2s;
         &.icon-arrow-left {
             transform: scaleX(-1);
+        }
+    }
+
+    &:not(.swiper-button-disabled):hover {
+        svg {
+            fill: var(--primary-color);
         }
     }
 }
