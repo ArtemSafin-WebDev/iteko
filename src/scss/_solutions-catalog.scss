@@ -5,9 +5,16 @@
     position: relative;
     z-index: 1;
 
+    &--no-top-padding {
+        padding-top: 0;
+    }
+
     @include breakpoint(mobile) {
         padding-top: 3rem;
         padding-bottom: 6rem;
+        &--no-top-padding {
+            padding-top: 0;
+        }
     }
 }
 
@@ -625,6 +632,12 @@
     text-transform: uppercase;
     border-top: 0.2rem solid #1b1e1d;
     margin-top: 5.5rem;
+    transition: color .2s, border-color .2s;
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
 
     @include breakpoint(mobile) {
         font-weight: 600;
@@ -641,7 +654,7 @@
         height: 2rem;
         flex-shrink: 0;
         margin-left: 2rem;
-
+        fill: currentColor;
         @include breakpoint(mobile) {
             width: 1.2rem;
             height: 1.2rem;

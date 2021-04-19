@@ -1,0 +1,106 @@
+.service {
+    padding-bottom: 10rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
+}
+
+.service__card {
+    background: #f0f3f4;
+    border-radius: 4rem;
+    padding: 8rem 12rem;
+    background-image: url('../img/service-card-hoop.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 77.5rem auto;
+
+    @include breakpoint(mobile) {
+        padding: 3rem var(--content-padding);
+        margin: 0 calc(-1 * var(--content-padding));
+        border-radius: 0;
+        background-size: 35rem auto;
+    }
+}
+
+.service__card-text-content {
+    font-size: 2rem;
+    line-height: 140%;
+    margin-bottom: 6rem;
+    @include breakpoint(mobile) {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 140%;
+        margin-bottom: 3rem;
+    }
+    p {
+        margin-bottom: 3.5rem;
+        @include breakpoint(mobile) {
+            margin-bottom: 1.6rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    big {
+        font-weight: 500;
+        font-size: 3.6rem;
+        line-height: 130%;
+
+        @include breakpoint(mobile) {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 140%;
+        }
+    }
+}
+
+.service__card-companies {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 2rem;
+        grid-column-gap: 3rem;
+    }
+   
+}
+
+.service__card-companies-link {
+    width: 10rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-top: 1rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
+   
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.service__card-companies-link-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 75%;
+    max-height: 50%;
+    @include objectFitContain();
+}
