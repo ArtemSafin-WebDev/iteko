@@ -5,6 +5,32 @@
     background-color: #fff;
     padding-bottom: 7rem;
 
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+    }
+
+    &--with-hoop {
+        &::after {
+            content: '';
+            width: 35rem;
+            height: 60rem;
+            background-image: url('../img/service-light-hoop.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            z-index: 1;
+            position: absolute;
+            right: 0;
+            // bottom: 0;
+            top: 13rem;
+            pointer-events: none;
+
+            @include breakpoint(mobile) {
+                display: none;
+            }
+        }
+    }
+
     &--fullwidth {
         padding-top: 0;
     }
@@ -46,10 +72,15 @@
         border-radius: 0;
     }
 
+    .solution-platform--light & {
+        background-color: transparent;
+        color: var(--text-color);
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem;
         margin: 0;
-        
+
         .solution-platform--fullwidth & {
             padding-top: 9rem;
             padding-bottom: 4rem;
@@ -75,13 +106,23 @@
     color: rgba(white, 0.3);
     margin-bottom: 4rem;
 
+    a {
+        .no-touch &:hover {
+            color: white;
+        }
+    }
+
     @include breakpoint(mobile) {
         display: none;
     }
 
-    a {
-        .no-touch &:hover {
-            color: white;
+    .solution-platform--light & {
+        color: rgba(#1b1e1d, 0.3);
+
+        a {
+            .no-touch &:hover {
+                color: rgba(#1b1e1d, 1);
+            }
         }
     }
 }
@@ -136,6 +177,14 @@
     justify-content: center;
     margin-bottom: 10rem;
 
+    &--compact {
+        margin-bottom: 4rem;
+    }
+
+    .solution-platform--light & {
+        background: #f0f3f4;
+    }
+
     @include breakpoint(mobile) {
         width: 4.8rem;
         height: 4.8rem;
@@ -144,10 +193,10 @@
 }
 
 .solution-platform__card-logo {
-    width: auto;
-    height: auto;
-    max-width: 10rem;
-    max-height: 7rem;
+    width: 100%;
+    height: 100%;
+    max-width: 70%;
+    max-height: 50%;
     flex-shrink: 0;
     display: block;
 
@@ -184,6 +233,23 @@
     border-radius: 5rem;
     transition: background-color 0.2s;
     white-space: nowrap;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .no-touch &:hover {
+        background-color: rgba(white, 0.3);
+    }
+
+    .solution-platform--light & {
+        background-color: rgba(#1c0f52, 0.15);
+        color: #1c0f52;
+
+        .no-touch &:hover {
+            background-color: rgba(#1c0f52, 0.3);
+        }
+    }
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1rem;
@@ -193,20 +259,13 @@
         margin-top: 1rem;
         margin-bottom: 0;
     }
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    .no-touch &:hover {
-        background-color: rgba(white, 0.3);
-    }
 }
 
 .solution-platform__card-title {
     font-weight: 500;
     font-size: 6rem;
     line-height: 120%;
-    margin-bottom: 4.7rem;
+    margin-bottom: 4rem;
     margin-top: -0.3em;
     padding-right: 14rem;
     @include breakpoint(mobile) {
@@ -229,7 +288,7 @@
     position: relative;
 
     &--compact {
-        margin-bottom: 4.5rem;
+        margin-bottom: 4rem;
     }
 
     &:last-child {
@@ -266,14 +325,11 @@
     line-height: 140%;
     color: var(--primary-color);
 
-   
-
     @include breakpointMF(small-tablet) {
         .solution-platform__card-features--small & {
             font-size: 2rem;
             line-height: 2.3rem;
             font-weight: 400;
-            
         }
     }
 
@@ -294,8 +350,8 @@
         background-color: var(--primary-color);
 
         .solution-platform__card-features--small & {
-            top: .4rem;
-            bottom: .4rem;
+            top: 0.4rem;
+            bottom: 0.4rem;
         }
 
         @include breakpoint(mobile) {
@@ -361,6 +417,68 @@
         order: 10;
         br {
             display: none;
+        }
+    }
+}
+
+.solution-platform__card-projects {
+    color: #1C0F52;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
+   
+}
+
+.solution-platform__card-projects-heading {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+}
+
+
+.solution-platform__card-projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 1rem;
+    }
+
+   
+}
+
+.solution-platform__card-projects-list-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 2rem;
+    line-height: 140%;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+
+    }
+
+    &::before {
+        content: '';
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background: #1C0F52;
+        flex-shrink: 0;
+        margin-right: 1.2rem;
+        margin-top: 1.3rem;
+
+        @include breakpoint(mobile) {
+            margin-top: .9rem;
         }
     }
 }

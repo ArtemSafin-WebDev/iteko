@@ -5050,6 +5050,25 @@ select:-webkit-autofill:focus {
   z-index: 1;
   background-color: #fff;
   padding-bottom: 7rem; }
+  @media only screen and (max-width: 640px) {
+    .solution-platform {
+      padding-top: 3rem; } }
+  .solution-platform--with-hoop::after {
+    content: '';
+    width: 35rem;
+    height: 60rem;
+    background-image: url("../img/service-light-hoop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 13rem;
+    pointer-events: none; }
+    @media only screen and (max-width: 640px) {
+      .solution-platform--with-hoop::after {
+        display: none; } }
   .solution-platform--fullwidth {
     padding-top: 0; }
   .solution-platform:last-child {
@@ -5085,6 +5104,9 @@ select:-webkit-autofill:focus {
     padding-top: 16rem;
     padding-bottom: 7.2rem;
     border-radius: 0; }
+  .solution-platform--light .solution-platform__card {
+    background-color: transparent;
+    color: var(--text-color); }
   @media only screen and (max-width: 640px) {
     .solution-platform__card {
       padding: 2rem;
@@ -5111,11 +5133,15 @@ select:-webkit-autofill:focus {
   line-height: 140%;
   color: rgba(255, 255, 255, 0.3);
   margin-bottom: 4rem; }
+  .no-touch .solution-platform__card-breadcrumbs a:hover {
+    color: white; }
   @media only screen and (max-width: 640px) {
     .solution-platform__card-breadcrumbs {
       display: none; } }
-  .no-touch .solution-platform__card-breadcrumbs a:hover {
-    color: white; }
+  .solution-platform--light .solution-platform__card-breadcrumbs {
+    color: rgba(27, 30, 29, 0.3); }
+    .no-touch .solution-platform--light .solution-platform__card-breadcrumbs a:hover {
+      color: #1b1e1d; }
 
 .solution-platform__card-row {
   display: -webkit-box;
@@ -5179,6 +5205,10 @@ select:-webkit-autofill:focus {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 10rem; }
+  .solution-platform__card-logo-container--compact {
+    margin-bottom: 4rem; }
+  .solution-platform--light .solution-platform__card-logo-container {
+    background: #f0f3f4; }
   @media only screen and (max-width: 640px) {
     .solution-platform__card-logo-container {
       width: 4.8rem;
@@ -5186,10 +5216,10 @@ select:-webkit-autofill:focus {
       margin-bottom: 0; } }
 
 .solution-platform__card-logo {
-  width: auto;
-  height: auto;
-  max-width: 10rem;
-  max-height: 7rem;
+  width: 100%;
+  height: 100%;
+  max-width: 70%;
+  max-height: 50%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   display: block; }
@@ -5241,6 +5271,15 @@ select:-webkit-autofill:focus {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   white-space: nowrap; }
+  .solution-platform__card-tag:last-child {
+    margin-bottom: 0; }
+  .no-touch .solution-platform__card-tag:hover {
+    background-color: rgba(255, 255, 255, 0.3); }
+  .solution-platform--light .solution-platform__card-tag {
+    background-color: rgba(28, 15, 82, 0.15);
+    color: #1c0f52; }
+    .no-touch .solution-platform--light .solution-platform__card-tag:hover {
+      background-color: rgba(28, 15, 82, 0.3); }
   @media only screen and (max-width: 640px) {
     .solution-platform__card-tag {
       font-weight: 500;
@@ -5250,16 +5289,12 @@ select:-webkit-autofill:focus {
       margin-right: 1.2rem;
       margin-top: 1rem;
       margin-bottom: 0; } }
-  .solution-platform__card-tag:last-child {
-    margin-bottom: 0; }
-  .no-touch .solution-platform__card-tag:hover {
-    background-color: rgba(255, 255, 255, 0.3); }
 
 .solution-platform__card-title {
   font-weight: 500;
   font-size: 6rem;
   line-height: 120%;
-  margin-bottom: 4.7rem;
+  margin-bottom: 4rem;
   margin-top: -0.3em;
   padding-right: 14rem; }
   @media only screen and (max-width: 640px) {
@@ -5280,7 +5315,7 @@ select:-webkit-autofill:focus {
   padding-right: 26rem;
   position: relative; }
   .solution-platform__card-text--compact {
-    margin-bottom: 4.5rem; }
+    margin-bottom: 4rem; }
   .solution-platform__card-text:last-child {
     margin-bottom: 5rem; }
   @media only screen and (max-width: 640px) {
@@ -5334,8 +5369,8 @@ select:-webkit-autofill:focus {
     bottom: 0.7rem;
     background-color: var(--primary-color); }
     .solution-platform__card-features--small .solution-platform__card-feature::before {
-      top: .4rem;
-      bottom: .4rem; }
+      top: 0.4rem;
+      bottom: 0.4rem; }
     @media only screen and (max-width: 640px) {
       .solution-platform__card-feature::before {
         top: 0.2rem;
@@ -5430,6 +5465,57 @@ select:-webkit-autofill:focus {
             order: 10; }
     .solution-platform__card-demo-access br {
       display: none; } }
+
+.solution-platform__card-projects {
+  color: #1C0F52; }
+  @media only screen and (max-width: 640px) {
+    .solution-platform__card-projects {
+      margin-top: 2rem; } }
+
+.solution-platform__card-projects-heading {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 140%;
+  margin-bottom: 2.5rem; }
+  @media only screen and (max-width: 640px) {
+    .solution-platform__card-projects-heading {
+      font-size: 1.8rem;
+      margin-bottom: 1.8rem; } }
+
+.solution-platform__card-projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem; }
+  @media only screen and (max-width: 640px) {
+    .solution-platform__card-projects-list {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 1rem; } }
+
+.solution-platform__card-projects-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 2rem;
+  line-height: 140%; }
+  @media only screen and (max-width: 640px) {
+    .solution-platform__card-projects-list-item {
+      font-size: 1.6rem; } }
+  .solution-platform__card-projects-list-item::before {
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: #1C0F52;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 1.2rem;
+    margin-top: 1.3rem; }
+    @media only screen and (max-width: 640px) {
+      .solution-platform__card-projects-list-item::before {
+        margin-top: .9rem; } }
 
 .solution-ai {
   padding-bottom: 12rem;
@@ -7731,6 +7817,58 @@ select:-webkit-autofill:focus {
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
 
+.solution-team {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding-bottom: 13rem; }
+  @media only screen and (max-width: 640px) {
+    .solution-team {
+      padding-bottom: 6rem; } }
+
+.solution-team__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 2rem;
+  grid-column-gap: 7.5rem;
+  padding-top: 9rem;
+  border-top: 0.3rem solid #000000; }
+  @media only screen and (max-width: 640px) {
+    .solution-team__grid {
+      grid-template-columns: 1fr;
+      grid-gap: 1.6rem;
+      padding-top: 2rem;
+      display: block;
+      border-top: 0.2rem solid #000000; } }
+
+.solution-team__heading {
+  font-weight: 500;
+  font-size: 3.6rem;
+  line-height: 130%;
+  margin-top: -0.3rem; }
+  @media only screen and (max-width: 640px) {
+    .solution-team__heading {
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 130%;
+      margin-top: 0;
+      margin-bottom: 1.5rem; } }
+
+.solution-team__text {
+  font-size: 2rem;
+  line-height: 140%; }
+  @media only screen and (max-width: 640px) {
+    .solution-team__text {
+      font-size: 1.4rem;
+      line-height: 140%; } }
+  .solution-team__text p {
+    margin-bottom: 1.8rem; }
+    @media only screen and (max-width: 640px) {
+      .solution-team__text p {
+        margin-bottom: 1.5rem; } }
+    .solution-team__text p:last-child {
+      margin-bottom: 0; }
+
 .project-intro {
   position: relative;
   z-index: 1;
@@ -9255,9 +9393,9 @@ textarea.modal__demo-form-input {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: auto;
-  height: auto;
-  max-width: 75%;
+  width: 100%;
+  height: 100%;
+  max-width: 70%;
   max-height: 50%;
   -o-object-fit: contain;
      object-fit: contain;
