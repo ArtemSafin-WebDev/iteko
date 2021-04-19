@@ -4745,6 +4745,18 @@ select:-webkit-autofill:focus {
   z-index: 1;
   background: white;
   min-height: 28rem; }
+  .no-touch .solutions-catalog__block-card:hover .solutions-catalog__block-card-content {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
+  .no-touch .solutions-catalog__block-card:hover .solutions-catalog__block-card-text {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s; }
   @media only screen and (max-width: 640px) {
     .solutions-catalog__block-card {
       min-height: 19.2rem;
@@ -4819,7 +4831,14 @@ select:-webkit-autofill:focus {
   width: 30%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  position: relative;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s; }
   @media only screen and (max-width: 640px) {
     .solutions-catalog__block-card-content {
       width: 100%;
@@ -4831,22 +4850,30 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 140%;
-  margin-bottom: 2.2rem; }
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%; }
   @media only screen and (max-width: 640px) {
     .solutions-catalog__block-card-title {
       font-weight: 500;
       font-size: 1.5rem;
-      line-height: 120%;
-      margin-bottom: 1rem; } }
+      line-height: 120%; } }
   .solutions-catalog__block-card-title:last-child {
     margin-bottom: 0; }
 
 .solutions-catalog__block-card-text {
   font-size: 1.5rem;
-  line-height: 140%; }
+  line-height: 140%;
+  padding-top: 1.5rem;
+  opacity: 0;
+  -webkit-transition: opacity .3s, visibility 0s linear .3s;
+  transition: opacity .3s, visibility 0s linear .3s;
+  visibility: hidden; }
   @media only screen and (max-width: 640px) {
     .solutions-catalog__block-card-text {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem;
+      padding-top: 1rem; } }
 
 @media only screen and (min-width: 641px) {
   .solutions-catalog__block-card-arrow {
