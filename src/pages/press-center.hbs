@@ -1,0 +1,546 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+
+<section class="press-center-header">
+
+    <div class="container">
+        <div class="press-center-header__content">
+            <div class="press-center-header__bg">
+                <img src="img/project/project-intro-bg.jpg" alt="" class="press-center-header__bg-image">
+            </div>
+
+            <div class="press-center-header__row">
+                <div class="press-center-header__breadcrumbs">
+                    <a href="#" class="press-center-header__breadcrumbs-link">
+                        Главная
+                    </a><br>
+                    /
+                    <a href="#" class="press-center-header__breadcrumbs-link">
+                        Пресс-центр
+                    </a>
+                </div>
+                <h1 class="press-center-header__main-heading">
+                    Пресс-центр
+                </h1>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="press-center">
+    <div class="container">
+        <div class="press-center__filters">
+            <div class="press-center__categories">
+                <a href="#" class="press-center__categories-link active">
+                    Новости
+                </a>
+                <a href="#" class="press-center__categories-link">
+                    АйТеко в СМИ
+                </a>
+                <a href="#" class="press-center__categories-link">
+                    Мероприятия
+                </a>
+            </div>
+            <form action="/" method="GET" class="press-center__form">
+                {{!-- <div class="press-center__search">
+                    <button class="press-center__search-btn" type="button">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
+                </div> --}}
+                <div class="press-center__date-select" id="picker-container">
+                    <label class="press-center__date-select-input-label">
+                        <input type="text" class="press-center__date-select-input js-datepicker" placeholder="Дата"
+                            readonly>
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                            <use xlink:href="#arrow-simple-down"></use>
+                        </svg>
+                    </label>
+                </div>
+                <div class="press-center__theme-select">
+                    <select name="theme" class="js-custom-select">
+                        <option value="1">
+                            Рейтинг
+                        </option>
+                        <option value="2">
+                            Категория
+                        </option>
+                        <option value="3">
+                            Длинная категория
+                        </option>
+
+                    </select>
+                </div>
+            </form>
+
+        </div>
+        <div class="press-center__layout">
+            <div class="press-center__layout-main">
+                <ul class="press-center__catalog-list">
+                    <li class="press-center__catalog-list-item press-center__catalog-list-item--fullwidth">
+                        <a href="#" class="press-center__catalog-card press-center__catalog-card--with-bg">
+                            <div class="press-center__catalog-card-bg press-center__catalog-card-bg--large">
+                                <img src="img/press-center/large-card-bg.jpg" alt=""
+                                    class="press-center__catalog-card-bg-image">
+                            </div>
+                            <div class="press-center__category press-center__catalog-card-category">
+                                Рейтинг
+                            </div>
+                            <h4 class="press-center__catalog-card-title press-center__catalog-card-title--large">
+                                АйТеко и Государственный институт русского языка им. А. С. Пушкина реализовали
+                                совместный проект
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                В интервью CNews о проекте рассказали Александр Балакирев, директор департамента
+                                информационных систем и технологий Государственного института русского языка им. А. С.
+                                Пушкина, и Максим Митрохин, директор по развитию бизнеса группы компаний «АйТеко».
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                <div class="press-center__catalog-card-date">
+                                    28 апреля 2020
+                                </div>
+                                <div class="press-center__catalog-card-tags">
+                                    <div class="press-center__catalog-card-tag">
+                                        #финансы
+                                    </div>
+                                    <div class="press-center__catalog-card-tag">
+                                        #цод
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="press-center__catalog-list-item">
+                        <a href="#" class="press-center__catalog-card">
+
+                            <div class="press-center__category press-center__catalog-card-category">
+                                Рейтинг
+                            </div>
+                            <h4 class="press-center__catalog-card-title">
+                                АйТеко и Huawei провели
+                                для заказчиков конференцию
+                                и экскурсию в Huawei OpenLab
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                Мероприятие было посвящено сетевой инфраструктуре будущего и технологии Wi-Fi 6. На
+                                экскурсии
+                                по демоцентру OpenLab гости наглядно познакомились
+                                с прорывными решениями Huawei в области беспроводных технологий, интернета вещей,
+                                безопасного города.
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                <div class="press-center__catalog-card-date">
+                                    28 апреля 2020
+                                </div>
+                                <div class="press-center__catalog-card-tags">
+                                    <div class="press-center__catalog-card-tag">
+                                        #финансы
+                                    </div>
+                                    <div class="press-center__catalog-card-tag">
+                                        #цод
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="press-center__catalog-list-item">
+                        <a href="#" class="press-center__catalog-card">
+
+                            <div class="press-center__category press-center__catalog-card-category">
+                                Рейтинг
+                            </div>
+                            <h4 class="press-center__catalog-card-title">
+                                СБКлауд (ГК «АйТеко») выпустила новый релиз платформы виртуализации РУСТЭК
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                Платформа РУСТЭК расширила в новом релизе спектр возможностей для управления
+                                ИТ-инфраструктурой, организации хранения и защиты данных​.
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                <div class="press-center__catalog-card-date">
+                                    28 апреля 2020
+                                </div>
+                                <div class="press-center__catalog-card-tags">
+                                    <div class="press-center__catalog-card-tag">
+                                        #финансы
+                                    </div>
+                                    <div class="press-center__catalog-card-tag">
+                                        #цод
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="press-center__catalog-list-item">
+                        <a href="#" class="press-center__catalog-card press-center__catalog-card--with-bg">
+                            <div class="press-center__catalog-card-bg">
+                                <img src="img/press-center/small-card-light-bg.jpg" alt=""
+                                    class="press-center__catalog-card-bg-image">
+                            </div>
+                            <div class="press-center__category press-center__catalog-card-category">
+                                Рейтинг
+                            </div>
+                            <h4 class="press-center__catalog-card-title">
+                                Эксперты из Кремниевой долины представили прогнозы развития инноваций и рынка венчурных
+                                инвестиций на конференции «АйТеко»
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                Компания «АйТеко» совместно с партнерами — компаниями Cisco, APC by Schneider Electric,
+                                Hewlett Packard Enterprise, Huawei, Micro Focus и NetApp — провела ИТ-конференцию «Кто
+                                окажется победителем
+                                в битве технологий? Классические компании, новые технологические гиганты, стремительно
+                                растущие стартапы».
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                <div class="press-center__catalog-card-date">
+                                    28 апреля 2020
+                                </div>
+                                <div class="press-center__catalog-card-tags">
+                                    <div class="press-center__catalog-card-tag">
+                                        #финансы
+                                    </div>
+                                    <div class="press-center__catalog-card-tag">
+                                        #цод
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="press-center__catalog-list-item">
+                        <a href="#" class="press-center__catalog-card">
+
+                            <div class="press-center__category press-center__catalog-card-category">
+                                Рейтинг
+                            </div>
+                            <h4 class="press-center__catalog-card-title">
+                                Эксперты из Кремниевой долины представили прогнозы развития инноваций и рынка венчурных
+                                инвестиций на конференции «АйТеко»
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                Компания «АйТеко» совместно с партнерами — компаниями Cisco, APC by Schneider Electric,
+                                Hewlett Packard Enterprise, Huawei, Micro Focus и NetApp — провела ИТ-конференцию «Кто
+                                окажется победителем
+                                в битве технологий? Классические компании, новые технологические гиганты, стремительно
+                                растущие стартапы».
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                <div class="press-center__catalog-card-date">
+                                    28 апреля 2020
+                                </div>
+                                <div class="press-center__catalog-card-tags">
+                                    <div class="press-center__catalog-card-tag">
+                                        #финансы
+                                    </div>
+                                    <div class="press-center__catalog-card-tag">
+                                        #цод
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="press-center__catalog-list-item">
+                        <a href="#" class="press-center__catalog-card">
+
+                            <div class="press-center__category press-center__catalog-card-category">
+                                Рейтинг
+                            </div>
+                            <h4 class="press-center__catalog-card-title">
+                                Эксперты из Кремниевой долины представили прогнозы развития инноваций и рынка венчурных
+                                инвестиций на конференции «АйТеко»
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                Компания «АйТеко» совместно с партнерами — компаниями Cisco, APC by Schneider Electric,
+                                Hewlett Packard Enterprise, Huawei, Micro Focus и NetApp — провела ИТ-конференцию «Кто
+                                окажется победителем
+                                в битве технологий? Классические компании, новые технологические гиганты, стремительно
+                                растущие стартапы».
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                <div class="press-center__catalog-card-date">
+                                    28 апреля 2020
+                                </div>
+                                <div class="press-center__catalog-card-tags">
+                                    <div class="press-center__catalog-card-tag">
+                                        #финансы
+                                    </div>
+                                    <div class="press-center__catalog-card-tag">
+                                        #цод
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="press-center__catalog-list-item">
+                        <a href="#"
+                            class="press-center__catalog-card press-center__catalog-card--with-bg press-center__catalog-card--white">
+                            <div class="press-center__catalog-card-bg">
+                                <img src="img/press-center/card-no-bg-gradient.svg" alt=""
+                                    class="press-center__catalog-card-bg-image">
+                            </div>
+                            <div class="press-center__category press-center__catalog-card-category">
+                                Рейтинг
+                            </div>
+                            <h4 class="press-center__catalog-card-title">
+                                Сергей Гавренков возглавил направление комплексных инфраструктурных
+                                и инжиниринговых проектов ГК «АйТеко»
+                            </h4>
+                            <div class="press-center__catalog-card-text">
+                                Компания «АйТеко» совместно с партнерами — компаниями Cisco, APC by Schneider Electric,
+                                Hewlett Packard Enterprise, Huawei, Micro Focus и NetApp — провела ИТ-конференцию «Кто
+                                окажется победителем
+                                в битве технологий? Классические компании, новые технологические гиганты, стремительно
+                                растущие стартапы».
+                            </div>
+                            <div class="press-center__catalog-card-info">
+                                <div class="press-center__catalog-card-date">
+                                    28 апреля 2020
+                                </div>
+                                <div class="press-center__catalog-card-tags">
+                                    <div class="press-center__catalog-card-tag">
+                                        #финансы
+                                    </div>
+                                    <div class="press-center__catalog-card-tag">
+                                        #цод
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="pagination">
+                    <a href="#" class="pagination__link active">
+                        1
+                    </a>
+                    <a href="#" class="pagination__link">
+                        2
+                    </a>
+                    <a href="#" class="pagination__link">
+                        3
+                    </a>
+                    <a href="#" class="pagination__link">
+                        4
+                    </a>
+                    <a href="#" class="pagination__next">
+                        Следующая
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="press-center__layout-sidebar">
+                <div class="press-center__other-news js-other-news-slider">
+
+                    <div class="swiper-container press-center__other-news-slider">
+
+
+                        <ul class="swiper-wrapper press-center__other-news-list">
+                            <li class="swiper-slide press-center__other-news-list-item">
+                                <a href="#" class="press-center__other-news-card">
+                                    <div class="press-center__category press-center__other-news-card-category">
+                                        Рейтинг
+                                    </div>
+                                    <h4 class="press-center__other-news-card-title">
+                                        Сергей Гавренков — в интервью CNews: «На рынке складывается доминирование
+                                        сервисных
+                                        моделей бизнеса»
+                                    </h4>
+                                    <div class="press-center__other-news-card-info">
+                                        <div class="press-center__other-news-card-date">
+                                            28 апреля 2020
+                                        </div>
+                                        <div class="press-center__other-news-card-tags">
+                                            <div class="press-center__other-news-card-tag">
+                                                #финансы
+                                            </div>
+                                            <div class="press-center__other-news-card-tag">
+                                                #цод
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide press-center__other-news-list-item">
+                                <a href="#" class="press-center__other-news-card">
+                                    <div class="press-center__category press-center__other-news-card-category">
+                                        Рейтинг
+                                    </div>
+                                    <h4 class="press-center__other-news-card-title">
+                                        Об ИТ-конференции АйТеко и открытой дискуссии на тему битвы технологий
+                                        – в публикации TAdviser
+                                    </h4>
+                                    <div class="press-center__other-news-card-info">
+                                        <div class="press-center__other-news-card-date">
+                                            28 апреля 2020
+                                        </div>
+                                        <div class="press-center__other-news-card-tags">
+                                            <div class="press-center__other-news-card-tag">
+                                                #финансы
+                                            </div>
+                                            <div class="press-center__other-news-card-tag">
+                                                #цод
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide press-center__other-news-list-item">
+                                <a href="#" class="press-center__other-news-card">
+                                    <div class="press-center__category press-center__other-news-card-category">
+                                        Рейтинг
+                                    </div>
+                                    <h4 class="press-center__other-news-card-title">
+                                        АйТеко вошла в ТОП-400 рейтинга
+                                        РБК 500
+                                    </h4>
+                                    <div class="press-center__other-news-card-info">
+                                        <div class="press-center__other-news-card-date">
+                                            28 апреля 2020
+                                        </div>
+                                        <div class="press-center__other-news-card-tags">
+                                            <div class="press-center__other-news-card-tag">
+                                                #финансы
+                                            </div>
+                                            <div class="press-center__other-news-card-tag">
+                                                #цод
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide press-center__other-news-list-item">
+                                <a href="#" class="press-center__other-news-card">
+                                    <div class="press-center__category press-center__other-news-card-category">
+                                        Рейтинг
+                                    </div>
+                                    <h4 class="press-center__other-news-card-title">
+                                        Сергей Гавренков возглавил направление комплексных инфраструктурных
+                                        и инжиниринговых проектов ГК «АйТеко»
+                                    </h4>
+                                    <div class="press-center__other-news-card-info">
+                                        <div class="press-center__other-news-card-date">
+                                            28 апреля 2020
+                                        </div>
+                                        <div class="press-center__other-news-card-tags">
+                                            <div class="press-center__other-news-card-tag">
+                                                #финансы
+                                            </div>
+                                            <div class="press-center__other-news-card-tag">
+                                                #цод
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide press-center__other-news-list-item">
+                                <a href="#" class="press-center__other-news-card">
+                                    <div class="press-center__category press-center__other-news-card-category">
+                                        Рейтинг
+                                    </div>
+                                    <h4 class="press-center__other-news-card-title">
+                                        Сергей Гавренков — в интервью CNews: «На рынке складывается доминирование
+                                        сервисных
+                                        моделей бизнеса»
+                                    </h4>
+                                    <div class="press-center__other-news-card-info">
+                                        <div class="press-center__other-news-card-date">
+                                            28 апреля 2020
+                                        </div>
+                                        <div class="press-center__other-news-card-tags">
+                                            <div class="press-center__other-news-card-tag">
+                                                #финансы
+                                            </div>
+                                            <div class="press-center__other-news-card-tag">
+                                                #цод
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide press-center__other-news-list-item">
+                                <a href="#" class="press-center__other-news-card">
+                                    <div class="press-center__category press-center__other-news-card-category">
+                                        Рейтинг
+                                    </div>
+                                    <h4 class="press-center__other-news-card-title">
+                                        Об ИТ-конференции АйТеко и открытой дискуссии на тему битвы технологий
+                                        – в публикации TAdviser
+                                    </h4>
+                                    <div class="press-center__other-news-card-info">
+                                        <div class="press-center__other-news-card-date">
+                                            28 апреля 2020
+                                        </div>
+                                        <div class="press-center__other-news-card-tags">
+                                            <div class="press-center__other-news-card-tag">
+                                                #финансы
+                                            </div>
+                                            <div class="press-center__other-news-card-tag">
+                                                #цод
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="you-can-contact">
+    <div class="container">
+        <div class="you-can-contact__card">
+            <div class="you-can-contact__card-left-col">
+                <h2 class="you-can-contact__card-small-heading">
+                    Контакты пресс-службы
+                </h2>
+                <div class="you-can-contact__card-text">
+                    <p>
+                        Вы можете связаться
+                        с нами любым удобным для вас способом
+                    </p>
+                </div>
+            </div>
+            <div class="you-can-contact__card-right-col">
+                <div class="you-can-contact__card-content">
+
+
+                    <div class="you-can-contact__card-contacts">
+                        <div class="you-can-contact__card-name">
+                            <p>
+                                Константин Константинович Константинопольский
+                            </p>
+                        </div>
+                        <a href="tel:+7 495 777-10-95" class="you-can-contact__card-phone">+7 495 777-10-95</a>
+                        <a href="mailto:income@i-teco.ru" class="you-can-contact__card-mail">income@i-teco.ru</a>
+                    </div>
+                    <a href="#" class="you-can-contact__card-download-link">
+                        <span class="you-can-contact__card-download-link-text">
+                            <span class="you-can-contact__card-download-link-text-inner">
+                                Скачать Пресс-кит
+                            </span>
+
+                        </span>
+
+
+                        <svg width="14" height="14" aria-hidden="true" class="icon-download">
+                            <use xlink:href="#download"></use>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

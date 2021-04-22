@@ -1,0 +1,78 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        justify-content: flex-start;
+    }
+}
+
+.pagination__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    margin-right: 0.3rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, color .2s;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 150%;
+    user-select: none;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        padding: .2rem .6rem;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &.active {
+        background: #f0f3f4;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .no-touch &:not(.active):hover,
+    .touch &:not(.active):active {
+        color: var(--primary-color);
+    }
+}
+
+.pagination__next {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 111%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+    svg {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        fill: currentColor;
+        margin-left: 1.3rem;
+
+        @include breakpoint(mobile) {
+            height: 1.7rem;
+            width: 1.7rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}

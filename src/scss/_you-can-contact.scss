@@ -1,0 +1,190 @@
+.you-can-contact {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
+}
+
+.you-can-contact__card {
+    padding: 8rem;
+    background: #f0f3f4;
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/you-can-contact-hoop.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
+
+    @include breakpoint(mobile) {
+        border-radius: 3rem;
+        padding: 4rem;
+        flex-direction: column;
+        align-items: initial;
+
+        background-size: auto 24rem;
+    }
+}
+
+.you-can-contact__card-left-col {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.you-can-contact__card-small-heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 111%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 111%;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.you-can-contact__card-text {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+    max-width: 70rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        max-width: none;
+    }
+}
+
+.you-can-contact__card-right-col {
+    width: 36rem;
+    flex-shrink: 0;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+    }
+}
+
+.you-can-contact__card-content {
+    max-width: 24rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.you-can-contact__card-contacts {
+    padding-bottom: 4.5rem;
+    border-bottom: 2px solid #000000;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.7rem;
+        padding-bottom: 3rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.you-can-contact__card-name {
+    font-size: 1.5rem;
+    line-height: 140%;
+    margin-bottom: 1.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.2rem;
+    }
+}
+
+.you-can-contact__card-phone {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        margin-bottom: .5rem;
+    }
+}
+
+.you-can-contact__card-mail {
+    font-size: 1.4rem;
+    line-height: 109%;
+    color: var(--primary-color);
+    align-self: flex-start;
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s, color .2s;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover {
+        border-color: var(--primary-color);
+    }
+}
+
+.you-can-contact__card-download-link {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 109%;
+   
+    color: var(--primary-color);
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+    &:link, 
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    svg {
+        width: 1.8rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        margin-left: 1rem;
+        fill: currentColor;
+    }
+
+    .no-touch &:hover {
+        .you-can-contact__card-download-link-text-inner {
+            border-color: transparent;
+        }
+    }
+}
+
+.you-can-contact__card-download-link-text-inner {
+    border-bottom: 1px solid currentColor;
+    transition: border-color .2s;
+}

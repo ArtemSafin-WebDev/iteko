@@ -21,6 +21,8 @@ import solutionAccordions from './solutionAccorions';
 import solutionExamples from './solutionExamples';
 import solutionGallerySlider from './solutionGallerySlider';
 import modals from './modals';
+import datepicker from './datepicker';
+import otherNewsSlider from './otherNewsSlider';
 
 
 
@@ -45,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
     solutionGallerySlider();
     FixedFooter();
     modals();
+    datepicker();
+    otherNewsSlider();
 });
 
 window.addEventListener('load', function() {

@@ -13,13 +13,21 @@ export default function menu() {
     if (!menu || !burger) return;
     let menuOpen = false;
 
+    let activeTl = null;
+
     const openMenu = () => {
         if (menuOpen) return;
+
+        if (activeTl) {
+            activeTl.kill();
+        }
 
         lockScroll(menu);
         document.body.classList.add('menu-open');
 
         const tl = gsap.timeline();
+
+        activeTl = tl;
         tl.fromTo(
             menu,
             {
