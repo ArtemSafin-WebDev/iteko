@@ -13,6 +13,8 @@ export default function pressCenterSlider() {
             speed: 800,
             loop: true,
             loopedSlides: 3,
+            loopAdditionalSlides: 3,
+            // slideToClickedSlide: true,
             navigation: {
                 nextEl: element.querySelector('.press-center-slider__arrow--next'),
                 prevEl: element.querySelector('.press-center-slider__arrow--prev')

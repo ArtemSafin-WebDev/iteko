@@ -11931,13 +11931,15 @@ textarea.modal__demo-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: -webkit-transform .7s;
-  transition: -webkit-transform .7s;
-  transition: transform .7s;
-  transition: transform .7s, -webkit-transform .7s; }
+  -webkit-transition: opacity .4s, -webkit-transform .7s;
+  transition: opacity .4s, -webkit-transform .7s;
+  transition: transform .7s, opacity .4s;
+  transition: transform .7s, opacity .4s, -webkit-transform .7s; }
   .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) .press-center-slider__card {
     -webkit-transform: scale(0.8);
-            transform: scale(0.8); }
+            transform: scale(0.8);
+    opacity: .8;
+    pointer-events: none; }
     @media only screen and (max-width: 640px) {
       .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) .press-center-slider__card {
         -webkit-transform: scale(0.9);

@@ -101,10 +101,12 @@
 .press-center-slider__card {
     display: flex;
     flex-direction: column;
-    transition: transform .7s;
+    transition: transform .7s, opacity .4s;
 
     .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) & {
         transform: scale(0.8);
+        opacity: .8;
+        pointer-events: none;
 
         @include breakpoint(mobile) {
             transform: scale(0.9);
