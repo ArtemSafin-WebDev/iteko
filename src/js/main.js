@@ -25,6 +25,7 @@ import datepicker from './datepicker';
 import otherNewsSlider from './otherNewsSlider';
 import publicationsSlider from './publicationsSlider';
 import articleGallery from './articleGallery';
+import pressCenterSlider from './pressCenterSlider';
 
 
 
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     otherNewsSlider();
     publicationsSlider();
     articleGallery();
+    pressCenterSlider();
 });
 
 window.addEventListener('load', function() {
