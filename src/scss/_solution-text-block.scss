@@ -146,134 +146,6 @@
     }
 }
 
-.solution-text-block__content {
-    width: 100%;
-    max-width: 120rem;
-    font-size: 2rem;
-    line-height: 140%;
-    margin: 0 auto;
-
-    @include breakpoint(mobile) {
-        margin: 0;
-        max-width: none;
-        font-weight: 400;
-        font-size: 1.4rem;
-        line-height: 140%;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: 500;
-        font-size: 3.6rem;
-        line-height: 130%;
-        margin-bottom: 3rem;
-        margin-top: 5rem;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        @include breakpoint(mobile) {
-            font-size: 2.4rem;
-            margin-bottom: 1.8rem;
-            margin-top: 3rem;
-        }
-    }
-    big {
-        font-weight: 500;
-        font-size: 2.5rem;
-        line-height: 140%;
-
-        @include breakpoint(mobile) {
-            font-weight: 500;
-            font-size: 1.4rem;
-            line-height: 140%;
-        }
-    }
-
-    p {
-        margin-bottom: 2.8rem;
-
-        @include breakpoint(mobile) {
-            margin-bottom: 1.6rem;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    blockquote {
-        width: 100%;
-        margin: 6rem 0;
-        max-width: 90rem;
-        margin-left: auto;
-        padding-top: 7.4rem;
-        padding-bottom: 5.2rem;
-        padding-left: 3.5rem;
-        font-weight: 500;
-        font-size: 3.6rem;
-        line-height: 130%;
-        border-top: 2px solid #000000;
-        border-bottom: 2px solid #000000;
-
-        @include breakpoint(mobile) {
-            font-weight: 500;
-            font-size: 2.2rem;
-            line-height: 140%;
-            padding: 3rem 0;
-            margin: 3.5rem 0;
-        }
-        p {
-            margin: 0;
-            position: relative;
-            z-index: 1;
-
-            &::before {
-                content: '';
-                width: 10rem;
-                height: 8.5rem;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-image: url('../img/quotes.svg');
-                position: absolute;
-                left: -3.5rem;
-                top: -2rem;
-                z-index: -1;
-
-                @include breakpoint(mobile) {
-                    display: none;
-                }
-            }
-        }
-
-        footer {
-            font-weight: 500;
-            font-size: 2.5rem;
-            line-height: 140%;
-            color: #a9a9a9;
-            text-align: right;
-            margin-top: 5rem;
-
-            @include breakpoint(mobile) {
-                font-weight: 500;
-                font-size: 1.2rem;
-                line-height: 130%;
-                margin-top: 4rem;
-                max-width: 18rem;
-                margin-left: auto;
-            }
-        }
-    }
-}
 
 .solution-text-block__video-simple {
     margin: 7rem 0;
@@ -366,7 +238,7 @@
     font-size: 1.5rem;
     line-height: 140%;
     color: #a9a9a9;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     font-weight: 400;
 
     @include breakpoint(mobile) {

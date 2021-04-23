@@ -23,6 +23,8 @@ import solutionGallerySlider from './solutionGallerySlider';
 import modals from './modals';
 import datepicker from './datepicker';
 import otherNewsSlider from './otherNewsSlider';
+import publicationsSlider from './publicationsSlider';
+import articleGallery from './articleGallery';
 
 
 
@@ -49,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
     modals();
     datepicker();
     otherNewsSlider();
+    publicationsSlider();
+    articleGallery();
 });
 
 window.addEventListener('load', function() {
