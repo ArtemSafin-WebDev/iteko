@@ -76,6 +76,11 @@
     font-size: 2.5rem;
     line-height: 140%;
 
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.4rem;
@@ -122,6 +127,11 @@
     line-height: 140%;
     margin-bottom: 0.7rem;
 
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.5rem;
@@ -137,6 +147,9 @@
     font-size: 1.5rem;
     line-height: 120%;
     margin-bottom: 3rem;
+    .no-touch &:hover {
+        color: var(--primary-color);
+    }
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -191,20 +204,34 @@
     justify-content: center;
     background: rgba(#c4c4c4, 0.23);
     border-radius: 50%;
-    @include breakpoint(mobile) {
-        width: 4rem;
-        height: 4rem;
-    }
+    transition: background-color .2s, color .2s;
     svg {
         width: 2rem;
         height: 2rem;
         fill: white;
+        transition: fill .2s;
 
         @include breakpoint(mobile) {
             width: 1.6rem;
             height: 1.6rem;
         }
     }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+
+        svg {
+            fill: white;
+        }
+    }
+    @include breakpoint(mobile) {
+        width: 4rem;
+        height: 4rem;
+    }
+   
+
+
 }
 
 .page-footer__bottom-row {
@@ -235,6 +262,11 @@
 
 .page-footer__policy {
     margin-right: 1.8rem;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
     @include breakpoint(mobile) {
         margin: 0;
         margin-bottom: 1.6rem;
@@ -243,6 +275,11 @@
 
 .page-footer__info {
     margin-right: 1.8rem;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
     @include breakpoint(mobile) {
         margin: 0;
         margin-bottom: 1.6rem;
@@ -306,6 +343,10 @@
 .page-footer__contacts-additional-item-link {
     font-size: 2rem;
     line-height: 140%;
+
+    .no-touch &:hover {
+        color: var(--primary-color);
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.5rem;

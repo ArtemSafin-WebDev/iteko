@@ -26,6 +26,7 @@ import otherNewsSlider from './otherNewsSlider';
 import publicationsSlider from './publicationsSlider';
 import articleGallery from './articleGallery';
 import pressCenterSlider from './pressCenterSlider';
+import ourClientsSlider from './ourClientsSlider';
 
 
 
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     publicationsSlider();
     articleGallery();
     pressCenterSlider();
+    ourClientsSlider();
 });
 
 window.addEventListener('load', function() {

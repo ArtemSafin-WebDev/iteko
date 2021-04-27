@@ -2,12 +2,12 @@ import { Swiper, Navigation, EffectFade } from 'swiper';
 
 Swiper.use([Navigation, EffectFade]);
 
-export default function successStories() {
-    const elements = Array.from(document.querySelectorAll('.js-success-stories'));
+export default function ourClientsSlider() {
+    const elements = Array.from(document.querySelectorAll('.js-our-clients-slider'));
 
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
-        const links = Array.from(element.querySelectorAll('.success-stories__slider-nav-link'));
+        const links = Array.from(element.querySelectorAll('.our-clients__nav-link'));
 
         const slider = new Swiper(container, {
             loop: false,
@@ -17,7 +17,15 @@ export default function successStories() {
             preventClicks: false,
             autoHeight: true,
             speed: 700,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
             init: false,
+            navigation: {
+                nextEl: element.querySelector('.our-slients__arrow--next'),
+                prevEl: element.querySelector('.our-slients__arrow--prev')
+            },
             on: {
                 slideChangeTransitionStart: () => {
                     element.classList.add('slider-transitioning');

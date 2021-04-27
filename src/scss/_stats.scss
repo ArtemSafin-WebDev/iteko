@@ -1,0 +1,64 @@
+.stats {
+    padding-bottom: 9rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 6.5rem;
+    }
+}
+
+.stats__content {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.stats__small-heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 111%;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 111%;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.stats__intro {
+    border-bottom: 0.3rem solid #1b1e1d;
+    padding-bottom: 5.5rem;
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 3.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.stats__intro-text {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 130%;
+    }
+}
+
+.stats__chart-image {
+    display: block;
+    height: auto;
+    width: 100%;
+}

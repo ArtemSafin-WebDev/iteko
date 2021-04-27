@@ -1,0 +1,115 @@
+.ceo {
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 5rem;
+    }
+}
+
+.ceo__card {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-column-gap: 8rem;
+
+    color: white;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
+}
+
+.ceo__card-bg {
+    position: absolute;
+    left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    top: 0;
+    bottom: 0;
+    background-image: url('../img/ceo-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include breakpoint(mobile) {
+        background-image: url('../img/ceo-bg-mobile.svg');
+    }
+}
+
+.ceo__card-content {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-bottom: 0;
+    }
+}
+
+.ceo__card-image {
+    // width: 100%;
+    height: auto;
+    align-self: flex-end;
+    object-fit: contain;
+    justify-self: center;
+    width: 100%;
+    max-width: 60rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.ceo__card-title {
+    font-weight: 500;
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    line-height: 130%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 130%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.ceo__card-description {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 140%;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.ceo__card-text {
+    font-size: 2rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 140%;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

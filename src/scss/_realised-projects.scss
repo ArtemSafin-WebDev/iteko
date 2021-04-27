@@ -1,0 +1,30 @@
+.realised-projects {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 13.5rem;
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 6rem;
+    }
+
+    .success-stories__slider-subcard {
+        border-top: 0.2rem solid #1b1e1d;
+    }
+}
+
+.realised-projects__heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 111%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 111%;
+        margin-bottom: 3rem;
+    }
+}
