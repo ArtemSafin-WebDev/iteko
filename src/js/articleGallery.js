@@ -12,7 +12,7 @@ export default function articleGallery() {
             watchOverflow: true,
             spaceBetween: 0,
             thumbs: {},
-
+            speed: 700,
             navigation: {
                 nextEl: element.querySelector('.article-content__gallery-arrow--next'),
                 prevEl: element.querySelector('.article-content__gallery-arrow--prev')
@@ -25,6 +25,8 @@ export default function articleGallery() {
             watchSlidesProgress: true,
             slidesPerView: 'auto',
             threshold: 10,
+            speed: 700,
+            slideToClickedSlide: true,
             spaceBetween: 14,
             centerInsufficientSlides: window.matchMedia("(max-width: 640px)").matches ? false : true,
             breakpoints: {

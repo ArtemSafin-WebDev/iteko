@@ -25,7 +25,8 @@
 
     .no-touch &:hover {
         .solution-we-can__card-arrow {
-            background-color: #1b1e1d;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
 
             svg {
                 fill: white;
@@ -84,7 +85,7 @@
     margin-left: 7rem;
     border: 1px solid #1b1e1d;
     border-radius: 50%;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color .2s;
 
     @include breakpoint(mobile) {
         width: 7rem;

@@ -149,10 +149,12 @@
 
 .about-company__numbers {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 4rem;
     grid-row-gap: 9rem;
     margin-bottom: 0.8rem;
+    margin-right: 8rem;
+    max-width: 80rem;
 
     @include breakpoint(mobile) {
         grid-template-columns: repeat(2, minmax(0, 1fr));

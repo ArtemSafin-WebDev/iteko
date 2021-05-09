@@ -88,6 +88,8 @@
     }
 
     .swiper-container {
+        margin: -3rem -2rem;
+        padding: 3rem 2rem;
         @include breakpoint(mobile) {
             overflow: visible;
         }
@@ -100,8 +102,15 @@
     flex-grow: 1;
     padding: 4.5rem;
     border: 1px solid rgba(#bbbfc4, 0.4);
+    background-color: #fff;
     border-radius: 4rem;
+    transition: border-color .2s, box-shadow .2s;
     // min-height: 36rem;
+
+    .no-touch &:hover {
+        box-shadow: 0 0.8rem 2.5rem rgba(black, .07);
+        border-color: white;
+    }
 
     @include breakpoint(mobile) {
         padding: 3.2rem;

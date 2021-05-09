@@ -387,15 +387,20 @@
 .press-center__category {
     padding: 0.7rem 1.6rem;
     border-radius: 5rem;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: transparent;
+    color: var(--text-color);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     align-self: flex-start;
-
-    font-size: 1.5rem;
+    border: 1px solid rgba(#1B1E1D, .15);
+    font-size: 1rem;
     line-height: 140%;
+
+    .press-center__catalog-card--white & {
+        border-color: rgba(white, .15);
+        color: white;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.3rem;
@@ -405,6 +410,7 @@
 
 .press-center__other-news-card-category {
     margin-bottom: 1.8rem;
+    
 }
 
 .press-center__other-news-card-title {
@@ -622,7 +628,7 @@
 
 .press-center__catalog-card-category {
     margin-bottom: 3rem;
-
+  
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
     }

@@ -5,6 +5,14 @@
     position: relative;
     z-index: 1;
 
+    &:first-child {
+        padding-top: 18rem;
+
+        @include breakpoint(mobile) {
+            padding-top: 10rem;
+        }
+    }
+
     &--no-top-padding {
         padding-top: 0;
     }

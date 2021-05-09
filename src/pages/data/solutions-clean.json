@@ -1,4 +1,5 @@
 {
     "title": "Айтеко - Решения",
-    "noIntroFeatures": true
+    "noIntroFeatures": true,
+    "darkHeader": true
 }

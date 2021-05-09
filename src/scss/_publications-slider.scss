@@ -12,7 +12,8 @@
 
     .swiper-container {
         overflow: visible;
-        margin: 0;
+        margin: -2rem;
+        padding: 2rem;
     }
 
     .swiper-slide {
@@ -34,6 +35,10 @@
     position: relative;
     margin-right: calc((100vw - 100% - 32rem - var(--sb-width, 0)) / 2 * -1);
     overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: -2rem;
+    margin-top: -2rem;
     &::after {
         content: '';
         position: absolute;
@@ -65,6 +70,7 @@
     @include breakpoint(mobile) {
         padding-top: 4rem;
         flex-direction: column;
+        border: none;
     }
 }
 
@@ -151,17 +157,19 @@
     background-repeat: no-repeat;
     background-position: right top;
     background-size: auto 70%;
-
+    transition: color .2s, box-shadow .2s;
     @include breakpoint(mobile) {
         padding: 2rem;
         min-height: 30rem;
         border-radius: 2rem;
         background-size: auto 50%;
     }
-    .no-touch &:hover,
-    .touch &:active {
+    .no-touch &:hover {
+        box-shadow: 0px 0.8rem 1rem rgba(0, 0, 0, 0.1);
         .publications-slider__card-title {
             color: var(--primary-color);
+         
+            
         }
     }
 }

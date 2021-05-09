@@ -1878,8 +1878,8 @@ select:-webkit-autofill:focus {
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 130%;
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000; }
+    border-top: .3rem solid #000000;
+    border-bottom: .3rem solid #000000; }
     @media only screen and (max-width: 640px) {
       .default-content blockquote {
         font-weight: 500;
@@ -3430,10 +3430,12 @@ select:-webkit-autofill:focus {
 
 .about-company__numbers {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-column-gap: 4rem;
   grid-row-gap: 9rem;
-  margin-bottom: 0.8rem; }
+  margin-bottom: 0.8rem;
+  margin-right: 8rem;
+  max-width: 80rem; }
   @media only screen and (max-width: 640px) {
     .about-company__numbers {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4940,6 +4942,11 @@ select:-webkit-autofill:focus {
   background-color: #fff;
   position: relative;
   z-index: 1; }
+  .solutions-catalog:first-child {
+    padding-top: 18rem; }
+    @media only screen and (max-width: 640px) {
+      .solutions-catalog:first-child {
+        padding-top: 10rem; } }
   .solutions-catalog--no-top-padding {
     padding-top: 0; }
   @media only screen and (max-width: 640px) {
@@ -7125,9 +7132,12 @@ select:-webkit-autofill:focus {
     .solution-examples__slider .swiper-slide {
       width: 100%; } }
 
-@media only screen and (max-width: 640px) {
-  .solution-examples__slider .swiper-container {
-    overflow: visible; } }
+.solution-examples__slider .swiper-container {
+  margin: -3rem -2rem;
+  padding: 3rem 2rem; }
+  @media only screen and (max-width: 640px) {
+    .solution-examples__slider .swiper-container {
+      overflow: visible; } }
 
 .solution-examples__slider-card {
   display: -webkit-box;
@@ -7142,7 +7152,16 @@ select:-webkit-autofill:focus {
           flex-grow: 1;
   padding: 4.5rem;
   border: 1px solid rgba(187, 191, 196, 0.4);
-  border-radius: 4rem; }
+  background-color: #fff;
+  border-radius: 4rem;
+  -webkit-transition: border-color .2s, -webkit-box-shadow .2s;
+  transition: border-color .2s, -webkit-box-shadow .2s;
+  transition: border-color .2s, box-shadow .2s;
+  transition: border-color .2s, box-shadow .2s, -webkit-box-shadow .2s; }
+  .no-touch .solution-examples__slider-card:hover {
+    -webkit-box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.07);
+            box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.07);
+    border-color: white; }
   @media only screen and (max-width: 640px) {
     .solution-examples__slider-card {
       padding: 3.2rem;
@@ -7758,7 +7777,8 @@ select:-webkit-autofill:focus {
           -ms-flex-align: initial;
               align-items: initial; } }
   .no-touch .solution-we-can__card:hover .solution-we-can__card-arrow {
-    background-color: #1b1e1d; }
+    background-color: var(--primary-color);
+    border-color: var(--primary-color); }
     .no-touch .solution-we-can__card:hover .solution-we-can__card-arrow svg {
       fill: white; }
 
@@ -7820,8 +7840,8 @@ select:-webkit-autofill:focus {
   margin-left: 7rem;
   border: 1px solid #1b1e1d;
   border-radius: 50%;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
+  -webkit-transition: background-color 0.2s, border-color .2s;
+  transition: background-color 0.2s, border-color .2s; }
   @media only screen and (max-width: 640px) {
     .solution-we-can__card-arrow {
       width: 7rem;
@@ -9960,12 +9980,12 @@ textarea.modal__demo-form-input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 10rem 0;
-  min-height: 50rem;
+  padding: 5rem 0;
+  min-height: 30rem;
   color: white; }
   @media only screen and (max-width: 640px) {
     .press-center-header__content {
-      padding-top: 12rem;
+      padding-top: 8rem;
       padding-bottom: 3rem;
       min-height: auto; } }
 
@@ -10397,8 +10417,8 @@ textarea.modal__demo-form-input {
 .press-center__category {
   padding: 0.7rem 1.6rem;
   border-radius: 5rem;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: transparent;
+  color: var(--text-color);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -10410,8 +10430,12 @@ textarea.modal__demo-form-input {
           justify-content: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  font-size: 1.5rem;
+  border: 1px solid rgba(27, 30, 29, 0.15);
+  font-size: 1rem;
   line-height: 140%; }
+  .press-center__catalog-card--white .press-center__category {
+    border-color: rgba(255, 255, 255, 0.15);
+    color: white; }
   @media only screen and (max-width: 640px) {
     .press-center__category {
       font-size: 1.3rem;
@@ -11213,7 +11237,8 @@ textarea.modal__demo-form-input {
       padding-bottom: 6rem; } }
   .publications-slider .swiper-container {
     overflow: visible;
-    margin: 0; }
+    margin: -2rem;
+    padding: 2rem; }
   .publications-slider .swiper-slide {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11231,7 +11256,11 @@ textarea.modal__demo-form-input {
   padding-left: 18px;
   position: relative;
   margin-right: calc((100vw - 100% - 32rem - var(--sb-width, 0)) / 2 * -1);
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: -2rem;
+  margin-top: -2rem; }
   .publications-slider__wrapper::after {
     content: '';
     position: absolute;
@@ -11264,7 +11293,8 @@ textarea.modal__demo-form-input {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      border: none; } }
 
 .publications-slider__left-col {
   width: 32rem;
@@ -11358,16 +11388,22 @@ textarea.modal__demo-form-input {
   background-image: url("../img/publications-slider-hoop.svg");
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: auto 70%; }
+  background-size: auto 70%;
+  -webkit-transition: color .2s, -webkit-box-shadow .2s;
+  transition: color .2s, -webkit-box-shadow .2s;
+  transition: color .2s, box-shadow .2s;
+  transition: color .2s, box-shadow .2s, -webkit-box-shadow .2s; }
   @media only screen and (max-width: 640px) {
     .publications-slider__card {
       padding: 2rem;
       min-height: 30rem;
       border-radius: 2rem;
       background-size: auto 50%; } }
-  .no-touch .publications-slider__card:hover .publications-slider__card-title,
-  .touch .publications-slider__card:active .publications-slider__card-title {
-    color: var(--primary-color); }
+  .no-touch .publications-slider__card:hover {
+    -webkit-box-shadow: 0px 0.8rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0.8rem 1rem rgba(0, 0, 0, 0.1); }
+    .no-touch .publications-slider__card:hover .publications-slider__card-title {
+      color: var(--primary-color); }
 
 .publications-slider__card-category {
   padding: 0.7rem 1.6rem;
@@ -11512,7 +11548,11 @@ textarea.modal__demo-form-input {
 .article-content__gallery-main-slider {
   position: relative;
   border-radius: 1.5rem;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
 
 .article-content__gallery-main-slider-card {
   position: relative;
@@ -11590,10 +11630,7 @@ textarea.modal__demo-form-input {
 .article-content__gallery-thumbs-slider {
   margin-top: 1.5rem; }
   .article-content__gallery-thumbs-slider .swiper-slide {
-    width: 17.8rem;
-    margin-right: 1.3rem; }
-    .article-content__gallery-thumbs-slider .swiper-slide:last-child {
-      margin-right: 0 !important; }
+    width: 17.8rem; }
     @media only screen and (max-width: 640px) {
       .article-content__gallery-thumbs-slider .swiper-slide {
         width: 6rem; } }
@@ -12019,7 +12056,11 @@ textarea.modal__demo-form-input {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .3s, visibility 0s linear .3s;
-  transition: opacity .3s, visibility 0s linear .3s; }
+  transition: opacity .3s, visibility 0s linear .3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   @media only screen and (max-width: 640px) {
     .press-center-slider__card-content {
       margin-top: -5.2rem; } }

@@ -160,7 +160,8 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visibility 0s linear .3s;
-
+    backface-visibility: hidden;
+    transform: translateZ(0);
     @include breakpoint(mobile) {
         margin-top: -5.2rem;
     }
