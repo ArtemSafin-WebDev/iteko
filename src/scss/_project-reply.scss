@@ -157,6 +157,11 @@
         fill: var(--primary-color);
         vertical-align: baseline;
     }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
 }
 
 .project-reply__card-text-content {

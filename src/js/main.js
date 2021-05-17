@@ -27,6 +27,7 @@ import publicationsSlider from './publicationsSlider';
 import articleGallery from './articleGallery';
 import pressCenterSlider from './pressCenterSlider';
 import ourClientsSlider from './ourClientsSlider';
+import anchorLinks from './anchorLinks';
 
 
 
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     articleGallery();
     pressCenterSlider();
     ourClientsSlider();
+    anchorLinks();
 });
 
 window.addEventListener('load', function() {

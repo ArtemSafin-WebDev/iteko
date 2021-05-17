@@ -109,8 +109,17 @@
         }
     }
 
+ 
+
     p {
         margin-bottom: 2.8rem;
+
+        a {
+            &:link,
+            &:visited {
+                color: var(--primary-color);
+            }
+        }
 
         @include breakpoint(mobile) {
             margin-bottom: 1.6rem;

@@ -1862,6 +1862,8 @@ select:-webkit-autofill:focus {
         line-height: 140%; } }
   .default-content p {
     margin-bottom: 2.8rem; }
+    .default-content p a:link, .default-content p a:visited {
+      color: var(--primary-color); }
     @media only screen and (max-width: 640px) {
       .default-content p {
         margin-bottom: 1.6rem; } }
@@ -9195,6 +9197,9 @@ select:-webkit-autofill:focus {
     margin-left: 0.7rem;
     fill: var(--primary-color);
     vertical-align: baseline; }
+  .no-touch .project-reply__card-link:hover,
+  .touch .project-reply__card-link:active {
+    color: var(--primary-color); }
 
 .project-reply__card-text-content {
   display: -webkit-box;
@@ -12200,7 +12205,7 @@ textarea.modal__demo-form-input {
   position: relative;
   background-color: #fff;
   z-index: 1;
-  padding-bottom: 3rem; }
+  padding-bottom: 10rem; }
   @media only screen and (max-width: 640px) {
     .about-intro {
       padding-bottom: 4rem; } }
@@ -12229,11 +12234,11 @@ textarea.modal__demo-form-input {
   z-index: 1;
   color: white;
   padding-top: 16rem;
-  padding-bottom: 10rem; }
+  padding-bottom: 4rem; }
   @media only screen and (max-width: 640px) {
     .about-intro__content {
       padding-top: 10rem;
-      padding-bottom: 7rem;
+      padding-bottom: 3rem;
       min-height: auto; } }
 
 .about-intro__bg {
@@ -12461,7 +12466,7 @@ textarea.modal__demo-form-input {
   border-top: 0.3rem solid #1b1e1d; }
 
 .top__intro {
-  padding-top: 7.5rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
   display: grid;
   grid-template-columns: 34rem minmax(0, 1fr);

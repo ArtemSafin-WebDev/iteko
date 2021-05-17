@@ -2,7 +2,7 @@
     position: relative;
     background-color: #fff;
     z-index: 1;
-    padding-bottom: 3rem;
+    padding-bottom: 10rem;
 
     @include breakpoint(mobile) {
         padding-bottom: 4rem;
@@ -34,11 +34,11 @@
     z-index: 1;
     color: white;
     padding-top: 16rem;
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
 
     @include breakpoint(mobile) {
         padding-top: 10rem;
-        padding-bottom: 7rem;
+        padding-bottom: 3rem;
         min-height: auto;
     }
 }
