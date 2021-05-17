@@ -274,26 +274,26 @@
 
         &:nth-child(2) {
             .intro__card {
-                margin-bottom: 6rem;
-                margin-left: -2rem;
+                margin-top: -5rem;
+                margin-left: -12rem;
             }
         }
         &:nth-child(3) {
             .intro__card {
-                margin-top: 14rem;
-                margin-left: -8rem;
+                margin-top: 34rem;
+                margin-left: -13rem;
             }
         }
         &:nth-child(4) {
             .intro__card {
-                margin-top: 34rem;
-                margin-left: -24rem;
+                margin-top: 17rem;
+                margin-left: -10rem;
             }
         }
         &:nth-child(6) {
             .intro__card {
-                margin-top: 30rem;
-                margin-left: -13rem;
+                margin-top: 24rem;
+                margin-left: -10rem;
             }
         }
     }
@@ -321,51 +321,73 @@
             // pointer-events: none;
 
             .intro__card {
-                opacity: 0.5;
+                opacity: 0.2;
+            }
+
+
+            .intro__card-ring {
+                transform: translate(-50%, -50%) scale(0.5) !important;
+            }
+
+            .intro__card-content {
+                transform: scale(0.6) !important;
             }
         }
         &:nth-child(1) {
             .intro__card {
                 align-self: center;
                 justify-self: center;
+                transform: translate(140%, 80%);
+            }
+
+
+            .intro__card-ring {
+                transform: translate(-50%, -50%) scale(0.4);
             }
 
             .intro__card-content {
-                transform: scale(0.85);
+                transform: scale(0.6);
             }
-
-            .intro__card-ring {
-                transform: translate(-50%, -50%) scale(0.8);
-            }
+          
 
             &.active {
-                .intro__card {
-                    transform: translate(40%, 40%);
-                }
+                // .intro__card {
+                //     transform: translate(40%, 40%);
+                // }
 
+              
+
+                
                 .intro__card-ring {
-                    transform: translate(-50%, -50%) scale(1);
+                    transform: translate(-50%, -50%) scale(0.85);
                 }
 
                 .intro__card-content {
                     transform: scale(1);
                 }
+
+
+                
             }
 
             &.faded {
-                .intro__card {
-                    transform: translate(-50%, -60%);
-                }
+                // .intro__card {
+                //     transform: translate(-50%, -60%);
+                // }
+
+
+
             }
         }
         &:nth-child(2) {
             .intro__card {
                 align-self: center;
                 justify-self: flex-end;
+                transform: translate(30%, 10%);
             }
 
             .intro__card-ring {
-                transform: translate(-50%, -50%) scale(0.5);
+                transform: translate(-50%, -50%) scale(0.6);
             }
 
             .intro__card-content {
@@ -374,7 +396,7 @@
 
             &.active {
                 .intro__card {
-                    transform: translate(-20%, 40%);
+                    transform: translate(25%, 40%);
                 }
 
                 .intro__card-content {
@@ -387,9 +409,9 @@
             }
 
             &.faded {
-                .intro__card {
-                    transform: translate(-30%, -60%);
-                }
+                // .intro__card {
+                //     transform: translate(-30%, -60%);
+                // }
             }
         }
         &:nth-child(3) {
@@ -414,13 +436,19 @@
                 transform: scale(0.8);
             }
 
+
+            
+
             &.active {
                 .intro__card {
-                    transform: translate(-30%, 50%);
+                    transform: translate(-20%, 50%);
                 }
 
+
+
+
                 .intro__card-ring {
-                    transform: translate(-50%, -50%) scale(0.85);
+                    transform: translate(-50%, -50%) scale(.9);
                 }
 
                 .intro__card-content {
@@ -429,9 +457,9 @@
             }
 
             &.faded {
-                .intro__card {
-                    transform: translate(25%, -65%);
-                }
+                // .intro__card {
+                //     transform: translate(25%, -65%);
+                // }
             }
         }
         &:nth-child(4) {
@@ -441,21 +469,24 @@
                 margin-bottom: 11rem;
             }
 
-            .intro__card-ring {
-                transform: translate(-50%, -50%) scale(0.5);
-            }
+           
+
 
             .intro__card-content {
-                transform: scale(0.6);
+                transform: scale(0.85);
+            }
+
+            .intro__card-ring {
+                transform: translate(-50%, -50%) scale(0.85);
             }
 
             &.active {
                 .intro__card {
-                    transform: translate(-30%, -90%);
+                    transform: translate(-70%, -150%);
                 }
 
                 .intro__card-ring {
-                    transform: translate(-50%, -50%) scale(0.8);
+                    transform: translate(-50%, -50%) scale(1);
                 }
 
                 .intro__card-content {
@@ -464,9 +495,9 @@
             }
 
             &.faded {
-                .intro__card {
-                    transform: translate(-40%, 40%);
-                }
+                // .intro__card {
+                //     transform: translate(-40%, 40%);
+                // }
             }
         }
 
@@ -475,6 +506,7 @@
                 align-self: flex-end;
                 justify-self: flex-end;
                 margin-bottom: 5rem;
+                transform: translate(20%, -130%);
             }
 
             .intro__card-ring {
@@ -487,7 +519,7 @@
 
             &.active {
                 .intro__card {
-                    transform: translate(-40%, -250%);
+                    transform: translate(-30%, -250%);
                 }
 
                 .intro__card-ring {
@@ -500,9 +532,9 @@
             }
 
             &.faded {
-                .intro__card {
-                    transform: translate(20%, 200%);
-                }
+                // .intro__card {
+                //     transform: translate(20%, 200%);
+                // }
             }
         }
 
@@ -543,9 +575,9 @@
             }
 
             &.faded {
-                .intro__card {
-                    transform: translate(40%, 70%);
-                }
+                // .intro__card {
+                //     transform: translate(40%, 70%);
+                // }
             }
         }
     }
@@ -711,17 +743,15 @@
 }
 
 .intro__heading-block {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    left: 0;
+    top: 13rem;
+    text-align: left;
     z-index: 100;
     position: absolute;
-    margin-top: -3rem;
+    
     transition: opacity 0.3s, visibility 0.3s, transform .7s;
+
+    
 
     @include breakpointMF(small-tablet) {
         body:not(.animatable) & {
@@ -730,26 +760,7 @@
             transform: translate(-50%, -50%) translateY(3rem);
         }
 
-        &--flying {
-            .sector-1-hovered & {
-                transform: translate(-50%, -50%) translateX(70%);
-            }
-            .sector-2-hovered & {
-                transform: translate(-50%, -50%) translateY(130%);
-            }
-            .sector-3-hovered & {
-                transform: translate(-50%, -50%) translateX(-100%);
-            }
-            .sector-4-hovered & {
-                transform: translate(-50%, -50%) translateY(-50%) translateX(30%);
-            }
-            .sector-5-hovered & {
-                transform: translate(-50%, -50%) translateY(-80%) translateX(35%);
-            }
-            .sector-6-hovered & {
-                transform: translate(-50%, -50%) translateY(-80%) translateX(-35%);
-            }
-        }
+        
 
      
     }
@@ -764,18 +775,13 @@
         margin-bottom: 3.5rem;
         left: auto;
         top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .intro.hovered & {
-        opacity: 0.1;
-        // visibility: hidden;
-
-        &--flying {
-            opacity: 0.5;
-        }
-        transition: opacity 0.3s, visibility 0s linear 0.3s, transform .7s;
-        pointer-events: none;
-    }
+   
 }
 
 .intro__heading {
@@ -783,6 +789,8 @@
     line-height: 120%;
     margin-bottom: 1.8rem;
     font-weight: 500;
+
+    
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -796,7 +804,7 @@
     padding: 0.8rem 2rem;
     font-size: 1.5rem;
     line-height: 140%;
-    text-align: center;
+   
     display: inline-flex;
     border-radius: 2.5rem;
     background: rgba(white, 0.1);
