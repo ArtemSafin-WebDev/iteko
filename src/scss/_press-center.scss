@@ -514,11 +514,11 @@
 .press-center__catalog-card {
     display: flex;
     flex-direction: column;
-
+    flex-grow: 1;
     position: relative;
     border-radius: 2.5rem;
     z-index: 1;
-    padding: 4rem 0;
+    padding: 4rem;
     transition: color 0.2s, box-shadow 0.2s;
     @include breakpoint(mobile) {
         padding: 0;
@@ -564,8 +564,8 @@
             position: absolute;
             top: 0rem;
             bottom: 0rem;
-            right: -4rem;
-            left: -4rem;
+            left: 0;
+            right: 0;
             z-index: -1;
             border-radius: 2.5rem;
             background-size: cover;

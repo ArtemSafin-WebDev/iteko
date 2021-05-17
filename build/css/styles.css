@@ -8622,20 +8622,26 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .project-brief {
       padding-bottom: 5rem; } }
+  @media only screen and (max-width: 640px) {
+    .project-brief figure {
+      padding: 0; } }
   .project-brief figure figcaption {
     font-size: 1.5rem;
     line-height: 140%;
     color: #bbbfc4;
-    margin-top: 3rem;
-    padding-left: 16rem; }
+    margin-top: 3rem; }
     @media only screen and (max-width: 640px) {
       .project-brief figure figcaption {
         padding-left: 0;
         font-size: 1.2rem;
         margin-top: 2rem; } }
 
+.project-brief__content {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto; }
+
 .project-brief__text {
-  padding-left: 16rem;
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 130%;
@@ -10547,10 +10553,13 @@ textarea.modal__demo-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   position: relative;
   border-radius: 2.5rem;
   z-index: 1;
-  padding: 4rem 0;
+  padding: 4rem;
   -webkit-transition: color 0.2s, -webkit-box-shadow 0.2s;
   transition: color 0.2s, -webkit-box-shadow 0.2s;
   transition: color 0.2s, box-shadow 0.2s;
@@ -10587,8 +10596,8 @@ textarea.modal__demo-form-input {
     position: absolute;
     top: 0rem;
     bottom: 0rem;
-    right: -4rem;
-    left: -4rem;
+    left: 0;
+    right: 0;
     z-index: -1;
     border-radius: 2.5rem;
     background-size: cover;
