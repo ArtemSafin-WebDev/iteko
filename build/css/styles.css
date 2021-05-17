@@ -2808,7 +2808,8 @@ select:-webkit-autofill:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
   -webkit-transition: opacity 0.7s;
-  transition: opacity 0.7s; }
+  transition: opacity 0.7s;
+  position: relative; }
   @media only screen and (max-width: 640px) {
     .intro__cards-sector {
       -ms-flex-negative: 0;
@@ -2848,19 +2849,21 @@ select:-webkit-autofill:focus {
         margin-top: 24rem;
         margin-left: -10rem; } }
   @media only screen and (min-width: 641px) {
-    .intro__cards-sector.active .intro__card-features-list,
-    .intro__cards-sector.active .intro__card-title svg,
-    .intro__cards-sector.active .intro__card-flagship-products {
-      opacity: 1;
-      visibility: inherit;
-      -webkit-transition: opacity 0.7s, visibility 0.7s;
-      transition: opacity 0.7s, visibility 0.7s; }
-    .intro__cards-sector.active .intro__card-flagship-products {
-      -webkit-transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s;
-      transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s; }
-    .intro__cards-sector.active .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
+    .intro__cards-sector.active {
+      z-index: 20; }
+      .intro__cards-sector.active .intro__card-features-list,
+      .intro__cards-sector.active .intro__card-title svg,
+      .intro__cards-sector.active .intro__card-flagship-products {
+        opacity: 1;
+        visibility: inherit;
+        -webkit-transition: opacity 0.7s, visibility 0.7s;
+        transition: opacity 0.7s, visibility 0.7s; }
+      .intro__cards-sector.active .intro__card-flagship-products {
+        -webkit-transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s;
+        transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s; }
+      .intro__cards-sector.active .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
     .intro__cards-sector.faded .intro__card {
       opacity: 0.2; }
     .intro__cards-sector.faded .intro__card-ring {

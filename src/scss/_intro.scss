@@ -252,7 +252,7 @@
     grid-template-columns: minmax(0, 1fr);
     flex-grow: 1;
     transition: opacity 0.7s;
-
+    position: relative;
     @include breakpoint(mobile) {
         flex-shrink: 0;
         align-self: center;
@@ -300,6 +300,7 @@
 
     @include breakpointMF(small-tablet) {
         &.active {
+            z-index: 20;
             .intro__card-features-list,
             .intro__card-title svg,
             .intro__card-flagship-products {
