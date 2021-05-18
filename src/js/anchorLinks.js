@@ -26,7 +26,7 @@ export default function anchorLinks() {
                         scrollTo: {
                             y: elementToScroll,
                             autoKill: false,
-                            offsetY: document.querySelector('.page-header').offsetHeight
+                            
                         }
                     });
                 }
