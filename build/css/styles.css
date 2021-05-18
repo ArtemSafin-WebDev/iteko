@@ -2876,8 +2876,8 @@ select:-webkit-autofill:focus {
               transform: scale(0.6); }
     .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(3) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card, .ordered-view .intro__cards-sector:nth-child(5) .intro__card, .ordered-view .intro__cards-sector:nth-child(6) .intro__card {
       opacity: 1;
-      -webkit-transform: translate(5rem, 5rem);
-              transform: translate(5rem, 5rem); }
+      -webkit-transform: translate(5rem, 5rem) scale(0.8);
+              transform: translate(5rem, 5rem) scale(0.8); }
     .ordered-view .intro__cards-sector:nth-child(1) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0.5);
               transform: translate(-50%, -50%) scale(0.5); }
@@ -2891,6 +2891,15 @@ select:-webkit-autofill:focus {
       transition: opacity .3s, visibility .3s; }
     .ordered-view .intro__cards-sector:nth-child(1), .ordered-view .intro__cards-sector:nth-child(2), .ordered-view .intro__cards-sector:nth-child(3) {
       z-index: 20; }
+    .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card {
+      -webkit-transform: translate(40%, 5rem) scale(0.8);
+              transform: translate(40%, 5rem) scale(0.8); }
+    .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(5) .intro__card {
+      -webkit-transform: translate(30%, 5rem) scale(0.8);
+              transform: translate(30%, 5rem) scale(0.8); }
+    .ordered-view .intro__cards-sector:nth-child(3) .intro__card, .ordered-view .intro__cards-sector:nth-child(6) .intro__card {
+      -webkit-transform: translate(15%, 5rem) scale(0.8);
+              transform: translate(15%, 5rem) scale(0.8); }
     .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card {
       -ms-flex-item-align: initial;
           align-self: initial;
@@ -3101,7 +3110,8 @@ select:-webkit-autofill:focus {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.7s, visibility 0s linear 0.7s;
-  transition: opacity 0.7s, visibility 0s linear 0.7s; }
+  transition: opacity 0.7s, visibility 0s linear 0.7s;
+  max-width: 28rem; }
 
 .intro__card-features-list-item {
   font-size: 1.5rem;
