@@ -2849,29 +2849,53 @@ select:-webkit-autofill:focus {
         margin-top: 24rem;
         margin-left: -10rem; } }
   @media only screen and (min-width: 641px) {
-    .intro__cards-sector.active {
+    .intro:not(.ordered-view) .intro__cards-sector.active {
       z-index: 20; }
-      .intro__cards-sector.active .intro__card-features-list,
-      .intro__cards-sector.active .intro__card-title svg,
-      .intro__cards-sector.active .intro__card-flagship-products {
+      .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-features-list,
+      .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-title svg,
+      .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-flagship-products {
         opacity: 1;
         visibility: inherit;
         -webkit-transition: opacity 0.7s, visibility 0.7s;
         transition: opacity 0.7s, visibility 0.7s; }
-      .intro__cards-sector.active .intro__card-flagship-products {
+      .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-flagship-products {
         -webkit-transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s;
         transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s; }
-      .intro__cards-sector.active .intro__card-content {
+      .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-content {
         -webkit-transform: scale(1);
                 transform: scale(1); }
-    .intro__cards-sector.faded .intro__card {
+    .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card {
       opacity: 0.2; }
-    .intro__cards-sector.faded .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.5) !important;
-              transform: translate(-50%, -50%) scale(0.5) !important; }
-    .intro__cards-sector.faded .intro__card-content {
-      -webkit-transform: scale(0.6) !important;
-              transform: scale(0.6) !important; }
+    .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card-ring {
+      -webkit-transform: translate(-50%, -50%) scale(0.5);
+              transform: translate(-50%, -50%) scale(0.5); }
+    .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card-content {
+      -webkit-transform: scale(0.6);
+              transform: scale(0.6); }
+    .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(3) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card, .ordered-view .intro__cards-sector:nth-child(5) .intro__card, .ordered-view .intro__cards-sector:nth-child(6) .intro__card {
+      opacity: 1;
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0); }
+    .ordered-view .intro__cards-sector:nth-child(1) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-ring {
+      -webkit-transform: translate(-50%, -50%) scale(0.6);
+              transform: translate(-50%, -50%) scale(0.6); }
+    .ordered-view .intro__cards-sector:nth-child(1) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-content {
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+    .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card {
+      -ms-flex-item-align: initial;
+          align-self: initial;
+      justify-self: initial;
+      margin: 0;
+      -webkit-transition: none;
+      transition: none; }
+    .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card-features {
+      position: static; }
+    .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card-features-list {
+      opacity: 1;
+      visibility: inherit;
+      -webkit-transition: opacity .3s, visibility .3s;
+      transition: opacity .3s, visibility .3s; }
     .intro__cards-sector:nth-child(1) .intro__card {
       -ms-flex-item-align: center;
           align-self: center;
@@ -2884,10 +2908,10 @@ select:-webkit-autofill:focus {
     .intro__cards-sector:nth-child(1) .intro__card-content {
       -webkit-transform: scale(0.6);
               transform: scale(0.6); }
-    .intro__cards-sector:nth-child(1).active .intro__card-ring {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(1).active .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0.85);
               transform: translate(-50%, -50%) scale(0.85); }
-    .intro__cards-sector:nth-child(1).active .intro__card-content {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(1).active .intro__card-content {
       -webkit-transform: scale(1);
               transform: scale(1); }
     .intro__cards-sector:nth-child(2) .intro__card {
@@ -2902,13 +2926,13 @@ select:-webkit-autofill:focus {
     .intro__cards-sector:nth-child(2) .intro__card-content {
       -webkit-transform: scale(0.6);
               transform: scale(0.6); }
-    .intro__cards-sector:nth-child(2).active .intro__card {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card {
       -webkit-transform: translate(25%, 40%);
               transform: translate(25%, 40%); }
-    .intro__cards-sector:nth-child(2).active .intro__card-content {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card-content {
       -webkit-transform: scale(1);
               transform: scale(1); }
-    .intro__cards-sector:nth-child(2).active .intro__card-ring {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0.85);
               transform: translate(-50%, -50%) scale(0.85); }
     .intro__cards-sector:nth-child(3) .intro__card {
@@ -2927,13 +2951,13 @@ select:-webkit-autofill:focus {
     .intro__cards-sector:nth-child(3) .intro__card-content {
       -webkit-transform: scale(0.8);
               transform: scale(0.8); }
-    .intro__cards-sector:nth-child(3).active .intro__card {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card {
       -webkit-transform: translate(-20%, 50%);
               transform: translate(-20%, 50%); }
-    .intro__cards-sector:nth-child(3).active .intro__card-ring {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0.9);
               transform: translate(-50%, -50%) scale(0.9); }
-    .intro__cards-sector:nth-child(3).active .intro__card-content {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card-content {
       -webkit-transform: scale(1);
               transform: scale(1); }
     .intro__cards-sector:nth-child(4) .intro__card {
@@ -2947,13 +2971,13 @@ select:-webkit-autofill:focus {
     .intro__cards-sector:nth-child(4) .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0.85);
               transform: translate(-50%, -50%) scale(0.85); }
-    .intro__cards-sector:nth-child(4).active .intro__card {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card {
       -webkit-transform: translate(-70%, -150%);
               transform: translate(-70%, -150%); }
-    .intro__cards-sector:nth-child(4).active .intro__card-ring {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(1);
               transform: translate(-50%, -50%) scale(1); }
-    .intro__cards-sector:nth-child(4).active .intro__card-content {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card-content {
       -webkit-transform: scale(1);
               transform: scale(1); }
     .intro__cards-sector:nth-child(5) .intro__card {
@@ -2969,13 +2993,13 @@ select:-webkit-autofill:focus {
     .intro__cards-sector:nth-child(5) .intro__card-content {
       -webkit-transform: scale(0.6);
               transform: scale(0.6); }
-    .intro__cards-sector:nth-child(5).active .intro__card {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card {
       -webkit-transform: translate(-30%, -250%);
               transform: translate(-30%, -250%); }
-    .intro__cards-sector:nth-child(5).active .intro__card-ring {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0.7);
               transform: translate(-50%, -50%) scale(0.7); }
-    .intro__cards-sector:nth-child(5).active .intro__card-content {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card-content {
       -webkit-transform: scale(1);
               transform: scale(1); }
     .intro__cards-sector:nth-child(6) .intro__card {
@@ -2994,13 +3018,13 @@ select:-webkit-autofill:focus {
     .intro__cards-sector:nth-child(6) .intro__card-content {
       -webkit-transform: scale(0.65);
               transform: scale(0.65); }
-    .intro__cards-sector:nth-child(6).active .intro__card {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card {
       -webkit-transform: translate(15%, -160%);
               transform: translate(15%, -160%); }
-    .intro__cards-sector:nth-child(6).active .intro__card-ring {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0.75);
               transform: translate(-50%, -50%) scale(0.75); }
-    .intro__cards-sector:nth-child(6).active .intro__card-content {
+    .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card-content {
       -webkit-transform: scale(1);
               transform: scale(1); } }
 
@@ -3016,7 +3040,13 @@ select:-webkit-autofill:focus {
   font-size: 2.5rem;
   line-height: 140%;
   margin-bottom: 2rem;
-  max-width: 28rem; }
+  max-width: 28rem;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left; }
   @media only screen and (min-width: 641px) {
     .intro__card-title {
       -webkit-transition: opacity 0.7s;
@@ -3161,10 +3191,17 @@ select:-webkit-autofill:focus {
   text-align: left;
   z-index: 100;
   position: absolute;
-  -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform .7s;
-  transition: opacity 0.3s, visibility 0.3s, -webkit-transform .7s;
-  transition: opacity 0.3s, visibility 0.3s, transform .7s;
-  transition: opacity 0.3s, visibility 0.3s, transform .7s, -webkit-transform .7s; }
+  -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.7s;
+  transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.7s;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.7s;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.7s, -webkit-transform 0.7s; }
+  .ordered-view .intro__heading-block {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s, -webkit-transform 0.3s; }
   @media only screen and (min-width: 641px) {
     body:not(.animatable) .intro__heading-block {
       opacity: 0;

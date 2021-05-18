@@ -104,7 +104,6 @@
     bottom: 0;
     width: 100%;
     height: auto;
-   
 
     @include breakpoint(mobile) {
         display: none;
@@ -233,10 +232,8 @@
         body:not(.animatable) & {
             pointer-events: none;
         }
-    
     }
 
-  
     @include breakpoint(mobile) {
         padding: 2rem 0;
         grid-template-columns: initial;
@@ -299,7 +296,7 @@
     }
 
     @include breakpointMF(small-tablet) {
-        &.active {
+        .intro:not(.ordered-view) &.active {
             z-index: 20;
             .intro__card-features-list,
             .intro__card-title svg,
@@ -318,20 +315,79 @@
             }
         }
 
-        &.faded {
+        .intro:not(.ordered-view) &.faded {
             // pointer-events: none;
 
             .intro__card {
                 opacity: 0.2;
             }
 
-
             .intro__card-ring {
-                transform: translate(-50%, -50%) scale(0.5) !important;
+                transform: translate(-50%, -50%) scale(0.5);
             }
 
             .intro__card-content {
-                transform: scale(0.6) !important;
+                transform: scale(0.6);
+            }
+        }
+
+        .ordered-view & {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                .intro__card {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                    // align-self: initial;
+                    // justify-self: initial;
+                    // margin: 0;
+                }
+
+                // .intro__card-title {
+                //     transform: scale(0.8);
+                    
+                // }
+
+                .intro__card-ring {
+                    transform: translate(-50%, -50%) scale(0.6);
+                }
+
+                .intro__card-content {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .returned-to-grid & {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                .intro__card {
+                    align-self: initial;
+                    justify-self: initial;
+                    margin: 0;
+                    transition: none;
+                }
+
+
+                .intro__card-features {
+                   
+                    position: static;
+                }
+
+                
+
+                .intro__card-features-list {
+                    opacity: 1;
+                    visibility: inherit;
+                    transition: opacity .3s, visibility .3s;
+                }
             }
         }
         &:nth-child(1) {
@@ -341,7 +397,6 @@
                 transform: translate(140%, 80%);
             }
 
-
             .intro__card-ring {
                 transform: translate(-50%, -50%) scale(0.4);
             }
@@ -349,16 +404,12 @@
             .intro__card-content {
                 transform: scale(0.6);
             }
-          
 
-            &.active {
+            .intro:not(.ordered-view) &.active {
                 // .intro__card {
                 //     transform: translate(40%, 40%);
                 // }
 
-              
-
-                
                 .intro__card-ring {
                     transform: translate(-50%, -50%) scale(0.85);
                 }
@@ -366,18 +417,9 @@
                 .intro__card-content {
                     transform: scale(1);
                 }
-
-
-                
             }
 
-            &.faded {
-                // .intro__card {
-                //     transform: translate(-50%, -60%);
-                // }
-
-
-
+            .intro:not(.ordered-view) &.faded {
             }
         }
         &:nth-child(2) {
@@ -395,7 +437,7 @@
                 transform: scale(0.6);
             }
 
-            &.active {
+            .intro:not(.ordered-view) &.active {
                 .intro__card {
                     transform: translate(25%, 40%);
                 }
@@ -409,7 +451,7 @@
                 }
             }
 
-            &.faded {
+            .intro:not(.ordered-view) &.faded {
                 // .intro__card {
                 //     transform: translate(-30%, -60%);
                 // }
@@ -437,19 +479,13 @@
                 transform: scale(0.8);
             }
 
-
-            
-
-            &.active {
+            .intro:not(.ordered-view) &.active {
                 .intro__card {
                     transform: translate(-20%, 50%);
                 }
 
-
-
-
                 .intro__card-ring {
-                    transform: translate(-50%, -50%) scale(.9);
+                    transform: translate(-50%, -50%) scale(0.9);
                 }
 
                 .intro__card-content {
@@ -457,7 +493,7 @@
                 }
             }
 
-            &.faded {
+            .intro:not(.ordered-view) &.faded {
                 // .intro__card {
                 //     transform: translate(25%, -65%);
                 // }
@@ -470,9 +506,6 @@
                 margin-bottom: 11rem;
             }
 
-           
-
-
             .intro__card-content {
                 transform: scale(0.85);
             }
@@ -481,7 +514,7 @@
                 transform: translate(-50%, -50%) scale(0.85);
             }
 
-            &.active {
+            .intro:not(.ordered-view) &.active {
                 .intro__card {
                     transform: translate(-70%, -150%);
                 }
@@ -495,7 +528,7 @@
                 }
             }
 
-            &.faded {
+            .intro:not(.ordered-view) &.faded {
                 // .intro__card {
                 //     transform: translate(-40%, 40%);
                 // }
@@ -518,7 +551,7 @@
                 transform: scale(0.6);
             }
 
-            &.active {
+            .intro:not(.ordered-view) &.active {
                 .intro__card {
                     transform: translate(-30%, -250%);
                 }
@@ -532,7 +565,7 @@
                 }
             }
 
-            &.faded {
+            .intro:not(.ordered-view) &.faded {
                 // .intro__card {
                 //     transform: translate(20%, 200%);
                 // }
@@ -561,7 +594,7 @@
                 transform: scale(0.65);
             }
 
-            &.active {
+            .intro:not(.ordered-view) &.active {
                 .intro__card {
                     transform: translate(15%, -160%);
                 }
@@ -575,7 +608,7 @@
                 }
             }
 
-            &.faded {
+            .intro:not(.ordered-view) &.faded {
                 // .intro__card {
                 //     transform: translate(40%, 70%);
                 // }
@@ -595,6 +628,8 @@
     line-height: 140%;
     margin-bottom: 2rem;
     max-width: 28rem;
+    transition: transform .3s;
+    transform-origin: top left;
 
     @include breakpointMF(small-tablet) {
         transition: opacity 0.7s;
@@ -749,10 +784,14 @@
     text-align: left;
     z-index: 100;
     position: absolute;
-    
-    transition: opacity 0.3s, visibility 0.3s, transform .7s;
 
-    
+    transition: opacity 0.3s, visibility 0.3s, transform 0.7s;
+
+    .ordered-view & {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
+    }
 
     @include breakpointMF(small-tablet) {
         body:not(.animatable) & {
@@ -760,13 +799,7 @@
             visibility: hidden;
             transform: translate(-50%, -50%) translateY(3rem);
         }
-
-        
-
-     
     }
-
-   
 
     @include breakpoint(mobile) {
         margin: 0;
@@ -781,8 +814,6 @@
         align-items: center;
         text-align: center;
     }
-
-   
 }
 
 .intro__heading {
@@ -790,8 +821,6 @@
     line-height: 120%;
     margin-bottom: 1.8rem;
     font-weight: 500;
-
-    
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -805,7 +834,7 @@
     padding: 0.8rem 2rem;
     font-size: 1.5rem;
     line-height: 140%;
-   
+
     display: inline-flex;
     border-radius: 2.5rem;
     background: rgba(white, 0.1);
@@ -822,7 +851,6 @@
     }
 }
 
-
 .intro__scroll-progress {
     width: 12rem;
     position: absolute;
@@ -830,7 +858,7 @@
     transform: translateX(-50%);
     bottom: 2.6rem;
     height: 2px;
-    background-color: rgba(white, .3);
+    background-color: rgba(white, 0.3);
     overflow: hidden;
 
     display: none;
@@ -839,18 +867,15 @@
     }
 }
 
-
 .intro__scroll-progress-bar {
     position: absolute;
     width: 3rem;
     height: 100%;
     background-color: #fff;
 
-   
     left: var(--progress, 0%);
-   
+
     top: 0;
- 
 }
 
 .intro__scroll-progress-bar-wrapper {
