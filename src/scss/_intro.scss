@@ -228,6 +228,10 @@
     padding-bottom: 12rem;
     padding-top: 9rem;
 
+    .returned-to-grid & {
+        padding-top: 15rem;
+    }
+
     @include breakpointMF(small-tablet) {
         body:not(.animatable) & {
             pointer-events: none;
@@ -340,7 +344,7 @@
             &:nth-child(6) {
                 .intro__card {
                     opacity: 1;
-                    transform: translate(0, 0);
+                    transform: translate(5rem, 5rem);
                     // align-self: initial;
                     // justify-self: initial;
                     // margin: 0;
@@ -352,12 +356,26 @@
                 // }
 
                 .intro__card-ring {
-                    transform: translate(-50%, -50%) scale(0.6);
+                    transform: translate(-50%, -50%) scale(0.5);
                 }
 
                 .intro__card-content {
                     transform: scale(1);
                 }
+
+
+                .intro__card-features-list {
+                    opacity: 1;
+                    visibility: inherit;
+                    transition: opacity .3s, visibility .3s;
+                }
+            }
+
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                z-index: 20;
             }
         }
 
@@ -388,13 +406,16 @@
                     visibility: inherit;
                     transition: opacity .3s, visibility .3s;
                 }
+
+
+
+                
             }
         }
         &:nth-child(1) {
             .intro__card {
-                align-self: center;
-                justify-self: center;
-                transform: translate(140%, 80%);
+                
+                transform: translate(100%, 60%);
             }
 
             .intro__card-ring {
@@ -402,7 +423,7 @@
             }
 
             .intro__card-content {
-                transform: scale(0.6);
+                transform: scale(0.7);
             }
 
             .intro:not(.ordered-view) &.active {
@@ -424,9 +445,8 @@
         }
         &:nth-child(2) {
             .intro__card {
-                align-self: center;
-                justify-self: flex-end;
-                transform: translate(30%, 10%);
+               
+                transform: translate(65%, 36%);
             }
 
             .intro__card-ring {
@@ -434,12 +454,12 @@
             }
 
             .intro__card-content {
-                transform: scale(0.6);
+                transform: scale(0.7);
             }
 
             .intro:not(.ordered-view) &.active {
                 .intro__card {
-                    transform: translate(25%, 40%);
+                    transform: translate(65%, 36%);
                 }
 
                 .intro__card-content {
@@ -459,9 +479,7 @@
         }
         &:nth-child(3) {
             .intro__card {
-                align-self: center;
-                justify-self: flex-end;
-                margin-top: 4rem;
+                transform: translate(45%, 35%);
             }
 
             .intro__card-flagship-products {
@@ -476,12 +494,12 @@
             }
 
             .intro__card-content {
-                transform: scale(0.8);
+                transform: scale(0.9);
             }
 
             .intro:not(.ordered-view) &.active {
                 .intro__card {
-                    transform: translate(-20%, 50%);
+                    transform: translate(35%, 45%);
                 }
 
                 .intro__card-ring {
@@ -501,13 +519,11 @@
         }
         &:nth-child(4) {
             .intro__card {
-                align-self: flex-end;
-                justify-self: flex-end;
-                margin-bottom: 11rem;
+                transform: translate(65%, 45%);
             }
 
             .intro__card-content {
-                transform: scale(0.85);
+                transform: scale(0.95);
             }
 
             .intro__card-ring {
@@ -516,7 +532,7 @@
 
             .intro:not(.ordered-view) &.active {
                 .intro__card {
-                    transform: translate(-70%, -150%);
+                    transform: translate(45%, 8%);
                 }
 
                 .intro__card-ring {
@@ -537,10 +553,8 @@
 
         &:nth-child(5) {
             .intro__card {
-                align-self: flex-end;
-                justify-self: flex-end;
-                margin-bottom: 5rem;
-                transform: translate(20%, -130%);
+             
+                transform: translate(60%, 30%);
             }
 
             .intro__card-ring {
@@ -548,12 +562,12 @@
             }
 
             .intro__card-content {
-                transform: scale(0.6);
+                transform: scale(0.75);
             }
 
             .intro:not(.ordered-view) &.active {
                 .intro__card {
-                    transform: translate(-30%, -250%);
+                    transform: translate(35%, 5%);
                 }
 
                 .intro__card-ring {
@@ -574,9 +588,8 @@
 
         &:nth-child(6) {
             .intro__card {
-                align-self: flex-end;
-                justify-self: flex-end;
-                margin-bottom: 2rem;
+              
+                transform: translate(50%, 50%);
             }
 
             .intro__card-flagship-products {
@@ -591,12 +604,12 @@
             }
 
             .intro__card-content {
-                transform: scale(0.65);
+                transform: scale(0.75);
             }
 
             .intro:not(.ordered-view) &.active {
                 .intro__card {
-                    transform: translate(15%, -160%);
+                    transform: translate(30%, 10%);
                 }
 
                 .intro__card-ring {
@@ -624,7 +637,7 @@
 
 .intro__card-title {
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 140%;
     margin-bottom: 2rem;
     max-width: 28rem;

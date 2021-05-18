@@ -36,27 +36,39 @@ export default function intro() {
                 });
             });
 
+
+            window.returnToGrid = () => {
+                const state = Flip.getState(document.querySelectorAll('.intro__card'));
+                element.classList.add('returned-to-grid');
+                Flip.from(state, {
+                    duration: 2,
+                    paused: false,
+                    // ease: 'none'
+                });
+            };
+
             const enterChaosView = () => {
                 chaosView.classList.add('active');
                 listView.classList.remove('active');
                 element.classList.remove('ordered-view');
+              
             };
 
             const enterOrderView = () => {
                 chaosView.classList.remove('active');
                 listView.classList.add('active');
                 element.classList.add('ordered-view');
+                // element.classList.add('locked');
+
+                
+
+                // gsap.delayedCall(2, () => {
+                //     window.returnToGrid();
+                // });
+                
             };
 
-            window.returnToGrid = () => {
-                const state = Flip.getState(document.querySelectorAll('.intro__card'));
-                element.classList.add('returned-to-grid');
-                Flip.from(state, {
-                    duration: 0.8,
-                    paused: false,
-                    // ease: 'none'
-                });
-            };
+          
 
             if (chaosView) {
                 chaosView.addEventListener('click', event => {
@@ -70,8 +82,9 @@ export default function intro() {
                     enterOrderView();
                 });
             }
-
-            enterChaosView();
+            chaosView.classList.add('active');
+            listView.classList.remove('active');
+            
         });
     } else {
         elements.forEach(element => {
