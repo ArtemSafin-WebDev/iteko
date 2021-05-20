@@ -8589,7 +8589,7 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 140%;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.6rem;
   border-bottom: 2px solid #000000;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 640px) {
@@ -8724,7 +8724,8 @@ select:-webkit-autofill:focus {
 .project-brief__image {
   display: block;
   width: 100%;
-  height: auto; }
+  height: auto;
+  border-radius: 1.5rem; }
 
 .project-contactor {
   background-color: #fff;
@@ -8739,7 +8740,7 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 140%;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.6rem;
   border-bottom: 2px solid #000000;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 640px) {
@@ -8937,7 +8938,7 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 140%;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.6rem;
   border-bottom: 2px solid #000000;
   margin-bottom: 6rem; }
   @media only screen and (max-width: 640px) {
