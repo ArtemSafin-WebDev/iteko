@@ -1,0 +1,646 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="career-intro">
+
+
+    <div class="container">
+        <div class="inner-container">
+
+
+            <div class="career-intro__content">
+                <div class="career-intro__bg">
+                    <img src="img/career-bg.jpg" alt="" class="career-intro__bg-image">
+                </div>
+                <div class="career-intro__row">
+                    <div class="career-intro__wrapper">
+
+
+                        <div class="career-intro__breadcrumbs">
+                            <a href="#">
+                                Главная
+                            </a><br> / <a href="#">
+                                Карьера
+                            </a>
+                        </div>
+                        <div class="career-intro__heading-block">
+                            <h1 class="career-intro__main-heading">
+                                Карьера в «Ай-теко»
+                            </h1>
+                            <div class="career-intro__heading-text">
+                                <p>
+                                    Работа в компаний «Ай-теко» — это отличные перспективы
+                                    для профессионального развития и карьерного роста
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="career-intro__open-vacancies">
+                        <div class="career-intro__open-vacancies-amount">
+                            40
+                        </div>
+                        <div class="career-intro__open-vacancies-text">
+                            открытых<br> вакансий
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="career-catalog">
+    <div class="container">
+        <div class="inner-container">
+
+
+            <div class="career-catalog__top-row">
+                <nav class="career-catalog__nav">
+                    <a href="#" class="career-catalog__nav-link active">
+                        Все вакансии
+                    </a>
+                    <a href="#" class="career-catalog__nav-link">
+                        Для студентов и выпускников
+                    </a>
+                    <a href="#" class="career-catalog__nav-link">
+                        Для профессионалов
+                    </a>
+                </nav>
+
+                <div class="career-catalog__filter js-career-catalog-filter">
+                    <div class="career-catalog__filter-btn">
+                        <div class="career-catalog__filter-btn-text">
+                            Фильтр
+                        </div>
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                            <use xlink:href="#arrow-simple-down"></use>
+                        </svg>
+                    </div>
+                    <div class="career-catalog__filter-dropdown">
+                        <div class="career-catalog__filter-dropdown-inner">
+                            <form action="/" method="GET" class="career-catalog__filter-dropdown-form">
+                                <div class="career-catalog__filter-dropdown-accordions">
+
+
+                                    <div class="career-catalog__filter-dropdown-accordion js-accordion">
+                                        <div class="career-catalog__filter-dropdown-accordion-btn js-accordion-btn">
+                                            <div class="career-catalog__filter-dropdown-accordion-btn-text">
+                                                Город
+                                            </div>
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                                                <use xlink:href="#arrow-simple-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="career-catalog__filter-dropdown-accordion-content js-accordion-content">
+                                            <div class="career-catalog__filter-dropdown-accordion-content-inner">
+
+
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="city" value="moscow"
+                                                        class="career-catalog__filter-dropdown-checkbox-input" checked>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Москва
+                                                    </span>
+                                                </label>
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="city" value="piter"
+                                                        class="career-catalog__filter-dropdown-checkbox-input">
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Санкт-Петербург
+                                                    </span>
+                                                </label>
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="city" value="kazan"
+                                                        class="career-catalog__filter-dropdown-checkbox-input">
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Казань
+                                                    </span>
+                                                </label>
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="city" value="sochi"
+                                                        class="career-catalog__filter-dropdown-checkbox-input">
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Сочи
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="career-catalog__filter-dropdown-accordion js-accordion">
+                                        <div class="career-catalog__filter-dropdown-accordion-btn js-accordion-btn">
+                                            <div class="career-catalog__filter-dropdown-accordion-btn-text">
+                                                Направление деятельности
+                                            </div>
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                                                <use xlink:href="#arrow-simple-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="career-catalog__filter-dropdown-accordion-content js-accordion-content">
+                                            <div class="career-catalog__filter-dropdown-accordion-content-inner">
+
+
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="direction" value="1"
+                                                        class="career-catalog__filter-dropdown-checkbox-input" checked>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Направление 1
+                                                    </span>
+                                                </label>
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="direction" value="2"
+                                                        class="career-catalog__filter-dropdown-checkbox-input">
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Направление 2
+                                                    </span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="career-catalog__filter-dropdown-accordion js-accordion">
+                                        <div class="career-catalog__filter-dropdown-accordion-btn js-accordion-btn">
+                                            <div class="career-catalog__filter-dropdown-accordion-btn-text">
+                                                Партнеры
+                                            </div>
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                                                <use xlink:href="#arrow-simple-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="career-catalog__filter-dropdown-accordion-content js-accordion-content">
+                                            <div class="career-catalog__filter-dropdown-accordion-content-inner">
+
+
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="partner" value="1"
+                                                        class="career-catalog__filter-dropdown-checkbox-input" checked>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Партнер 1
+                                                    </span>
+                                                </label>
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="partner" value="2"
+                                                        class="career-catalog__filter-dropdown-checkbox-input">
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        Партнер 2
+                                                    </span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="career-catalog__filter-dropdown-accordion js-accordion">
+                                        <div class="career-catalog__filter-dropdown-accordion-btn js-accordion-btn">
+                                            <div class="career-catalog__filter-dropdown-accordion-btn-text">
+                                                Опыт работы
+                                            </div>
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
+                                                <use xlink:href="#arrow-simple-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="career-catalog__filter-dropdown-accordion-content js-accordion-content">
+                                            <div class="career-catalog__filter-dropdown-accordion-content-inner">
+
+
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="experience" value="1"
+                                                        class="career-catalog__filter-dropdown-checkbox-input" checked>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        1 год
+                                                    </span>
+                                                </label>
+                                                <label class="career-catalog__filter-dropdown-checkbox">
+
+                                                    <input type="radio" name="experience" value="2"
+                                                        class="career-catalog__filter-dropdown-checkbox-input">
+                                                    <span class="career-catalog__filter-dropdown-checkbox-mark">
+
+                                                    </span>
+                                                    <span class="career-catalog__filter-dropdown-checkbox-text">
+                                                        2 года
+                                                    </span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="reset" class="career-catalog__filter-dropdown-form-reset">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                    Сбросить фильтры
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="career-catalog__layout">
+                <div class="career-catalog__layout-left-col">
+                    <ul class="career-catalog__list">
+                        <li class="career-catalog__list-item">
+                            <a href="#" class="career-catalog__card">
+                                <div class="career-catalog__card-bg">
+
+                                </div>
+                                <div class="career-catalog__card-content">
+                                    <h4 class="career-catalog__card-title">
+                                        Менеджер по продажам
+                                        (ИТ оборудование, проекты, услуги)
+                                    </h4>
+                                    <div class="career-catalog__card-description">
+                                        Обязанности: Разработка программ ЦОС по следующим направлениям: обнаружение,
+                                        измерение параметров, демодуляция...
+                                    </div>
+                                    <div class="career-catalog__card-info">
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Дата публикации
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                28.10.20
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Город
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                Москва
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Опыт работы
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 1 года до 3 лет
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Зарплата
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 60 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="career-catalog__card-arrow">
+                                    <div class="career-catalog__card-arrow-reply">
+                                        Откликнуться<br> на вакансию
+                                    </div>
+                                    <div class="career-catalog__card-arrow-inner">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+
+
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="career-catalog__list-item">
+                            <a href="#" class="career-catalog__card">
+                                <div class="career-catalog__card-bg">
+
+                                </div>
+                                <div class="career-catalog__card-content">
+                                    <h4 class="career-catalog__card-title">
+                                        Инженер технической поддержки
+                                    </h4>
+                                    <div class="career-catalog__card-description">
+                                        Обязанности: Разработка программ ЦОС по следующим направлениям: обнаружение,
+                                        измерение параметров, демодуляция...
+                                    </div>
+                                    <div class="career-catalog__card-info">
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Дата публикации
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                28.10.20
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Город
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                Москва
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Опыт работы
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 1 года до 3 лет
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Зарплата
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 60 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="career-catalog__card-arrow">
+                                    <div class="career-catalog__card-arrow-reply">
+                                        Откликнуться<br> на вакансию
+                                    </div>
+                                    <div class="career-catalog__card-arrow-inner">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+
+
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="career-catalog__list-item">
+                            <a href="#" class="career-catalog__card">
+                                <div class="career-catalog__card-bg">
+
+                                </div>
+                                <div class="career-catalog__card-content">
+                                    <h4 class="career-catalog__card-title">
+                                        Стажер – тестировщик
+                                        по нагрузочному тестированию
+                                    </h4>
+                                    <div class="career-catalog__card-description">
+                                        Обязанности: Разработка программ ЦОС по следующим направлениям: обнаружение,
+                                        измерение параметров, демодуляция...
+                                    </div>
+                                    <div class="career-catalog__card-info">
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Дата публикации
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                28.10.20
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Город
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                Москва
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Опыт работы
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 1 года до 3 лет
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Зарплата
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 60 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="career-catalog__card-arrow">
+                                    <div class="career-catalog__card-arrow-reply">
+                                        Откликнуться<br> на вакансию
+                                    </div>
+                                    <div class="career-catalog__card-arrow-inner">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+
+
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="career-catalog__list-item">
+                            <a href="#" class="career-catalog__card">
+                                <div class="career-catalog__card-bg">
+
+                                </div>
+                                <div class="career-catalog__card-content">
+                                    <h4 class="career-catalog__card-title">
+                                        Младший инженер-программист
+                                    </h4>
+                                    <div class="career-catalog__card-description">
+                                        Обязанности: Разработка программ ЦОС по следующим направлениям: обнаружение,
+                                        измерение параметров, демодуляция...
+                                    </div>
+                                    <div class="career-catalog__card-info">
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Дата публикации
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                28.10.20
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Город
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                Москва
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Опыт работы
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 1 года до 3 лет
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Зарплата
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 60 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="career-catalog__card-arrow">
+                                    <div class="career-catalog__card-arrow-reply">
+                                        Откликнуться<br> на вакансию
+                                    </div>
+                                    <div class="career-catalog__card-arrow-inner">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="career-catalog__list-item">
+                            <a href="#" class="career-catalog__card">
+                                <div class="career-catalog__card-bg">
+
+                                </div>
+                                <div class="career-catalog__card-content">
+                                    <h4 class="career-catalog__card-title">
+                                        Менеджер по продажам
+                                        (ИТ оборудование, проекты, услуги)
+                                    </h4>
+                                    <div class="career-catalog__card-description">
+                                        Обязанности: Разработка программ ЦОС по следующим направлениям: обнаружение,
+                                        измерение параметров, демодуляция...
+                                    </div>
+                                    <div class="career-catalog__card-info">
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Дата публикации
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                28.10.20
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Город
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                Москва
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Опыт работы
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 1 года до 3 лет
+                                            </div>
+                                        </div>
+                                        <div class="career-catalog__card-info-block">
+                                            <div class="career-catalog__card-info-block-key">
+                                                Зарплата
+                                            </div>
+                                            <div class="career-catalog__card-info-block-value">
+                                                от 60 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="career-catalog__card-arrow">
+                                    <div class="career-catalog__card-arrow-reply">
+                                        Откликнуться<br> на вакансию
+                                    </div>
+                                    <div class="career-catalog__card-arrow-inner">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="pagination">
+                        <a href="#" class="pagination__link active">
+                            1
+                        </a>
+                        <a href="#" class="pagination__link">
+                            2
+                        </a>
+                        <a href="#" class="pagination__link">
+                            3
+                        </a>
+                        <a href="#" class="pagination__link">
+                            4
+                        </a>
+                        <a href="#" class="pagination__next">
+                            Следующая
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="career-catalog__layout-right-col">
+                    <div class="career-catalog__work-center">
+                        <h3 class="career-catalog__work-center-heading">
+                            Центр приема на работу
+                        </h3>
+                        <div class="career-catalog__work-center-text">
+                            Готовы стать частью нашей команды? Отправьте своё резюме
+                        </div>
+                        <div class="career-catalog__work-center-resume">
+                            <div class="career-catalog__work-center-resume-text">
+                                Присылайте резюме на адрес:
+                            </div>
+                            <a href="mailto:press@i-teco.ru"
+                                class="career-catalog__work-center-resume-mail">press@i-teco.ru</a>
+                        </div>
+                        <a href="#" class="career-catalog__work-center-hh">
+                            <span class="career-catalog__work-center-hh-text">
+                                «Ай-теко» на HH
+                            </span>
+                            <img src="img/hh.png" alt="" class="career-catalog__work-center-hh-image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

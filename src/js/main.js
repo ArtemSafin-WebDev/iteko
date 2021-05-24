@@ -28,6 +28,8 @@ import articleGallery from './articleGallery';
 import pressCenterSlider from './pressCenterSlider';
 import ourClientsSlider from './ourClientsSlider';
 import anchorLinks from './anchorLinks';
+import accordions from './accordions';
+import careerCatalogFilter from './careerCatalogFilter';
 
 
 
@@ -59,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
     pressCenterSlider();
     ourClientsSlider();
     anchorLinks();
+    accordions();
+    careerCatalogFilter();
 });
 
 window.addEventListener('load', function() {

@@ -1,0 +1,197 @@
+.career-intro {
+    padding-bottom: 8rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 3rem;
+    }
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.career-intro__content {
+    min-height: 46rem;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    background-color: #1c1050;
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+        min-height: auto;
+    }
+}
+
+.career-intro__bg {
+    position: absolute;
+    left: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+    right: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(2, 0, 21, 0) 0%, rgba(2, 0, 27, 0.75) 59.84%);
+    }
+}
+
+.career-intro__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.career-intro__row {
+    display: flex;
+
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        align-items: initial;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-gap: 2rem;
+        grid-template-areas: 'breadcrumbs breadcrumbs' 'heading vacancies' 'heading-text heading-text';
+        align-items: center;
+        grid-row-gap: 1rem;
+    }
+}
+
+.career-intro__wrapper {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        display: contents;
+        
+    }
+}
+
+.career-intro__breadcrumbs {
+    width: 25rem;
+    flex-shrink: 0;
+    color: rgba(white, 0.5);
+    margin-top: 1rem;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        grid-area: breadcrumbs;
+    }
+    a {
+        font-size: 1.5rem;
+        line-height: 140%;
+
+        @include breakpoint(mobile) {
+            font-size: 1.3rem;
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: white;
+        }
+    }
+}
+
+.career-intro__heading-block {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        display: contents;
+    }
+}
+
+.career-intro__main-heading {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        grid-area: heading;
+        margin: 0;
+    }
+}
+
+.career-intro__heading-text {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        font-weight: 400;
+        grid-area: heading-text;
+    }
+}
+
+.career-intro__open-vacancies {
+    width: 30rem;
+    height: 30rem;
+    flex-shrink: 0;
+    margin-left: 10rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image: url('../img/career-hoop.svg');
+    background-position: left 1rem center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include breakpoint(mobile) {
+        width: 15rem;
+        height: 15rem;
+        margin: 0;
+        background-position: left .5rem center;
+    }
+}
+
+.career-intro__open-vacancies-amount {
+    font-weight: 500;
+    font-size: 10rem;
+    line-height: 0.8;
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 4rem;
+    }
+}
+
+.career-intro__open-vacancies-text {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+    }
+}
