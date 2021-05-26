@@ -104,7 +104,7 @@
     bottom: 0;
     width: 100%;
     height: auto;
-    padding: 0 4rem;
+    padding: 0 6rem;
     @include breakpoint(mobile) {
         display: none;
         padding: 0;
@@ -113,19 +113,49 @@
 
 .intro__scroll-down {
     position: absolute;
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 4rem;
     left: 0;
-    top: 4.3rem;
-    svg {
-        display: block;
+    top: 0rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color .4s;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
+        background-color: var(--primary-color);
+        transition: transform .4s;
+        transform: scale(0);
+        border-radius: 50%;
+    }
+    svg {
+        display: block;
+        width: 1.3rem;
+        height: 1.3rem;
         fill: white;
         animation-name: arrow;
-        animation-duration: 2s;
+        animation-duration: 1s;
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation-direction: alternate;
+        animation-timing-function: ease;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: var(--primary-color);
+
+        &::before {
+            transform: scale(1);
+        }
     }
 
     @include breakpoint(mobile) {
@@ -133,26 +163,16 @@
     }
 }
 
+
+
+
+
 @keyframes arrow {
     0% {
-        opacity: 0;
-        transform: translateY(-1rem);
-    }
-
-    30% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    70% {
-        opacity: 1;
+        transform: translateY(-10%);
     }
     100% {
-        opacity: 0;
-        transform: translateY(1rem);
+        transform: translateY(10%);
     }
 }
 
