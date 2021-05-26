@@ -454,7 +454,10 @@
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3) {
-                z-index: 20;
+                .intro__card {
+                    z-index: 20;
+                }
+                
             }
 
             &:nth-child(1),
@@ -815,8 +818,8 @@
     top: 0;
     transform: translate(-50%, -50%);
     z-index: -1;
-    width: 50rem;
-    height: 50rem;
+    width: 40rem;
+    height: 40rem;
     object-fit: contain;
     object-position: center;
     max-width: none;
