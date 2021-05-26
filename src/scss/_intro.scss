@@ -346,18 +346,33 @@
     }
 
     @include breakpointMF(small-tablet) {
+        position: static;
+
+        .intro__card {
+            pointer-events: none;
+        }
+
+        .intro__card-title {
+            pointer-events: initial;
+        }
+        .intro__card-features {
+            pointer-events: initial;
+        }
         .intro:not(.ordered-view) &.active {
-            z-index: 20;
+            .intro__card {
+                z-index: 20;
+            }
+
             .intro__card-features-list,
             .intro__card-title svg,
             .intro__card-flagship-products {
                 opacity: 1;
                 visibility: inherit;
-                transition: opacity 0.7s, visibility 0.7s;
+                transition: opacity 1s, visibility 1s;
             }
 
             .intro__card-flagship-products {
-                transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s;
+                transition: opacity 1s ease 0.4s, visibility 1s ease 0.4s;
             }
 
             .intro__card-content {
@@ -398,7 +413,7 @@
 
                 // .intro__card-title {
                 //     transform: scale(0.8);
-                    
+
                 // }
 
                 .intro__card-ring {
@@ -409,14 +424,12 @@
                     transform: scale(1);
                 }
 
-
                 .intro__card-features-list {
                     opacity: 1;
                     visibility: inherit;
-                    transition: opacity .3s, visibility .3s;
+                    transition: opacity 0.4s, visibility 0.4s;
                 }
             }
-
 
             &:nth-child(1),
             &:nth-child(2),
@@ -424,29 +437,22 @@
                 z-index: 20;
             }
 
-
             &:nth-child(1),
             &:nth-child(4) {
                 .intro__card {
-                    
                     transform: translate(40%, 5rem) scale(0.8);
-                    
                 }
             }
             &:nth-child(2),
             &:nth-child(5) {
                 .intro__card {
-                    
                     transform: translate(30%, 5rem) scale(0.8);
-                    
                 }
             }
             &:nth-child(3),
             &:nth-child(6) {
                 .intro__card {
-                    
                     transform: translate(15%, 5rem) scale(0.8);
-                    
                 }
             }
         }
@@ -465,28 +471,19 @@
                     transition: none;
                 }
 
-
                 .intro__card-features {
-                   
                     position: static;
                 }
-
-                
 
                 .intro__card-features-list {
                     opacity: 1;
                     visibility: inherit;
-                    transition: opacity .3s, visibility .3s;
+                    transition: opacity 0.4s, visibility 0.4s;
                 }
-
-
-
-                
             }
         }
         &:nth-child(1) {
             .intro__card {
-                
                 transform: translate(100%, 60%);
             }
 
@@ -517,7 +514,6 @@
         }
         &:nth-child(2) {
             .intro__card {
-               
                 transform: translate(65%, 36%);
             }
 
@@ -625,7 +621,6 @@
 
         &:nth-child(5) {
             .intro__card {
-             
                 transform: translate(60%, 30%);
             }
 
@@ -660,7 +655,6 @@
 
         &:nth-child(6) {
             .intro__card {
-              
                 transform: translate(50%, 50%);
             }
 
@@ -704,20 +698,20 @@
 
 .intro__card {
     position: relative;
-    transition: transform 0.7s, opacity 0.7s;
+    transition: transform 1s, opacity 1s;
 }
 
 .intro__card-title {
     font-weight: 500;
     font-size: 2.2rem;
     line-height: 140%;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     max-width: 28rem;
-    transition: transform .3s;
+    transition: transform 0.4s;
     transform-origin: top left;
 
     @include breakpointMF(small-tablet) {
-        transition: opacity 0.7s;
+        transition: opacity 1s;
 
         body:not(.animatable) & {
             opacity: 0 !important;
@@ -729,7 +723,7 @@
         font-size: 1.2rem;
         line-height: 120%;
         max-width: 17rem;
-        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     svg {
@@ -741,7 +735,7 @@
         vertical-align: baseline;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.7s, visibility 0s linear 0.7s;
+        transition: opacity 1s, visibility 0s linear 1s;
         display: inline-block;
 
         @include breakpoint(mobile) {
@@ -775,7 +769,7 @@
 .intro__card-features-list {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.7s, visibility 0s linear 0.7s;
+    transition: opacity 1s, visibility 0s linear 1s;
     max-width: 28rem;
 }
 
@@ -806,7 +800,10 @@
     object-fit: contain;
     object-position: center;
     max-width: none;
-    transition: transform 0.8s;
+    transition: transform 1s;
+
+    // width: 40rem;
+    // height: 40rem;
 
     @include breakpointMF(small-tablet) {
         body:not(.animatable) & {
@@ -831,7 +828,7 @@
     padding-top: 0.3rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.7s, visibility 0s linear 0.7s;
+    transition: opacity 1s, visibility 0s linear 1s;
 
     @include breakpoint(mobile) {
         display: none;
@@ -871,12 +868,12 @@
     z-index: 100;
     position: absolute;
 
-    transition: opacity 0.3s, visibility 0.3s, transform 0.7s;
+    transition: opacity 0.4s, visibility 0.4s, transform 1s;
 
     .ordered-view & {
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
+        transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
     }
 
     @include breakpointMF(small-tablet) {

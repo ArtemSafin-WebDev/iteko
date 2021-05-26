@@ -2912,208 +2912,216 @@ select:-webkit-autofill:focus {
         margin-top: 24rem;
         margin-left: -10rem; } }
   @media only screen and (min-width: 641px) {
-    .intro:not(.ordered-view) .intro__cards-sector.active {
-      z-index: 20; }
+    .intro__cards-sector {
+      position: static; }
+      .intro__cards-sector .intro__card {
+        pointer-events: none; }
+      .intro__cards-sector .intro__card-title {
+        pointer-events: initial; }
+      .intro__cards-sector .intro__card-features {
+        pointer-events: initial; }
+      .intro:not(.ordered-view) .intro__cards-sector.active .intro__card {
+        z-index: 20; }
       .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-features-list,
       .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-title svg,
       .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-flagship-products {
         opacity: 1;
         visibility: inherit;
-        -webkit-transition: opacity 0.7s, visibility 0.7s;
-        transition: opacity 0.7s, visibility 0.7s; }
+        -webkit-transition: opacity 1s, visibility 1s;
+        transition: opacity 1s, visibility 1s; }
       .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-flagship-products {
-        -webkit-transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s;
-        transition: opacity 0.7s ease 0.3s, visibility 0.7s ease 0.3s; }
+        -webkit-transition: opacity 1s ease 0.4s, visibility 1s ease 0.4s;
+        transition: opacity 1s ease 0.4s, visibility 1s ease 0.4s; }
       .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-content {
         -webkit-transform: scale(1);
                 transform: scale(1); }
-    .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card {
-      opacity: 0.2; }
-    .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.5);
-              transform: translate(-50%, -50%) scale(0.5); }
-    .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card-content {
-      -webkit-transform: scale(0.6);
-              transform: scale(0.6); }
-    .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(3) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card, .ordered-view .intro__cards-sector:nth-child(5) .intro__card, .ordered-view .intro__cards-sector:nth-child(6) .intro__card {
-      opacity: 1;
-      -webkit-transform: translate(5rem, 5rem) scale(0.8);
-              transform: translate(5rem, 5rem) scale(0.8); }
-    .ordered-view .intro__cards-sector:nth-child(1) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.5);
-              transform: translate(-50%, -50%) scale(0.5); }
-    .ordered-view .intro__cards-sector:nth-child(1) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    .ordered-view .intro__cards-sector:nth-child(1) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-features-list {
-      opacity: 1;
-      visibility: inherit;
-      -webkit-transition: opacity .3s, visibility .3s;
-      transition: opacity .3s, visibility .3s; }
-    .ordered-view .intro__cards-sector:nth-child(1), .ordered-view .intro__cards-sector:nth-child(2), .ordered-view .intro__cards-sector:nth-child(3) {
-      z-index: 20; }
-    .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card {
-      -webkit-transform: translate(40%, 5rem) scale(0.8);
-              transform: translate(40%, 5rem) scale(0.8); }
-    .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(5) .intro__card {
-      -webkit-transform: translate(30%, 5rem) scale(0.8);
-              transform: translate(30%, 5rem) scale(0.8); }
-    .ordered-view .intro__cards-sector:nth-child(3) .intro__card, .ordered-view .intro__cards-sector:nth-child(6) .intro__card {
-      -webkit-transform: translate(15%, 5rem) scale(0.8);
-              transform: translate(15%, 5rem) scale(0.8); }
-    .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card {
-      -ms-flex-item-align: initial;
-          align-self: initial;
-      justify-self: initial;
-      margin: 0;
-      -webkit-transition: none;
-      transition: none; }
-    .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card-features {
-      position: static; }
-    .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card-features-list {
-      opacity: 1;
-      visibility: inherit;
-      -webkit-transition: opacity .3s, visibility .3s;
-      transition: opacity .3s, visibility .3s; }
-    .intro__cards-sector:nth-child(1) .intro__card {
-      -webkit-transform: translate(100%, 60%);
-              transform: translate(100%, 60%); }
-    .intro__cards-sector:nth-child(1) .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.4);
-              transform: translate(-50%, -50%) scale(0.4); }
-    .intro__cards-sector:nth-child(1) .intro__card-content {
-      -webkit-transform: scale(0.7);
-              transform: scale(0.7); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(1).active .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.85);
-              transform: translate(-50%, -50%) scale(0.85); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(1).active .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    .intro__cards-sector:nth-child(2) .intro__card {
-      -webkit-transform: translate(65%, 36%);
-              transform: translate(65%, 36%); }
-    .intro__cards-sector:nth-child(2) .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.6);
-              transform: translate(-50%, -50%) scale(0.6); }
-    .intro__cards-sector:nth-child(2) .intro__card-content {
-      -webkit-transform: scale(0.7);
-              transform: scale(0.7); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card {
-      -webkit-transform: translate(65%, 36%);
-              transform: translate(65%, 36%); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.85);
-              transform: translate(-50%, -50%) scale(0.85); }
-    .intro__cards-sector:nth-child(3) .intro__card {
-      -webkit-transform: translate(45%, 35%);
-              transform: translate(45%, 35%); }
-    .intro__cards-sector:nth-child(3) .intro__card-flagship-products {
-      left: auto;
-      padding-left: 0;
-      right: 100%;
-      padding-right: 3rem; }
-    .intro__cards-sector:nth-child(3) .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.7);
-              transform: translate(-50%, -50%) scale(0.7); }
-    .intro__cards-sector:nth-child(3) .intro__card-content {
-      -webkit-transform: scale(0.9);
-              transform: scale(0.9); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card {
-      -webkit-transform: translate(35%, 45%);
-              transform: translate(35%, 45%); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.9);
-              transform: translate(-50%, -50%) scale(0.9); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    .intro__cards-sector:nth-child(4) .intro__card {
-      -webkit-transform: translate(65%, 45%);
-              transform: translate(65%, 45%); }
-    .intro__cards-sector:nth-child(4) .intro__card-content {
-      -webkit-transform: scale(0.95);
-              transform: scale(0.95); }
-    .intro__cards-sector:nth-child(4) .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.85);
-              transform: translate(-50%, -50%) scale(0.85); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card {
-      -webkit-transform: translate(45%, 8%);
-              transform: translate(45%, 8%); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(1);
-              transform: translate(-50%, -50%) scale(1); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    .intro__cards-sector:nth-child(5) .intro__card {
-      -webkit-transform: translate(60%, 30%);
-              transform: translate(60%, 30%); }
-    .intro__cards-sector:nth-child(5) .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.6);
-              transform: translate(-50%, -50%) scale(0.6); }
-    .intro__cards-sector:nth-child(5) .intro__card-content {
-      -webkit-transform: scale(0.75);
-              transform: scale(0.75); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card {
-      -webkit-transform: translate(35%, 5%);
-              transform: translate(35%, 5%); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.7);
-              transform: translate(-50%, -50%) scale(0.7); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    .intro__cards-sector:nth-child(6) .intro__card {
-      -webkit-transform: translate(50%, 50%);
-              transform: translate(50%, 50%); }
-    .intro__cards-sector:nth-child(6) .intro__card-flagship-products {
-      left: auto;
-      padding-left: 0;
-      right: 100%;
-      padding-right: 3rem; }
-    .intro__cards-sector:nth-child(6) .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.65);
-              transform: translate(-50%, -50%) scale(0.65); }
-    .intro__cards-sector:nth-child(6) .intro__card-content {
-      -webkit-transform: scale(0.75);
-              transform: scale(0.75); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card {
-      -webkit-transform: translate(30%, 10%);
-              transform: translate(30%, 10%); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card-ring {
-      -webkit-transform: translate(-50%, -50%) scale(0.75);
-              transform: translate(-50%, -50%) scale(0.75); }
-    .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card-content {
-      -webkit-transform: scale(1);
-              transform: scale(1); } }
+      .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card {
+        opacity: 0.2; }
+      .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+                transform: translate(-50%, -50%) scale(0.5); }
+      .intro:not(.ordered-view) .intro__cards-sector.faded .intro__card-content {
+        -webkit-transform: scale(0.6);
+                transform: scale(0.6); }
+      .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(3) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card, .ordered-view .intro__cards-sector:nth-child(5) .intro__card, .ordered-view .intro__cards-sector:nth-child(6) .intro__card {
+        opacity: 1;
+        -webkit-transform: translate(5rem, 5rem) scale(0.8);
+                transform: translate(5rem, 5rem) scale(0.8); }
+      .ordered-view .intro__cards-sector:nth-child(1) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-ring, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+                transform: translate(-50%, -50%) scale(0.5); }
+      .ordered-view .intro__cards-sector:nth-child(1) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-content, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
+      .ordered-view .intro__cards-sector:nth-child(1) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-features-list {
+        opacity: 1;
+        visibility: inherit;
+        -webkit-transition: opacity 0.4s, visibility 0.4s;
+        transition: opacity 0.4s, visibility 0.4s; }
+      .ordered-view .intro__cards-sector:nth-child(1), .ordered-view .intro__cards-sector:nth-child(2), .ordered-view .intro__cards-sector:nth-child(3) {
+        z-index: 20; }
+      .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card {
+        -webkit-transform: translate(40%, 5rem) scale(0.8);
+                transform: translate(40%, 5rem) scale(0.8); }
+      .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(5) .intro__card {
+        -webkit-transform: translate(30%, 5rem) scale(0.8);
+                transform: translate(30%, 5rem) scale(0.8); }
+      .ordered-view .intro__cards-sector:nth-child(3) .intro__card, .ordered-view .intro__cards-sector:nth-child(6) .intro__card {
+        -webkit-transform: translate(15%, 5rem) scale(0.8);
+                transform: translate(15%, 5rem) scale(0.8); }
+      .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card {
+        -ms-flex-item-align: initial;
+            align-self: initial;
+        justify-self: initial;
+        margin: 0;
+        -webkit-transition: none;
+        transition: none; }
+      .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card-features, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card-features {
+        position: static; }
+      .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card-features-list {
+        opacity: 1;
+        visibility: inherit;
+        -webkit-transition: opacity 0.4s, visibility 0.4s;
+        transition: opacity 0.4s, visibility 0.4s; }
+      .intro__cards-sector:nth-child(1) .intro__card {
+        -webkit-transform: translate(100%, 60%);
+                transform: translate(100%, 60%); }
+      .intro__cards-sector:nth-child(1) .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.4);
+                transform: translate(-50%, -50%) scale(0.4); }
+      .intro__cards-sector:nth-child(1) .intro__card-content {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(1).active .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.85);
+                transform: translate(-50%, -50%) scale(0.85); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(1).active .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
+      .intro__cards-sector:nth-child(2) .intro__card {
+        -webkit-transform: translate(65%, 36%);
+                transform: translate(65%, 36%); }
+      .intro__cards-sector:nth-child(2) .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.6);
+                transform: translate(-50%, -50%) scale(0.6); }
+      .intro__cards-sector:nth-child(2) .intro__card-content {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card {
+        -webkit-transform: translate(65%, 36%);
+                transform: translate(65%, 36%); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(2).active .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.85);
+                transform: translate(-50%, -50%) scale(0.85); }
+      .intro__cards-sector:nth-child(3) .intro__card {
+        -webkit-transform: translate(45%, 35%);
+                transform: translate(45%, 35%); }
+      .intro__cards-sector:nth-child(3) .intro__card-flagship-products {
+        left: auto;
+        padding-left: 0;
+        right: 100%;
+        padding-right: 3rem; }
+      .intro__cards-sector:nth-child(3) .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.7);
+                transform: translate(-50%, -50%) scale(0.7); }
+      .intro__cards-sector:nth-child(3) .intro__card-content {
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card {
+        -webkit-transform: translate(35%, 45%);
+                transform: translate(35%, 45%); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.9);
+                transform: translate(-50%, -50%) scale(0.9); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(3).active .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
+      .intro__cards-sector:nth-child(4) .intro__card {
+        -webkit-transform: translate(65%, 45%);
+                transform: translate(65%, 45%); }
+      .intro__cards-sector:nth-child(4) .intro__card-content {
+        -webkit-transform: scale(0.95);
+                transform: scale(0.95); }
+      .intro__cards-sector:nth-child(4) .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.85);
+                transform: translate(-50%, -50%) scale(0.85); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card {
+        -webkit-transform: translate(45%, 8%);
+                transform: translate(45%, 8%); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(4).active .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
+      .intro__cards-sector:nth-child(5) .intro__card {
+        -webkit-transform: translate(60%, 30%);
+                transform: translate(60%, 30%); }
+      .intro__cards-sector:nth-child(5) .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.6);
+                transform: translate(-50%, -50%) scale(0.6); }
+      .intro__cards-sector:nth-child(5) .intro__card-content {
+        -webkit-transform: scale(0.75);
+                transform: scale(0.75); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card {
+        -webkit-transform: translate(35%, 5%);
+                transform: translate(35%, 5%); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.7);
+                transform: translate(-50%, -50%) scale(0.7); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(5).active .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
+      .intro__cards-sector:nth-child(6) .intro__card {
+        -webkit-transform: translate(50%, 50%);
+                transform: translate(50%, 50%); }
+      .intro__cards-sector:nth-child(6) .intro__card-flagship-products {
+        left: auto;
+        padding-left: 0;
+        right: 100%;
+        padding-right: 3rem; }
+      .intro__cards-sector:nth-child(6) .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.65);
+                transform: translate(-50%, -50%) scale(0.65); }
+      .intro__cards-sector:nth-child(6) .intro__card-content {
+        -webkit-transform: scale(0.75);
+                transform: scale(0.75); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card {
+        -webkit-transform: translate(30%, 10%);
+                transform: translate(30%, 10%); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card-ring {
+        -webkit-transform: translate(-50%, -50%) scale(0.75);
+                transform: translate(-50%, -50%) scale(0.75); }
+      .intro:not(.ordered-view) .intro__cards-sector:nth-child(6).active .intro__card-content {
+        -webkit-transform: scale(1);
+                transform: scale(1); } }
 
 .intro__card {
   position: relative;
-  -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
-  transition: opacity 0.7s, -webkit-transform 0.7s;
-  transition: transform 0.7s, opacity 0.7s;
-  transition: transform 0.7s, opacity 0.7s, -webkit-transform 0.7s; }
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s; }
 
 .intro__card-title {
   font-weight: 500;
   font-size: 2.2rem;
   line-height: 140%;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   max-width: 28rem;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
   -webkit-transform-origin: top left;
           transform-origin: top left; }
   @media only screen and (min-width: 641px) {
     .intro__card-title {
-      -webkit-transition: opacity 0.7s;
-      transition: opacity 0.7s; }
+      -webkit-transition: opacity 1s;
+      transition: opacity 1s; }
       body:not(.animatable) .intro__card-title {
         opacity: 0 !important; } }
   @media only screen and (max-width: 640px) {
@@ -3122,7 +3130,7 @@ select:-webkit-autofill:focus {
       font-size: 1.2rem;
       line-height: 120%;
       max-width: 17rem;
-      margin-bottom: 0; } }
+      padding-bottom: 0; } }
   .intro__card-title svg {
     width: 0.85rem;
     height: 0.85rem;
@@ -3133,8 +3141,8 @@ select:-webkit-autofill:focus {
     vertical-align: baseline;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.7s, visibility 0s linear 0.7s;
-    transition: opacity 0.7s, visibility 0s linear 0.7s;
+    -webkit-transition: opacity 1s, visibility 0s linear 1s;
+    transition: opacity 1s, visibility 0s linear 1s;
     display: inline-block; }
     @media only screen and (max-width: 640px) {
       .intro__card-title svg {
@@ -3170,8 +3178,8 @@ select:-webkit-autofill:focus {
 .intro__card-features-list {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.7s, visibility 0s linear 0.7s;
-  transition: opacity 0.7s, visibility 0s linear 0.7s;
+  -webkit-transition: opacity 1s, visibility 0s linear 1s;
+  transition: opacity 1s, visibility 0s linear 1s;
   max-width: 28rem; }
 
 .intro__card-features-list-item {
@@ -3199,10 +3207,10 @@ select:-webkit-autofill:focus {
   -o-object-position: center;
      object-position: center;
   max-width: none;
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s; }
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
   @media only screen and (min-width: 641px) {
     body:not(.animatable) .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0) !important;
@@ -3223,8 +3231,8 @@ select:-webkit-autofill:focus {
   padding-top: 0.3rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.7s, visibility 0s linear 0.7s;
-  transition: opacity 0.7s, visibility 0s linear 0.7s; }
+  -webkit-transition: opacity 1s, visibility 0s linear 1s;
+  transition: opacity 1s, visibility 0s linear 1s; }
   @media only screen and (max-width: 640px) {
     .intro__card-flagship-products {
       display: none; } }
@@ -3255,17 +3263,17 @@ select:-webkit-autofill:focus {
   text-align: left;
   z-index: 100;
   position: absolute;
-  -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.7s;
-  transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.7s;
-  transition: opacity 0.3s, visibility 0.3s, transform 0.7s;
-  transition: opacity 0.3s, visibility 0.3s, transform 0.7s, -webkit-transform 0.7s; }
+  -webkit-transition: opacity 0.4s, visibility 0.4s, -webkit-transform 1s;
+  transition: opacity 0.4s, visibility 0.4s, -webkit-transform 1s;
+  transition: opacity 0.4s, visibility 0.4s, transform 1s;
+  transition: opacity 0.4s, visibility 0.4s, transform 1s, -webkit-transform 1s; }
   .ordered-view .intro__heading-block {
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, visibility 0s linear 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
-    transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s, -webkit-transform 0.3s; }
+    -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s, -webkit-transform 0.4s; }
   @media only screen and (min-width: 641px) {
     body:not(.animatable) .intro__heading-block {
       opacity: 0;
