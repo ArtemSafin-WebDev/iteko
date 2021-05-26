@@ -164,6 +164,10 @@
     &--high {
         grid-row: span 3;
     }
+
+    &--medium {
+        grid-row: span 2;
+    }
 }
 
 .modal__demo-form-input {
@@ -553,6 +557,15 @@ textarea.modal__demo-form-input {
     color: #bbbfc4;
     max-width: 44rem;
     margin-top: -0.3rem;
+
+    a {
+        border-bottom: 1px solid currentColor;
+        transition: color .2s, border-color .2s;
+        .no-touch &:hover,
+        .touch &:active {
+            border-color: transparent;
+        }
+    }
 }
 
 .modal__demo-form-checkbox-input:checked ~ .modal__demo-form-checkbox-mark svg {

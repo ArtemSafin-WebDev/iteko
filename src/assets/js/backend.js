@@ -19,4 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    var vacancyForm = document.querySelector('#vacancy-form');
+
+    if (vacancyForm) {
+        vacancyForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (
+                $(vacancyForm)
+                    .parsley()
+                    .isValid()
+            ) {
+                vacancyForm.reset();
+                $(vacancyForm)
+                    .parsley()
+                    .reset();
+                vacancyForm.classList.add('success');
+
+                setTimeout(function() {
+                    vacancyForm.classList.remove('success');
+                }, 3000)
+            }
+        });
+    }
 });

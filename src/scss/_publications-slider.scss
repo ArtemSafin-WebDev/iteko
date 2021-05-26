@@ -25,6 +25,12 @@
             width: 100%;
         }
     }
+
+    &--vacancy {
+        .swiper-slide {
+            width: 32rem;
+        }
+    }
 }
 
 .publications-slider__wrapper {
