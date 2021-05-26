@@ -30,6 +30,7 @@ import ourClientsSlider from './ourClientsSlider';
 import anchorLinks from './anchorLinks';
 import accordions from './accordions';
 import careerCatalogFilter from './careerCatalogFilter';
+import partnersSlider from './partnersSlider';
 
 
 
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorLinks();
     accordions();
     careerCatalogFilter();
+    partnersSlider();
 });
 
 window.addEventListener('load', function() {

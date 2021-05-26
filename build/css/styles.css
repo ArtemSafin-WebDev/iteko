@@ -14826,3 +14826,231 @@ textarea.modal__demo-form-input {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 150%; }
+
+.partners {
+  padding-top: 21rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 9rem; }
+  @media only screen and (max-width: 640px) {
+    .partners {
+      padding-bottom: 6rem;
+      padding-top: 8rem; } }
+
+.partners__top-row {
+  margin-bottom: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media only screen and (max-width: 640px) {
+    .partners__top-row {
+      margin-bottom: 3rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
+
+.partners__breadcrumbs {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: rgba(27, 30, 29, 0.3);
+  width: 25.4rem; }
+  @media only screen and (max-width: 640px) {
+    .partners__breadcrumbs {
+      width: auto;
+      margin-bottom: 2rem;
+      font-size: 1.3rem; } }
+  .no-touch .partners__breadcrumbs a:hover,
+  .touch .partners__breadcrumbs a:active {
+    color: #1b1e1d; }
+
+.partners__main-heading {
+  font-weight: 500;
+  font-size: 6rem;
+  line-height: 120%; }
+  @media only screen and (max-width: 640px) {
+    .partners__main-heading {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin: 0; } }
+
+.partners__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 8rem;
+  grid-row-gap: 7rem;
+  margin-bottom: 18rem; }
+  @media only screen and (max-width: 640px) {
+    .partners__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 2rem;
+      margin-bottom: 7rem;
+      grid-row-gap: 3rem; } }
+
+.partners__card-logo-container {
+  width: 100%;
+  height: 8.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem; }
+  @media only screen and (max-width: 640px) {
+    .partners__card-logo-container {
+      height: 6rem;
+      margin-bottom: 1rem; } }
+
+.partners__card-logo {
+  height: 80%;
+  width: auto;
+  max-width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left center;
+     object-position: left center; }
+
+.partners__card-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 111%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  color: var(--primary-color); }
+
+.partners__card-text {
+  font-size: 1.2rem;
+  line-height: 140%; }
+
+.partners__card-certified {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 140%; }
+  .partners__card-certified svg {
+    width: 1rem;
+    height: 0.6rem;
+    fill: var(--text-color);
+    margin-left: 1rem;
+    margin-top: .5rem;
+    display: inline-block; }
+    @media only screen and (max-width: 640px) {
+      .partners__card-certified svg {
+        margin-left: 0.5rem; } }
+
+.partners__slider-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.partners__slider-card-logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.6rem;
+  margin-bottom: 1.5rem;
+  height: 4rem; }
+  @media only screen and (max-width: 640px) {
+    .partners__slider-card-logo-container {
+      height: 3rem;
+      margin-bottom: 1.2rem; } }
+
+.partners__slider-card-logo {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left center;
+     object-position: left center; }
+
+.partners__slider-card-title {
+  font-size: 1.2rem;
+  line-height: 140%;
+  color: #bbbfc4;
+  font-weight: 400; }
+
+.partners__slider-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2.5rem;
+  border-top: 0.3rem solid var(--text-color);
+  margin-top: 8rem; }
+  @media only screen and (max-width: 640px) {
+    .partners__slider-controls {
+      padding-top: 1.5rem;
+      margin-top: 2rem; } }
+
+.partners__slider-show-more {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 111%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 3rem; }
+  @media only screen and (max-width: 640px) {
+    .partners__slider-show-more {
+      font-size: 1.3rem;
+      font-weight: 600; } }
+  .no-touch .partners__slider-show-more:hover,
+  .touch .partners__slider-show-more:active {
+    color: var(--primary-color); }
+
+.partners__slider-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.partners__slider-arrow {
+  width: 2rem;
+  height: 2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 3rem;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s; }
+  @media only screen and (max-width: 640px) {
+    .partners__slider-arrow {
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-right: 2rem; } }
+  .partners__slider-arrow svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: var(--text-color);
+    -webkit-transition: fill .2s;
+    transition: fill .2s; }
+  .partners__slider-arrow:last-child {
+    margin-right: 0; }
+  .partners__slider-arrow.swiper-button-disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: .5; }
+  .no-touch .partners__slider-arrow:not(.swiper-button-disabled):hover svg,
+  .touch .partners__slider-arrow:not(.swiper-button-disabled):active svg {
+    fill: var(--primary-color); }
