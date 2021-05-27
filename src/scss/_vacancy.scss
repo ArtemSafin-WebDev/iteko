@@ -59,7 +59,7 @@
     font-size: 6rem;
     line-height: 120%;
     margin-bottom: 3rem;
-
+    margin-left: -.055em;
     @include breakpoint(mobile) {
         font-size: 2.2rem;
         line-height: 1.2;
@@ -181,7 +181,8 @@
     border-radius: 4rem;
     padding-top: 8.5rem;
     padding-left: 12rem;
-    padding-right: 5rem;
+    padding-right: 12rem;
+    
     padding-bottom: 11rem;
 
     @include breakpoint(mobile) {
@@ -211,7 +212,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        right: 6rem;
+        right: 0;
         height: 1px;
         background-color: var(--text-color);
 

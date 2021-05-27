@@ -475,15 +475,30 @@ textarea.modal__demo-form-input {
 
 .modal__demo-form-submit {
     padding: 2rem 6.2rem;
-    border-radius: 5rem;
+    
     text-align: center;
     color: white;
-    background-color: var(--primary-color);
+  
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 111%;
     transition: color 0.2s, background-color 0.2s;
     margin-left: 3rem;
+
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform .3s;
+        background-color: var(--primary-color);
+        z-index: -1;
+        border-radius: 5rem;
+    }
 
     @include breakpoint(mobile) {
         margin-left: 0;
@@ -493,7 +508,9 @@ textarea.modal__demo-form-input {
     }
     .no-touch &:hover,
     .touch &:active {
-        background-color: var(--primary-color-hover);
+        &::before {
+            transform: scale(.95);
+        }
     }
 }
 
@@ -531,7 +548,7 @@ textarea.modal__demo-form-input {
     height: 1.6rem;
     flex-shrink: 0;
     margin-right: 2rem;
-    border: 1px solid #00b07a;
+    border: 1px solid #bbbfc4;
     border-radius: 1px;
     display: flex;
     flex-direction: column;
@@ -568,8 +585,12 @@ textarea.modal__demo-form-input {
     }
 }
 
-.modal__demo-form-checkbox-input:checked ~ .modal__demo-form-checkbox-mark svg {
-    opacity: 1;
+.modal__demo-form-checkbox-input:checked ~ .modal__demo-form-checkbox-mark {
+    border-color: var(--primary-color);
+    svg {
+        opacity: 1;
+    }
+    
 }
 
 .modal__demo-success {
