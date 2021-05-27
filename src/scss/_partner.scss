@@ -1,0 +1,96 @@
+.partner {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-top: 21rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 8rem;
+    }
+    
+}
+
+.partner__heading-block {
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.partner__breadcrumbs {
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: rgba(#1b1e1d, 0.3);
+
+    margin-bottom: 8rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+    }
+
+    a {
+        .no-touch &:hover,
+        .touch &:active {
+            color: #1b1e1d;
+        }
+    }
+}
+
+.partner__top-row {
+    display: flex;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.partner__logo {
+    width: 18.4rem;
+    height: auto;
+    flex-shrink: 0;
+    margin-right: 16rem;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.partner__info {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.partner__name {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 120%;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.partner__description {
+    font-size: 2rem;
+    line-height: 140%;
+    max-width: 90rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.6rem;
+    }
+}

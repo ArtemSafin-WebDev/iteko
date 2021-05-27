@@ -235,7 +235,7 @@
 .vacancy__details-block-heading {
     font-weight: 600;
     font-size: 1.5rem;
-    line-height: 111%;
+    line-height: 1.4;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
@@ -248,12 +248,17 @@
 .vacancy__details-block-list-item {
     margin-bottom: 1.6rem;
     position: relative;
+    font-size: 2rem;
+    line-height: 140%;
 
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
     &::before {
         content: '';
         position: absolute;
         right: 100%;
-        top: 0.6rem;
+        top: 1rem;
         width: 0.6rem;
         height: 0.6rem;
         background-color: var(--text-color);
@@ -265,7 +270,7 @@
             display: inline-block;
             vertical-align: top;
             margin-right: .5rem;
-            margin-top: 0.65rem;
+            margin-top: 0.8rem;
             width: 0.5rem;
             height: 0.5rem;
         }
