@@ -235,6 +235,10 @@
     align-items: center;
     justify-content: center;
 
+    &--white {
+        background-color: white;
+    }
+
     @include breakpoint(mobile) {
         width: 6rem;
         height: 6rem;
@@ -291,5 +295,23 @@
         font-weight: 500;
         font-size: 1.5rem;
         line-height: 140%;
+    }
+}
+
+
+.success-stories__slider-subcard-read-full {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+    margin-left: auto;
+    margin-top: 5rem;
+   
+    svg {
+        width: 0.8rem;
+        height: .8rem;
+        display: inline-block;
+        vertical-align: baseline;
+        fill: var(--primary-color);
+        margin-left: 0.5rem;
     }
 }
