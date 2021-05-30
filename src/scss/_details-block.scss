@@ -1,0 +1,25 @@
+.details-block {
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 10rem;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 2rem;
+    }
+}
+
+.details-block__heading {
+    padding-bottom: 4rem;
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    border-bottom: 1px solid #000000;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 120%;
+        padding-bottom: 2.5rem;
+    }
+}

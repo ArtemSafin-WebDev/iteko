@@ -15,7 +15,7 @@ export default function partnersSlider() {
             slidesPerGroup: 1,
             slidesPerColumnFill: 'row',
             watchOverflow: true,
-         
+            threshold: 5,
             navigation: {
                 nextEl: element.querySelector('.partners__slider-arrow--prev'),
                 prevEl: element.querySelector('.partners__slider-arrow--next')

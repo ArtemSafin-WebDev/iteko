@@ -81,6 +81,13 @@
     grid-column-gap: 5.5rem;
     grid-row-gap: 4rem;
 
+    &--column {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 2.5rem;
+        max-width: 67rem;
+        margin-left: auto;
+    }
+
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         padding: 0;

@@ -1,0 +1,100 @@
+.players {
+    position: relative;
+    background-color: #fff;
+    z-index: 1;
+    padding-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 3rem;
+    }
+}
+
+.players__top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.players__heading {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 140%;
+    user-select: none;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+
+.players__arrows {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.players__arrow {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    transition: opacity .2s;
+    margin-right: 3rem;
+    &:last-child {
+        margin-right: 0;
+    }
+    svg {
+        fill: black;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: fill .2s;
+    }
+
+    &.swiper-button-disabled {
+       
+        pointer-events: none;
+        cursor: default;
+
+        svg {
+            fill: rgba(27,30,29,.2);
+        }
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.players__slider {
+    .swiper-slide {
+        width: 16.66%;
+        
+    }
+}
+
+.players__slider-card {
+    height: 5.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    
+}
+
+.players__slider-card-icon {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+}

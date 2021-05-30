@@ -31,6 +31,7 @@ import anchorLinks from './anchorLinks';
 import accordions from './accordions';
 import careerCatalogFilter from './careerCatalogFilter';
 import partnersSlider from './partnersSlider';
+import playersSlider from './playersSlider';
 
 
 
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     accordions();
     careerCatalogFilter();
     partnersSlider();
+    playersSlider();
 });
 
 window.addEventListener('load', function() {

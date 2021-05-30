@@ -1,0 +1,126 @@
+.faq {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
+}
+
+.faq__content {
+    padding: 10rem 15rem;
+    background: #f0f3f4;
+    border-radius: 4rem;
+    @include breakpoint(mobile) {
+        border-radius: 3rem;
+        padding: 3rem var(--content-padding);
+        margin: 0 calc(-1 * var(--content-padding));
+    }
+}
+
+.faq__heading {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 120%;
+        margin-bottom: 2.5rem;
+    }
+}
+.faq__accordions-list {
+    counter-reset: faq-list;
+}
+
+.faq__accordions-list-item {
+    border-top: 1px solid #000000;
+    counter-increment: faq-list;
+
+    &:last-child {
+        border-bottom: 1px solid #000000;
+    }
+
+    &::before {
+        content: '';
+    }
+}
+
+
+
+.faq__accordion-btn {
+    display: flex;
+    align-self: baseline;
+    padding: 4rem 0;
+    transition: color 0.2s;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 140%;
+    user-select: none;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+        padding: 2rem 0;
+        font-size: 1.6rem;
+    }
+
+    &::before {
+        counter-increment: ordered-list;
+        content: counter(faq-list, decimal-leading-zero) '.';
+
+        color: var(--primary-color);
+
+        min-width: 4.5rem;
+
+        @include breakpoint(mobile) {
+            min-width: 3.3rem;
+        }
+    }
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        align-self: center;
+        transition: transform .2s;
+
+        @include breakpoint(mobile) {
+            align-self: flex-start;
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-top: 0.2rem;
+        }
+    }
+
+    
+    .faq__accordion.active & {
+        color: var(--primary-color);
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.faq__accordion-content {
+    height: 0;
+    overflow: hidden;
+}
+
+.faq__accordion-content-inner {
+    padding-bottom: 5rem;
+    font-size: 2rem;
+    line-height: 140%;
+}
+
+
+.faq__accordion-btn-text {
+    width: 40%;
+    flex-grow: 1;
+}
