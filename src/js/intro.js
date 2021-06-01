@@ -58,13 +58,7 @@ export default function intro() {
                 chaosView.classList.remove('active');
                 listView.classList.add('active');
                 element.classList.add('ordered-view');
-                // element.classList.add('locked');
-
                 
-
-                // gsap.delayedCall(2, () => {
-                //     window.returnToGrid();
-                // });
                 
             };
 

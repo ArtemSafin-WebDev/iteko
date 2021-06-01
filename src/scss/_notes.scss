@@ -1,0 +1,112 @@
+.notes {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
+}
+
+.notes__heading {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        margin-right: 0;
+        line-height: 130%;
+    }
+}
+
+.notes__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.notes__list-item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.notes__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 6.5rem;
+    border: 1px solid rgba(#bbbfc4, 0.4);
+    border-radius: 4rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    padding-top: 3rem;
+
+    @include breakpoint(mobile) {
+        padding: 3.2rem;
+        padding-top: 0.5rem;
+        border-radius: 3rem;
+    }
+
+    .no-touch &:hover {
+        box-shadow: 0 0.8rem 2.5rem rgba(black, 0.07);
+        border-color: white;
+    }
+}
+
+.notes__card-icon-container {
+    display: flex;
+    align-items: center;
+    min-height: 9rem;
+    border-bottom: 1px solid rgba(#bbbfc4, 0.4);
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        min-height: 6rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.notes__card-icon {
+    height: 2.6rem;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
+    max-width: 100%;
+
+    @include breakpoint(mobile) {
+        height: 2rem;
+    }
+}
+
+.notes__card-title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 140%;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 140%;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.notes__card-text {
+    font-size: 1.5rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 140%;
+    }
+}

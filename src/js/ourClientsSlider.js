@@ -18,6 +18,7 @@ export default function ourClientsSlider() {
             autoHeight: true,
             speed: 700,
             effect: 'fade',
+            threshold: 5,
             fadeEffect: {
                 crossFade: true
             },

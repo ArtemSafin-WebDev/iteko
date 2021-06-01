@@ -36,6 +36,8 @@ export default function modals() {
     document.addEventListener('click', event => {
         if (event.target.matches('.js-open-modal') || event.target.closest('.js-open-modal')) {
             event.preventDefault();
+
+            window.closeMenu();
             const link = event.target.matches('.js-open-modal') ? event.target : event.target.closest('.js-open-modal');
             const hash = link.hash;
             openModal(hash);

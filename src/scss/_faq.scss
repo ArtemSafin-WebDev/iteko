@@ -62,7 +62,7 @@
     line-height: 140%;
     user-select: none;
     cursor: pointer;
-
+    
     @include breakpoint(mobile) {
         padding: 2rem 0;
         font-size: 1.6rem;
@@ -86,7 +86,7 @@
         height: 2rem;
         fill: currentColor;
         flex-shrink: 0;
-        margin-left: 2rem;
+        margin-left: auto;
         align-self: center;
         transition: transform .2s;
 
@@ -123,4 +123,10 @@
 .faq__accordion-btn-text {
     width: 40%;
     flex-grow: 1;
+    max-width: 82rem;
+    padding-right: 2rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
 }

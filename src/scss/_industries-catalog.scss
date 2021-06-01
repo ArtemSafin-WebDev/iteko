@@ -37,6 +37,24 @@
     position: relative;
     z-index: 1;
     min-height: 32.7rem;
+
+    .industries-catalog__list-item:first-child & {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: opacity 0.2s;
+            background-image: url('../img/industries-first-card-hoop.svg');
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: 95% auto;
+            opacity: .4;
+        }
+    }
     @include breakpoint(mobile) {
         padding: 3.5rem;
         border-radius: 3rem;
@@ -62,6 +80,10 @@
         border-color: #f0f3f4;
         &::before {
             opacity: 0.5;
+        }
+
+        &::after {
+            opacity: 0;
         }
     }
 }
@@ -97,10 +119,15 @@
 .industries-catalog__card-text {
     font-size: 1.5rem;
     line-height: 140%;
+    max-width: 34rem;
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 140%;
         max-width: none;
+
+        br {
+            display: none;
+        }
     }
 }

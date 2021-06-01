@@ -644,7 +644,7 @@
     .no-touch &:hover,
     .touch &:active {
         color: var(--primary-color);
-        border-color: var(--primary-color);
+        // border-color: var(--primary-color);
     }
 
     @include breakpoint(mobile) {

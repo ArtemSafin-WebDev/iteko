@@ -1,0 +1,98 @@
+.protection {
+    position: relative;
+    background-color: #fff;
+    z-index: 1;
+    padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
+}
+
+.protection__card {
+    display: flex;
+    align-items: center;
+    padding: 5.4rem 0;
+    padding-right: 20rem;
+    padding-left: 14rem;
+    background: #1c0f52;
+    border-radius: 4rem;
+    color: white;
+    background-image: url('../img/protection-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        padding: 3rem;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+        border-radius: 3rem;
+        background-position: right bottom;
+    }
+}
+
+.protection__card-text {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    max-width: 72rem;
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: 3rem;
+        width: 100%;
+        flex-grow: 0;
+        max-width: none;
+    }
+   
+}
+
+.protection__card-download {
+    width: 18.4rem;
+    height: 18.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 6rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 120%;
+    text-align: center;
+    animation-name: breath-protection;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+        height: 10rem;
+        font-size: 1.4rem;
+        margin: 0;
+        margin-left: auto;
+        
+    }
+}
+
+
+
+@keyframes breath-protection {
+    50% {
+        transform: scale(1.05);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

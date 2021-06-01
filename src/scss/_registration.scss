@@ -1,0 +1,103 @@
+.registration {
+    padding-bottom: 7rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
+}
+
+.registration__card {
+    position: relative;
+    border-radius: 4rem;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 10rem;
+    color: white;
+    background-image: url('../img/registration-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+        padding: 3rem;
+        border-radius: 3rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        .registration__card-arrow {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+    }
+}
+
+.registration__card-heading {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 111%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 111%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.registration__card-text {
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: 3rem;
+    }
+}
+
+.registration__card-arrow {
+    flex-shrink: 0;
+    margin-left: 3rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 21rem;
+    height: 21rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transition: border-color 0.2s, background-color 0.2s;
+    @include breakpoint(mobile) {
+        width: 7rem;
+        height: 7rem;
+        margin-left: 0;
+    }
+    svg {
+        width: 4rem;
+        height: 4rem;
+        flex-shrink: 0;
+        fill: white;
+        transition: fill 0.2s;
+        @include breakpoint(mobile) {
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+    }
+}

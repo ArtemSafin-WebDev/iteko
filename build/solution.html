@@ -224,7 +224,7 @@
                             <use xlink:href="#search"></use>
                         </svg>
                     </a>
-                    <a href="#" class="page-header__contact-link">
+                    <a href="#demo" class="page-header__contact-link js-open-modal">
                         Связаться
                     </a>
                 </div>
@@ -1865,6 +1865,7 @@
                 </form>
             </div>
         </div>
+        
         <div class="modal js-modal" id="demo-success">
             <div class="modal__inner modal__inner--demo">
                 <button class="modal__close js-close-modal" type="button">
@@ -1923,6 +1924,98 @@
                         </div>
                         <a href="#demo" class="modal__demo-success-back-link js-open-modal">
                             Повторить
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="modal js-modal" id="registration-modal">
+            <div class="modal__inner modal__inner--demo">
+                <button class="modal__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <form action="/" method="POST" class="modal__demo-form" data-need-validation id="registration-form">
+                    <h3 class="modal__demo-form-small-heading">
+                        Регистрация
+                    </h3>
+                    <h2 class="modal__demo-form-large-heading">
+                        Заполните форму ниже, <br>
+                        и мы вскоре свяжемся с вами
+                    </h2>
+                    <div class="modal__demo-form-fields">
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="name" placeholder="ФИО" required>
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="organization" placeholder="Организация">
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="tel" class="modal__demo-form-input js-phone-input" name="phone" placeholder="Телефон"
+                                required data-parsley-phone>
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="role" placeholder="Должность">
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="email" class="modal__demo-form-input" name="email" placeholder="E-mail" required>
+                        </div>
+                    </div>
+                    <div class="modal__demo-form-controls">
+                        <label class="modal__demo-form-checkbox">
+                            <input type="checkbox" name="policy" class="modal__demo-form-checkbox-input" checked required>
+                            <span class="modal__demo-form-checkbox-mark">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                    <use xlink:href="#checkmark"></use>
+                                </svg>
+                            </span>
+                            <span class="modal__demo-form-checkbox-text">
+                                Даю согласие на обработку моих персональных данных, в соответствии с Федеральным законом от
+                                27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в
+                                <a href="#">Согласии на обработку персональных данных
+                                </a>
+                            </span>
+                        </label>
+                        <button type="submit" class="modal__demo-form-submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+        <div class="modal js-modal" id="registration-success">
+            <div class="modal__inner modal__inner--demo">
+                <button class="modal__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <div class="modal__demo-form">
+                    <h3 class="modal__demo-form-small-heading">
+                        Регистрация прошла успешно
+                    </h3>
+                    <div class="modal__demo-success">
+                        <h4 class="modal__demo-success-heading">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-success">
+                                <use xlink:href="#success"></use>
+                            </svg>
+                            Спасибо за регистрацию!
+                        </h4>
+                        <div class="modal__demo-success-text">
+                            <p>
+                                Спасибо за регистрацию на вебинар «Защита данных без компромиссов. Технологии NetApp и сервисы
+                                АйТеко». Вы получите приглашение со ссылкой за день до мероприятия.
+                            </p>
+                        </div>
+                        <a href="#" class="modal__demo-success-back-link js-close-modal">
+                            Вернуться на сайт
                         </a>
                     </div>
         

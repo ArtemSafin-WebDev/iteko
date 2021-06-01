@@ -13,6 +13,7 @@ export default function publicationsSlider() {
             watchOverflow: true,
             spaceBetween: 12,
             loop: true,
+            threshold: 5,
             loopedSlides: 4,
             navigation: {
                 nextEl: element.querySelector('.publications-slider__arrow--next'),

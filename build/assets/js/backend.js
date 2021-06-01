@@ -19,6 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    var registrationForm = document.querySelector('#registration-form');
+
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (
+                $(registrationForm)
+                    .parsley()
+                    .isValid()
+            ) {
+                registrationForm.reset();
+                $(registrationForm)
+                    .parsley()
+                    .reset();
+                if (typeof window.openModal === 'function') {
+                    window.openModal('#registration-success');
+                }
+            }
+        });
+    }
     var vacancyForm = document.querySelector('#vacancy-form');
 
     if (vacancyForm) {
@@ -37,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 setTimeout(function() {
                     vacancyForm.classList.remove('success');
-                }, 3000)
+                }, 3000);
             }
         });
     }

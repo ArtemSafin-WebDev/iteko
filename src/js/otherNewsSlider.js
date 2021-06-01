@@ -13,7 +13,8 @@ export default function otherNewsSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             spaceBetween: 30,
-            watchOverflow: true
+            watchOverflow: true,
+            threshold: 5,
         });
     });
 }

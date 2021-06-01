@@ -113,6 +113,10 @@ export default function menu() {
         menuOpen = false;
     };
 
+
+    window.openMenu = openMenu;
+    window.closeMenu = closeMenu;
+
     burger.addEventListener('click', event => {
         event.preventDefault();
         if (menuOpen) {

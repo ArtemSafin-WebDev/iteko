@@ -143,6 +143,16 @@
         margin-right: 0;
     }
 
+
+    &.swiper-button-disabled {
+        cursor: default;
+        pointer-events: none;
+
+        svg {
+            fill: rgba(27, 30, 29, 0.2);
+        }
+    }
+
     .no-touch &:not(.swiper-button-disabled):hover,
     .touch &:not(.swiper-button-disabled):active {
         svg {
@@ -210,6 +220,10 @@
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
         font-size: 2rem;
+
+        br {
+            display: none;
+        }
     }
 }
 

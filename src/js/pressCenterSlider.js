@@ -13,6 +13,7 @@ export default function pressCenterSlider() {
             speed: 800,
             loop: true,
             loopedSlides: 3,
+            threshold: 5,
             loopAdditionalSlides: 3,
             // slideToClickedSlide: true,
             navigation: {

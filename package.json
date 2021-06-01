@@ -29,6 +29,7 @@
     "lazysizes": "^5.2.0",
     "lodash": "^4.17.21",
     "moment": "^2.24.0",
+    "odometer": "^0.4.8",
     "parsleyjs": "^2.9.2",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^6.3.2"
