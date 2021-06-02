@@ -5,6 +5,8 @@
     position: relative;
     z-index: 1;
 
+    
+
     @include breakpoint(mobile) {
         padding-top: 6rem;
         padding-bottom: 5rem;

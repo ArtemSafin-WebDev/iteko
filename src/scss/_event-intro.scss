@@ -4,8 +4,12 @@
     background-color: #fff;
     padding-bottom: 8rem;
 
+   
+
     @include breakpoint(mobile) {
         padding-bottom: 4rem;
+
+        
     }
     &:last-child {
         padding-bottom: 0;
@@ -21,9 +25,22 @@
     padding: 13rem 0;
     color: white;
 
+    .event-intro--no-bg & {
+        padding-bottom: 6rem;
+       
+
+        @include breakpoint(mobile) {
+            padding-bottom: 0;
+        }
+    }
+
+    .event-intro--dark & {
+        color: var(--text-color);
+    }
+
     @include breakpoint(mobile) {
         padding: 4rem 0;
-        padding-top: 8rem;
+        padding-top: 3rem;
         flex-direction: column;
     }
 }
@@ -57,8 +74,7 @@
         margin-right: 0;
         flex-shrink: 0;
         margin-bottom: 3rem;
-        display: flex;
-        align-items: center;
+        
         // flex-wrap: wrap;
     }
 }
@@ -138,6 +154,11 @@
     align-items: flex-end;
     color: #4ae7b6;
 
+
+    .event-intro--dark & {
+        color: var(--primary-color);
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
         margin-bottom: 2rem;
@@ -151,6 +172,10 @@
 
     text-shadow: 0px 0px 1.9rem rgba(74, 231, 182, 0.6);
     margin-right: 2rem;
+
+    .event-intro--dark & {
+        text-shadow: 0px 0px 1.9rem rgba(0, 176, 122, 0.2);
+    }
 
     @include breakpoint(mobile) {
         font-size: 10rem;
@@ -261,6 +286,11 @@
 
     &--green {
         color: #4ae7b6;
+
+
+        .event-intro--dark & {
+            color: var(--primary-color);
+        }
     }
 }
 
@@ -363,6 +393,11 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 
+    &:link,
+    &:visited {
+        color: white;
+    }
+
     @include breakpoint(mobile) {
         width: 10rem;
         height: 10rem;
@@ -371,6 +406,10 @@
         position: absolute;
         bottom: 2rem;
         right: 0;
+
+        .event-intro--no-bg & {
+            bottom: -2rem;
+        }
 
     }
 }

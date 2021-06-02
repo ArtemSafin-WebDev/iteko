@@ -4,6 +4,8 @@
     background-color: #fff;
     padding-bottom: 10rem;
 
+    
+
     @include breakpoint(mobile) {
         padding-bottom: 4rem;
     }
@@ -16,24 +18,11 @@
     position: relative;
     padding: 9rem 0;
     color: white;
-    @include breakpoint(mobile) {
-        padding: 3rem 0;
-        flex-direction: column;
-        align-items: initial;
-        justify-content: initial;
-    }
     &:link,
     &:visited {
         color: white;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        .technologies__card-arrow {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-    }
     &::before {
         content: '';
         position: absolute;
@@ -52,6 +41,40 @@
             background-position: left center;
         }
     }
+
+    .technologies--dark & {
+        color: var(--text-color);
+
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+
+        &::before {
+            background-color: lightgray;
+            background-image: url('../img/tech-light-bg.svg');
+        }
+    }
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+    }
+    
+
+    .no-touch &:hover,
+    .touch &:active {
+        .technologies__card-arrow {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+   
 }
 
 .technologies__card-content {
@@ -71,6 +94,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    .technologies--dark & {
+        color: #1C0F52;
+    }
+
+    
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -107,6 +135,8 @@
     border: 1px solid #ffffff;
     border-radius: 50%;
     transition: border-color 0.2s, background-color 0.2s;
+
+   
     svg {
         width: 4rem;
         height: 4rem;
@@ -116,6 +146,13 @@
         @include breakpoint(mobile) {
             width: 1.3rem;
             height: 1.3rem;
+        }
+    }
+
+    .technologies--dark & {
+        border: 1px solid #1B1E1D;
+        svg {
+            fill: var(--text-color);
         }
     }
 

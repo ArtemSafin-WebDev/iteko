@@ -5,7 +5,7 @@ import { debounce } from 'lodash';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FixedFooter() {
-    const pageFooter = document.querySelector('.page-footer');
+    const pageFooter = document.querySelector('.page-footer:not(.page-footer--simple)');
 
     const pageFooterInner = document.querySelector('.page-footer__inner');
     if (!pageFooter) return;

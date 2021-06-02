@@ -7,9 +7,7 @@
     @include breakpoint(mobile) {
         padding-bottom: 4rem;
     }
-    &:last-child {
-        padding-bottom: 0;
-    }
+    
 }
 
 .solution-feedback__card {

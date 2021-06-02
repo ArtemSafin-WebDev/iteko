@@ -1,5 +1,11 @@
 .page-footer {
-   
+    &--simple {
+        background-color: white;
+        position: relative;
+        z-index: 1;
+        color: var(--text-color);
+        
+    }
 }
 
 .page-footer__inner {
@@ -13,6 +19,15 @@
     padding-bottom: 7.5rem;
     opacity: 0;
     visibility: hidden;
+
+    .page-footer--simple & {
+        background: none;
+        opacity: 1;
+        visibility: inherit;
+        color: var(--text-color);
+        padding-top: 0;
+        
+    }
 
     .loaded & {
         opacity: 1;
@@ -204,12 +219,16 @@
     justify-content: center;
     background: rgba(#c4c4c4, 0.23);
     border-radius: 50%;
-    transition: background-color .2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
     svg {
         width: 2rem;
         height: 2rem;
         fill: white;
-        transition: fill .2s;
+        transition: fill 0.2s;
+
+        .page-footer--simple & {
+            fill: var(--text-color);
+        }
 
         @include breakpoint(mobile) {
             width: 1.6rem;
@@ -229,9 +248,6 @@
         width: 4rem;
         height: 4rem;
     }
-   
-
-
 }
 
 .page-footer__bottom-row {
@@ -242,6 +258,10 @@
     line-height: 140%;
     margin-bottom: 4rem;
     border-top: 1px solid #ffffff;
+
+    .page-footer--simple & {
+        border-top-color: var(--text-color);
+    }
 
     @include breakpoint(mobile) {
         flex-direction: column;
@@ -307,6 +327,10 @@
     font-size: 1.2rem;
     line-height: 140%;
     color: rgba(white, 0.3);
+
+    .page-footer--simple & {
+        color: rgba(#1b1e1d, 0.3);
+    }
 }
 
 .page-footer__contacts-additional {
@@ -338,6 +362,10 @@
     color: rgba(white, 0.6);
     margin-bottom: 0.5rem;
     font-weight: 400;
+
+    .page-footer--simple & {
+        color: rgba(#1b1e1d, 0.6);
+    }
 }
 
 .page-footer__contacts-additional-item-link {

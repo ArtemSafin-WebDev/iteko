@@ -25,6 +25,13 @@
     overflow: hidden;
     justify-content: space-between;
 
+
+    .protection--dark & {
+        background-image: url('../img/protection-light-bg.svg');
+        color: var(--text-color);
+        background-color: lightgrey;
+    }
+
     @include breakpoint(mobile) {
         padding: 3rem;
         flex-direction: column;
@@ -74,6 +81,11 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
 
     @include breakpoint(mobile) {
         width: 10rem;
