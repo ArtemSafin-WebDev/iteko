@@ -1,0 +1,102 @@
+.event-simple-content {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
+
+    .event-simple-content__complex-heading {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin: 0;
+        @include breakpoint(mobile) {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+    }
+}
+
+.event-simple-content__text {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.event-simple-content__complex {
+    margin: 7rem 0;
+    background: #f0f3f4;
+    border-radius: 4rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 3rem;
+    background-image: url('../img/multimedia-complex-hoop.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 35rem auto;
+    align-items: baseline;
+
+    @include breakpoint(mobile) {
+        margin: 3rem 0;
+        border-radius: 2.5rem;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 2.4rem 3rem;
+        background-size: 20rem auto;
+        grid-gap: 2rem;
+    }
+}
+
+.event-simple-content__about-project {
+    padding: 5rem 3rem;
+    border-top: 0.2rem solid #000000;
+    border-bottom: 0.2rem solid #000000;
+    max-width: 90rem;
+
+    width: 100%;
+    margin: 7rem 0;
+    margin-left: auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin: 3rem 0;
+        max-width: none;
+        padding: 2rem 0;
+    }
+}
+
+.event-simple-content__about-project-large-text {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 130%;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.event-simple-content__about-project-small-text {
+    font-size: 2rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 140%;
+    }
+}

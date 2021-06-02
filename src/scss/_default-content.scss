@@ -109,6 +109,41 @@
         }
     }
 
+
+    ul {
+        max-width: 52rem;
+        margin-bottom: 2.8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 1.4rem;
+            padding-left: 2rem;
+            position: relative;
+            &::before {
+                content: '';
+                display: inline-block;
+                vertical-align: top;
+                width: 0.6rem;
+                height: 0.6rem;
+                background-color: var(--text-color);
+                border-radius: 50%;
+                margin-right: 1rem;
+                margin-top: 1.1rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                @include breakpoint(mobile) {
+                    margin-top: 0.69rem;
+                    
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
  
 
     p {
