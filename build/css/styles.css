@@ -10656,7 +10656,7 @@ textarea.modal__demo-form-input {
     color: var(--primary-color); }
 
 .press-center__category {
-  padding: 0.7rem 1.6rem;
+  padding: 0.6rem 1.4rem;
   border-radius: 5rem;
   background-color: transparent;
   color: var(--text-color);
@@ -10671,11 +10671,12 @@ textarea.modal__demo-form-input {
           justify-content: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  border: 1px solid rgba(27, 30, 29, 0.15);
-  font-size: 1rem;
-  line-height: 140%; }
+  background: #E5E8EC;
+  color: #1C0F52;
+  font-size: 1.3rem;
+  line-height: 120%; }
   .press-center__catalog-card--white .press-center__category {
-    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     color: white; }
   @media only screen and (max-width: 640px) {
     .press-center__category {
@@ -15079,7 +15080,7 @@ textarea.modal__demo-form-input {
 
 .partners__card-title {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 111%;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -15087,7 +15088,7 @@ textarea.modal__demo-form-input {
   color: var(--primary-color); }
 
 .partners__card-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 140%; }
 
 .partners__card-certified {
@@ -15138,7 +15139,7 @@ textarea.modal__demo-form-input {
      object-position: left center; }
 
 .partners__slider-card-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 140%;
   color: #bbbfc4;
   font-weight: 400; }

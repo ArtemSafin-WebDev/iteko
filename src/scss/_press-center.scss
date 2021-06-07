@@ -385,7 +385,7 @@
 }
 
 .press-center__category {
-    padding: 0.7rem 1.6rem;
+    padding: 0.6rem 1.4rem;
     border-radius: 5rem;
     background-color: transparent;
     color: var(--text-color);
@@ -393,12 +393,13 @@
     align-items: center;
     justify-content: center;
     align-self: flex-start;
-    border: 1px solid rgba(#1B1E1D, .15);
-    font-size: 1rem;
-    line-height: 140%;
+    background: #E5E8EC;
+    color: #1C0F52;
+    font-size: 1.3rem;
+    line-height: 120%;
 
     .press-center__catalog-card--white & {
-        border-color: rgba(white, .15);
+        background-color: rgba(white, .15);
         color: white;
     }
 
