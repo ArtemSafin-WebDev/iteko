@@ -299,7 +299,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     flex-grow: 1;
-    transition: opacity 0.7s;
+    transition: opacity 1s;
     position: relative;
     @include breakpoint(mobile) {
         flex-shrink: 0;
@@ -373,7 +373,7 @@
             }
 
             .intro__card-flagship-products {
-                transition: opacity 1s ease 0.4s, visibility 1s ease 0.4s;
+                transition: opacity 1s ease 0.7s, visibility 1s ease 0.7s;
             }
 
             .intro__card-content {
@@ -428,7 +428,7 @@
                 .intro__card-features-list {
                     opacity: 1;
                     visibility: inherit;
-                    transition: opacity 0.4s, visibility 0.4s;
+                    transition: opacity 1s, visibility 1s;
                 }
             }
 
@@ -481,7 +481,7 @@
                 .intro__card-features-list {
                     opacity: 1;
                     visibility: inherit;
-                    transition: opacity 0.4s, visibility 0.4s;
+                    transition: opacity 0.7s, visibility 0.7s;
                 }
             }
         }
@@ -703,7 +703,7 @@
 
 .intro__card {
     position: relative;
-    transition: transform 1s, opacity 1s;
+    transition: transform 1.5s, opacity 1.5s;
 }
 
 .intro__card-title {
@@ -712,7 +712,7 @@
     line-height: 140%;
     padding-bottom: 2rem;
     max-width: 28rem;
-    transition: transform 0.4s;
+    transition: transform 0.7s;
     transform-origin: top left;
 
     @include breakpointMF(small-tablet) {
@@ -740,7 +740,7 @@
         vertical-align: baseline;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 1s, visibility 0s linear 1s;
+        transition: opacity 1.5s, visibility 0s linear 1.5s;
         display: inline-block;
 
         @include breakpoint(mobile) {
@@ -753,7 +753,7 @@
     display: flex;
     flex-direction: column;
     transform-origin: left top;
-    transition: transform 0.7s;
+    transition: transform 1s;
     position: relative;
 }
 
@@ -805,7 +805,7 @@
     object-fit: contain;
     object-position: center;
     max-width: none;
-    transition: transform 1s;
+    transition: transform 1.5s;
 
     // width: 40rem;
     // height: 40rem;
@@ -873,12 +873,12 @@
     z-index: 100;
     position: absolute;
 
-    transition: opacity 0.4s, visibility 0.4s, transform 1s;
+    transition: opacity 0.7s, visibility 0.7s, transform 1.5s;
 
     .ordered-view & {
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
+        transition: opacity 0.7s, visibility 0s linear 0.7s, transform 0.7s;
     }
 
     @include breakpointMF(small-tablet) {

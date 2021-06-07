@@ -2980,8 +2980,8 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -webkit-transition: opacity 0.7s;
-  transition: opacity 0.7s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
   position: relative; }
   @media only screen and (max-width: 640px) {
     .intro__cards-sector {
@@ -3040,8 +3040,8 @@ select:-webkit-autofill:focus {
         -webkit-transition: opacity 1s, visibility 1s;
         transition: opacity 1s, visibility 1s; }
       .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-flagship-products {
-        -webkit-transition: opacity 1s ease 0.4s, visibility 1s ease 0.4s;
-        transition: opacity 1s ease 0.4s, visibility 1s ease 0.4s; }
+        -webkit-transition: opacity 1s ease 0.7s, visibility 1s ease 0.7s;
+        transition: opacity 1s ease 0.7s, visibility 1s ease 0.7s; }
       .intro:not(.ordered-view) .intro__cards-sector.active .intro__card-content {
         -webkit-transform: scale(1);
                 transform: scale(1); }
@@ -3066,8 +3066,8 @@ select:-webkit-autofill:focus {
       .ordered-view .intro__cards-sector:nth-child(1) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(2) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(3) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(4) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(5) .intro__card-features-list, .ordered-view .intro__cards-sector:nth-child(6) .intro__card-features-list {
         opacity: 1;
         visibility: inherit;
-        -webkit-transition: opacity 0.4s, visibility 0.4s;
-        transition: opacity 0.4s, visibility 0.4s; }
+        -webkit-transition: opacity 1s, visibility 1s;
+        transition: opacity 1s, visibility 1s; }
       .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(2) .intro__card, .ordered-view .intro__cards-sector:nth-child(3) .intro__card {
         z-index: 20; }
       .ordered-view .intro__cards-sector:nth-child(1) .intro__card, .ordered-view .intro__cards-sector:nth-child(4) .intro__card {
@@ -3091,8 +3091,8 @@ select:-webkit-autofill:focus {
       .returned-to-grid .intro__cards-sector:nth-child(1) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(2) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(3) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(4) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(5) .intro__card-features-list, .returned-to-grid .intro__cards-sector:nth-child(6) .intro__card-features-list {
         opacity: 1;
         visibility: inherit;
-        -webkit-transition: opacity 0.4s, visibility 0.4s;
-        transition: opacity 0.4s, visibility 0.4s; }
+        -webkit-transition: opacity 0.7s, visibility 0.7s;
+        transition: opacity 0.7s, visibility 0.7s; }
       .intro__cards-sector:nth-child(1) .intro__card {
         -webkit-transform: translate(100%, 60%);
                 transform: translate(100%, 60%);
@@ -3213,10 +3213,10 @@ select:-webkit-autofill:focus {
 
 .intro__card {
   position: relative;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s, -webkit-transform 1s; }
+  -webkit-transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: transform 1.5s, opacity 1.5s;
+  transition: transform 1.5s, opacity 1.5s, -webkit-transform 1.5s; }
 
 .intro__card-title {
   font-weight: 500;
@@ -3224,10 +3224,10 @@ select:-webkit-autofill:focus {
   line-height: 140%;
   padding-bottom: 2rem;
   max-width: 28rem;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
   -webkit-transform-origin: top left;
           transform-origin: top left; }
   @media only screen and (min-width: 641px) {
@@ -3253,8 +3253,8 @@ select:-webkit-autofill:focus {
     vertical-align: baseline;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 1s, visibility 0s linear 1s;
-    transition: opacity 1s, visibility 0s linear 1s;
+    -webkit-transition: opacity 1.5s, visibility 0s linear 1.5s;
+    transition: opacity 1.5s, visibility 0s linear 1.5s;
     display: inline-block; }
     @media only screen and (max-width: 640px) {
       .intro__card-title svg {
@@ -3270,10 +3270,10 @@ select:-webkit-autofill:focus {
           flex-direction: column;
   -webkit-transform-origin: left top;
           transform-origin: left top;
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   position: relative; }
 
 .intro__card-features {
@@ -3319,10 +3319,10 @@ select:-webkit-autofill:focus {
   -o-object-position: center;
      object-position: center;
   max-width: none;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s; }
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s; }
   @media only screen and (min-width: 641px) {
     body:not(.animatable) .intro__card-ring {
       -webkit-transform: translate(-50%, -50%) scale(0) !important;
@@ -3375,17 +3375,17 @@ select:-webkit-autofill:focus {
   text-align: left;
   z-index: 100;
   position: absolute;
-  -webkit-transition: opacity 0.4s, visibility 0.4s, -webkit-transform 1s;
-  transition: opacity 0.4s, visibility 0.4s, -webkit-transform 1s;
-  transition: opacity 0.4s, visibility 0.4s, transform 1s;
-  transition: opacity 0.4s, visibility 0.4s, transform 1s, -webkit-transform 1s; }
+  -webkit-transition: opacity 0.7s, visibility 0.7s, -webkit-transform 1.5s;
+  transition: opacity 0.7s, visibility 0.7s, -webkit-transform 1.5s;
+  transition: opacity 0.7s, visibility 0.7s, transform 1.5s;
+  transition: opacity 0.7s, visibility 0.7s, transform 1.5s, -webkit-transform 1.5s; }
   .ordered-view .intro__heading-block {
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0.4s;
-    transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0.4s;
-    transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
-    transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s, -webkit-transform 0.4s; }
+    -webkit-transition: opacity 0.7s, visibility 0s linear 0.7s, -webkit-transform 0.7s;
+    transition: opacity 0.7s, visibility 0s linear 0.7s, -webkit-transform 0.7s;
+    transition: opacity 0.7s, visibility 0s linear 0.7s, transform 0.7s;
+    transition: opacity 0.7s, visibility 0s linear 0.7s, transform 0.7s, -webkit-transform 0.7s; }
   @media only screen and (min-width: 641px) {
     body:not(.animatable) .intro__heading-block {
       opacity: 0;
