@@ -11,6 +11,12 @@
 
 .solution-gallery__slider {
     position: relative;
+
+    @media (orientation: landscape) and (max-width: 820px) {
+        max-width: 70rem;
+        margin: 0 auto;
+        width: 100%;
+    }
     .swiper-container {
         overflow: visible;
     }
@@ -24,7 +30,7 @@
 .solution-gallery__slider-card {
     display: flex;
     flex-direction: column;
-    min-height: 78rem;
+    // min-height: 78rem;
     flex-grow: 1;
     border-radius: 4rem;
     overflow: hidden;
@@ -36,11 +42,21 @@
 
     backface-visibility: hidden;
     transition: transform 0.5s, opacity 0.5s;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 45%;
+    }
 
     @include breakpoint(mobile) {
         padding: 2.2rem;
-        min-height: 21.4rem;
+       
         border-radius: 1.5rem;
+
+        &::before {
+            padding-bottom: 50%;
+        }
     }
 
     &:link,
@@ -75,7 +91,7 @@
         height: 100%;
 
         @include breakpoint(mobile) {
-            background: linear-gradient(0deg, #1C0F52 -4.24%, rgba(28, 15, 82, 0) 61.44%);
+            background: linear-gradient(0deg, #1c0f52 -4.24%, rgba(28, 15, 82, 0) 61.44%);
         }
     }
 }
@@ -94,11 +110,27 @@
     font-weight: 500;
     font-size: 2.5rem;
     line-height: 140%;
+    position: absolute;
+    left: 5.5rem;
+    bottom: 5rem;
+    right: 5.5rem;
+
+    @media (orientation: landscape) and (max-width: 820px) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 120%;
+        left: 4rem;
+        right: 4rem;
+        bottom: 2rem;
+    }
 
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1rem;
         line-height: 120%;
+        left: 2.2rem;
+        right: 2.2rem;
+        bottom: 1.8rem;
     }
 }
 
@@ -121,10 +153,17 @@
     &--prev {
         right: 100%;
         margin-right: 4rem;
+
+        @media (orientation: landscape) and (max-width: 820px) {
+            margin-right: 1.3rem;
+        }
     }
     &--next {
         left: 100%;
         margin-left: 4rem;
+        @media (orientation: landscape) and (max-width: 820px) {
+            margin-left: 1.3rem;
+        }
     }
     svg {
         width: 3rem;

@@ -16,6 +16,7 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 3.5rem;
+        color: var(--text-color);
     }
 }
 
@@ -93,6 +94,14 @@
     &:link,
     &:visited {
         color: #bbbfc4;
+    }
+
+    @include breakpoint(mobile) {
+        color: var(--text-color);
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
     }
 
     .no-touch &:hover,

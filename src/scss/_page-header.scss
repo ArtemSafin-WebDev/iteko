@@ -24,7 +24,8 @@
     bottom: 0.2rem;
     z-index: 300;
     position: relative;
-    @include breakpoint(small-tablet) {
+
+    @media screen and (max-width: 820px) {
         margin-right: auto;
     }
 }
@@ -38,7 +39,7 @@
     }
 
     @include breakpoint(mobile) {
-        width: 8rem;
+        width: 10rem;
     }
 }
 
@@ -63,7 +64,7 @@
     margin-left: auto;
     margin-right: 2rem;
 
-    @include breakpoint(small-tablet) {
+    @media screen and (max-width: 820px) {
         display: none;
     }
 }
@@ -144,7 +145,7 @@
         height: 2px;
         margin-bottom: 6px;
         background-color: #fff;
-        transition: transform 0.3s, background-color .3s;
+        transition: transform 0.3s, background-color 0.3s;
 
         body:not(.menu-open) .page-header--dark & {
             background-color: var(--text-color);
@@ -157,8 +158,6 @@
 
     .menu-open & {
         background: rgba(white, 0.1);
-
-        
 
         &::before {
             transform: translateY(4px) rotate(45deg);
@@ -188,7 +187,7 @@
         background: rgba(white, 0.1);
     }
 
-    .no-touch:not(.menu-open)  .page-header--dark &:hover {
+    .no-touch:not(.menu-open) .page-header--dark &:hover {
         background: rgba(#1b1e1d, 0.05);
     }
 }
@@ -205,8 +204,6 @@
     color: white;
     border-radius: 50%;
     transition: background-color 0.2s;
-
-   
 
     @include breakpoint(mobile) {
         margin-right: 0;
@@ -235,7 +232,6 @@
     .no-touch .page-header--dark &:hover {
         background: rgba(#1b1e1d, 0.05);
     }
-
 
     .menu-open & {
         color: white;
@@ -272,8 +268,6 @@
     z-index: 300;
     position: relative;
 
-
-
     &::before {
         content: '';
         position: absolute;
@@ -303,9 +297,6 @@
     &:visited {
         color: white;
     }
-
-    
-   
 
     .no-touch &:hover {
         &::before {
@@ -634,11 +625,10 @@
     height: 5rem;
     background: rgba(#c4c4c4, 0.23);
     border-radius: 50%;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     .no-touch &:hover,
     .touch &:active {
         background: var(--primary-color);
-       
     }
 
     @include breakpoint(mobile) {
