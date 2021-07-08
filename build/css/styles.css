@@ -1592,9 +1592,14 @@ html {
   @media only screen and (max-width: 640px) {
     html {
       font-size: 10px; } }
+  @media screen and (max-width: 320px) {
+    html {
+      font-size: 8px; } }
+  @media screen and (max-width: 280px) {
+    html {
+      font-size: 7px; } }
 
 body {
-  min-width: 320px;
   font-size: 1.6rem;
   line-height: 1.2;
   min-height: 100vh;
