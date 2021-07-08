@@ -2953,9 +2953,7 @@ select:-webkit-autofill:focus {
       padding: 2rem 0;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       grid-template-rows: initial;
-      grid-row-gap: 6rem;
-      padding-left: 2rem;
-      margin-right: -4rem; } }
+      grid-row-gap: 6rem; } }
 
 .intro__cards-sector {
   display: grid;
@@ -2989,7 +2987,7 @@ select:-webkit-autofill:focus {
             flex-shrink: 0;
         -ms-flex-item-align: center;
             align-self: center;
-        padding-right: 2rem; }
+        margin-left: 2rem; }
       .intro__cards-sector:nth-child(1) .intro__card {
         -webkit-box-ordinal-group: -8;
             -ms-flex-order: -9;
@@ -3220,10 +3218,11 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .intro__card-title {
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 120%;
       max-width: 17rem;
-      padding-bottom: 0; } }
+      padding-bottom: 0;
+      padding-right: 1rem; } }
   .intro__card-title svg {
     width: 0.85rem;
     height: 0.85rem;
@@ -3311,8 +3310,8 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .intro__card-ring {
       top: 50%;
-      width: 12rem;
-      height: 12rem; } }
+      width: 10rem;
+      height: 10rem; } }
 
 .intro__card-flagship-products {
   position: absolute;

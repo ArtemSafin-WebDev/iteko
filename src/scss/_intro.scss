@@ -289,8 +289,7 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: initial;
         grid-row-gap: 6rem;
-        padding-left: 2rem;
-        margin-right: -4rem;
+
         // align-items: center;
         // display: flex;
         // flex-wrap: nowrap;
@@ -314,11 +313,7 @@
             position: relative;
             flex-shrink: 0;
             align-self: center;
-            padding-right: 2rem;
-            // position: relative;
-            // right: -2rem;
-
-            
+            margin-left: 2rem;
         }
 
         &:nth-child(1) {
@@ -336,7 +331,6 @@
                 order: -10;
             }
         }
-
 
         // &:nth-child(1) {
         //     .intro__card {
@@ -750,10 +744,11 @@
 
     @include breakpoint(mobile) {
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 120%;
         max-width: 17rem;
         padding-bottom: 0;
+        padding-right: 1rem;
     }
 
     svg {
@@ -843,8 +838,8 @@
 
     @include breakpoint(mobile) {
         top: 50%;
-        width: 12rem;
-        height: 12rem;
+        width: 10rem;
+        height: 10rem;
     }
 }
 
