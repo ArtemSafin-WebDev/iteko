@@ -53,6 +53,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @include breakpoint(mobile) {
+        object-position: left center;
+    }
 }
 
 .career-intro__row {
