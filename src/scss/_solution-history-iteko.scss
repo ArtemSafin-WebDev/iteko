@@ -1,0 +1,112 @@
+.solution-history {
+  margin-bottom: 114px;
+  background-image: url('../img/solution/history-iteko-background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.solution-history__container {
+  padding: 92px 0 148px;
+}
+
+.solution-history__content-wrapper {
+  position: relative;
+}
+
+.solution-history__main-content-wrapper {
+  display: flex;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.solution-history__year-wrapper {
+  margin-right: 68px;
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 540px;
+}
+
+.solution-history__title {
+  color: #884DD6;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.solution-history__year-up-number-wrapper, .solution-history__year-down-number-wrapper {
+  font-weight: 500;
+  font-size: 286px;
+  line-height: 216px;
+  width: 100%;
+}
+
+.solution-history__year-up-number-wrapper {
+  color: #9480EA;
+  opacity: 0.15;
+}
+
+.solution-history__year-down-number-wrapper {
+  background: linear-gradient(to top left, #8F5FE3, #00B07A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: end;
+}
+
+.solution-history__annotations-list, .solution-history__year-list {
+  overflow-y: scroll;
+  height: 571px;
+
+  &::-webkit-scrollbar {
+    width: 0 !important
+  }
+}
+
+.solution-history__annotation-item {
+  color: white;
+  margin-bottom: 84px;
+
+  &--active {
+    .solution-history__annotation-item-value {
+      opacity: 1;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.solution-history__annotation-item-caption {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.2;
+}
+
+.solution-history__annotation-item-value {
+  font-size: 20px;
+  line-height: 30px;
+  opacity: 0.2;
+}
+
+.solution-history__year-list {
+  position: absolute;
+  top: 0;
+  left: -77px;
+  width: 60px;
+  height: 100%;
+}
+
+.solution-history__year-item {
+  color: white;
+  opacity: 0.2;
+  margin-bottom: 20px;
+
+  &--active {
+    opacity: 1;
+  }
+}
