@@ -10280,9 +10280,25 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   color: white;
   opacity: 0.2;
   margin-bottom: 20px;
+  position: relative;
+  padding-left: 22px;
+}
+.solution-history__year-item:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: white;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
 }
 .solution-history__year-item--active {
   opacity: 1;
+}
+.solution-history__year-item--active:before {
+  width: 17px;
 }
 
 .solution-gallery {

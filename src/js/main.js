@@ -35,6 +35,7 @@ import playersSlider from './playersSlider';
 import eventCountdown from './eventCountdown';
 import speakers from './speakers';
 import whyIteko from './whyIteko';
+import solutionHistoryIteko from './solutionHistoryIteko';
 
 
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     intro();
     solutionAccordions();
     solutionExamples();
+    solutionHistoryIteko();
     solutionGallerySlider();
     FixedFooter();
     modals();

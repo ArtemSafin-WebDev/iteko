@@ -121,8 +121,25 @@
   color: white;
   opacity: 0.2;
   margin-bottom: 20px;
+  position: relative;
+  padding-left: 22px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 1px;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
 
   &--active {
     opacity: 1;
+
+    &:before {
+      width: 17px;
+    }
   }
 }
