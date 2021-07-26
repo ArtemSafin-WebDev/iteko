@@ -10223,11 +10223,11 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   text-align: end;
 }
 
-.solution-history__annotations-list, .solution-history__year-list {
+.solution-history__annotations-list, .solution-history__years-list {
   overflow-y: scroll;
   height: 571px;
 }
-.solution-history__annotations-list::-webkit-scrollbar, .solution-history__year-list::-webkit-scrollbar {
+.solution-history__annotations-list::-webkit-scrollbar, .solution-history__years-list::-webkit-scrollbar {
   width: 0 !important;
 }
 
@@ -10246,6 +10246,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 .solution-history__annotation-item {
   color: white;
   margin-bottom: 84px;
+  text-align: start;
 }
 .solution-history__annotation-item--active .solution-history__annotation-item-value {
   opacity: 1;
@@ -10255,18 +10256,20 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 }
 
 .solution-history__annotation-item-caption {
+  display: block;
   font-size: 20px;
   margin-bottom: 30px;
   opacity: 0.2;
 }
 
 .solution-history__annotation-item-value {
+  display: block;
   font-size: 20px;
   line-height: 30px;
   opacity: 0.2;
 }
 
-.solution-history__year-list {
+.solution-history__years-list {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);

@@ -58,7 +58,7 @@
   text-align: end;
 }
 
-.solution-history__annotations-list, .solution-history__year-list {
+.solution-history__annotations-list, .solution-history__years-list {
   overflow-y: scroll;
   height: 571px;
 
@@ -84,6 +84,7 @@
 .solution-history__annotation-item {
   color: white;
   margin-bottom: 84px;
+  text-align: start;
 
   &--active {
     .solution-history__annotation-item-value {
@@ -97,18 +98,20 @@
 }
 
 .solution-history__annotation-item-caption {
+  display: block;
   font-size: 20px;
   margin-bottom: 30px;
   opacity: 0.2;
 }
 
 .solution-history__annotation-item-value {
+  display: block;
   font-size: 20px;
   line-height: 30px;
   opacity: 0.2;
 }
 
-.solution-history__year-list {
+.solution-history__years-list {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
