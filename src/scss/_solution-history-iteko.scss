@@ -58,42 +58,21 @@
   text-align: end;
 }
 
-.solution-history__annotations-list, .solution-history__years-list {
-  overflow-y: scroll;
-  height: 571px;
-
-  &::-webkit-scrollbar {
-    width: 0 !important
-  }
-}
-
-.solution-history__annotations-list {
-  &:before {
-    content: "";
-    display: block;
-    height: 24px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),color-stop(75%,#fff));
-    background-image: linear-gradient(to bottom,rgb(255 255 255 / 0%),#1C0F52 75%);
-  }
+// todo для нижнего затемненния
+.solution-history__annotations-list-container {
+  height: 527px;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
+  mask-image: linear-gradient(to top, transparent 0%, #000 28%);
 }
 
 .solution-history__annotation-item {
   color: white;
-  margin-bottom: 84px;
   text-align: start;
 
-  &--active {
+  &.swiper-slide-active {
     .solution-history__annotation-item-value {
       opacity: 1;
     }
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }
 
@@ -111,7 +90,7 @@
   opacity: 0.2;
 }
 
-.solution-history__years-list {
+.solution-history__years-list-container {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -123,9 +102,12 @@
 .solution-history__year-item {
   color: white;
   opacity: 0.2;
-  margin-bottom: 20px;
   position: relative;
   padding-left: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:before {
     position: absolute;
@@ -138,7 +120,7 @@
     left: 0;
   }
 
-  &--active {
+  &.swiper-slide-active {
     opacity: 1;
 
     &:before {

@@ -1,37 +1,45 @@
+import { Navigation, Swiper } from 'swiper';
+
+Swiper.use([Navigation]);
+
 export default function solutionHistoryIteko() {
-  const elements = Array.from(document.querySelectorAll('.solution-history'));
-  let yearsList;
-  let annotationsList;
+    const elements = Array.from(document.querySelectorAll('.solution-history'));
 
-  let currentYearIdx;
+    elements.forEach(element => {
+        const swiperYears = new Swiper(element.querySelector('.solution-history__years-list-container'), {
+            direction: 'vertical',
+            slidesPerView: 13,
+            spaceBetween: 20,
+            mousewheel: true,
+            centeredSlides: true,
+            centerSlidesBounds: true
+        });
 
-  elements.forEach(element => {
-    yearsList = Array.from(element.querySelectorAll('.solution-history__year-item'));
-    annotationsList = Array.from(element.querySelectorAll('.solution-history__annotation-item'));
+        const swiperAnnotation = new Swiper(element.querySelector('.solution-history__annotations-list-container'), {
+            direction: 'vertical',
+            slidesPerView: 1.1,
+            spaceBetween: 84,
+            mousewheel: true
+        });
 
-    const setCurrentYear = (index) => {
-      if (currentYearIdx || currentYearIdx === 0) {
-        yearsList[currentYearIdx].classList.remove('solution-history__year-item--active');
-        annotationsList[currentYearIdx].classList.remove('solution-history__annotation-item--active');
-      }
+        swiperYears.slideTo(6, 300);
+        swiperAnnotation.slideTo(6, 300);
 
-      currentYearIdx = index;
-      yearsList[index].classList.add('solution-history__year-item--active');
-      annotationsList[index].classList.add('solution-history__annotation-item--active');
-    }
+        const yearsList = Array.from(element.querySelectorAll('.solution-history__year-item'));
+        const annotationsList = Array.from(element.querySelectorAll('.solution-history__annotation-item'));
 
-    setCurrentYear(0);
+        yearsList.forEach((yearItem, index) => {
+            yearItem.onclick = () => {
+                swiperYears.slideTo(index, 300);
+                swiperAnnotation.slideTo(index, 300);
+            };
+        });
 
-    yearsList.forEach((yearItem, index) => {
-      yearItem.onclick = () => {
-        setCurrentYear(index);
-      }
-    })
-
-    annotationsList.forEach((annotationItem, index) => {
-      annotationItem.onclick = () => {
-        setCurrentYear(index);
-      }
-    })
-  });
+        annotationsList.forEach((annotationItem, index) => {
+            annotationItem.onclick = () => {
+                swiperYears.slideTo(index, 300);
+                swiperAnnotation.slideTo(index, 300);
+            };
+        });
+    });
 }

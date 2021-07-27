@@ -10223,36 +10223,20 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   text-align: end;
 }
 
-.solution-history__annotations-list, .solution-history__years-list {
-  overflow-y: scroll;
-  height: 571px;
-}
-.solution-history__annotations-list::-webkit-scrollbar, .solution-history__years-list::-webkit-scrollbar {
-  width: 0 !important;
-}
-
-.solution-history__annotations-list:before {
-  content: "";
-  display: block;
-  height: 24px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #1C0F52));
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1C0F52 75%);
+.solution-history__annotations-list-container {
+  height: 527px;
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000));
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
+  mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000));
+  mask-image: linear-gradient(to top, transparent 0%, #000 28%);
 }
 
 .solution-history__annotation-item {
   color: white;
-  margin-bottom: 84px;
   text-align: start;
 }
-.solution-history__annotation-item--active .solution-history__annotation-item-value {
+.solution-history__annotation-item.swiper-slide-active .solution-history__annotation-item-value {
   opacity: 1;
-}
-.solution-history__annotation-item:last-child {
-  margin-bottom: 0;
 }
 
 .solution-history__annotation-item-caption {
@@ -10269,7 +10253,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   opacity: 0.2;
 }
 
-.solution-history__years-list {
+.solution-history__years-list-container {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -10282,9 +10266,11 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 .solution-history__year-item {
   color: white;
   opacity: 0.2;
-  margin-bottom: 20px;
   position: relative;
   padding-left: 22px;
+}
+.solution-history__year-item:last-child {
+  margin-bottom: 0;
 }
 .solution-history__year-item:before {
   position: absolute;
@@ -10297,10 +10283,10 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
           transform: translateY(-50%);
   left: 0;
 }
-.solution-history__year-item--active {
+.solution-history__year-item.swiper-slide-active {
   opacity: 1;
 }
-.solution-history__year-item--active:before {
+.solution-history__year-item.swiper-slide-active:before {
   width: 17px;
 }
 
