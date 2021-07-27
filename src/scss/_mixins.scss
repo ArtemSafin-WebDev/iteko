@@ -191,7 +191,7 @@
         @media only screen and (max-width: (768px)) {
             @content;
         }
-    } @else if $class == mobile {
+        } @else if $class == mobile {
         @media only screen and (max-width: (640px)) {
             @content;
         }

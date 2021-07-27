@@ -10177,8 +10177,18 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   max-width: 120rem;
   margin: 0 auto;
 }
+@media only screen and (max-width: 1200px) {
+  .solution-history__main-content-wrapper {
+    margin-left: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .solution-history__main-content-wrapper {
+    margin-left: 0;
+  }
+}
 
-.solution-history__year-wrapper {
+.solution-history__years-active-wrapper {
   margin-right: 6.8rem;
   width: 54rem;
   display: -webkit-box;
@@ -10191,7 +10201,20 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   -webkit-box-flex: 0;
       -ms-flex: 0 0 54rem;
           flex: 0 0 54rem;
-  height: 43rem;
+  height: 44rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .solution-history__years-active-wrapper {
+    display: none;
+  }
+}
+
+.solution-history__years-active {
+  -webkit-transition: 300ms -webkit-transform;
+  transition: 300ms -webkit-transform;
+  transition: 300ms transform;
+  transition: 300ms transform, 300ms -webkit-transform;
 }
 
 .solution-history__title {
@@ -10208,6 +10231,11 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   font-size: 28.6rem;
   line-height: 21.6rem;
   width: 100%;
+}
+@media only screen and (max-width: 1400px) {
+  .solution-history__year-up-number-wrapper, .solution-history__year-down-number-wrapper {
+    font-size: 27rem;
+  }
 }
 
 .solution-history__year-up-number-wrapper {
@@ -10255,8 +10283,12 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: -7.7rem;
-  width: 6rem;
-  height: 43rem;
+  height: 44rem;
+}
+@media only screen and (max-width: 1400px) {
+  .solution-history__years-list-container {
+    left: -2.7rem;
+  }
 }
 
 .solution-history__year-item {
@@ -10298,6 +10330,10 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
   mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000));
   mask-image: linear-gradient(to top, transparent 0%, #000 28%);
+}
+
+.solution-history__year {
+  height: 44rem;
 }
 
 .solution-gallery {
