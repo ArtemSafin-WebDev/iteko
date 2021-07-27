@@ -37,8 +37,6 @@ import speakers from './speakers';
 import whyIteko from './whyIteko';
 import solutionHistoryIteko from './solutionHistoryIteko';
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
@@ -57,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     intro();
     solutionAccordions();
     solutionExamples();
-    solutionHistoryIteko();
     solutionGallerySlider();
     FixedFooter();
     modals();
@@ -74,11 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
     playersSlider();
     eventCountdown();
     speakers();
-   
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
     whyIteko();
-})
+    solutionHistoryIteko();
+});

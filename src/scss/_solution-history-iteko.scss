@@ -58,11 +58,8 @@
   text-align: end;
 }
 
-// todo для нижнего затемненния
 .solution-history__annotations-list-container {
   height: 52.7rem;
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
-  mask-image: linear-gradient(to top, transparent 0%, #000 28%);
 }
 
 .solution-history__annotation-item {
@@ -127,4 +124,15 @@
       width: 1.7rem;
     }
   }
+}
+
+// todo перекрывается нижним классом
+.solution-history__up-silencing-block {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 28%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 28%);
+}
+
+.solution-history__down-silencing-block {
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
+  mask-image: linear-gradient(to top, transparent 0%, #000 28%);
 }

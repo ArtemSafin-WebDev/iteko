@@ -10225,10 +10225,6 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 
 .solution-history__annotations-list-container {
   height: 52.7rem;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000));
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
-  mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000));
-  mask-image: linear-gradient(to top, transparent 0%, #000 28%);
 }
 
 .solution-history__annotation-item {
@@ -10288,6 +10284,20 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 }
 .solution-history__year-item.swiper-slide-active:before {
   width: 1.7rem;
+}
+
+.solution-history__up-silencing-block {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(28%, #000));
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 28%);
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(28%, #000));
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 28%);
+}
+
+.solution-history__down-silencing-block {
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000));
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
+  mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000));
+  mask-image: linear-gradient(to top, transparent 0%, #000 28%);
 }
 
 .solution-gallery {
