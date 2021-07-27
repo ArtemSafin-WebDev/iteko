@@ -8,10 +8,20 @@
 
 .solution-history__container {
   padding: 9.2rem 0 14.8rem;
+
+  @include breakpoint(small-tablet) {
+    padding: 5rem 0;
+  }
 }
 
 .solution-history__content-wrapper {
   position: relative;
+}
+
+.solution-history__content {
+  @include breakpoint(small-tablet) {
+    height: 100%;
+  }
 }
 
 .solution-history__main-content-wrapper {
@@ -26,6 +36,8 @@
 
   @include breakpoint(small-tablet) {
     margin-left: 0;
+    display: flex;
+    height: 430px;
   }
 }
 
@@ -54,6 +66,10 @@
   line-height: 1.8rem;
   margin-bottom: 8rem;
   text-transform: uppercase;
+
+  @include breakpoint(small-tablet) {
+    margin-bottom: 1.8rem;
+  }
 }
 
 .solution-history__year-up-number-wrapper, .solution-history__year-down-number-wrapper {
@@ -86,6 +102,10 @@
 
 .solution-history__annotations-list-container {
   height: 52.7rem;
+
+  @include breakpoint(small-tablet) {
+    height: 34.9rem;
+  }
 }
 
 .solution-history__annotation-item {
@@ -104,6 +124,10 @@
   font-size: 2rem;
   margin-bottom: 3rem;
   opacity: 0.2;
+
+  @include breakpoint(small-tablet) {
+    display: none;
+  }
 }
 
 .solution-history__annotation-item-value {
@@ -112,6 +136,11 @@
   line-height: 3rem;
   opacity: 0.2;
   transition: 500ms opacity;
+
+  @include breakpoint(small-tablet) {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 }
 
 .solution-history__years-list-container {
@@ -124,6 +153,16 @@
   @include breakpoint(desktop) {
     left: -2.7rem;
   }
+
+  @include breakpoint(small-tablet) {
+    position: relative;
+    top: 0;
+    transform: none;
+    left: 0;
+    flex: 0 0 6rem;
+    margin-right: 2rem;
+    height: 100%;
+  }
 }
 
 .solution-history__year-item {
@@ -132,6 +171,10 @@
   position: relative;
   padding-left: 2.2rem;
   transition: 500ms opacity;
+
+  @include breakpoint(small-tablet) {
+    font-size: 14px;
+  }
 
   &:last-child {
     margin-bottom: 0;

@@ -56,18 +56,29 @@ export default function solutionHistoryIteko() {
 
     const swiperYears = new Swiper(element.querySelector('.solution-history__years-list-container'), {
       direction: 'vertical',
-      slidesPerView: 13,
+      slidesPerView: 'auto',
       spaceBetween: 20,
       mousewheel: true,
       centeredSlides: true,
-      centerSlidesBounds: true
+      centerSlidesBounds: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 13
+        }
+      }
     });
 
     const swiperAnnotation = new Swiper(element.querySelector('.solution-history__annotations-list-container'), {
       direction: 'vertical',
-      slidesPerView: 'auto',
-      spaceBetween: 84,
-      mousewheel: true
+      slidesPerView: 1,
+      spaceBetween: 20,
+      mousewheel: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: 84
+        }
+      }
     });
 
     swiperYears.on('slideChange', () => {
@@ -133,5 +144,26 @@ export default function solutionHistoryIteko() {
         setCurrentYear(index, annotationItem.value);
       };
     });
+
+    // const setResize = () => {
+    //   // swiperAnnotation.spaceBetween = 20;
+    //   switch (true) {
+    //     case window.innerWidth >= 768:
+    //       resize = 'desk'
+    //       break;
+    //
+    //     default:
+    //       resize = 'mobile'
+    //   }
+    // }
+    //
+    // let resize;
+    // setResize();
+    //
+    // window.addEventListener('resize', () => {
+    //   if (resize === 'mobile') {
+    //     console.log(swiperAnnotation)
+    //   }
+    // })
   });
 }
