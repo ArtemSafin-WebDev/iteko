@@ -104,7 +104,11 @@
   height: 52.7rem;
 
   @include breakpoint(small-tablet) {
-    height: 34.9rem;
+    height: 69rem;
+  }
+
+  @include breakpoint(mobile) {
+    height: 39.3rem;
   }
 }
 

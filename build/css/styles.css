@@ -10284,7 +10284,12 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 }
 @media only screen and (max-width: 768px) {
   .solution-history__annotations-list-container {
-    height: 34.9rem;
+    height: 69rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .solution-history__annotations-list-container {
+    height: 39.3rem;
   }
 }
 
@@ -10316,11 +10321,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   -webkit-transition: 500ms opacity;
   transition: 500ms opacity;
 }
-<<<<<<< HEAD
 @media only screen and (max-width: 640px) {
-=======
-@media only screen and (max-width: 768px) {
->>>>>>> 46ab523800ded6ff47c3beae875329996f62cbe2
   .solution-history__annotation-item-value {
     font-size: 1.2rem;
     line-height: 1.8rem;
@@ -10348,7 +10349,6 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
             transform: none;
     left: 0;
     -webkit-box-flex: 0;
-<<<<<<< HEAD
         -ms-flex: 0 0 9rem;
             flex: 0 0 9rem;
     margin-right: 2rem;
@@ -10360,12 +10360,6 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
     -webkit-box-flex: 0;
         -ms-flex: 0 0 6rem;
             flex: 0 0 6rem;
-=======
-        -ms-flex: 0 0 6rem;
-            flex: 0 0 6rem;
-    margin-right: 2rem;
-    height: 100%;
->>>>>>> 46ab523800ded6ff47c3beae875329996f62cbe2
   }
 }
 
@@ -10408,11 +10402,8 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 .solution-history__full-silencing-block {
   -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000), color-stop(80%, #000), to(transparent));
   -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%, #000 80%, transparent 100%);
-<<<<<<< HEAD
   mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(28%, #000), color-stop(80%, #000), to(transparent));
   mask-image: linear-gradient(to top, transparent 0%, #000 28%, #000 80%, transparent 100%);
-=======
->>>>>>> 46ab523800ded6ff47c3beae875329996f62cbe2
 }
 
 .solution-history__up-silencing-block {
