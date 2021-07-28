@@ -43,7 +43,7 @@ export default function solutionHistoryIteko() {
             <div class="solution-history__year-up-number-wrapper">${yearItem.slice(0, 2)}</div>
             <div class="solution-history__year-down-number-wrapper">${yearItem.slice(2, 4)}</div>
         </div>
-      `;
+        `;
         });
 
         const yearsList = element.querySelector('.solution-history__years-list-container');
@@ -56,18 +56,29 @@ export default function solutionHistoryIteko() {
 
         const swiperYears = new Swiper(element.querySelector('.solution-history__years-list-container'), {
             direction: 'vertical',
-            slidesPerView: 13,
+            slidesPerView: 'auto',
             spaceBetween: 20,
             mousewheel: true,
             centeredSlides: true,
-            centerSlidesBounds: true
+            centerSlidesBounds: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 13
+                }
+            }
         });
 
         const swiperAnnotation = new Swiper(element.querySelector('.solution-history__annotations-list-container'), {
             direction: 'vertical',
             slidesPerView: 'auto',
-            spaceBetween: 84,
-            mousewheel: true
+            spaceBetween: 20,
+            mousewheel: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 84
+                }
+            }
         });
 
         swiperYears.on('slideChange', () => {
@@ -89,26 +100,32 @@ export default function solutionHistoryIteko() {
             yearsActiveList.style.transform = `translateY(${-44 * index}rem)`;
 
             // добавить затемнение
-            if (index === 0) {
-                annotationsList.classList.remove('solution-history__up-silencing-block');
+            switch (true) {
+                case index <= 5:
+                    yearsList.classList.remove('solution-history__full-silencing-block');
+                    yearsList.classList.add('solution-history__down-silencing-block');
+                    break;
+
+                case index > 5 && index < yearsArr.length - 6:
+                    yearsList.classList.add('solution-history__full-silencing-block');
+                    yearsList.classList.remove('solution-history__up-silencing-block');
+                    yearsList.classList.remove('solution-history__down-silencing-block');
+                    break;
+
+                case index >= yearsArr.length - 6:
+                    yearsList.classList.remove('solution-history__down-silencing-block');
+                    yearsList.classList.add('solution-history__up-silencing-block');
+                    break;
             }
 
-            if (index <= 7) {
-                yearsList.classList.remove('solution-history__up-silencing-block');
-            } else {
-                yearsList.classList.add('solution-history__up-silencing-block');
-            }
+            switch (true) {
+                case index === annotationsArr.length - 1:
+                    annotationsList.classList.remove('solution-history__down-silencing-block');
+                    break;
 
-            if (index === annotationsArr.length - 1) {
-                annotationsList.classList.remove('solution-history__down-silencing-block');
-            } else {
-                annotationsList.classList.add('solution-history__down-silencing-block');
-            }
-
-            if (index >= yearsArr.length - 6) {
-                yearsList.classList.remove('solution-history__down-silencing-block');
-            } else {
-                yearsList.classList.add('solution-history__down-silencing-block');
+                case index !== annotationsArr.length - 1:
+                    annotationsList.classList.add('solution-history__down-silencing-block');
+                    break;
             }
         };
 
@@ -127,5 +144,26 @@ export default function solutionHistoryIteko() {
                 setCurrentYear(index, annotationItem.value);
             };
         });
+
+        // const setResize = () => {
+        //   // swiperAnnotation.spaceBetween = 20;
+        //   switch (true) {
+        //     case window.innerWidth >= 768:
+        //       resize = 'desk'
+        //       break;
+        //
+        //     default:
+        //       resize = 'mobile'
+        //   }
+        // }
+        //
+        // let resize;
+        // setResize();
+        //
+        // window.addEventListener('resize', () => {
+        //   if (resize === 'mobile') {
+        //     console.log(swiperAnnotation)
+        //   }
+        // })
     });
 }
