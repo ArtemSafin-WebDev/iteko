@@ -10272,8 +10272,8 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 }
 
 .solution-history__year-down-number-wrapper {
-  background: -webkit-gradient(linear, right bottom, left top, from(#8F5FE3), to(#00B07A));
-  background: linear-gradient(to top left, #8F5FE3, #00B07A);
+  background: -webkit-gradient(linear, right bottom, left top, color-stop(-10%, #00b07a), color-stop(30%, #8f5fe3));
+  background: linear-gradient(to top left, #00b07a -10%, #8f5fe3 30%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: end;
@@ -22951,7 +22951,11 @@ form.success .vacancy__reply-form-success {
   font-weight: 500;
   font-size: 46.3rem;
   line-height: 55.6rem;
-  color: rgba(28, 15, 82, 0.59);
+  background: -webkit-gradient(linear, right bottom, left top, color-stop(-6%, #00b07a), color-stop(36%, #8f5fe3));
+  background: linear-gradient(to top left, #00b07a -6%, #8f5fe3 36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: end;
 }
 @media only screen and (max-width: 640px) {
   .not-found__code {

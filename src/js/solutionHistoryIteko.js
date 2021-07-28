@@ -73,6 +73,8 @@ export default function solutionHistoryIteko() {
             slidesPerView: 'auto',
             spaceBetween: 20,
             mousewheel: true,
+            centeredSlides: true,
+            centerSlidesBounds: true,
             breakpoints: {
                 768: {
                     spaceBetween: 84
