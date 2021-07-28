@@ -75,7 +75,6 @@ export default function solutionHistoryIteko() {
             mousewheel: true,
             breakpoints: {
                 768: {
-                    slidesPerView: 'auto',
                     spaceBetween: 84
                 }
             }
