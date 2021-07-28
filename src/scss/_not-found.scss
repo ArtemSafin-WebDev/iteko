@@ -64,6 +64,14 @@
   -webkit-text-fill-color: transparent;
   text-align: end;
 
+  @include breakpoint(laptop) {
+    font-size: 39.3rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 30rem;
+  }
+
   @include breakpoint(mobile) {
     font-size: 16rem;
     line-height: 1;

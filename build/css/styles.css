@@ -22957,6 +22957,16 @@ form.success .vacancy__reply-form-success {
   -webkit-text-fill-color: transparent;
   text-align: end;
 }
+@media only screen and (max-width: 1200px) {
+  .not-found__code {
+    font-size: 39.3rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .not-found__code {
+    font-size: 30rem;
+  }
+}
 @media only screen and (max-width: 640px) {
   .not-found__code {
     font-size: 16rem;

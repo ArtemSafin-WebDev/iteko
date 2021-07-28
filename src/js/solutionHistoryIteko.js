@@ -77,6 +77,8 @@ export default function solutionHistoryIteko() {
             centerSlidesBounds: true,
             breakpoints: {
                 768: {
+                    centeredSlides: false,
+                    centerSlidesBounds: false,
                     spaceBetween: 84
                 }
             }
