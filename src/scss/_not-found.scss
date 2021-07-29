@@ -1,124 +1,135 @@
 .not-found {
-    color: white;
-    background-color: #1c1050;
-    position: relative;
-    z-index: 1;
-    background-image: url('../img/not-found-bg.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  color: white;
+  background-color: #1c1050;
+  position: relative;
+  z-index: 1;
+  background-image: url('../img/not-found-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-
 
 
 .not-found__content {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 0;
 
-    @include breakpoint(mobile) {
-        padding: 4rem 0;
-    }
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+  }
 }
 
 .not-found__row {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    @include breakpoint(mobile) {
-        flex-direction: column;
-        align-items: initial;
-    }
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: initial;
+  }
 }
 
 .not-found__left-col {
-    width: 50%;
-    flex-grow: 1;
+  width: 50%;
+  flex-grow: 1;
 
-    @include breakpoint(mobile) {
-        width: 100%;
-        flex-grow: 0;
-        margin-bottom: 1rem;
-    }
+  @include breakpoint(mobile) {
+    width: 100%;
+    flex-grow: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 .not-found__right-col {
-    width: 44rem;
-    flex-shrink: 0;
-    margin-left: 3rem;
+  width: 44rem;
+  flex-shrink: 0;
+  margin-left: 3rem;
 
-    @include breakpoint(mobile) {
-        width: 100%;
-        flex-shrink: 1;
-        margin: 0;
-    }
+  @include breakpoint(mobile) {
+    width: 100%;
+    flex-shrink: 1;
+    margin: 0;
+  }
 }
 
 .not-found__code {
-    font-weight: 500;
-    font-size: 46.3rem;
-    line-height: 55.6rem;
-    color: rgba(28, 15, 82, 0.59);
+  font-weight: 500;
+  font-size: 46.3rem;
+  line-height: 55.6rem;
+  background: linear-gradient(to top left, #00b07a -6%,#8f5fe3 36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: end;
 
-    @include breakpoint(mobile) {
-        font-size: 16rem;
-        line-height: 1;
-    }
+  @include breakpoint(laptop) {
+    font-size: 39.3rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 30rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 16rem;
+    line-height: 1;
+  }
 }
 
 .not-found__heading {
-    font-weight: 500;
-    font-size: 5.5rem;
-    line-height: 120%;
-    margin-bottom: 2.8rem;
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 120%;
+  margin-bottom: 2.8rem;
 
-    @include breakpoint(mobile) {
-        font-size: 3rem;
-        line-height: 1.2;
-        margin-bottom: 2rem;
-    }
+  @include breakpoint(mobile) {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
 }
 
 .not-found__text {
-    font-size: 1.5rem;
-    line-height: 140%;
-    margin-bottom: 4.5rem;
-    max-width: 30rem;
+  font-size: 1.5rem;
+  line-height: 140%;
+  margin-bottom: 4.5rem;
+  max-width: 30rem;
 
-    @include breakpoint(mobile) {
-        max-width: none;
-        margin-bottom: 2.5rem;
-        font-size: 1.3rem;
-    }
+  @include breakpoint(mobile) {
+    max-width: none;
+    margin-bottom: 2.5rem;
+    font-size: 1.3rem;
+  }
 }
 
 .not-found__link {
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 120%;
-    position: relative;
-    z-index: 1;
-    padding: 1.4rem 2.4rem;
-    display: inline-flex;
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--primary-color);
-        z-index: -1;
-        border-radius: 2.2rem;
-        transition: transform .2s;
-    }
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 120%;
+  position: relative;
+  z-index: 1;
+  padding: 1.4rem 2.4rem;
+  display: inline-flex;
 
-    .no-touch &:hover,
-    .touch &:active {
-        &::before {
-            transform: scale(0.96);
-        }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    border-radius: 2.2rem;
+    transition: transform .2s;
+  }
+
+  .no-touch &:hover,
+  .touch &:active {
+    &::before {
+      transform: scale(0.96);
     }
+  }
 }

@@ -1,0 +1,225 @@
+.solution-history {
+  margin-bottom: 11.4rem;
+  background-image: url('../img/solution/history-iteko-background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.solution-history__container {
+  padding: 9.2rem 0 14.8rem;
+
+  @include breakpoint(small-tablet) {
+    padding: 5rem 0;
+  }
+}
+
+.solution-history__content-wrapper {
+  position: relative;
+}
+
+.solution-history__content {
+  @include breakpoint(small-tablet) {
+    height: 100%;
+  }
+}
+
+.solution-history__main-content-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @include breakpoint(laptop) {
+    margin-left: 50px;
+  }
+
+  @include breakpoint(small-tablet) {
+    margin-left: 0;
+    display: flex;
+    height: 430px;
+  }
+}
+
+.solution-history__years-active-wrapper {
+  margin-right: 6.8rem;
+  width: 54rem;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 54rem;
+  height: 44rem;
+  overflow: hidden;
+
+  @include breakpoint(small-tablet) {
+    display: none;
+  }
+}
+
+.solution-history__years-active {
+  transition: 300ms transform;
+}
+
+.solution-history__title {
+  color: #884DD6;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  margin-bottom: 8rem;
+  text-transform: uppercase;
+
+  @include breakpoint(small-tablet) {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.solution-history__year-up-number-wrapper, .solution-history__year-down-number-wrapper {
+  font-weight: 500;
+  font-size: 28.6rem;
+  line-height: 21.6rem;
+  width: 100%;
+
+  @include breakpoint(desktop) {
+    font-size: 27rem;
+  }
+}
+
+.solution-history__year {
+  height: 44rem;
+  user-select: none;
+}
+
+.solution-history__year-up-number-wrapper {
+  color: #9480EA;
+  opacity: 0.15;
+}
+
+.solution-history__year-down-number-wrapper {
+  background: linear-gradient(to top left, #00b07a -10%,#8f5fe3 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: end;
+}
+
+.solution-history__annotations-list-container {
+  height: 52.7rem;
+
+  @include breakpoint(small-tablet) {
+    height: 69rem;
+  }
+
+  @include breakpoint(mobile) {
+    height: 39.3rem;
+  }
+}
+
+.solution-history__annotation-item {
+  color: white;
+  text-align: start;
+
+  &.swiper-slide-active {
+    .solution-history__annotation-item-value {
+      opacity: 1;
+    }
+  }
+}
+
+.solution-history__annotation-item-caption {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  opacity: 0.2;
+
+  @include breakpoint(small-tablet) {
+    display: none;
+  }
+}
+
+.solution-history__annotation-item-value {
+  display: block;
+  font-size: 2rem;
+  line-height: 3rem;
+  opacity: 0.2;
+  transition: 500ms opacity;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+.solution-history__years-list-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -7.7rem;
+  height: 44rem;
+
+  @include breakpoint(desktop) {
+    left: -2.7rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    position: relative;
+    top: 0;
+    transform: none;
+    left: 0;
+    flex: 0 0 9rem;
+    margin-right: 2rem;
+    height: 100%;
+  }
+
+  @include breakpoint(mobile) {
+    flex: 0 0 6rem;
+  }
+}
+
+.solution-history__year-item {
+  color: white;
+  opacity: 0.2;
+  position: relative;
+  padding-left: 2.2rem;
+  transition: 500ms opacity;
+
+  @include breakpoint(small-tablet) {
+    font-size: 14px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 0.1rem;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: 500ms width;
+  }
+
+  &.swiper-slide-active {
+    opacity: 1;
+
+    &:before {
+      width: 1.7rem;
+    }
+  }
+}
+
+.solution-history__full-silencing-block {
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to top, transparent 0%, #000 28%, #000 80%, transparent 100%);
+}
+
+.solution-history__up-silencing-block {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 28%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 28%);
+}
+
+.solution-history__down-silencing-block {
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%);
+  mask-image: linear-gradient(to top, transparent 0%, #000 28%);
+}
