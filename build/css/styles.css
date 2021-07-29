@@ -10216,7 +10216,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   -webkit-box-flex: 0;
       -ms-flex: 0 0 54rem;
           flex: 0 0 54rem;
-  height: 44rem;
+  height: 47rem;
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
@@ -10259,7 +10259,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 }
 
 .solution-history__year {
-  height: 44rem;
+  height: 47rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -10334,7 +10334,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: -7.7rem;
-  height: 44rem;
+  height: 47rem;
 }
 @media only screen and (max-width: 1400px) {
   .solution-history__years-list-container {

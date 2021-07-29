@@ -70,13 +70,14 @@ export default function solutionHistoryIteko() {
 
         const swiperAnnotation = new Swiper(element.querySelector('.solution-history__annotations-list-container'), {
             direction: 'vertical',
-            slidesPerView: 'auto',
+            slidesPerView: 1,
             spaceBetween: 20,
             mousewheel: true,
             centeredSlides: true,
             centerSlidesBounds: true,
             breakpoints: {
                 768: {
+                    slidesPerView: 'auto',
                     centeredSlides: false,
                     centerSlidesBounds: false,
                     spaceBetween: 84
@@ -100,7 +101,7 @@ export default function solutionHistoryIteko() {
             yearDownNumber.innerText = yearValue.slice(2, 4);
 
             // анимация больших цифр
-            yearsActiveList.style.transform = `translateY(${-44 * index}rem)`;
+            yearsActiveList.style.transform = `translateY(${-47 * index}rem)`;
 
             // добавить затемнение
             switch (true) {
@@ -137,7 +138,6 @@ export default function solutionHistoryIteko() {
 
         yearsArr.forEach((yearItem, index) => {
             yearItem.onclick = () => {
-                console.log(123);
                 setCurrentYear(index, yearItem.value);
             };
         });

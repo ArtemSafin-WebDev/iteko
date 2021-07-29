@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   flex: 0 0 54rem;
-  height: 44rem;
+  height: 47rem;
   overflow: hidden;
 
   @include breakpoint(small-tablet) {
@@ -84,7 +84,7 @@
 }
 
 .solution-history__year {
-  height: 44rem;
+  height: 47rem;
   user-select: none;
 }
 
@@ -152,7 +152,7 @@
   top: 50%;
   transform: translateY(-50%);
   left: -7.7rem;
-  height: 44rem;
+  height: 47rem;
 
   @include breakpoint(desktop) {
     left: -2.7rem;
