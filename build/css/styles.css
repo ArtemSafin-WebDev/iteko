@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Swiper 6.8.0
+ * Swiper 6.8.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -8,7 +8,7 @@
  *
  * Released under the MIT License
  *
- * Released on: July 22, 2021
+ * Released on: August 23, 2021
  */
 @font-face {
   font-family: "swiper-icons";
@@ -374,6 +374,10 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
+}
+
+.swiper-pagination-bullet:only-child {
+  display: none !important;
 }
 
 .swiper-pagination-bullet-active {
