@@ -1151,7 +1151,7 @@
   }
 
   .intro__block-2__title {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
   }
 }
 
@@ -1167,9 +1167,9 @@
 
 @media screen and (max-height: 600px) and (min-width: 768px) {
   .intro__block-2__title {
-    font-size: 3rem;
-    line-height: 3.8rem;
-    margin-bottom: 0;
+    font-size: 3rem !important;
+    line-height: 3.8rem !important;
+    margin-bottom: 0 !important;
   }
 }
 
