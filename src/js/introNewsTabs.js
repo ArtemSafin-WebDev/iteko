@@ -33,7 +33,6 @@ export default function introNewsTabs() {
         links.forEach((link, linkIndex) => {
             link.addEventListener('click', event => {
                 event.preventDefault();
-                console.log('Clicked index', linkIndex)
                 slider.slideToLoop(linkIndex);
             })
         })

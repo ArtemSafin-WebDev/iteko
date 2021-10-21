@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <script src="assets/js/ie11CustomProperties.js"></script>
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>
+        Айтеко - Страница партнера
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 7.91 7.91" id="arrow-diagonal" xmlns="http://www.w3.org/2000/svg"><path d="M1.41 7.91l4.5-4.5V7h2V0h-7v2H4.5L0 6.5z"/></symbol><symbol viewBox="0 0 19.8 19.8" id="arrow-down" xmlns="http://www.w3.org/2000/svg"><path d="M11.15 0h-2.5v15L1.78 8.13 0 9.9l9.9 9.9 9.9-9.9L18 8.13 11.15 15z"/></symbol><symbol viewBox="0 0 14.68 19.87" id="arrow-down-scroll" xmlns="http://www.w3.org/2000/svg"><path d="M7.68 19.87l-.34-.37-.34.37-7-6.5.68-.74 6.16 5.72V0h1v18.35L14 12.63l.68.74-7 6.5z"/></symbol><symbol viewBox="0 0 19.8 19.8" id="arrow-left" xmlns="http://www.w3.org/2000/svg"><path d="M19.8 11.15v-2.5h-15l6.88-6.87L9.9 0 0 9.9l9.9 9.9 1.78-1.8-6.88-6.85z"/></symbol><symbol viewBox="0 0 19.8 19.8" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M0 8.65v2.5h15L8.13 18l1.77 1.8 9.9-9.9L9.9 0 8.13 1.78 15 8.65z"/></symbol><symbol viewBox="0 0 10 6" id="arrow-simple-down" xmlns="http://www.w3.org/2000/svg"><path d="M1.17 0L5 3.73 8.83 0 10 1.14 5 6 0 1.14z"/></symbol><symbol viewBox="0 0 30.39 32.5" id="award" xmlns="http://www.w3.org/2000/svg"><path d="M15.2 0a3.82 3.82 0 00-2.2.74l-2.1 1.45-2.38.31a4.26 4.26 0 00-3.21 3.2l-.43 2.54-1.44 1.88a4.08 4.08 0 000 4.53l1.48 2.15.39 2.2-4 6.13L0 27h6l1.44 3.36.9 2.15 1.29-1.95 3.94-5.94a4.18 4.18 0 003.29 0l3.94 5.94 1.29 1.95.9-2.15L24.41 27h6l-1.31-1.92-3.9-5.94.31-2.34L27 14.73a4 4 0 000-4.49l-1.49-2.15L25 5.74v-.08a3.69 3.69 0 00-3.12-3.16l-2.35-.31L17.42.74A3.82 3.82 0 0015.2 0zm0 2.54a1.46 1.46 0 01.78.23l2.22 1.61.28.19h.31l2.73.43a1.11 1.11 0 011 1v.07l.51 2.78v.27l.19.24 1.6 2.22a1.58 1.58 0 010 1.72l-1.75 2.46v.31l-.39 2.74a1.35 1.35 0 01-.2.54h-.08a1.06 1.06 0 01-.74.39h-.06l-2.85.51h-.31l-.24.2-2.2 1.78a1.69 1.69 0 01-1.76 0l-2-1.56-.24-.2h-.35L8.87 20a1.07 1.07 0 01-.87-.55 1.14 1.14 0 01-.19-.45v-.07l-.51-2.88v-.31l-.2-.23-1.6-2.23a1.65 1.65 0 010-1.76l1.56-2 .2-.23v-.35l.36-2.62A1.72 1.72 0 019 5l2.62-.35h.31l.28-.19 2.22-1.61a1.47 1.47 0 01.77-.31zm8.63 19l1.91 2.93h-3l-.31.78-.86 2-2.66-4.05.58-.43 2.51-.43h.08a3.62 3.62 0 001.75-.78zm-17.27 0a3.56 3.56 0 002 .9l2.39.31.54.43-2.65 4-.86-2-.31-.78h-3z"/></symbol><symbol id="chart" viewBox="0 0 45.75 35.42" xmlns="http://www.w3.org/2000/svg"><defs><style>.ahcls-1{fill-rule:evenodd}</style></defs><path class="ahcls-1" d="M24.35 19.19h-3V1.48h3zM19.92.74a.71.71 0 01.22-.52.74.74 0 01.52-.22h4.43a.74.74 0 01.52.22.71.71 0 01.22.52v4.43h17.71a2.2 2.2 0 012.21 2.21V28a2.22 2.22 0 01-2.21 2.21h-16l.37 1.48h2.37a.75.75 0 01.53.22.71.71 0 01.18.3.78.78 0 010 .22v2.21a.76.76 0 01-.21.52.75.75 0 01-.53.22H15.5a.75.75 0 01-.5-.18.76.76 0 01-.21-.52v-2.21a.78.78 0 010-.22A.71.71 0 0115 32a.75.75 0 01.53-.22h2.37l.37-1.48h-16a2.19 2.19 0 01-1.62-.7A2.17 2.17 0 010 28V7.38a2.2 2.2 0 012.21-2.21h11.07V3.69A.75.75 0 0114 3h4.43a.74.74 0 01.52.22.73.73 0 01.22.52v1.43h.73zm-.73 5.9v12.55h.73V6.64zm-8.12 14a.76.76 0 01-.52-.21.74.74 0 010-1.05.72.72 0 01.52-.21h2.21V6.64H2.21a.74.74 0 00-.52.22.72.72 0 00-.21.52v17h42.79v-17a.72.72 0 00-.21-.52.74.74 0 00-.52-.22H25.83v12.55h.73v-8.86a.73.73 0 01.22-.52.74.74 0 01.52-.22h4.43a.75.75 0 01.74.74v8.86h2.21a.72.72 0 01.52.21.74.74 0 010 1.05.76.76 0 01-.52.21zM31 19.19v-8.12h-3v8.12zM1.48 25.83V28a.72.72 0 00.21.52.74.74 0 00.52.22h41.33a.74.74 0 00.52-.22.72.72 0 00.21-.52v-2.17zm17.91 5.9h7L26 30.25h-6.24zm-3.16 1.48v.73h13.29v-.73zm-1.47-14h3V4.43h-3z"/><path class="ahcls-1" d="M4.43 26.56a.73.73 0 00-.52.22.74.74 0 00-.22.52.71.71 0 00.22.52.73.73 0 00.52.22h3.69a.74.74 0 00.52-.22.71.71 0 00.22-.52.75.75 0 00-.74-.74zM10 26.65a.59.59 0 00-.18.13.74.74 0 00-.22.52.71.71 0 00.22.52.62.62 0 00.18.18 1 1 0 01-.1-.21 1.12 1.12 0 01-.08-.45 1.11 1.11 0 01.08-.44 1 1 0 01.1-.25zM11.42 28a2 2 0 00.1-.21 1.28 1.28 0 000-.89 2 2 0 00-.1-.21.74.74 0 01.4.65.71.71 0 01-.22.52.79.79 0 01-.18.14z"/></symbol><symbol viewBox="0 0 9 6.55" id="checkmark" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 6.55L0 3.85.97 2.7l2.16 1.84L7.97 0 9 1.09 3.18 6.55z"/></symbol><symbol viewBox="0 0 30 30" id="compass" xmlns="http://www.w3.org/2000/svg"><path d="M15 0a15 15 0 1015 15A15 15 0 0015 0zm-1.29 2.58v1.17h2.5V2.58a12.43 12.43 0 0111.21 11.17h-1.17v2.5h1.17a12.43 12.43 0 01-11.17 11.17v-1.17h-2.5v1.17A12.43 12.43 0 012.58 16.25h1.17v-2.5H2.58A12.43 12.43 0 0113.71 2.58zm9.42 4.3L12.7 12.7 6.88 23.13 17.3 17.3zM15 13.13A1.88 1.88 0 1113.13 15 1.87 1.87 0 0115 13.13z"/></symbol><symbol viewBox="0 0 43 44" id="crane" xmlns="http://www.w3.org/2000/svg"><path d="M41.57 37.8v-3.41a.68.68 0 00-.68-.68h-1.37V18.35a4.07 4.07 0 00-2.94-7.11l-5.32-5.33a5.56 5.56 0 00.09-.82 4.09 4.09 0 00-7.13-2.73h-7.55a4.09 4.09 0 00-7.13 2.73 3.66 3.66 0 00.05.57 4.08 4.08 0 002 3v2.6a.68.68 0 00.69.68.69.69 0 11-.69.68.68.68 0 00-.68-.68H8.18a.68.68 0 00-.68.68 4.76 4.76 0 002.5 4.14L.45 20.12a.66.66 0 00-.45.63V33a.69.69 0 00.68.68h23.17a.68.68 0 00.68-.68V20.76a.66.66 0 00-.45-.63l-9.52-3.36a4.75 4.75 0 001.11-7.51v-.64a3.91 3.91 0 001-.81h7.56a3.94 3.94 0 002.41 1.31h.13l5.95 5.95v.22a4.09 4.09 0 001.29 3l-3.22 15.42H30a.68.68 0 00-.68.68v3.41H15.67a.68.68 0 00-.68.68v4.09a.69.69 0 00.68.68h25.9a.69.69 0 00.68-.68v-4.09a.68.68 0 00-.68-.68zm-2-22.49a2.73 2.73 0 11-5.36-.69 2.42 2.42 0 01.12-.35 2.72 2.72 0 011.83-1.6 4 4 0 01.69-.09 2.72 2.72 0 012.67 2.73zM10.9 5.09a2.73 2.73 0 115.45 0 2.61 2.61 0 01-.12.83 2.71 2.71 0 01-2.6 1.89h-.39a2.72 2.72 0 01-2.31-2.33 2.19 2.19 0 01-.03-.39zm1.37 12.31l7.6 2.68H4.66zm10.9 15H1.36V21.44h21.81zM14.31 9.18v.37a.68.68 0 00.23.51 3.4 3.4 0 11-5.61 3.21h1.41A2 2 0 1013 10.66V9.18zm3.17-2.73a.61.61 0 00.05-.12 4 4 0 00.19-1.24 3.89 3.89 0 00-.24-1.36h5.93a3.89 3.89 0 00-.24 1.36 2.75 2.75 0 000 .57 3.66 3.66 0 00.2.79zm7.08-1a2.19 2.19 0 010-.36 2.73 2.73 0 115.45 0 2.92 2.92 0 01-.12.83 2.72 2.72 0 01-2.6 1.89h-.39a2.72 2.72 0 01-2.34-2.36zm4 3.52a3.29 3.29 0 00.61-.26 2.12 2.12 0 00.2-.12 3.17 3.17 0 00.36-.23l.22-.19a3.32 3.32 0 00.28-.26c.07-.07.13-.15.2-.23l.22-.29.08-.1L35 11.62l-.1.06a4 4 0 00-.39.23l-.16.1a5.85 5.85 0 00-.47.4 4.33 4.33 0 00-.4.47l-.11.17a2.88 2.88 0 00-.22.38.6.6 0 00-.06.11L28.54 9zm6.69 10.11a4 4 0 002.93.08v14.55h-6zm-4.56 18h4.08a.69.69 0 100-1.37h-4.1v-.68h9.54v2.77h-9.54zm10.22 4.77H16.35v-2.69h24.54z"/><path d="M35.21 15.08a1.43 1.43 0 000 .29 1.74 1.74 0 00.63 1.09 1.73 1.73 0 001.1.38 1.79 1.79 0 00.72-.15l.16-.08a1.77 1.77 0 00.84-1.15 1.58 1.58 0 000-.38 1.61 1.61 0 00-.06-.44 1.76 1.76 0 00-1.26-1.27 1.74 1.74 0 00-1.51.33 1.78 1.78 0 00-.62 1.38zm1.79-.59h.15a.59.59 0 01.42.42.77.77 0 010 .15.59.59 0 010 .13.57.57 0 01-.29.39.64.64 0 01-.47 0 .57.57 0 01-.13-.08.64.64 0 01-.22-.38v-.08a.6.6 0 01.54-.55zM27.64 4.13l.09-.08a2.2 2.2 0 00.41-1.15 2.34 2.34 0 000-.38 3.15 3.15 0 000-.44A1.62 1.62 0 0027.5.81c-.26-.13-.54 0-.75.32a2.75 2.75 0 00-.34 1.39 2.81 2.81 0 000 .29 2.37 2.37 0 00.32 1.08 1.29 1.29 0 00.2.25.56.56 0 00.35.14.52.52 0 00.36-.15zm-.47-1.07L27.1 3a1 1 0 01-.1-.4.19.19 0 010-.08c0-.33.13-.59.3-.59h.07a.55.55 0 01.21.41.92.92 0 010 .16.62.62 0 010 .13.78.78 0 01-.14.39.18.18 0 01-.27.04zM13 3.89a1.67 1.67 0 00.4.25 1.86 1.86 0 00.7.14 1.79 1.79 0 00.72-.15l.18-.08a1.79 1.79 0 00.8-1.15 1.58 1.58 0 000-.38 1.61 1.61 0 00-.06-.44A1.75 1.75 0 0014.52.81a1.77 1.77 0 00-1.52.32 1.81 1.81 0 00-.69 1.39 1.43 1.43 0 000 .29A1.65 1.65 0 0013 3.89zm1.1-2h.15a.59.59 0 01.42.42.77.77 0 010 .15.69.69 0 010 .13.6.6 0 01-.29.39.64.64 0 01-.47 0 .38.38 0 01-.19.02.59.59 0 01-.22-.37v-.08a.59.59 0 01.58-.62zM34.23 41.49h5.47a.89.89 0 000-1.76h-5.47a.89.89 0 000 1.76z"/><path d="M31.1 41.49h1.18c.64 0 1.17-.4 1.17-.88s-.53-.88-1.17-.88H31.1c-.64 0-1.17.39-1.17.88s.53.88 1.17.88zM38.29 36.21h-.88c-.24 0-.44.39-.44.88s.2.88.44.88h.88c.24 0 .44-.39.44-.88s-.2-.88-.44-.88zM4.23 30.93h5.63a.71.71 0 00.71-.71v-5.63a.71.71 0 00-.71-.71H4.23a.71.71 0 00-.71.71v5.63a.71.71 0 00.71.71zm.7-5.64h4.23v4.23H4.93zM14.79 30.93h5.63a.71.71 0 00.71-.71v-5.63a.71.71 0 00-.71-.71h-5.63a.7.7 0 00-.7.71v5.63a.7.7 0 00.7.71zm.7-5.64h4.23v4.23h-4.23z"/></symbol><symbol viewBox="0 0 8 8" id="cross" xmlns="http://www.w3.org/2000/svg"><path class="alcls-1" d="M8 .81L7.19 0 4 3.19.81 0 0 .81 3.19 4 0 7.19.81 8 4 4.81 7.19 8 8 7.19 4.81 4z"/></symbol><symbol viewBox="0 0 35 25" id="crowd" xmlns="http://www.w3.org/2000/svg"><path d="M11.88 0a4.38 4.38 0 104.37 4.38A4.39 4.39 0 0011.88 0zm11.25 0a4.38 4.38 0 104.37 4.38A4.39 4.39 0 0023.13 0zM11.88 2.5A1.88 1.88 0 1110 4.38a1.86 1.86 0 011.88-1.88zm11.25 0a1.88 1.88 0 11-1.88 1.88 1.86 1.86 0 011.88-1.88zm-16.88 5a5 5 0 00-3.48 8.55A6.31 6.31 0 000 21.25h2.5a3.75 3.75 0 017.5 0h2.5a6.31 6.31 0 00-2.77-5.2A5 5 0 006.25 7.5zm6.25 13.75A6.28 6.28 0 0011.25 25h2.5a3.75 3.75 0 017.5 0h2.5a6.28 6.28 0 00-1.25-3.75A6.34 6.34 0 0021 19.8a5 5 0 10-7 0 6.34 6.34 0 00-1.5 1.45zm10 0H25a3.75 3.75 0 017.5 0H35a6.31 6.31 0 00-2.77-5.2 5 5 0 10-7 0 6.31 6.31 0 00-2.73 5.2zM6.25 10a2.5 2.5 0 11-2.5 2.5 2.48 2.48 0 012.5-2.5zm22.5 0a2.5 2.5 0 11-2.5 2.5 2.48 2.48 0 012.5-2.5zM17.5 13.75a2.5 2.5 0 11-2.5 2.5 2.48 2.48 0 012.5-2.5z"/></symbol><symbol id="doc" viewBox="0 0 30.73 26.96" xmlns="http://www.w3.org/2000/svg"><defs><style>.ancls-1{fill:none;stroke:#000}</style></defs><path class="ancls-1" d="M30.73 26.46h-2.12m0 0V11.63A1.59 1.59 0 0027 10m1.59 16.42H2.12M27 10V6.86a1.59 1.59 0 00-1.59-1.59M27 10H11.6m13.83-4.73V2.09A1.59 1.59 0 0023.84.5H6.89A1.59 1.59 0 005.3 2.09v3.18m20.13 0H13.19m-7.89 0a1.59 1.59 0 00-1.59 1.59V10M5.3 5.27H8M3.71 10a1.59 1.59 0 00-1.59 1.59v14.87M3.71 10h2.7M2.12 26.46H0M13.19 5.27a2.65 2.65 0 00-5.19 0m5.19 0H8M11.6 10a2.65 2.65 0 00-5.19 0m5.19 0H6.41M11.15 16.4a2.68 2.68 0 11-2.67-2.68 2.66 2.66 0 012.67 2.68zM24.9 13.22H13.78M24.9 15.87H13.78M24.9 18.52H13.78M24.9 21.44H5.83M24.9 24.11H5.83"/></symbol><symbol viewBox="0 0 14 11" id="download" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 5.08H7.88V0H6.13v5.08H3.5L7 8.46zM0 10.15V11h14v-.85z"/></symbol><symbol viewBox="0 0 10 20" id="facebook" xmlns="http://www.w3.org/2000/svg"><path d="M10 0v4H8c-.69 0-1 .81-1 1.5V8h3v4H7v8H3v-8H0V8h3V4a4 4 0 014-4z"/></symbol><symbol viewBox="0 0 36 36" id="failure" xmlns="http://www.w3.org/2000/svg"><path d="M18 0a18 18 0 1018 18A18 18 0 0018 0zm5 22l-1 1-4-4-4 4-1-1 4-4-4-4 1-1 4 4 4-4 1 1-4 4z"/></symbol><symbol viewBox="0 0 11 19" id="fb" xmlns="http://www.w3.org/2000/svg"><path d="M7.06 6.38V4.51c0-.84.19-1.26 1.49-1.26h1.64V.13H7.46C4.11.13 3 1.66 3 4.29v2.09H.81V9.5H3v9.38h4.06V9.5h2.76l.37-3.12z"/></symbol><symbol viewBox="0 0 10 12" id="file" xmlns="http://www.w3.org/2000/svg"><path d="M9.87 2.27L7.59.13A.45.45 0 007.45 0a.57.57 0 00-.18 0H1.36A1.33 1.33 0 000 1.29v9.42A1.33 1.33 0 001.36 12h7.28A1.33 1.33 0 0010 10.71V2.57a.43.43 0 00-.13-.3zm-2.14-.81l.72.68h-.72zm1.36 9.25a.44.44 0 01-.45.43H1.36a.44.44 0 01-.45-.43V1.29a.44.44 0 01.45-.43h5.46v1.71a.44.44 0 00.45.43h1.82v7.71z"/></symbol><symbol id="filter" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><defs><style>.atcls-1{isolation:isolate}</style></defs><path class="atcls-1" d="M3.8 4.73a.62.62 0 01.2.41v4.55a.31.31 0 00.53.22l1.24-1.45C5.94 8.25 6 8.15 6 8V5.14a.62.62 0 01.16-.41L9.88.78A.47.47 0 009.53 0H.47a.47.47 0 00-.35.78z"/></symbol><symbol viewBox="0 0 35.5 33.5" id="gears" xmlns="http://www.w3.org/2000/svg"><path d="M27.71 33.5H7.79a1.75 1.75 0 110-3.5h2.72l.83-2.5h-7.6A3.75 3.75 0 010 23.75v-20A3.75 3.75 0 013.74 0h28a3.75 3.75 0 013.76 3.75v20a3.75 3.75 0 01-3.74 3.75h-7.6L25 30h2.72a1.75 1.75 0 010 3.5zm-19.92-2a.25.25 0 100 .5h19.92a.25.25 0 000-.5H23.9l-1.32-4h-9.66l-1.32 4zm4.59-5.5H31.76A2.24 2.24 0 0034 23.75v-.25H1.5v.25A2.24 2.24 0 003.74 26zm15.08-4H34V3.75a2.24 2.24 0 00-2.24-2.25h-28A2.24 2.24 0 001.5 3.75V22H8v-2.12h2a.25.25 0 00.24-.18 7.6 7.6 0 01.82-2 .26.26 0 000-.31L9.65 16l2.47-2.48 1.43 1.44a.24.24 0 00.3 0 7.21 7.21 0 012-.82.25.25 0 00.18-.24v-2h3.5v2a.25.25 0 00.18.24 7.54 7.54 0 012 .82.24.24 0 00.3 0l1.43-1.44L25.85 16l-1.43 1.43a.26.26 0 000 .31 7.81 7.81 0 01.82 2 .25.25 0 00.24.18h2zm-4.62 0H26v-.62h-.52a1.74 1.74 0 01-1.69-1.31 6.51 6.51 0 00-.66-1.59 1.73 1.73 0 01.27-2.12l.38-.38-.36-.36L23 16a1.73 1.73 0 01-2.12.27 6 6 0 00-1.59-.66A1.74 1.74 0 0118 13.92v-.54h-.5v.54a1.74 1.74 0 01-1.3 1.69 6 6 0 00-1.59.66 1.73 1.73 0 01-2.12-.27l-.37-.38-.35.36.37.38a1.73 1.73 0 01.27 2.12 6.68 6.68 0 00-.66 1.59 1.74 1.74 0 01-1.69 1.31h-.52V22h3.35v-.37a4.62 4.62 0 014.87-4.69c3.1 0 5.1 1.89 5.1 4.81a2.09 2.09 0 01-.02.25zm-8.44 0h6.94a2.09 2.09 0 000-.25c0-2.07-1.35-3.31-3.6-3.31a3.15 3.15 0 00-3.37 3.19l.03.37z"/></symbol><symbol id="grid-view" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><style>.avcls-1{fill-rule:evenodd}</style></defs><path class="avcls-1" d="M15.33 0a.67.67 0 01.67.67v4.66a.67.67 0 01-.67.67h-4.66a.67.67 0 01-.67-.67V.67a.67.67 0 01.67-.67zM15.33 10a.67.67 0 01.67.67v4.66a.67.67 0 01-.67.67h-4.66a.67.67 0 01-.67-.67v-4.66a.67.67 0 01.67-.67zM5.33 10a.67.67 0 01.67.67v4.66a.67.67 0 01-.67.67H.67a.67.67 0 01-.67-.67v-4.66A.67.67 0 01.67 10zM5.33 0A.67.67 0 016 .67v4.66a.67.67 0 01-.67.67H.67A.67.67 0 010 5.33V.67A.67.67 0 01.67 0z"/></symbol><symbol viewBox="0 0 35 26.34" id="handshake" xmlns="http://www.w3.org/2000/svg"><path d="M21.64 0a8.63 8.63 0 00-2.11.23 7.7 7.7 0 00-2.23 1A7.62 7.62 0 0014.53.12a21.5 21.5 0 00-3.32 0C9.8.11 8.88.83 7.38 1.41a16.43 16.43 0 01-6.13 1.13H0v12l.7.35L3 16.06l8.2 9.14a4.28 4.28 0 003.32 1.1 6.52 6.52 0 003-.9c1.84-1.11 6.87-4.61 6.87-4.61l.12-.08.08-.08a4.38 4.38 0 001.09-2.07l4.81-2.42L34.14 15l.86-.27V2.54h-1.25a16.14 16.14 0 01-6.13-1.17C26.12.78 25.21.07 23.79 0h-2.15zm0 2.5h2c.13 0 1.33.52 3 1.17a19.42 19.42 0 005.86 1.25v8l-2.89 1h-.16l-3.79 1.91a4.38 4.38 0 00-.93-1.56l-.08-.12-5.31-6.53-.79-1-1 .78-3.36 2.74a2.65 2.65 0 01-3 .11 2 2 0 01-.47-.31l5.7-4.73.08-.07a8.45 8.45 0 013.64-2.5 5.6 5.6 0 011.54-.14zM13 2.54a8.19 8.19 0 011.25 0 5.57 5.57 0 011 .43c-.12.12-.22.18-.35.31l-.08.08L8 9.06l-1.06.86.94 1a8.11 8.11 0 002.31 1.64 5.45 5.45 0 005.5-.31l.08-.08 2.42-2 4.61 5.66v.08a2.05 2.05 0 010 2.93l-.19.11L21 16.8l-2 1.48 1.61 2.15c-.65.44-.95.67-1.64 1.13l-1.7-2.26-2 1.48 1.61 2.15-.55.35a4.54 4.54 0 01-1.84.55 2.07 2.07 0 01-1.36-.31l-8.44-9.3-.16-.22-2-1V4.92a20 20 0 005.75-1.17c1.67-.64 2.86-1.17 3-1.17z"/></symbol><symbol viewBox="0 0 20 20" id="instagram" xmlns="http://www.w3.org/2000/svg"><path d="M5.8 0h8.4A5.8 5.8 0 0120 5.8v8.4a5.8 5.8 0 01-5.8 5.8H5.8A5.8 5.8 0 010 14.2V5.8A5.8 5.8 0 015.8 0zm-.2 2A3.6 3.6 0 002 5.6v8.8A3.6 3.6 0 005.6 18h8.8a3.6 3.6 0 003.6-3.6V5.6A3.6 3.6 0 0014.4 2zm9.65 1.5A1.25 1.25 0 1114 4.75a1.25 1.25 0 011.25-1.25zM10 5a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 103 3 3 3 0 00-3-3z"/></symbol><symbol viewBox="0 0 19 14" id="list-view" xmlns="http://www.w3.org/2000/svg"><path d="M18 2H1a1 1 0 010-2h17a1 1 0 010 2zM18 8H1a1 1 0 010-2h17a1 1 0 010 2zM18 14H1a1 1 0 010-2h17a1 1 0 010 2z"/></symbol><symbol viewBox="0 0 14 20" id="ok" xmlns="http://www.w3.org/2000/svg"><path d="M12.83 10.74c-.28-.57-1.07-1.05-2.12-.24A6.84 6.84 0 017 11.64a6.84 6.84 0 01-3.71-1.14c-1-.81-1.84-.33-2.12.24-.5 1 .06 1.49 1.33 2.3A8.54 8.54 0 006 14.1l-.8.8-.03.1C4.06 16.07 3 17.14 2.25 17.88a1.14 1.14 0 000 1.62l.14.16a1.16 1.16 0 001.64 0l3-3c1.15 1.13 2.24 2.22 3 3a1.16 1.16 0 001.64 0l.13-.16a1.12 1.12 0 000-1.62l-3-3-.8-.79A8.35 8.35 0 0011.5 13c1.27-.77 1.83-1.26 1.33-2.26z"/><path d="M7 10.12a5.06 5.06 0 10-5.06-5.06A5.05 5.05 0 007 10.12zm0-7.55a2.49 2.49 0 11-2.5 2.49A2.5 2.5 0 017 2.57z"/></symbol><symbol viewBox="0 0 20.32 29.21" id="play" xmlns="http://www.w3.org/2000/svg"><path d="M19.92 13.8a1 1 0 010 1.61L1.6 29a1 1 0 01-1.6-.8V1A1 1 0 011.6.2z"/></symbol><symbol viewBox="0 0 13.67 7.83" id="scroll-down" xmlns="http://www.w3.org/2000/svg"><path d="M6.83 7.83a1 1 0 01-.7-.29L.29 1.71A1 1 0 011.71.29l5.12 5.13L12 .29a1 1 0 011.41 0 1 1 0 010 1.42L7.54 7.54a1 1 0 01-.71.29z"/></symbol><symbol viewBox="0 0 17 17" id="search" xmlns="http://www.w3.org/2000/svg"><path d="M16.71 15.29l-3-3a7.68 7.68 0 10-1.41 1.41l3 3a1 1 0 001.42 0 1 1 0 00-.01-1.41zM2 7.67a5.67 5.67 0 119.68 4 5.66 5.66 0 01-9.68-4z"/></symbol><symbol viewBox="0 0 36 36" id="success" xmlns="http://www.w3.org/2000/svg"><path d="M18 0a18 18 0 1018 18A18 18 0 0018 0zm-2.18 25L10 19.05l1.58-1.62 4.24 4.32L25.4 12l1.6 1.61z"/></symbol><symbol viewBox="0 0 18.02 15.12" id="telegram" xmlns="http://www.w3.org/2000/svg"><path d="M6.78 14.21L7.06 10l7.68-6.92c.34-.31-.07-.46-.52-.19l-9.48 6-4.1-1.33c-.88-.25-.89-.86.2-1.3L16.81.1c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L9.6 11.86l-2 1.93a1.06 1.06 0 01-.82.42z"/></symbol><symbol viewBox="0 0 22 17" id="twitter" xmlns="http://www.w3.org/2000/svg"><path d="M21.46 2a8.57 8.57 0 01-2.46.69A4.3 4.3 0 0020.88.31a8.64 8.64 0 01-2.72 1.05A4.22 4.22 0 0015 0a4.28 4.28 0 00-4.27 4.29 4.46 4.46 0 00.11 1A12.19 12.19 0 012 .79a4.24 4.24 0 00-.58 2.15A4.22 4.22 0 003.33 6.5 4.24 4.24 0 011.38 6a4.29 4.29 0 003.44 4.21 4.21 4.21 0 01-1.93.07 4.28 4.28 0 004 3 8.52 8.52 0 01-5.33 1.84 8.72 8.72 0 01-1-.06A12.14 12.14 0 007.12 17 12.14 12.14 0 0019.33 4.79v-.56A8.57 8.57 0 0021.46 2z"/></symbol><symbol viewBox="0 0 20 12" id="vk" xmlns="http://www.w3.org/2000/svg"><path d="M17.54 7.6a8.51 8.51 0 011.92 2.22c.64 1.06-.7 1.14-.7 1.14h-2.58a1.81 1.81 0 01-1.28-.39c-1-.66-1.9-2.39-2.59-2.16s-.69 1.78-.69 1.78a.62.62 0 01-.16.39.65.65 0 01-.53.12H9.78A6.24 6.24 0 015 8.67C2.55 6.13.39 1.13.39 1.13S.27.83.4.66 1 .5 1 .5h2.73a.72.72 0 01.44.16.89.89 0 01.24.34 17.61 17.61 0 001 2.13c1.15 2 1.68 2.42 2.05 2.21.6-.31.43-2.81.43-2.81a2.76 2.76 0 00-.29-1.31 1.3 1.3 0 00-.82-.43c-.16 0 .1-.38.43-.55A6.58 6.58 0 019.62 0 4.85 4.85 0 0111 .13c1 .23.63 1.12.63 3.24 0 .69-.1 1.63.37 2 .21.14.73 0 2-2.17A17.63 17.63 0 0015.06.89a.89.89 0 01.25-.31 1 1 0 01.38-.08h2.9s.88-.1 1 .29-.33 1.38-1.52 3c-1.92 2.55-2.14 2.31-.53 3.81z" fill-rule="evenodd"/></symbol><symbol viewBox="0 0 20 16" id="youtube" xmlns="http://www.w3.org/2000/svg"><path d="M8 12.5v-9L14 8zM18 .4a55.36 55.36 0 00-8-.4 58.24 58.24 0 00-8 .38C.44.9 0 4.4 0 8s.44 7.1 2 7.61a56 56 0 008 .39 56 56 0 008-.39c1.56-.51 2-4 2-7.61S19.56.91 18 .4z"/></symbol></svg>    </div>
+
+    <div class="page-content">
+        <header class="page-header  page-header--dark ">
+            <div class="container">
+                <div class="page-header__row">
+                    <div class="page-header__menu">
+                        <div class="page-header__menu-inner">
+                            <div class="container">
+                                <form action="/" method="POST" class="page-header__search-form">
+                                    <input type="search" class="page-header__search-form-input" placeholder="Поиск">
+                                    <button class="page-header__search-form-submit" type="submit">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                            <use xlink:href="#search"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                                <div class="page-header__menu-row">
+                                    <div class="page-header__menu-solutions">
+                                        <h3 class="page-header__menu-solutions-heading">
+                                            <div class="page-header__menu-solutions-heading-text">
+                                                Решения
+                                            </div>
+        
+                                        </h3>
+                                        <ul class="page-header__menu-solutions-list">
+                                            <li class="page-header__menu-solutions-list-item">
+                                                <a href="#" class="page-header__menu-solutions-card">
+                                                    Разработка ПО, стартапы, большие данные
+        
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                        <use xlink:href="#arrow-diagonal"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-solutions-list-item">
+                                                <a href="#" class="page-header__menu-solutions-card">
+                                                    IT-инфраструктура
+                                                    и телекоммуникационные решения
+        
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                        <use xlink:href="#arrow-diagonal"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-solutions-list-item">
+                                                <a href="#" class="page-header__menu-solutions-card">
+                                                    Аутсорсинг, сервисные услуги и IaaS
+        
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                        <use xlink:href="#arrow-diagonal"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-solutions-list-item">
+                                                <a href="#" class="page-header__menu-solutions-card">
+                                                    Инженерные системы и управление строительством
+        
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                        <use xlink:href="#arrow-diagonal"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-solutions-list-item">
+                                                <a href="#" class="page-header__menu-solutions-card">
+                                                    Консалтинг
+                                                    и бизнес-приложения
+        
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-diagonal">
+                                                        <use xlink:href="#arrow-diagonal"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <nav class="page-header__menu-nav">
+                                        <a href="about.html" class="page-header__menu-nav-link">
+                                            <div class="page-header__menu-nav-link-text">
+                                                О компании
+                                            </div>
+                                        </a>
+                                        <a href="projects.html" class="page-header__menu-nav-link">
+                                            <div class="page-header__menu-nav-link-text">
+                                                Проекты
+                                            </div>
+                                        </a>
+                                        <a href="industries.html" class="page-header__menu-nav-link">
+                                            <div class="page-header__menu-nav-link-text">
+                                                Отрасли
+                                            </div>
+                                        </a>
+                                        <a href="career.html" class="page-header__menu-nav-link">
+                                            <div class="page-header__menu-nav-link-text">
+                                                Карьера
+                                            </div>
+                                        </a>
+                                        <a href="contacts.html" class="page-header__menu-nav-link">
+                                            <div class="page-header__menu-nav-link-text">
+                                                Контакты
+                                            </div>
+                                        </a>
+                                        <a href="partners.html" class="page-header__menu-nav-link">
+                                            <div class="page-header__menu-nav-link-text">
+                                                Партнеры
+                                            </div>
+                                        </a>
+                                        <a href="press-center.html" class="page-header__menu-nav-link">
+                                            <div class="page-header__menu-nav-link-text">
+                                                Пресс-центр
+                                            </div>
+                                        </a>
+        
+                                    </nav>
+                                    <div class="page-header__menu-contacts">
+                                        <a href="tel:+7 495 777-10-95" class="page-header__menu-phone-link">
+                                            +7 495 777-10-95
+                                        </a>
+                                        <a href="#" class="page-header__mail-link">
+                                            income@i-teco.ru
+                                        </a>
+                                        <ul class="page-header__menu-social-list">
+                                            <li class="page-header__menu-social-list-item">
+                                                <a href="#" class="page-header__menu-social-link">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                        <use xlink:href="#facebook"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-social-list-item">
+                                                <a href="#" class="page-header__menu-social-link">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-twitter">
+                                                        <use xlink:href="#twitter"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-social-list-item">
+                                                <a href="#" class="page-header__menu-social-link">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-youtube">
+                                                        <use xlink:href="#youtube"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-social-list-item">
+                                                <a href="#" class="page-header__menu-social-link">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                                                        <use xlink:href="#instagram"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-header__menu-social-list-item">
+                                                <a href="#" class="page-header__menu-social-link">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-telegram">
+                                                        <use xlink:href="#telegram"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="page-header__logo">
+        
+        
+        
+        
+                        <img src="img/logo-dark.svg" alt="" class="page-header__logo-image page-header__logo-image--dark"
+                            width="120">
+        
+                        <img src="img/logo.svg" alt="" class="page-header__logo-image" width="120">
+        
+                    </a>
+        
+                    <nav class="page-header__nav">
+                        <ul class="page-header__nav-list">
+                            <li class="page-header__nav-list-item">
+                                <a href="about.html" class="page-header__nav-link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="projects.html" class="page-header__nav-link">
+                                    Проекты
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="industries.html" class="page-header__nav-link">
+                                    Отрасли
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="career.html" class="page-header__nav-link">
+                                    Карьера
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="contacts.html" class="page-header__nav-link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="partners.html" class="page-header__nav-link">
+                                    Партнеры
+                                </a>
+                            </li>
+                            <li class="page-header__nav-list-item">
+                                <a href="press-center.html" class="page-header__nav-link">
+                                    Пресс-центр
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="page-header__burger">
+        
+                    </button>
+                    <a href="#" class="page-header__search-btn">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </a>
+                    <a href="#demo" class="page-header__contact-link js-open-modal">
+                        Связаться
+                    </a>
+                </div>
+            </div>
+        </header>        <main class="page-main">
+
+<section class="partner">
+    <div class="container">
+        <div class="inner-container">
+
+
+            <div class="partner__heading-block">
+                <div class="partner__breadcrumbs">
+                    <a href="#">
+                        Главная
+                    </a><br>/ <a href="#">
+                        Карьера
+                    </a>
+                </div>
+                <div class="partner__top-row">
+                    <img src="img/partners/cisco.jpg" alt="" class="partner__logo">
+                    <div class="partner__info">
+                        <h1 class="partner__name">
+                            CISCO
+                        </h1>
+                        <div class="partner__description">
+                            <p>
+                                Американская транснациональная компания, разрабатывающая и продающая сетевое
+                                оборудование,
+                                предназначенное в основном для крупных организаций и телекоммуникационных предприятий.
+                                Одна
+                                из крупнейших в мире компаний, специализирующихся в области высоких технологий.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vacancy__details">
+                <div class="vacancy__details-block">
+                    <h3 class="vacancy__details-block-heading">
+                        Статусы:
+                    </h3>
+                    <ul class="vacancy__details-block-list">
+                        <li class="vacancy__details-block-list-item">
+                            Cisco Gold Certified Partner – наивысший статус, подтверждаемый ежегодно с 2006
+
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Customer Satisfaction Excellence – статус удовлетворенности клиентов, подтверждаемый
+                            ежегодно с
+                            2010
+                        </li>
+                    </ul>
+                </div>
+                <div class="vacancy__details-block">
+                    <h3 class="vacancy__details-block-heading">
+                        Награды и достижения:
+                    </h3>
+                    <ul class="vacancy__details-block-list">
+                        <li class="vacancy__details-block-list-item">
+                            В 2016 компания «РАССЭ» (ГК «Ай-Теко») успешно прошла ресертификационный аудит Cisco без
+                            единого
+                            замечания
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Эксперты компании имеют свыше 100 уникальных сертификатов Cisco, включая международные Cisco
+                            Certified Internetwork Expert (CCIE)
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Service Provider Partner of the Year (итоги 2010)
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Технологический партнер года в области оптических систем/Technology Excellence – Optical
+                            (итоги
+                            2009)
+                        </li>
+                    </ul>
+                </div>
+                <div class="vacancy__details-block">
+                    <h3 class="vacancy__details-block-heading">
+                        Специализации и&nbsp;авторизации:
+                    </h3>
+                    <ul class="vacancy__details-block-list">
+                        <li class="vacancy__details-block-list-item">
+                            Advanced Collaboration Architecture Specialization
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Advanced Core and WAN Specialization
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Advanced Data Center Architecture Specialization
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Advanced Enterprise Networks Architecture Specialization
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Advanced Security Architecture Specialization
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Advanced Unified Access Specialization
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Cisco Meeting Server formerly Acano
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Flexpod Premium Partner
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            Hospitality_Solutions_Partner
+                        </li>
+                        <li class="vacancy__details-block-list-item">
+                            PSPP Local
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="solution-we-can">
+    <div class="container">
+        <div class="inner-container">
+
+
+            <a href="#demo" class="solution-we-can__card js-open-modal">
+                <div class="solution-we-can__card-content">
+                    <h2 class="solution-we-can__card-heading">
+                        ОБРАТНАЯ СВЯЗЬ
+                    </h2>
+                    <div class="solution-we-can__card-text">
+                        <p>
+                            АйТеко умеет все.<br> Доверьте нам ваши задачи!
+                        </p>
+                    </div>
+                </div>
+                <div class="solution-we-can__card-arrow">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+        </main>
+
+
+                <footer class="page-footer">
+                    <div class="page-footer__inner">
+                
+                
+                        <div class="container">
+                            <div class="inner-container">
+                                <div class="page-footer__top-row">
+                                    <a href="#" class="page-footer__logo">
+                                        <img src="img/iteko-simple-logo.png" alt="" class="page-footer__logo-image">
+                                    </a>
+                                    <nav class="page-footer__nav">
+                                        <a href="#" class="page-footer__nav-link">
+                                            Решения
+                                        </a>
+                                        <a href="#" class="page-footer__nav-link">
+                                            Продукты
+                                        </a>
+                                        <a href="#" class="page-footer__nav-link">
+                                            Проекты
+                                        </a>
+                                        <a href="#" class="page-footer__nav-link">
+                                            О компании
+                                        </a>
+                                        <a href="#" class="page-footer__nav-link">
+                                            Карьера
+                                        </a>
+                                        <a href="#" class="page-footer__nav-link">
+                                            Партнеры
+                                        </a>
+                                        <a href="#" class="page-footer__nav-link">
+                                            Пресс-центр
+                                        </a>
+                                        <a href="#" class="page-footer__nav-link">
+                                            Контакты
+                                        </a>
+                                    </nav>
+                                    <div class="page-footer__contacts">
+                                        <div class="page-footer__contacts-main">
+                                            <a href="tel:+74957771095" class="page-footer__phone-link">
+                                                +7 495 777-10-95
+                                            </a>
+                                            <a href="#" class="page-footer__mail-link">
+                                                income@i-teco.ru
+                                            </a>
+                                            <div class="page-footer__address">
+                                                Ул. Кедрова, 15, Москва, 117036
+                                            </div>
+                                            <ul class="page-footer__social-list">
+                                                <li class="page-footer__social-list-item">
+                                                    <a href="#" class="page-footer__social-link">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-fb">
+                                                            <use xlink:href="#fb"></use>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li class="page-footer__social-list-item">
+                                                    <a href="#" class="page-footer__social-link">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-twitter">
+                                                            <use xlink:href="#twitter"></use>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li class="page-footer__social-list-item">
+                                                    <a href="#" class="page-footer__social-link">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-youtube">
+                                                            <use xlink:href="#youtube"></use>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li class="page-footer__social-list-item">
+                                                    <a href="#" class="page-footer__social-link">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                                                            <use xlink:href="#instagram"></use>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li class="page-footer__social-list-item">
+                                                    <a href="#" class="page-footer__social-link">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-telegram">
+                                                            <use xlink:href="#telegram"></use>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="page-footer__contacts-additional">
+                                            <div class="page-footer__contacts-additional-item">
+                                                <h5 class="page-footer__contacts-additional-item-title">
+                                                    Тех.поддержка
+                                                </h5>
+                                                <a href="tel:+78002001095" class="page-footer__contacts-additional-item-link">
+                                                    8 800 200-10-95
+                                                </a>
+                                            </div>
+                                            <div class="page-footer__contacts-additional-item">
+                                                <h5 class="page-footer__contacts-additional-item-title">
+                                                    Пресс-служба
+                                                </h5>
+                                                <a href="mailto:press@i-teco.ru" class="page-footer__contacts-additional-item-link">
+                                                    press@i-teco.ru
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-footer__bottom-row">
+                                    <div class="page-footer__copyright">
+                                        © i-teco, 2020
+                                    </div>
+                                    <a href="#" class="page-footer__policy">
+                                        Обработка персональных данных
+                                    </a>
+                                    <a href="#" class="page-footer__info">
+                                        Раскрытие информации
+                                    </a>
+                                    <a href="#" class="page-footer__made-by">
+                                        Создание сайта
+                                        <img src="img/mark-weber-logo.svg" alt="" class="page-footer__made-by-image">
+                                    </a>
+                                </div>
+                                <div class="page-footer__remark">
+                                    <p>
+                                        Поскольку информационные активы любой организации нуждаются в соответствующей защите, Политика
+                                        информационной безопасности АО «Ай-Теко» — один из основополагающих документов компании.
+                                        А Политика
+                                        организации обработки и обеспечения безопасности персональных данных в АО «Ай-Теко» определяет
+                                        соблюдение принципов законности, конфиденциальности и безопасности при обработке персональных
+                                        данных.
+                                        В сфере производственной безопасности обеспечивается приоритет сохранения жизни и здоровья
+                                        работников
+                                        перед результатом хозяйственной деятельности, что нашло отражение в документе Политика
+                                        АО «Ай-Теко»
+                                        в области охраны труда. Мы дорожим репутацией компании с ответственным подходом к решению
+                                        вопросов
+                                        обеспечения экологической безопасности, зафиксировав это в документе Политика АО «Ай-Теко»
+                                        в области
+                                        охраны окружающей среды.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>        <div class="modal js-modal" id="demo">
+            <div class="modal__inner modal__inner--demo">
+                <button class="modal__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <form action="/" method="POST" class="modal__demo-form" data-need-validation id="demo-form">
+                    <h3 class="modal__demo-form-small-heading">
+                        Заявка на демодоступ
+                    </h3>
+                    <h2 class="modal__demo-form-large-heading">
+                        Заполните форму ниже,
+                        и мы вскоре свяжемся с вами
+                    </h2>
+                    <div class="modal__demo-form-fields">
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="name" placeholder="ФИО" required>
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <div class="modal__custom-select" id="theme-field">
+                                <select name="theme" class="js-custom-select" required
+                                    data-parsley-errors-container="#theme-field" data-parsley-class-handler="#theme-field">
+                                    <option value="" placeholder>Тема обращения</option>
+                                    <option value="1">Потенциальный клиент</option>
+                                    <option value="2">Запрос от СМИ</option>
+                                    <option value="3">Запрос по аналитике</option>
+                                    <option value="4">Карьера</option>
+                                    <option value="5">Технологическое партнерство</option>
+                                    <option value="6">Вопрос по работе сайта</option>
+                                    <option value="7">Другое</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="tel" class="modal__demo-form-input js-phone-input" name="phone" placeholder="Телефон"
+                                required data-parsley-phone>
+                        </div>
+                        <div class="modal__demo-form-field modal__demo-form-field--high">
+                            <textarea name="comment" class="modal__demo-form-input"
+                                placeholder="Дополнительная информация"></textarea>
+                        </div>
+        
+                        <div class="modal__demo-form-field">
+                            <input type="email" class="modal__demo-form-input" name="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="role" placeholder="Должность">
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="company" placeholder="Компания">
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <label class="modal__file-upload js-file-upload">
+                                <input type="file" name="file" class="modal__file-upload-input"
+                                    accept=".pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                                <span class="modal__file-upload-text js-file-upload-text">
+                                    Перетащите файл (pdf, doc, docx,XLS)
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal__demo-form-controls">
+                        <label class="modal__demo-form-checkbox">
+                            <input type="checkbox" name="policy" class="modal__demo-form-checkbox-input" checked required>
+                            <span class="modal__demo-form-checkbox-mark">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                    <use xlink:href="#checkmark"></use>
+                                </svg>
+                            </span>
+                            <span class="modal__demo-form-checkbox-text">
+                                Даю согласие на обработку моих персональных данных, в соответствии с Федеральным законом от
+                                27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в
+                                <a href="#">Согласии на обработку персональных данных
+                                </a>
+                            </span>
+                        </label>
+                        <button type="submit" class="modal__demo-form-submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="modal js-modal" id="demo-success">
+            <div class="modal__inner modal__inner--demo">
+                <button class="modal__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <div class="modal__demo-form">
+                    <h3 class="modal__demo-form-small-heading">
+                        Заявка отправлена
+                    </h3>
+                    <div class="modal__demo-success">
+                        <h4 class="modal__demo-success-heading">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-success">
+                                <use xlink:href="#success"></use>
+                            </svg>
+                            Спасибо за вашу заявку
+                        </h4>
+                        <div class="modal__demo-success-text">
+                            <p>
+                                В ближайшее время с вами свяжется наш специалист – будьте на связи
+                            </p>
+                        </div>
+                        <a href="#" class="modal__demo-success-back-link js-close-modal">
+                            Вернуться на сайт
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        <div class="modal js-modal" id="demo-failure">
+            <div class="modal__inner modal__inner--demo">
+                <button class="modal__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <div class="modal__demo-form">
+                    <h3 class="modal__demo-form-small-heading modal__demo-form-small-heading--violet">
+                        Заявка не отправлена
+                    </h3>
+                    <div class="modal__demo-success">
+                        <h4 class="modal__demo-success-heading modal__demo-success-heading--violet">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-failure">
+                                <use xlink:href="#failure"></use>
+                            </svg>
+                            Ваша заявка не отправлена
+                        </h4>
+                        <div class="modal__demo-success-text">
+                            <p>
+                                Попробуйте повторить операцию.
+                                Если не получается снова, напишите
+                                нам <a href="mailto:income@i-teco.ru">income@i-teco.ru</a> и мы вам поможем
+                            </p>
+                        </div>
+                        <a href="#demo" class="modal__demo-success-back-link js-open-modal">
+                            Повторить
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="modal js-modal" id="registration-modal">
+            <div class="modal__inner modal__inner--demo">
+                <button class="modal__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <form action="/" method="POST" class="modal__demo-form" data-need-validation id="registration-form">
+                    <h3 class="modal__demo-form-small-heading">
+                        Регистрация
+                    </h3>
+                    <h2 class="modal__demo-form-large-heading">
+                        Заполните форму ниже, <br>
+                        и мы вскоре свяжемся с вами
+                    </h2>
+                    <div class="modal__demo-form-fields">
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="name" placeholder="ФИО" required>
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="organization" placeholder="Организация">
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="tel" class="modal__demo-form-input js-phone-input" name="phone" placeholder="Телефон"
+                                required data-parsley-phone>
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="text" class="modal__demo-form-input" name="role" placeholder="Должность">
+                        </div>
+                        <div class="modal__demo-form-field">
+                            <input type="email" class="modal__demo-form-input" name="email" placeholder="E-mail" required>
+                        </div>
+                    </div>
+                    <div class="modal__demo-form-controls">
+                        <label class="modal__demo-form-checkbox">
+                            <input type="checkbox" name="policy" class="modal__demo-form-checkbox-input" checked required>
+                            <span class="modal__demo-form-checkbox-mark">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                    <use xlink:href="#checkmark"></use>
+                                </svg>
+                            </span>
+                            <span class="modal__demo-form-checkbox-text">
+                                Даю согласие на обработку моих персональных данных, в соответствии с Федеральным законом от
+                                27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в
+                                <a href="#">Согласии на обработку персональных данных
+                                </a>
+                            </span>
+                        </label>
+                        <button type="submit" class="modal__demo-form-submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+        <div class="modal js-modal" id="registration-success">
+            <div class="modal__inner modal__inner--demo">
+                <button class="modal__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <div class="modal__demo-form">
+                    <h3 class="modal__demo-form-small-heading">
+                        Регистрация прошла успешно
+                    </h3>
+                    <div class="modal__demo-success">
+                        <h4 class="modal__demo-success-heading">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-success">
+                                <use xlink:href="#success"></use>
+                            </svg>
+                            Спасибо за регистрацию!
+                        </h4>
+                        <div class="modal__demo-success-text">
+                            <p>
+                                Спасибо за регистрацию на вебинар «Защита данных без компромиссов. Технологии NetApp и сервисы
+                                АйТеко». Вы получите приглашение со ссылкой за день до мероприятия.
+                            </p>
+                        </div>
+                        <a href="#" class="modal__demo-success-back-link js-close-modal">
+                            Вернуться на сайт
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </div>        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=0e89b5e9-04ad-4f20-a1a5-c6102dbb6ad8
+&lang=ru_RU" type="text/javascript">
+</script>
+        <script src="assets/js/map.js"></script>
+    </div>
+</body>
+
+</html>
