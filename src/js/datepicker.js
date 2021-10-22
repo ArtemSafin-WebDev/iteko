@@ -7,7 +7,7 @@ export default function datepicker() {
     elements.forEach(element => {
         $(element)
             .datepicker({
-                format: 'mm-dd-yyyy',
+                format: 'dd.mm.yyyy',
                 container: '#picker-container',
                 language: 'ru',
                 autoclose: true

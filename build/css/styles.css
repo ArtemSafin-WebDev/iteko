@@ -212,7 +212,7 @@
   top: 50%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
   display: -webkit-box;
@@ -13088,7 +13088,7 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.press-center__categories-link:last-child {
+.press-center__categories-link:last-of-type {
   margin-right: 0;
 }
 @media only screen and (max-width: 640px) {
@@ -13098,8 +13098,8 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
     white-space: nowrap;
     margin-right: 1.5rem;
   }
-  .press-center__categories-link:last-child {
-    margin-right: 1.5rem;
+  .press-center__categories-link:last-of-type {
+    margin-right: 0;
   }
 }
 .press-center__categories-link:link, .press-center__categories-link:visited {
@@ -13466,8 +13466,8 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
           justify-content: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  background: #E5E8EC;
-  color: #1C0F52;
+  background: #e5e8ec;
+  color: #1c0f52;
   font-size: 1.3rem;
   line-height: 120%;
 }
@@ -13572,23 +13572,21 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 4rem;
-  grid-column-gap: 8rem;
   grid-auto-flow: dense;
 }
-@media only screen and (max-width: 1400px) {
-  .press-center__catalog-list {
-    grid-gap: 6rem;
-  }
+.press-center__catalog-list--three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media only screen and (max-width: 768px) {
   .press-center__catalog-list {
     grid-gap: 3rem;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media only screen and (max-width: 640px) {
   .press-center__catalog-list {
     grid-gap: 4rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
@@ -13602,7 +13600,12 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
           flex-direction: column;
 }
 .press-center__catalog-list-item--fullwidth {
-  grid-column: 1/-1;
+  grid-column: span 2;
+}
+@media only screen and (max-width: 640px) {
+  .press-center__catalog-list-item--fullwidth {
+    grid-column: span 1;
+  }
 }
 
 .press-center__catalog-card {
