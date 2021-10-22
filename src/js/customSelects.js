@@ -1,6 +1,6 @@
 import Choices from 'choices.js';
 
-export default function customSelects() {
+function initializeSelects() {
     const customSelects = Array.from(document.querySelectorAll('.js-custom-select'));
 
     customSelects.forEach(select => {
@@ -29,7 +29,10 @@ export default function customSelects() {
                 };
             }
         });
-
-      
     });
+}
+
+export default function customSelects() {
+    window.initializeSelects = initializeSelects;
+    initializeSelects();
 }
