@@ -24,6 +24,10 @@
     pointer-events: none;
   }
 
+  &.mod-no-show {
+    display: none;
+  }
+
   &.mod-block-2 {
     background: url('../img/home-page-bg-block-2.png'), url('../img/noise-pattern.png'), radial-gradient(at right, #00b77a, #008f61);
     background-repeat: no-repeat, repeat;

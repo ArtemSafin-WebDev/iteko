@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Swiper 6.8.4
+ * Swiper 6.8.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -8,7 +8,7 @@
  *
  * Released under the MIT License
  *
- * Released on: August 23, 2021
+ * Released on: July 22, 2021
  */
 @font-face {
   font-family: "swiper-icons";
@@ -212,7 +212,7 @@
   top: 50%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
   cursor: pointer;
   display: -webkit-box;
@@ -374,10 +374,6 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
-}
-
-.swiper-pagination-bullet:only-child {
-  display: none !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -3162,6 +3158,9 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 .intro.mod-hide {
   opacity: 0;
   pointer-events: none;
+}
+.intro.mod-no-show {
+  display: none;
 }
 .intro.mod-block-2 {
   background: url("../img/home-page-bg-block-2.png"), url("../img/noise-pattern.png"), radial-gradient(at right, #00b77a, #008f61);
