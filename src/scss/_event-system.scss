@@ -59,6 +59,19 @@
         }
     }
 
+    a {
+        color: var(--primary-color);
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            text-decoration: underline;
+        }
+    }
+
     ul {
         li {
             margin-bottom: 1rem;

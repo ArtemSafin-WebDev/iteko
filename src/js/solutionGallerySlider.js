@@ -7,16 +7,17 @@ export default function solutionGallerySlider() {
 
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
+        const slides = Array.from(element.querySelectorAll('.swiper-slide'));
 
         new Swiper(container, {
             slidesPerView: 1,
             spaceBetween: 0,
             watchOverflow: true,
-            loop: true,
+            loop: slides > 3 ? true : false,
             speed: 400,
             slideToClickedSlide: true,
-            loopedSlides: 4,
-            threshold: window.matchMedia('(max-width: 640px)').matches ? 0 : 4,
+            loopedSlides: 3,
+            threshold: window.matchMedia('(max-width: 640px)').matches ? 0 : 3,
 
             navigation: {
                 nextEl: element.querySelector('.solution-gallery__slider-arrow--next'),
