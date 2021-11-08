@@ -17,20 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const officeRadios = Array.from(document.querySelectorAll('.contacts__map-offices-checkbox-input'));
             const officesForm = document.querySelector('.contacts__map-offices');
 
-            const offices = [
-                {
-                    id: 1,
-                    coords: [55.683508, 37.573968]
-                },
-                {
-                    id: 2,
-                    coords: [55.673905, 37.559541]
-                },
-                {
-                    id: 3,
-                    coords: [55.682717, 37.565237]
-                }
-            ];
+           
 
             const objectManager = new ymaps.ObjectManager({
                 clusterize: false,
