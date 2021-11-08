@@ -15,6 +15,93 @@
 .page-header__row {
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.page-header__dropdown-search-form-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    margin-top: 3rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+
+    @include breakpoint(mobile) {
+        margin-top: 1.5rem;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+}
+
+.page-header__dropdown-search-form {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: rgba(white, 0.03);
+    padding: 1.2rem 2.4rem;
+    margin-bottom: 8rem;
+    min-height: 5.2rem;
+
+    background-color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        padding: 1rem 1.5rem;
+        min-height: 3.8rem;
+        background: rgba(white, 0.07);
+
+        background-color: var(--primary-color);
+        margin-bottom: 2.8rem;
+    }
+}
+
+.page-header__dropdown-search-form-input {
+    width: 30%;
+    flex-grow: 1;
+    font-size: 2rem;
+    line-height: 140%;
+    color: white;
+
+    @include placeholder {
+        color: rgba(white, 0.7);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.5rem;
+        line-height: 140%;
+    }
+}
+
+.page-header__dropdown-search-form-submit {
+    flex-shrink: 0;
+    margin-left: 3rem;
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        display: block;
+        fill: rgba(white, 0.4);
+        transition: fill 0.2s;
+
+       
+        fill: rgba(white, 0.7);
+        @include breakpoint(mobile) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            fill: white;
+        }
+    }
 }
 
 .page-header__logo {
@@ -229,7 +316,15 @@
     .no-touch &:hover {
         background: rgba(white, 0.1);
     }
+
+    &.active {
+        background: rgba(white, 0.1);
+    }
     .no-touch .page-header--dark &:hover {
+        background: rgba(#1b1e1d, 0.05);
+    }
+
+    .page-header--dark &.active {
         background: rgba(#1b1e1d, 0.05);
     }
 

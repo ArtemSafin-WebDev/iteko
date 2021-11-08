@@ -21,6 +21,7 @@
         <header class="page-header  page-header--dark ">
             <div class="container">
                 <div class="page-header__row">
+        
                     <div class="page-header__menu">
                         <div class="page-header__menu-inner">
                             <div class="container">
@@ -231,6 +232,16 @@
                     <button class="page-header__burger">
         
                     </button>
+                    <div class="page-header__dropdown-search-form-wrapper">
+                        <form action="/" method="POST" class="page-header__dropdown-search-form">
+                            <input type="search" class="page-header__dropdown-search-form-input" placeholder="Поиск">
+                            <button class="page-header__dropdown-search-form-submit" type="submit">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
                     <a href="#" class="page-header__search-btn">
                         <svg width="14" height="14" aria-hidden="true" class="icon-search">
                             <use xlink:href="#search"></use>
@@ -260,6 +271,7 @@
                     Контакты
                 </h1>
             </div>
+        
             <div class="contacts__map-block js-contacts-map">
                 <script>
                     const offices = [
