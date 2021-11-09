@@ -41,13 +41,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     .parsley()
                     .isValid()
             ) {
-                registrationForm.reset();
-                $(registrationForm)
-                    .parsley()
-                    .reset();
-                if (typeof window.openModal === 'function') {
-                    window.openModal('#registration-success');
-                }
+                let options = {
+                    success: function(data){
+                        if (data.ID > 0) {
+                            registrationForm.reset();
+                            $(registrationForm)
+                                .parsley()
+                                .reset();
+                            if (typeof window.openModal === 'function') {
+                                window.openModal('#registration-success');
+                            }
+                        } else {
+                            if (typeof window.openModal === 'function') {
+                                window.openModal('#demo-failure');
+                            }
+                        }
+                    },
+                    dataType:  'json',
+                };
+
+                $(registrationForm).ajaxSubmit(options);
             }
         });
     }
