@@ -199,6 +199,7 @@
     max-height: 50%;
     flex-shrink: 0;
     display: block;
+    object-fit: contain;
 
     @include breakpoint(mobile) {
         max-width: 3.2rem;

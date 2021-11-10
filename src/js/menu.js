@@ -22,6 +22,10 @@ export default function menu() {
             activeTl.kill();
         }
 
+        if (typeof window.closeSearchDropdown === 'function') {
+            window.closeSearchDropdown();
+        }
+
         lockScroll(menu);
         document.body.classList.add('menu-open');
 

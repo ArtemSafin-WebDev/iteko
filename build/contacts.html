@@ -21,6 +21,7 @@
         <header class="page-header  page-header--dark ">
             <div class="container">
                 <div class="page-header__row">
+        
                     <div class="page-header__menu">
                         <div class="page-header__menu-inner">
                             <div class="container">
@@ -231,6 +232,16 @@
                     <button class="page-header__burger">
         
                     </button>
+                    <div class="page-header__dropdown-search-form-wrapper">
+                        <form action="/" method="POST" class="page-header__dropdown-search-form">
+                            <input type="search" class="page-header__dropdown-search-form-input" placeholder="Поиск">
+                            <button class="page-header__dropdown-search-form-submit" type="submit">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
                     <a href="#" class="page-header__search-btn">
                         <svg width="14" height="14" aria-hidden="true" class="icon-search">
                             <use xlink:href="#search"></use>
@@ -260,7 +271,24 @@
                     Контакты
                 </h1>
             </div>
+
             <div class="contacts__map-block js-contacts-map">
+                <script>
+                    const offices = [
+                        {
+                            id: 1,
+                            coords: [55.683508, 37.573968]
+                        },
+                        {
+                            id: 2,
+                            coords: [55.673905, 37.559541]
+                        },
+                        {
+                            id: 3,
+                            coords: [55.682717, 37.565237]
+                        }
+                    ];
+                </script>
                 <div class="contacts__map">
 
                 </div>
@@ -285,7 +313,11 @@
                                         <span class="contacts__map-offices-checkbox-address">
                                             117036, г. Москва, ул. Кедрова, 15<br>
                                             Факс: +7 (495) 777-10-96<br>
-                                            E-mail: income@i-teco.ru
+                                            E-mail:
+                                            <a href="mailto:income@i-teco.ru">
+                                                income@i-teco.ru
+                                            </a>
+
                                         </span>
                                     </span>
                                 </label>
@@ -332,7 +364,7 @@
                                     </span>
                                 </label>
                             </li>
-                          
+
                         </ul>
                     </div>
                 </form>
@@ -350,11 +382,11 @@
                                     <h4 class="contacts__offices-card-title">
                                         Санкт-Петербург
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         197342, г. Санкт-Петербург,
                                         Ушаковская набережная, 5
                                         Телефон: +7 (812) 922 5201​​
-                                        E-mail: dragni@i-teco.ru
+                                        E-mail: <a href="mailto:dragni@i-teco.ru">dragni@i-teco.ru</a>
                                     </div>
                                 </div>
                             </li>
@@ -363,10 +395,12 @@
                                     <h4 class="contacts__offices-card-title">
                                         Нижний Новгород
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         ул. Родионова, 23
                                         Телефон: +7 (831) 467-80-84
-                                        E-mail: info_nnov@i-teco.ru
+                                        E-mail: <a href="mailto:info_nnov@i-teco.ru">
+                                            info_nnov@i-teco.ru
+                                        </a>
                                     </div>
                                 </div>
                             </li>
@@ -375,7 +409,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Татарстан
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         г. Казань, ул. Н. Ершова, 1а
                                         Телефон: +7 (843) 279-34-39
                                     </div>
@@ -395,7 +429,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Единый телефон поддержки для клиентов АйТеко
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Телефон: 8 800 200-10-95 (звонки из регионов — бесплатно)
                                         E-mail: support@i-teco.ru
                                     </div>
@@ -406,7 +440,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Ростов-на-Дону
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Ростов-на-Дону, пр. Космонавтов, 2/2, литер «В», офис 516
                                     </div>
                                 </div>
@@ -416,7 +450,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Ярославль
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         150054, Ярославль, пр-т Ленина, 44, офис 305
                                     </div>
                                 </div>
@@ -426,7 +460,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Красноярск
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
 
                                         660028, Красноярск, ул. Телевизорная, 1, стр. 14
                                     </div>
@@ -439,7 +473,7 @@
 
 
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
 
                                         Иркутск, ул. Декабрьских Событий, 125, офис 402
                                     </div>
@@ -452,7 +486,7 @@
 
 
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
 
                                         Санкт-Петербург, пр. Стачек, 47, корп. 2, лит. «А»
                                     </div>
@@ -463,7 +497,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Пермь
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         614000, Пермь, ул. Кирова, 37, офис 410
                                     </div>
                                 </div>
@@ -473,7 +507,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Воронеж
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Воронеж, ул. Беговая, 209
                                     </div>
                                 </div>
@@ -483,7 +517,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Нижний Новгород
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Нижний Новгород,
                                         ул. Монастырка, 1В
                                     </div>
@@ -494,7 +528,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Норильск
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Норильск, ул. Орджоникидзе, 20/14
                                     </div>
                                 </div>
@@ -504,7 +538,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Новосибирск
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Новосибирск, ул. Добролюбова, 16
                                     </div>
                                 </div>
@@ -514,7 +548,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Екатеринбург
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Екатеринбург,
                                         ул. Горького, 63, офис 501
                                     </div>
@@ -525,7 +559,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Сочи
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Сочи, ул. Ленина, 2
                                     </div>
                                 </div>
@@ -535,7 +569,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Саранск
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Саранск,
                                         ул. Васенко, 15А
                                     </div>
@@ -546,7 +580,7 @@
                                     <h4 class="contacts__offices-card-title">
                                         Тюменская область
                                     </h4>
-                                    <div class="contacts__offices-card-address">
+                                    <div class="default-content contacts__offices-card-address">
                                         Тюменская область, Ханты-Мансийский автономный округ-Югра, Нижневартовский
                                         район, поселок Излучинск, Промзона, Нижневартовская ГРЭС
                                     </div>

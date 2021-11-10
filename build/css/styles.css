@@ -2214,6 +2214,15 @@ select:-webkit-autofill:focus {
     color: var(--text-color);
   }
 }
+.default-content a:where(:not([class])) {
+  color: var(--primary-color);
+}
+.default-content a:where(:not([class])):link, .default-content a:where(:not([class])):visited {
+  color: var(--primary-color);
+}
+.no-touch .default-content a:where(:not([class])):hover, .touch .default-content a:where(:not([class])):active {
+  text-decoration: underline;
+}
 .default-content h1,
 .default-content h2 {
   font-weight: 500;
@@ -2417,6 +2426,107 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.page-header__dropdown-search-form-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  margin-top: 3rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+@media only screen and (max-width: 640px) {
+  .page-header__dropdown-search-form-wrapper {
+    margin-top: 1.5rem;
+  }
+}
+.page-header__dropdown-search-form-wrapper.active {
+  opacity: 1;
+  visibility: inherit;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.page-header__dropdown-search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.2rem 2.4rem;
+  margin-bottom: 8rem;
+  min-height: 5.2rem;
+  background-color: var(--primary-color);
+}
+@media only screen and (max-width: 640px) {
+  .page-header__dropdown-search-form {
+    padding: 1rem 1.5rem;
+    min-height: 3.8rem;
+    background: rgba(255, 255, 255, 0.07);
+    background-color: var(--primary-color);
+    margin-bottom: 2.8rem;
+  }
+}
+
+.page-header__dropdown-search-form-input {
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 2rem;
+  line-height: 140%;
+  color: white;
+}
+.page-header__dropdown-search-form-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.page-header__dropdown-search-form-input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.page-header__dropdown-search-form-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.page-header__dropdown-search-form-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+@media only screen and (max-width: 640px) {
+  .page-header__dropdown-search-form-input {
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+}
+
+.page-header__dropdown-search-form-submit {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 3rem;
+}
+.page-header__dropdown-search-form-submit svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: block;
+  fill: rgba(255, 255, 255, 0.4);
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+  fill: rgba(255, 255, 255, 0.7);
+}
+@media only screen and (max-width: 640px) {
+  .page-header__dropdown-search-form-submit svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.no-touch .page-header__dropdown-search-form-submit:hover svg, .touch .page-header__dropdown-search-form-submit:active svg {
+  fill: white;
 }
 
 .page-header__logo {
@@ -2658,7 +2768,13 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 .no-touch .page-header__search-btn:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+.page-header__search-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+}
 .no-touch .page-header--dark .page-header__search-btn:hover {
+  background: rgba(27, 30, 29, 0.05);
+}
+.page-header--dark .page-header__search-btn.active {
   background: rgba(27, 30, 29, 0.05);
 }
 .menu-open .page-header__search-btn {
@@ -7592,6 +7708,8 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   -ms-flex-negative: 0;
       flex-shrink: 0;
   display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media only screen and (max-width: 640px) {
   .solution-platform__card-logo {
@@ -8181,13 +8299,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   padding: 9rem 10rem;
   background: #f0f3f4;
   border-radius: 4.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: inline-block;
   margin: 0 -3.5rem;
   margin-bottom: 4.5rem;
 }
@@ -8203,7 +8315,8 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
 .solution-description__scheme-image {
   display: block;
   height: auto;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
 }
 
 .solution-description__accordions-card {
@@ -10841,8 +10954,8 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
      object-position: center;
 }
@@ -20261,10 +20374,6 @@ form.success .vacancy__reply-form-success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   cursor: pointer;
 }
 
@@ -20378,6 +20487,15 @@ form.success .vacancy__reply-form-success {
 .contacts__map-offices-checkbox-address {
   font-size: 1.5rem;
   line-height: 180%;
+}
+.contacts__map-offices-checkbox-address a {
+  color: var(--primary-color);
+}
+.contacts__map-offices-checkbox-address a:link, .contacts__map-offices-checkbox-address a:visited {
+  color: var(--primary-color);
+}
+.contacts__map-offices-checkbox-address a:hover {
+  text-decoration: underline;
 }
 @media only screen and (max-width: 640px) {
   .contacts__map-offices-checkbox-address {
@@ -21424,6 +21542,15 @@ form.success .vacancy__reply-form-success {
 }
 .event-system__col p:last-child {
   margin-bottom: 0;
+}
+.event-system__col a {
+  color: var(--primary-color);
+}
+.event-system__col a:link, .event-system__col a:visited {
+  color: var(--primary-color);
+}
+.no-touch .event-system__col a:hover, .touch .event-system__col a:active {
+  text-decoration: underline;
 }
 .event-system__col ul li {
   margin-bottom: 1rem;

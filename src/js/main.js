@@ -37,6 +37,7 @@ import speakers from './speakers';
 import whyIteko from './whyIteko';
 import solutionHistoryIteko from './solutionHistoryIteko';
 import introBlock2 from './introBlock2';
+import searchDropdown from './searchDropdown';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     eventCountdown();
     speakers();
     introBlock2();
+    searchDropdown();
 });
 
 window.addEventListener('load', function() {

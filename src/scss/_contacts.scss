@@ -175,7 +175,7 @@
 .contacts__map-offices-checkbox {
     display: flex;
     flex-direction: column;
-    user-select: none;
+   
     cursor: pointer;
 }
 
@@ -270,6 +270,19 @@
 .contacts__map-offices-checkbox-address {
     font-size: 1.5rem;
     line-height: 180%;
+
+    a {
+        color: var(--primary-color);
+
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.3rem;
