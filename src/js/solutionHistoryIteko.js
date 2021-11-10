@@ -3,54 +3,35 @@ import { Navigation, Swiper, Mousewheel } from 'swiper';
 Swiper.use([Navigation]);
 Swiper.use([Mousewheel]);
 
-export const YEARS__LIST = [
-    '1997',
-    '2000',
-    '2002',
-    '2004',
-    '2007',
-    '2008',
-    '2009',
-    '2010',
-    '2011',
-    '2012',
-    '2013',
-    '2014',
-    '2015',
-    '2016',
-    '2017',
-    '2018',
-    '2019',
-    '2020',
-    '2021'
-];
-
 export default function solutionHistoryIteko() {
     const elements = Array.from(document.querySelectorAll('.solution-history'));
 
     elements.forEach(element => {
+        const annotationsArr = Array.from(element.querySelectorAll('.solution-history__annotation-item'));
+
         const yearsListWrapper = element.querySelector('.solution-history__years-list-wrapper');
         const yearsActiveList = element.querySelector('.solution-history__years-active');
-
-        // добавить года в навигацию и ленту больших цифр
-        YEARS__LIST.forEach(yearItem => {
-            yearsListWrapper.innerHTML += `
-            <button type="button" class="solution-history__year-item swiper-slide" value="${yearItem}">${yearItem}</button>
-            `;
-
-            yearsActiveList.innerHTML += `
-        <div class="solution-history__year">
-            <div class="solution-history__year-up-number-wrapper">${yearItem.slice(0, 2)}</div>
-            <div class="solution-history__year-down-number-wrapper">${yearItem.slice(2, 4)}</div>
-        </div>
-        `;
-        });
 
         const yearsList = element.querySelector('.solution-history__years-list-container');
         const annotationsList = element.querySelector('.solution-history__annotations-list-container');
 
+        // добавить года в навигацию и ленту больших цифр
+        annotationsArr.forEach(yearBtn => {
+            const year = yearBtn.value;
+
+            yearsListWrapper.innerHTML += `
+            <button type="button" class="solution-history__year-item swiper-slide" value="${year}">${year}</button>
+            `;
+
+            yearsActiveList.innerHTML += `
+        <div class="solution-history__year">
+            <div class="solution-history__year-up-number-wrapper">${year.slice(0, 2)}</div>
+            <div class="solution-history__year-down-number-wrapper">${year.slice(2, 4)}</div>
+        </div>
+        `;
+        });
+
         const yearsArr = Array.from(element.querySelectorAll('.solution-history__year-item'));
-        const annotationsArr = Array.from(element.querySelectorAll('.solution-history__annotation-item'));
         const yearUpNumber = element.querySelector('.solution-history__year-up-number-wrapper');
         const yearDownNumber = element.querySelector('.solution-history__year-down-number-wrapper');
 
