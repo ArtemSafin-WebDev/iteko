@@ -50,6 +50,20 @@
         }
     }
 
+    a:where(:not([class])) {
+        color: var(--primary-color);
+
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            text-decoration: underline;
+        }
+    }
+
     h1,
     h2 {
         font-weight: 500;

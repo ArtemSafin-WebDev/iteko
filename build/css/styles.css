@@ -2218,6 +2218,15 @@ select:-webkit-autofill:focus {
     color: var(--text-color);
   }
 }
+.default-content a:where(:not([class])) {
+  color: var(--primary-color);
+}
+.default-content a:where(:not([class])):link, .default-content a:where(:not([class])):visited {
+  color: var(--primary-color);
+}
+.no-touch .default-content a:where(:not([class])):hover, .touch .default-content a:where(:not([class])):active {
+  text-decoration: underline;
+}
 .default-content h1,
 .default-content h2 {
   font-weight: 500;
@@ -20369,10 +20378,6 @@ form.success .vacancy__reply-form-success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   cursor: pointer;
 }
 
@@ -20486,6 +20491,15 @@ form.success .vacancy__reply-form-success {
 .contacts__map-offices-checkbox-address {
   font-size: 1.5rem;
   line-height: 180%;
+}
+.contacts__map-offices-checkbox-address a {
+  color: var(--primary-color);
+}
+.contacts__map-offices-checkbox-address a:link, .contacts__map-offices-checkbox-address a:visited {
+  color: var(--primary-color);
+}
+.contacts__map-offices-checkbox-address a:hover {
+  text-decoration: underline;
 }
 @media only screen and (max-width: 640px) {
   .contacts__map-offices-checkbox-address {
