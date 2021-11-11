@@ -18634,6 +18634,17 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   display: none;
 }
 
+.vacancy__details-block-content {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+@media only screen and (max-width: 640px) {
+  .vacancy__details-block-content {
+    font-size: 1.4rem;
+    line-height: 140%;
+  }
+}
+
 .vacancy__details-block-heading {
   font-weight: 600;
   font-size: 1.5rem;
