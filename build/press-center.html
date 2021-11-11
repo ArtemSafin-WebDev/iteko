@@ -306,8 +306,8 @@
                 <form action="/" method="GET" class="press-center__form">
                     <div class="press-center__date-select" id="picker-container">
                         <label class="press-center__date-select-input-label">
-                            <input type="text" class="press-center__date-select-input js-datepicker" data-container="#picker-container" placeholder="Дата"
-                                readonly>
+                            <input type="text" class="press-center__date-select-input js-datepicker"
+                                data-container="#picker-container" placeholder="Дата" readonly>
                             <svg width="14" height="14" aria-hidden="true" class="icon-arrow-down">
                                 <use xlink:href="#arrow-simple-down"></use>
                             </svg>
@@ -549,6 +549,15 @@
                     </ul>
 
                     <div class="pagination">
+                        <a href="#" class="pagination__prev">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                            <span class="pagination__prev-text">
+                                Предыдущая
+                            </span>
+
+                        </a>
                         <a href="#" class="pagination__link active">
                             1
                         </a>
@@ -562,7 +571,10 @@
                             4
                         </a>
                         <a href="#" class="pagination__next">
-                            Следующая
+
+                            <span class="pagination__prev-next">
+                                Следующая
+                            </span>
                             <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
                                 <use xlink:href="#arrow-right"></use>
                             </svg>

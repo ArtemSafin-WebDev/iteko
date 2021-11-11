@@ -3,11 +3,11 @@
     align-items: center;
     justify-content: flex-end;
     margin-top: 4.5rem;
-   
 
     @include breakpoint(mobile) {
         margin-top: 2.5rem;
-        justify-content: flex-start;
+        
+        justify-content: center;
     }
 }
 
@@ -17,9 +17,10 @@
     justify-content: center;
     width: 3.4rem;
     height: 3.4rem;
-    margin-right: 0.3rem;
+   
+    margin: 0 0.15rem;
     border-radius: 0.5rem;
-    transition: background-color 0.2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 150%;
@@ -27,11 +28,9 @@
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
-        padding: .2rem .6rem;
+        padding: 0.2rem 0.6rem;
     }
-    &:last-child {
-        margin-right: 0;
-    }
+    
     &.active {
         background: #f0f3f4;
         cursor: default;
@@ -44,6 +43,7 @@
     }
 }
 
+.pagination__prev,
 .pagination__next {
     font-weight: 600;
     font-size: 1.5rem;
@@ -57,6 +57,7 @@
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
+        // margin-left: auto;
     }
     svg {
         width: 2rem;
@@ -68,12 +69,40 @@
         @include breakpoint(mobile) {
             height: 1.7rem;
             width: 1.7rem;
-            margin-left: 1rem;
+            margin: 0;
         }
     }
 
     .no-touch &:hover,
     .touch &:active {
         color: var(--primary-color);
+    }
+}
+
+
+.pagination__prev {
+    margin-left: 0;
+    margin-right: 1rem;
+
+    @include breakpoint(mobile) {
+        // margin-right: auto;
+    }
+
+    svg {
+        margin-left: 0;
+        margin-right: 1.3rem;
+
+        @include breakpoint(mobile) {
+            margin: 0;
+           
+        }
+    }
+}
+
+
+.pagination__prev-text,
+.pagination__prev-next {
+    @include breakpoint(mobile) {
+        display: none;
     }
 }

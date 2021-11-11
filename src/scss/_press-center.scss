@@ -2,7 +2,7 @@
     padding-bottom: 10rem;
     background-color: #fff;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 
     @include breakpoint(mobile) {
         padding-bottom: 5rem;
@@ -15,6 +15,8 @@
     padding-bottom: 2.6rem;
     border-bottom: 2px solid var(--text-color);
     margin-bottom: 7rem;
+    position: relative;
+    z-index: 50;
 
     @include breakpoint(mobile) {
         flex-direction: column;
@@ -28,14 +30,16 @@
     display: flex;
     align-items: center;
     margin-right: 2rem;
-
+    gap: 3rem;
+    flex-wrap: wrap;
     @include breakpoint(mobile) {
         overflow-y: hidden;
         margin-right: 0;
         margin: 0 calc(-1 * var(--content-padding));
         padding: 0 var(--content-padding);
         padding-bottom: 2rem;
-
+        flex-wrap: nowrap;
+        gap: unset;
         &::after {
             content: '';
             width: 1px;
@@ -46,7 +50,7 @@
 }
 
 .press-center__categories-link {
-    margin-right: 3rem;
+   
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 111%;
@@ -54,9 +58,7 @@
     text-transform: uppercase;
     color: #bbbfc4;
     flex-shrink: 0;
-    &:last-of-type {
-        margin-right: 0;
-    }
+   
 
     @include breakpoint(mobile) {
         font-size: 1.3rem;
@@ -437,6 +439,7 @@
     white-space: nowrap;
     margin-right: 2rem;
     color: var(--text-color);
+    
 }
 
 .press-center__other-news-card-tags {
@@ -705,6 +708,8 @@
     color: rgba(#1b1e1d, 0.3);
     display: flex;
     align-items: center;
+    gap: 1.3rem;
+    flex-wrap: wrap;
 
     @include breakpoint(mobile) {
         margin-bottom: 1rem;
@@ -716,10 +721,10 @@
 }
 
 .press-center__catalog-card-tag {
-    margin-right: 1.3rem;
-    &:last-child {
-        margin-right: 0;
-    }
+    // margin-right: 1.3rem;
+    // &:last-child {
+    //     margin-right: 0;
+    // }
 }
 
 .press-center__date-select {
