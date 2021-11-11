@@ -63,6 +63,8 @@
     line-height: 140%;
     max-width: 52rem;
 
+  
+
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         max-width: none;
