@@ -21017,6 +21017,9 @@ form.success .vacancy__reply-form-success {
     min-width: 3.3rem;
   }
 }
+ul.faq__accordions-list .faq__accordion-btn::before {
+  display: none;
+}
 .faq__accordion-btn svg {
   width: 2rem;
   height: 2rem;
