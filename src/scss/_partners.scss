@@ -120,11 +120,29 @@
         margin-left: 1rem;
         margin-top: 0.5rem;
         display: inline-block;
+        transition: transform .2s;
 
         @include breakpoint(mobile) {
             margin-left: 0.5rem;
         }
     }
+
+    .partners__card-accordion.active & {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.partners__card-hidden-content {
+    font-size: 1.2rem;
+    line-height: 140%;
+    height: 0;
+    overflow: hidden;
+}
+
+.partners__card-hidden-content-inner {
+    padding-top: 1rem;
 }
 
 .partners__slider-card {

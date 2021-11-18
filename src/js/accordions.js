@@ -21,13 +21,13 @@ export default function accordions() {
         });
     };
 
-    const elements = Array.from(document.querySelectorAll('.js-accordion'));
+    document.addEventListener('click', event => {
+        if (event.target.matches('.js-accordion-btn') || event.target.closest('.js-accordion-btn')) {
+            const btn = event.target.matches('.js-accordion-btn') ? event.target : event.target.closest('.js-accordion-btn');
+            const element = btn.closest('.js-accordion');
+            const content = element.querySelector('.js-accordion-content');
+            const elements = Array.from(document.querySelectorAll('.js-accordion'))
 
-    elements.forEach(element => {
-        const btn = element.querySelector('.js-accordion-btn');
-        const content = element.querySelector('.js-accordion-content');
-
-        btn.addEventListener('click', event => {
             event.preventDefault();
 
             if (element.hasAttribute('data-close-other')) {
@@ -48,6 +48,8 @@ export default function accordions() {
                 openAccordion(content);
             }
             element.classList.toggle('active');
-        });
+        }
     });
+
+    
 }

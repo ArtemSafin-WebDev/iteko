@@ -83,6 +83,12 @@
         }
     }
 
+    ul.faq__accordions-list & {
+        &::before {
+            display: none;
+        }
+    }
+
     svg {
         width: 2rem;
         height: 2rem;

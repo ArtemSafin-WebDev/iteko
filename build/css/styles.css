@@ -19059,11 +19059,30 @@ form.success .vacancy__reply-form-success {
   margin-left: 1rem;
   margin-top: 0.5rem;
   display: inline-block;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 @media only screen and (max-width: 640px) {
   .partners__card-certified svg {
     margin-left: 0.5rem;
   }
+}
+.partners__card-accordion.active .partners__card-certified svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.partners__card-hidden-content {
+  font-size: 1.2rem;
+  line-height: 140%;
+  height: 0;
+  overflow: hidden;
+}
+
+.partners__card-hidden-content-inner {
+  padding-top: 1rem;
 }
 
 .partners__slider-card {
@@ -20997,6 +21016,9 @@ form.success .vacancy__reply-form-success {
   .faq__accordion-btn::before {
     min-width: 3.3rem;
   }
+}
+ul.faq__accordions-list .faq__accordion-btn::before {
+  display: none;
 }
 .faq__accordion-btn svg {
   width: 2rem;
