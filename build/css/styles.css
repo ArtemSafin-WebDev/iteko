@@ -23808,11 +23808,12 @@ ul.faq__accordions-list .faq__accordion-btn::before {
     font-size: 2rem;
   }
 }
-.search__results-card-title em {
+.search__results-card-title b {
   font-style: normal;
   background-color: #90d8c3;
   padding: 0.1rem 0.2rem;
   border-radius: 0.5rem;
+  font-weight: inherit;
 }
 
 .search__results-card-text {
@@ -23823,11 +23824,12 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 .search__results-card-text:last-child {
   margin-bottom: 0;
 }
-.search__results-card-text em {
+.search__results-card-text b {
   font-style: normal;
   background-color: #90d8c3;
   padding: 0.1rem 0.2rem;
   border-radius: 0.5rem;
+  font-weight: inherit;
 }
 
 .search__results-card-bottom-row {

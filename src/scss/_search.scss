@@ -69,11 +69,12 @@
     @include breakpoint(mobile) {
         font-size: 2rem;
     }
-    em {
+    b {
         font-style: normal;
         background-color: #90d8c3;
         padding: 0.1rem 0.2rem;
         border-radius: .5rem;
+        font-weight: inherit;
     }
 }
 
@@ -85,11 +86,12 @@
         margin-bottom: 0;
     }
 
-    em {
+    b {
         font-style: normal;
         background-color: #90d8c3;
         padding: 0.1rem 0.2rem;
         border-radius: .5rem;
+        font-weight: inherit;
     }
 }
 
