@@ -1,0 +1,122 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="contacts">
+    <div class="container">
+        <div class="inner-container">
+            <div class="contacts__top-row">
+                <div class="contacts__breadcrumbs">
+                    <a href="#">
+                        Главная
+                    </a><br> / <a href="#">
+                        Результаты поиска
+                    </a>
+                </div>
+
+                <h1 class="contacts__main-heading">
+                    Результаты поиска
+                </h1>
+            </div>
+
+            <div class="search">
+                <form action="/" method="GET" class="search__form">
+                    <input type="search" class="search__form-input" value="Алфавит">
+                    <button class="search__form-submit" type="submit">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <ul class="search__results-list">
+                    <li class="search__results-list-item">
+                        <a href="#" class="search__results-card">
+                            <h4 class="search__results-card-title">
+                                Платформа для управления большими данными «Цифровой <em>Алфавит</em>»
+                            </h4>
+                            <div class="search__results-card-text">
+                                <p>
+                                    Платформа «Цифровой <em>алфавит</em>» предназначена для реализации сервисов
+                                    эффективной обработки, хранения и представления данных и позволяет отталкиваться от
+                                    производственных
+                                </p>
+                            </div>
+                            <div class="search__results-card-bottom-row">
+                                <div class="search__results-card-category">
+                                    Пресс-центр
+                                </div>
+                                <div class="search__results-card-date">
+                                    Последнее изменение: 30.03.2021
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="search__results-list-item">
+                        <a href="#" class="search__results-card">
+                            <h4 class="search__results-card-title">
+                                Решение для обработки больших данных «Цифровой <em>алфавит</em>» вошло в Реестр
+                                отечественного ПО
+                            </h4>
+                            <div class="search__results-card-text">
+                                <p>
+                                    Платформа «Цифровой <em>алфавит</em>» предназначена для реализации сервисов
+                                    эффективной обработки, хранения и представления данных и позволяет отталкиваться от
+                                    производственных
+                                </p>
+                            </div>
+                            <div class="search__results-card-bottom-row">
+                                <div class="search__results-card-category">
+                                    Пресс-центр
+                                </div>
+                                <div class="search__results-card-date">
+                                    Последнее изменение: 30.03.2021
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="pagination">
+                    <a href="#" class="pagination__prev">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                        <span class="pagination__prev-text">
+                            Предыдущая
+                        </span>
+
+                    </a>
+                    <a href="#" class="pagination__link active">
+                        1
+                    </a>
+                    <a href="#" class="pagination__link">
+                        2
+                    </a>
+                    <a href="#" class="pagination__link">
+                        3
+                    </a>
+                    <a href="#" class="pagination__link">
+                        4
+                    </a>
+                    <a href="#" class="pagination__next">
+                        <span class="pagination__prev-next">
+                            Следующая
+                        </span>
+
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+{{/content}}
+{{/extend}}
