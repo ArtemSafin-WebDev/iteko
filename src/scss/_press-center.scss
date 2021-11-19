@@ -280,6 +280,15 @@
         }
     }
 
+    &:nth-child(odd) {
+        @include breakpoint(mobile) {
+            .choices__list--dropdown {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+
     .choices__list--dropdown .choices__item {
         font-size: 1.4rem;
         line-height: 1.7rem;
@@ -747,6 +756,17 @@
             right: auto !important;
             left: 0 !important;
             bottom: auto !important;
+
+           
+        }
+    }
+
+    &:nth-child(even) {
+        @include breakpoint(mobile) {
+            .datepicker.dropdown-menu {
+                left: auto !important;
+                right: 0;
+            }
         }
     }
 

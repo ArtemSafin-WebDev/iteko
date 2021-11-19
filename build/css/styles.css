@@ -13493,6 +13493,12 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
 }
+@media only screen and (max-width: 640px) {
+  .press-center__theme-select:nth-child(odd) .choices__list--dropdown {
+    right: auto;
+    left: 0;
+  }
+}
 .press-center__theme-select .choices__list--dropdown .choices__item {
   font-size: 1.4rem;
   line-height: 1.7rem;
@@ -14033,6 +14039,12 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
     right: auto !important;
     left: 0 !important;
     bottom: auto !important;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .press-center__date-select:nth-child(even) .datepicker.dropdown-menu {
+    left: auto !important;
+    right: 0;
   }
 }
 .press-center__date-select .datepicker-dropdown:before,
