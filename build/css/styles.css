@@ -2340,7 +2340,6 @@ select:-webkit-autofill:focus {
   }
 }
 .default-content ul {
-  max-width: 52rem;
   margin-bottom: 2.8rem;
 }
 .default-content ul:last-child {
@@ -16056,8 +16055,8 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 54rem;
-  height: 54rem;
+  width: 64rem;
+  height: 64rem;
   background-image: url("../img/since-hoop.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -18642,6 +18641,14 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
 }
 .vacancy__details-block:first-child {
   padding-top: 0;
+}
+.details-block .vacancy__details-block:first-child {
+  padding-top: 7rem;
+}
+@media only screen and (max-width: 640px) {
+  .details-block .vacancy__details-block:first-child {
+    padding-top: 3rem;
+  }
 }
 .vacancy__details-block:last-child {
   padding-bottom: 0;

@@ -10,10 +10,10 @@ export default function anchorLinks() {
             const hash = link.hash;
 
             if (hash && hash.startsWith('#to-')) {
-                event.preventDefault();
-
                 const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
                 if (elementToScroll) {
+                    event.preventDefault();
+                    console.log('Link prevented', elementToScroll);
                     if (window.menuOpen) {
                         window.closeMenu();
                     } else {
@@ -25,12 +25,34 @@ export default function anchorLinks() {
                         ease: 'power2.out',
                         scrollTo: {
                             y: elementToScroll,
-                            autoKill: false,
-                            
+                            autoKill: false
                         }
                     });
                 }
             }
         }
     });
+
+    const hash = window.location.hash;
+
+    if (hash && hash.startsWith('#to-')) {
+        const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
+        if (elementToScroll) {
+            console.log('Initial hash', hash);
+            if (window.menuOpen) {
+                window.closeMenu();
+            } else {
+                console.log('menu not open');
+            }
+
+            gsap.to(window, {
+                duration: 2,
+                ease: 'power2.out',
+                scrollTo: {
+                    y: elementToScroll,
+                    autoKill: false
+                }
+            });
+        }
+    }
 }

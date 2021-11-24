@@ -227,6 +227,16 @@
         padding-top: 0;
     }
 
+    .details-block & {
+        &:first-child {
+            padding-top: 7rem;
+
+            @include breakpoint(mobile) {
+                padding-top: 3rem;
+            }
+        }
+    }
+
     &:last-child {
         padding-bottom: 0;
         &::before {
