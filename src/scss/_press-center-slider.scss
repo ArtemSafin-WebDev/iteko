@@ -77,6 +77,10 @@
     line-height: 150%;
     color: rgba(white, 0.3);
     margin-right: 3rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 

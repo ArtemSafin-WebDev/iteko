@@ -11221,6 +11221,7 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   .project-intro__breadcrumbs {
     font-size: 1.3rem;
     margin-bottom: 2rem;
+    display: none;
   }
 }
 .no-touch .project-intro__breadcrumbs a:hover {
@@ -13148,6 +13149,7 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   .press-center-header__breadcrumbs {
     margin-right: 0;
     margin-bottom: 2rem;
+    display: none;
   }
 }
 
@@ -14508,6 +14510,7 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   .article-intro__breadcrumbs {
     margin-bottom: 3.5rem;
     color: var(--text-color);
+    display: none;
   }
 }
 
@@ -14572,8 +14575,8 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
           justify-content: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  background: #E5E8EC;
-  color: #1C0F52;
+  background: #e5e8ec;
+  color: #1c0f52;
   font-size: 1.3rem;
   line-height: 120%;
   margin-right: 1.5rem;
@@ -15558,6 +15561,11 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   line-height: 150%;
   color: rgba(255, 255, 255, 0.3);
   margin-right: 3rem;
+}
+@media only screen and (max-width: 640px) {
+  .press-center-slider__breadcrumbs {
+    display: none;
+  }
 }
 
 .no-touch .press-center-slider__breadcrumbs-link:hover {
@@ -17474,6 +17482,7 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
     margin-top: 0;
     margin-bottom: 0;
     grid-area: breadcrumbs;
+    display: none;
   }
 }
 .career-intro__breadcrumbs a {
@@ -18387,6 +18396,7 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
   .vacancy__breadcrumbs {
     font-size: 1.3rem;
     margin-bottom: 3rem;
+    display: none;
   }
 }
 .no-touch .vacancy__breadcrumbs a:hover, .touch .vacancy__breadcrumbs a:active {
@@ -18988,6 +18998,7 @@ form.success .vacancy__reply-form-success {
     width: auto;
     margin-bottom: 2rem;
     font-size: 1.3rem;
+    display: none;
   }
 }
 .no-touch .partners__breadcrumbs a:hover, .touch .partners__breadcrumbs a:active {
@@ -19265,6 +19276,7 @@ form.success .vacancy__reply-form-success {
   .partner__breadcrumbs {
     margin-bottom: 2rem;
     font-size: 1.3rem;
+    display: none;
   }
 }
 .no-touch .partner__breadcrumbs a:hover, .touch .partner__breadcrumbs a:active {
@@ -20340,6 +20352,7 @@ form.success .vacancy__reply-form-success {
     width: auto;
     margin-bottom: 2rem;
     font-size: 1.3rem;
+    display: none;
   }
 }
 .no-touch .contacts__breadcrumbs a:hover, .touch .contacts__breadcrumbs a:active {

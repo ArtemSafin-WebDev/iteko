@@ -18,6 +18,7 @@
     @include breakpoint(mobile) {
         font-size: 1.3rem;
         margin-bottom: 3rem;
+        display: none;
     }
 
     a {
