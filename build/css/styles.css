@@ -11988,6 +11988,9 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   display: grid;
   padding: 9rem 11rem;
 }
+.no-touch .project-reply__card:hover .project-reply__card-link, .touch .project-reply__card:active .project-reply__card-link {
+  color: var(--primary-color);
+}
 @media only screen and (max-width: 640px) {
   .project-reply__card {
     grid-template-columns: minmax(0, 1fr);
@@ -12147,6 +12150,8 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   font-size: 1.5rem;
   line-height: 120%;
   margin-left: auto;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .project-reply__card-link svg {
   width: 0.8rem;
@@ -12156,9 +12161,6 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   margin-left: 0.7rem;
   fill: var(--primary-color);
   vertical-align: baseline;
-}
-.no-touch .project-reply__card-link:hover, .touch .project-reply__card-link:active {
-  color: var(--primary-color);
 }
 
 .project-reply__card-text-content {

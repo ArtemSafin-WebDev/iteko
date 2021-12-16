@@ -18,6 +18,14 @@
     display: grid;
     padding: 9rem 11rem;
 
+    .no-touch &:hover,
+    .touch &:active {
+        .project-reply__card-link {
+            color: var(--primary-color);
+        }
+       
+    }
+
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
         grid-gap: 2rem;
@@ -149,6 +157,7 @@
     font-size: 1.5rem;
     line-height: 120%;
     margin-left: auto;
+    transition: color .2s;
     svg {
         width: 0.8rem;
         height: 0.8rem;
@@ -158,10 +167,7 @@
         vertical-align: baseline;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        color: var(--primary-color);
-    }
+  
 }
 
 .project-reply__card-text-content {
