@@ -198,7 +198,7 @@
 
         @include breakpoint(mobile) {
             font-weight: 500;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             line-height: 140%;
             padding: 3rem 0;
             margin: 3.5rem 0;
@@ -222,7 +222,10 @@
                 z-index: -1;
 
                 @include breakpoint(mobile) {
-                    display: none;
+                    width: 5rem;
+                    height: 4rem;
+                    left: -1.5rem;
+                    top: -1rem;
                 }
             }
         }
@@ -239,8 +242,8 @@
                 font-weight: 500;
                 font-size: 1.2rem;
                 line-height: 130%;
-                margin-top: 4rem;
-                max-width: 18rem;
+                margin-top: 2rem;
+                max-width: 24rem;
                 margin-left: auto;
             }
         }

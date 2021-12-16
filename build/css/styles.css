@@ -2407,7 +2407,7 @@ select:-webkit-autofill:focus {
 @media only screen and (max-width: 640px) {
   .default-content blockquote {
     font-weight: 500;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 140%;
     padding: 3rem 0;
     margin: 3.5rem 0;
@@ -2433,7 +2433,10 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (max-width: 640px) {
   .default-content blockquote p::before {
-    display: none;
+    width: 5rem;
+    height: 4rem;
+    left: -1.5rem;
+    top: -1rem;
   }
 }
 .default-content blockquote footer {
@@ -2449,8 +2452,8 @@ select:-webkit-autofill:focus {
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 130%;
-    margin-top: 4rem;
-    max-width: 18rem;
+    margin-top: 2rem;
+    max-width: 24rem;
     margin-left: auto;
   }
 }
