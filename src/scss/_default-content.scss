@@ -176,6 +176,20 @@
         }
     }
 
+    table {
+        border-collapse: collapse;
+        th, td {
+            padding: 1.2rem;
+            border: 1px solid var(--primary-color);
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+
+        th {
+            font-weight: 500;
+        }
+    }
+
     blockquote {
         width: 100%;
         margin: 6rem 0;

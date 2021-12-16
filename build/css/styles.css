@@ -2386,6 +2386,18 @@ select:-webkit-autofill:focus {
 .default-content p:last-child {
   margin-bottom: 0;
 }
+.default-content table {
+  border-collapse: collapse;
+}
+.default-content table th, .default-content table td {
+  padding: 1.2rem;
+  border: 1px solid var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.default-content table th {
+  font-weight: 500;
+}
 .default-content blockquote {
   width: 100%;
   margin: 6rem 0;
