@@ -16592,7 +16592,7 @@ textarea.modal__demo-form-input::-webkit-scrollbar-track {
 }
 @media only screen and (max-width: 640px) {
   .geography__card {
-    min-height: 40rem;
+    min-height: 20rem;
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
   }
