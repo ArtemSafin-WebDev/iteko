@@ -644,6 +644,12 @@
     }
 }
 
+
+.page-header__menu-nav-link--hide-on-mobile {
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
 .page-header__nav-link-text {
     display: block;
 }

@@ -3192,6 +3192,12 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 640px) {
+  .page-header__menu-nav-link--hide-on-mobile {
+    display: none;
+  }
+}
+
 .page-header__nav-link-text {
   display: block;
 }
