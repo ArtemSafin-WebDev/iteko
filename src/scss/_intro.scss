@@ -347,19 +347,30 @@
 
     &:nth-child(1) {
       .intro__card {
-        order: -9;
+        
       }
     }
     &:nth-child(3) {
       .intro__card {
-        order: -8;
+        order: -18;
       }
     }
     &:nth-child(4) {
       .intro__card {
-        order: -10;
+        order: -20;
       }
     }
+    &:nth-child(6) {
+      .intro__card {
+        order: -16;
+      }
+    }
+    &:nth-child(2) {
+      .intro__card {
+        order: -14;
+      }
+    }
+    
 
     // &:nth-child(1) {
     //     .intro__card {
