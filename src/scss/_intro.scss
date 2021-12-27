@@ -345,64 +345,7 @@
       margin-left: 2rem;
     }
 
-    &:nth-child(1) {
-      .intro__card {
-        
-      }
-    }
-    &:nth-child(3) {
-      .intro__card {
-        order: -18;
-      }
-    }
-    &:nth-child(4) {
-      .intro__card {
-        order: -20;
-      }
-    }
-    &:nth-child(6) {
-      .intro__card {
-        order: -16;
-      }
-    }
-    &:nth-child(2) {
-      .intro__card {
-        order: -14;
-      }
-    }
     
-
-    // &:nth-child(1) {
-    //     .intro__card {
-    //         margin-top: 10rem;
-    //         margin-left: var(--content-padding);
-    //     }
-    // }
-
-    // &:nth-child(2) {
-    //     .intro__card {
-    //         margin-top: -5rem;
-    //         margin-left: -12rem;
-    //     }
-    // }
-    // &:nth-child(3) {
-    //     .intro__card {
-    //         margin-top: 34rem;
-    //         margin-left: -13rem;
-    //     }
-    // }
-    // &:nth-child(4) {
-    //     .intro__card {
-    //         margin-top: 17rem;
-    //         margin-left: -10rem;
-    //     }
-    // }
-    // &:nth-child(6) {
-    //     .intro__card {
-    //         margin-top: 24rem;
-    //         margin-left: -10rem;
-    //     }
-    // }
   }
 
   @include breakpointMF(small-tablet) {

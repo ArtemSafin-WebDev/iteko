@@ -4839,26 +4839,6 @@ body:not(.menu-open) .page-header--dark .page-header__burger::before, body:not(.
         align-self: center;
     margin-left: 2rem;
   }
-  .intro__cards-sector:nth-child(3) .intro__card {
-    -webkit-box-ordinal-group: -17;
-        -ms-flex-order: -18;
-            order: -18;
-  }
-  .intro__cards-sector:nth-child(4) .intro__card {
-    -webkit-box-ordinal-group: -19;
-        -ms-flex-order: -20;
-            order: -20;
-  }
-  .intro__cards-sector:nth-child(6) .intro__card {
-    -webkit-box-ordinal-group: -15;
-        -ms-flex-order: -16;
-            order: -16;
-  }
-  .intro__cards-sector:nth-child(2) .intro__card {
-    -webkit-box-ordinal-group: -13;
-        -ms-flex-order: -14;
-            order: -14;
-  }
 }
 @media only screen and (min-width: 641px) {
   .intro__cards-sector {
