@@ -4,7 +4,8 @@ function initializeSelects() {
     const customSelects = Array.from(document.querySelectorAll('.js-custom-select'));
 
     customSelects.forEach(select => {
-        new Choices(select, {
+        const parentForm = select.closest('form');
+        const instance = new Choices(select, {
             searchEnabled: false,
             itemSelectText: '',
             shouldSort: false,
@@ -29,6 +30,17 @@ function initializeSelects() {
                 };
             }
         });
+
+        const defaultValue = instance.getValue(true);
+        // console.log('Default value', defaultValue);
+
+        if (parentForm) {
+            parentForm.addEventListener('reset', () => {
+                console.log('Parent form reset');
+
+                instance.setChoiceByValue(defaultValue);
+            });
+        }
     });
 }
 
