@@ -52,8 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 grecaptcha.ready(function() {
                     grecaptcha.execute(siteKey, {action: 'homepage'}).then(function(token) {
-                        let recaptchaResponse = demoForm.querySelector('[name = g-recaptcha-response]');
+                        let recaptchaResponse = registrationForm.querySelector('[name = g-recaptcha-response]');
                         recaptchaResponse.value = token;
+
+                        const eventDate = document.querySelector('.js-event-countdown').dataset.countdownDate;
+                        let eventDateInput = registrationForm.querySelector('[name = event-date]');
+                        eventDateInput.value = eventDate;
 
                         let options = {
                             success: function(data){
@@ -63,6 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                         .parsley()
                                         .reset();
                                     if (typeof window.openModal === 'function') {
+                                        $('#js-event_refresh').text(function( i, txt ) {
+                                            return txt.replace("EVENT_NAME", data.TITLE);
+                                        });
                                         window.openModal('#registration-success');
                                     }
                                 } else {
@@ -92,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ) {
                 grecaptcha.ready(function() {
                     grecaptcha.execute(siteKey, {action: 'homepage'}).then(function(token) {
-                        let recaptchaResponse = demoForm.querySelector('[name = g-recaptcha-response]');
+                        let recaptchaResponse = vacancyForm.querySelector('[name = g-recaptcha-response]');
                         recaptchaResponse.value = token;
 
                         let options = {
