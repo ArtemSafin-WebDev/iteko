@@ -24267,6 +24267,13 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   position: absolute;
   bottom: 7.5rem;
   left: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
 }
 @media only screen and (max-width: 640px) {
   .event-simple-intro__logo {
@@ -24274,6 +24281,13 @@ ul.faq__accordions-list .faq__accordion-btn::before {
     left: 2rem;
     position: static;
     margin-right: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 

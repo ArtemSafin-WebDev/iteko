@@ -38,11 +38,16 @@
     position: absolute;
     bottom: 7.5rem;
     left: 15rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     @include breakpoint(mobile) {
         bottom: 2rem;
         left: 2rem;
         position: static;
         margin-right: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
