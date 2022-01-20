@@ -49,10 +49,12 @@
 .event-simple-intro__logo-image {
     display: block;
     width: auto;
-    height: 1.8rem;
-
+    height: auto;
+    max-height: 3rem;
+    max-width: 10rem;
+    width: 100%;
     @include breakpoint(mobile) {
-        height: 1.5rem;
+        max-width: 8rem;
     }
     
 
@@ -154,6 +156,7 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    text-align: center;
 
     @include breakpoint(mobile) {
         width: 10rem;

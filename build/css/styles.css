@@ -24280,11 +24280,14 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 .event-simple-intro__logo-image {
   display: block;
   width: auto;
-  height: 1.8rem;
+  height: auto;
+  max-height: 3rem;
+  max-width: 10rem;
+  width: 100%;
 }
 @media only screen and (max-width: 640px) {
   .event-simple-intro__logo-image {
-    height: 1.5rem;
+    max-width: 8rem;
   }
 }
 
@@ -24417,6 +24420,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  text-align: center;
 }
 @media only screen and (max-width: 640px) {
   .event-simple-intro__link {
