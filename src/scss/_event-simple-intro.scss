@@ -55,11 +55,12 @@
     display: block;
     width: auto;
     height: auto;
-    max-height: 3rem;
-    max-width: 10rem;
+    max-height: 8rem;
+    max-width: 18rem;
     width: 100%;
     @include breakpoint(mobile) {
         max-width: 8rem;
+        max-height: 5rem;
     }
     
 
