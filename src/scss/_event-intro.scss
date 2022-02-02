@@ -97,14 +97,14 @@
 }
 
 .event-intro__logo-image {
-    height: 2.3rem;
+    height: 5.5rem;
     width: auto;
     max-width: 100%;
     object-fit: contain;
     object-position: left center;
 
     @include breakpoint(mobile) {
-        height: 1.7rem;
+        height: 2.5rem;
     }
 }
 
