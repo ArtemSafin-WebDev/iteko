@@ -39,6 +39,7 @@ import solutionHistoryIteko from './solutionHistoryIteko';
 import introBlock2 from './introBlock2';
 import searchDropdown from './searchDropdown';
 import fancybox from './fancybox';
+import ceoCardSlider from './ceoCardSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     introBlock2();
     searchDropdown();
     fancybox();
+    ceoCardSlider();
 });
 
 window.addEventListener('load', function() {
