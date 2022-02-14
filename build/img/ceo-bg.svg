@@ -1,1 +1,47 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1680 613"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:url(#linear-gradient);}.cls-4{opacity:0.8;}.cls-5{fill:url(#radial-gradient);}</style><clipPath id="clip-path"><rect class="cls-1" width="1680" height="613"/></clipPath><linearGradient id="linear-gradient" x1="842.96" y1="614.12" x2="837.04" y2="-205.86" gradientTransform="matrix(1, 0, 0, -1, 0, 614)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#555955"/><stop offset="0.51" stop-color="#585d57"/><stop offset="1" stop-color="#494e48"/></linearGradient><radialGradient id="radial-gradient" cx="534.57" cy="703.8" r="1" gradientTransform="matrix(-387.36, -387.58, -387.58, 387.36, 481066.86, -64969.61)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9a9a9a"/><stop offset="1" stop-color="#6a6a6a" stop-opacity="0"/></radialGradient></defs><g class="cls-2"><rect class="cls-3" width="1680" height="820"/><g class="cls-4"><circle class="cls-5" cx="1216.21" cy="467.21" r="599.78"/></g></g></svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 1680 613"  preserveAspectRatio="none">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-2 {
+                clip-path: url(#clip-path);
+            }
+
+            .cls-3 {
+                fill: url(#linear-gradient);
+            }
+
+            .cls-4 {
+                opacity: 0.8;
+            }
+
+            .cls-5 {
+                fill: url(#radial-gradient);
+            }
+        </style>
+        <clipPath id="clip-path">
+            <rect class="cls-1" width="1680" height="613" />
+        </clipPath>
+        <linearGradient id="linear-gradient" x1="842.96" y1="614.12" x2="837.04" y2="-205.86"
+            gradientTransform="matrix(1, 0, 0, -1, 0, 614)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#555955" />
+            <stop offset="0.51" stop-color="#585d57" />
+            <stop offset="1" stop-color="#494e48" />
+        </linearGradient>
+        <radialGradient id="radial-gradient" cx="534.57" cy="703.8" r="1"
+            gradientTransform="matrix(-387.36, -387.58, -387.58, 387.36, 481066.86, -64969.61)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#9a9a9a" />
+            <stop offset="1" stop-color="#6a6a6a" stop-opacity="0" />
+        </radialGradient>
+    </defs>
+    <g class="cls-2">
+        <rect class="cls-3" width="1680" height="820" />
+        <g class="cls-4">
+            <circle class="cls-5" cx="1216.21" cy="467.21" r="599.78" />
+        </g>
+    </g>
+</svg>

@@ -45,7 +45,7 @@
         &::after {
             content: '';
             flex-shrink: 0;
-            width: var(--content-padding);
+            width: 1px;
             height: 1px;
         }
     }
@@ -55,8 +55,21 @@
     padding-bottom: 4rem;
     border-bottom: 0.3rem solid #1b1e1d;
 
+   
+
     @include breakpoint(mobile) {
         padding-bottom: 0;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: calc(-1 * var(--content-padding));
+            height: 100%;
+            width: var(--content-padding);
+            background: linear-gradient(to left, white 20%, rgba(white, 0));
+            pointer-events: none;
+            top: 0;
+        }
     }
 }
 
