@@ -22342,7 +22342,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 }
 
 .event-intro__logo-image {
-  height: 5.5rem;
+  height: 8rem;
   width: auto;
   max-width: 100%;
   -o-object-fit: contain;
@@ -22352,7 +22352,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 }
 @media only screen and (max-width: 640px) {
   .event-intro__logo-image {
-    height: 2.5rem;
+    height: 5rem;
   }
 }
 
