@@ -23481,7 +23481,6 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   }
 }
 
-.program__card-date,
 .program__card-time {
   font-weight: 600;
   font-size: 1.5rem;
@@ -23490,14 +23489,21 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 640px) {
-  .program__card-date,
-.program__card-time {
+  .program__card-time {
     font-size: 1.3rem;
   }
 }
 
+.program__card-theme, .program__card-name, .program__card-name p {
+  position: relative;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 140%;
+}
+
 @media only screen and (max-width: 640px) {
-  .program__card-time {
+  .program__card-theme {
+    font-size: 1.3rem;
     justify-self: flex-end;
     text-align: right;
   }
@@ -23509,13 +23515,6 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   }
 }
 
-.program__card-name {
-  position: relative;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 140%;
-  margin-bottom: 1rem;
-}
 @media only screen and (max-width: 640px) {
   .program__card-name {
     font-size: 1.6rem;
@@ -23554,7 +23553,9 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   }
 }
 
-.program__card-text {
+.program__card-name .program__card-text {
+  display: block;
+  margin-top: 1rem;
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 140%;
@@ -23562,7 +23563,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 640px) {
-  .program__card-text {
+  .program__card-name .program__card-text {
     font-size: 1rem;
   }
 }
