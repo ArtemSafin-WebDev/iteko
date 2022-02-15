@@ -114,8 +114,8 @@ export default function solutionHistoryIteko() {
             }
         };
 
-        swiperYears.slideTo(6, 300);
-        swiperAnnotation.slideTo(6, 300);
+        swiperYears.slideTo(swiperYears.slides.length -1, 300);
+        swiperAnnotation.slideTo(swiperYears.slides.length -1, 300);
 
         yearsArr.forEach((yearItem, index) => {
             yearItem.onclick = () => {
