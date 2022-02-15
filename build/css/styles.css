@@ -23553,7 +23553,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   }
 }
 
-.program__card-name .program__card-text {
+.program__card-name span {
   display: block;
   margin-top: 1rem;
   font-weight: 500;
@@ -23563,7 +23563,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 640px) {
-  .program__card-name .program__card-text {
+  .program__card-name span {
     font-size: 1rem;
   }
 }
