@@ -23477,7 +23477,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   .program__card {
     padding: 2.4rem 0;
     grid-gap: 1.5rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
@@ -23502,10 +23502,15 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 }
 
 @media only screen and (max-width: 640px) {
+  .program__card-name p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
   .program__card-theme {
-    font-size: 1.3rem;
-    justify-self: flex-end;
-    text-align: right;
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 }
 
@@ -23543,6 +23548,8 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   background-color: currentColor;
   position: relative;
   top: 1.2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media only screen and (max-width: 640px) {
   .program__card-name::before {
@@ -23551,7 +23558,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin-right: 0.4rem;
+    margin-right: 0.9rem;
     top: auto;
     right: auto;
     margin-top: 0.85rem;
@@ -23570,6 +23577,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 @media only screen and (max-width: 640px) {
   .program__card-name span {
     font-size: 1rem;
+    margin-left: -1.2rem;
   }
 }
 
