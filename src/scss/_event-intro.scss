@@ -392,6 +392,7 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    z-index: 99;
 
     &:link,
     &:visited {

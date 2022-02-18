@@ -22850,6 +22850,7 @@ ul.faq__accordions-list .faq__accordion-btn::before {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  z-index: 99;
 }
 .event-intro__btn:link, .event-intro__btn:visited {
   color: white;
