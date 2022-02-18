@@ -23469,19 +23469,18 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   grid-gap: 2rem;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media only screen and (max-width: 640px) {
   .program__card {
     padding: 2.4rem 0;
     grid-gap: 1.5rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-.program__card-date,
 .program__card-time {
   font-weight: 600;
   font-size: 1.5rem;
@@ -23490,16 +23489,28 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 640px) {
-  .program__card-date,
-.program__card-time {
+  .program__card-time {
     font-size: 1.3rem;
   }
 }
 
+.program__card-theme, .program__card-name, .program__card-name p {
+  position: relative;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 140%;
+}
+
 @media only screen and (max-width: 640px) {
-  .program__card-time {
-    justify-self: flex-end;
-    text-align: right;
+  .program__card-name p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .program__card-theme {
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 }
 
@@ -23510,11 +23521,9 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 }
 
 .program__card-name {
-  position: relative;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 140%;
-  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media only screen and (max-width: 640px) {
   .program__card-name {
@@ -23531,14 +23540,16 @@ ul.faq__accordions-list .faq__accordion-btn::before {
 }
 .program__card-name::before {
   content: "";
-  right: 100%;
+  left: 0;
   margin-right: 1.5rem;
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 50%;
   background-color: currentColor;
-  position: absolute;
+  position: relative;
   top: 1.2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media only screen and (max-width: 640px) {
   .program__card-name::before {
@@ -23547,14 +23558,16 @@ ul.faq__accordions-list .faq__accordion-btn::before {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin-right: 0.4rem;
+    margin-right: 0.9rem;
     top: auto;
     right: auto;
     margin-top: 0.85rem;
   }
 }
 
-.program__card-text {
+.program__card-name span {
+  display: block;
+  margin-top: 1rem;
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 140%;
@@ -23562,8 +23575,9 @@ ul.faq__accordions-list .faq__accordion-btn::before {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 640px) {
-  .program__card-text {
+  .program__card-name span {
     font-size: 1rem;
+    margin-left: -1.2rem;
   }
 }
 
